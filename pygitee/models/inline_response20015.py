@@ -28,196 +28,66 @@ class InlineResponse20015(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'content': 'str',
-        'html_url': 'str',
-        'id': 'int',
-        'sender': 'Sender',
-        'unread': 'str',
-        'updated_at': 'str',
-        'url': 'str'
+        'list': 'List',
+        'total_count': 'int'
     }
 
     attribute_map = {
-        'content': 'content',
-        'html_url': 'html_url',
-        'id': 'id',
-        'sender': 'sender',
-        'unread': 'unread',
-        'updated_at': 'updated_at',
-        'url': 'url'
+        'list': 'list',
+        'total_count': 'total_count'
     }
 
-    def __init__(self, content=None, html_url=None, id=None, sender=None, unread=None, updated_at=None, url=None):  # noqa: E501
+    def __init__(self, list=None, total_count=None):  # noqa: E501
         """InlineResponse20015 - a model defined in Swagger"""  # noqa: E501
-        self._content = None
-        self._html_url = None
-        self._id = None
-        self._sender = None
-        self._unread = None
-        self._updated_at = None
-        self._url = None
+        self._list = None
+        self._total_count = None
         self.discriminator = None
-        if content is not None:
-            self.content = content
-        if html_url is not None:
-            self.html_url = html_url
-        if id is not None:
-            self.id = id
-        if sender is not None:
-            self.sender = sender
-        if unread is not None:
-            self.unread = unread
-        if updated_at is not None:
-            self.updated_at = updated_at
-        if url is not None:
-            self.url = url
+        if list is not None:
+            self.list = list
+        if total_count is not None:
+            self.total_count = total_count
 
     @property
-    def content(self):
-        """Gets the content of this InlineResponse20015.  # noqa: E501
+    def list(self):
+        """Gets the list of this InlineResponse20015.  # noqa: E501
 
 
-        :return: The content of this InlineResponse20015.  # noqa: E501
-        :rtype: str
+        :return: The list of this InlineResponse20015.  # noqa: E501
+        :rtype: List
         """
-        return self._content
+        return self._list
 
-    @content.setter
-    def content(self, content):
-        """Sets the content of this InlineResponse20015.
+    @list.setter
+    def list(self, list):
+        """Sets the list of this InlineResponse20015.
 
 
-        :param content: The content of this InlineResponse20015.  # noqa: E501
-        :type: str
+        :param list: The list of this InlineResponse20015.  # noqa: E501
+        :type: List
         """
 
-        self._content = content
+        self._list = list
 
     @property
-    def html_url(self):
-        """Gets the html_url of this InlineResponse20015.  # noqa: E501
+    def total_count(self):
+        """Gets the total_count of this InlineResponse20015.  # noqa: E501
 
 
-        :return: The html_url of this InlineResponse20015.  # noqa: E501
-        :rtype: str
-        """
-        return self._html_url
-
-    @html_url.setter
-    def html_url(self, html_url):
-        """Sets the html_url of this InlineResponse20015.
-
-
-        :param html_url: The html_url of this InlineResponse20015.  # noqa: E501
-        :type: str
-        """
-
-        self._html_url = html_url
-
-    @property
-    def id(self):
-        """Gets the id of this InlineResponse20015.  # noqa: E501
-
-
-        :return: The id of this InlineResponse20015.  # noqa: E501
+        :return: The total_count of this InlineResponse20015.  # noqa: E501
         :rtype: int
         """
-        return self._id
+        return self._total_count
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this InlineResponse20015.
+    @total_count.setter
+    def total_count(self, total_count):
+        """Sets the total_count of this InlineResponse20015.
 
 
-        :param id: The id of this InlineResponse20015.  # noqa: E501
+        :param total_count: The total_count of this InlineResponse20015.  # noqa: E501
         :type: int
         """
 
-        self._id = id
-
-    @property
-    def sender(self):
-        """Gets the sender of this InlineResponse20015.  # noqa: E501
-
-
-        :return: The sender of this InlineResponse20015.  # noqa: E501
-        :rtype: Sender
-        """
-        return self._sender
-
-    @sender.setter
-    def sender(self, sender):
-        """Sets the sender of this InlineResponse20015.
-
-
-        :param sender: The sender of this InlineResponse20015.  # noqa: E501
-        :type: Sender
-        """
-
-        self._sender = sender
-
-    @property
-    def unread(self):
-        """Gets the unread of this InlineResponse20015.  # noqa: E501
-
-
-        :return: The unread of this InlineResponse20015.  # noqa: E501
-        :rtype: str
-        """
-        return self._unread
-
-    @unread.setter
-    def unread(self, unread):
-        """Sets the unread of this InlineResponse20015.
-
-
-        :param unread: The unread of this InlineResponse20015.  # noqa: E501
-        :type: str
-        """
-
-        self._unread = unread
-
-    @property
-    def updated_at(self):
-        """Gets the updated_at of this InlineResponse20015.  # noqa: E501
-
-
-        :return: The updated_at of this InlineResponse20015.  # noqa: E501
-        :rtype: str
-        """
-        return self._updated_at
-
-    @updated_at.setter
-    def updated_at(self, updated_at):
-        """Sets the updated_at of this InlineResponse20015.
-
-
-        :param updated_at: The updated_at of this InlineResponse20015.  # noqa: E501
-        :type: str
-        """
-
-        self._updated_at = updated_at
-
-    @property
-    def url(self):
-        """Gets the url of this InlineResponse20015.  # noqa: E501
-
-
-        :return: The url of this InlineResponse20015.  # noqa: E501
-        :rtype: str
-        """
-        return self._url
-
-    @url.setter
-    def url(self, url):
-        """Sets the url of this InlineResponse20015.
-
-
-        :param url: The url of this InlineResponse20015.  # noqa: E501
-        :type: str
-        """
-
-        self._url = url
+        self._total_count = total_count
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -28,95 +28,74 @@ class InlineResponse20039(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'closed_issues': 'int',
         'created_at': 'str',
-        'description': 'str',
-        'due_on': 'str',
-        'html_url': 'str',
-        'number': 'int',
-        'open_issues': 'int',
-        'repository_id': 'int',
-        'state': 'str',
-        'title': 'str',
-        'updated_at': 'str',
+        'id': 'str',
+        'issues_events': 'str',
+        'merge_requests_events': 'str',
+        'note_events': 'str',
+        'password': 'str',
+        'project_id': 'str',
+        'push_events': 'str',
+        'result': 'str',
+        'result_code': 'str',
+        'tag_push_events': 'str',
         'url': 'str'
     }
 
     attribute_map = {
-        'closed_issues': 'closed_issues',
         'created_at': 'created_at',
-        'description': 'description',
-        'due_on': 'due_on',
-        'html_url': 'html_url',
-        'number': 'number',
-        'open_issues': 'open_issues',
-        'repository_id': 'repository_id',
-        'state': 'state',
-        'title': 'title',
-        'updated_at': 'updated_at',
+        'id': 'id',
+        'issues_events': 'issues_events',
+        'merge_requests_events': 'merge_requests_events',
+        'note_events': 'note_events',
+        'password': 'password',
+        'project_id': 'project_id',
+        'push_events': 'push_events',
+        'result': 'result',
+        'result_code': 'result_code',
+        'tag_push_events': 'tag_push_events',
         'url': 'url'
     }
 
-    def __init__(self, closed_issues=None, created_at=None, description=None, due_on=None, html_url=None, number=None, open_issues=None, repository_id=None, state=None, title=None, updated_at=None, url=None):  # noqa: E501
+    def __init__(self, created_at=None, id=None, issues_events=None, merge_requests_events=None, note_events=None, password=None, project_id=None, push_events=None, result=None, result_code=None, tag_push_events=None, url=None):  # noqa: E501
         """InlineResponse20039 - a model defined in Swagger"""  # noqa: E501
-        self._closed_issues = None
         self._created_at = None
-        self._description = None
-        self._due_on = None
-        self._html_url = None
-        self._number = None
-        self._open_issues = None
-        self._repository_id = None
-        self._state = None
-        self._title = None
-        self._updated_at = None
+        self._id = None
+        self._issues_events = None
+        self._merge_requests_events = None
+        self._note_events = None
+        self._password = None
+        self._project_id = None
+        self._push_events = None
+        self._result = None
+        self._result_code = None
+        self._tag_push_events = None
         self._url = None
         self.discriminator = None
-        if closed_issues is not None:
-            self.closed_issues = closed_issues
         if created_at is not None:
             self.created_at = created_at
-        if description is not None:
-            self.description = description
-        if due_on is not None:
-            self.due_on = due_on
-        if html_url is not None:
-            self.html_url = html_url
-        if number is not None:
-            self.number = number
-        if open_issues is not None:
-            self.open_issues = open_issues
-        if repository_id is not None:
-            self.repository_id = repository_id
-        if state is not None:
-            self.state = state
-        if title is not None:
-            self.title = title
-        if updated_at is not None:
-            self.updated_at = updated_at
+        if id is not None:
+            self.id = id
+        if issues_events is not None:
+            self.issues_events = issues_events
+        if merge_requests_events is not None:
+            self.merge_requests_events = merge_requests_events
+        if note_events is not None:
+            self.note_events = note_events
+        if password is not None:
+            self.password = password
+        if project_id is not None:
+            self.project_id = project_id
+        if push_events is not None:
+            self.push_events = push_events
+        if result is not None:
+            self.result = result
+        if result_code is not None:
+            self.result_code = result_code
+        if tag_push_events is not None:
+            self.tag_push_events = tag_push_events
         if url is not None:
             self.url = url
-
-    @property
-    def closed_issues(self):
-        """Gets the closed_issues of this InlineResponse20039.  # noqa: E501
-
-
-        :return: The closed_issues of this InlineResponse20039.  # noqa: E501
-        :rtype: int
-        """
-        return self._closed_issues
-
-    @closed_issues.setter
-    def closed_issues(self, closed_issues):
-        """Sets the closed_issues of this InlineResponse20039.
-
-
-        :param closed_issues: The closed_issues of this InlineResponse20039.  # noqa: E501
-        :type: int
-        """
-
-        self._closed_issues = closed_issues
 
     @property
     def created_at(self):
@@ -140,193 +119,214 @@ class InlineResponse20039(object):
         self._created_at = created_at
 
     @property
-    def description(self):
-        """Gets the description of this InlineResponse20039.  # noqa: E501
+    def id(self):
+        """Gets the id of this InlineResponse20039.  # noqa: E501
 
 
-        :return: The description of this InlineResponse20039.  # noqa: E501
+        :return: The id of this InlineResponse20039.  # noqa: E501
         :rtype: str
         """
-        return self._description
+        return self._id
 
-    @description.setter
-    def description(self, description):
-        """Sets the description of this InlineResponse20039.
+    @id.setter
+    def id(self, id):
+        """Sets the id of this InlineResponse20039.
 
 
-        :param description: The description of this InlineResponse20039.  # noqa: E501
+        :param id: The id of this InlineResponse20039.  # noqa: E501
         :type: str
         """
 
-        self._description = description
+        self._id = id
 
     @property
-    def due_on(self):
-        """Gets the due_on of this InlineResponse20039.  # noqa: E501
+    def issues_events(self):
+        """Gets the issues_events of this InlineResponse20039.  # noqa: E501
 
 
-        :return: The due_on of this InlineResponse20039.  # noqa: E501
+        :return: The issues_events of this InlineResponse20039.  # noqa: E501
         :rtype: str
         """
-        return self._due_on
+        return self._issues_events
 
-    @due_on.setter
-    def due_on(self, due_on):
-        """Sets the due_on of this InlineResponse20039.
+    @issues_events.setter
+    def issues_events(self, issues_events):
+        """Sets the issues_events of this InlineResponse20039.
 
 
-        :param due_on: The due_on of this InlineResponse20039.  # noqa: E501
+        :param issues_events: The issues_events of this InlineResponse20039.  # noqa: E501
         :type: str
         """
 
-        self._due_on = due_on
+        self._issues_events = issues_events
 
     @property
-    def html_url(self):
-        """Gets the html_url of this InlineResponse20039.  # noqa: E501
+    def merge_requests_events(self):
+        """Gets the merge_requests_events of this InlineResponse20039.  # noqa: E501
 
 
-        :return: The html_url of this InlineResponse20039.  # noqa: E501
+        :return: The merge_requests_events of this InlineResponse20039.  # noqa: E501
         :rtype: str
         """
-        return self._html_url
+        return self._merge_requests_events
 
-    @html_url.setter
-    def html_url(self, html_url):
-        """Sets the html_url of this InlineResponse20039.
+    @merge_requests_events.setter
+    def merge_requests_events(self, merge_requests_events):
+        """Sets the merge_requests_events of this InlineResponse20039.
 
 
-        :param html_url: The html_url of this InlineResponse20039.  # noqa: E501
+        :param merge_requests_events: The merge_requests_events of this InlineResponse20039.  # noqa: E501
         :type: str
         """
 
-        self._html_url = html_url
+        self._merge_requests_events = merge_requests_events
 
     @property
-    def number(self):
-        """Gets the number of this InlineResponse20039.  # noqa: E501
+    def note_events(self):
+        """Gets the note_events of this InlineResponse20039.  # noqa: E501
 
 
-        :return: The number of this InlineResponse20039.  # noqa: E501
-        :rtype: int
-        """
-        return self._number
-
-    @number.setter
-    def number(self, number):
-        """Sets the number of this InlineResponse20039.
-
-
-        :param number: The number of this InlineResponse20039.  # noqa: E501
-        :type: int
-        """
-
-        self._number = number
-
-    @property
-    def open_issues(self):
-        """Gets the open_issues of this InlineResponse20039.  # noqa: E501
-
-
-        :return: The open_issues of this InlineResponse20039.  # noqa: E501
-        :rtype: int
-        """
-        return self._open_issues
-
-    @open_issues.setter
-    def open_issues(self, open_issues):
-        """Sets the open_issues of this InlineResponse20039.
-
-
-        :param open_issues: The open_issues of this InlineResponse20039.  # noqa: E501
-        :type: int
-        """
-
-        self._open_issues = open_issues
-
-    @property
-    def repository_id(self):
-        """Gets the repository_id of this InlineResponse20039.  # noqa: E501
-
-
-        :return: The repository_id of this InlineResponse20039.  # noqa: E501
-        :rtype: int
-        """
-        return self._repository_id
-
-    @repository_id.setter
-    def repository_id(self, repository_id):
-        """Sets the repository_id of this InlineResponse20039.
-
-
-        :param repository_id: The repository_id of this InlineResponse20039.  # noqa: E501
-        :type: int
-        """
-
-        self._repository_id = repository_id
-
-    @property
-    def state(self):
-        """Gets the state of this InlineResponse20039.  # noqa: E501
-
-
-        :return: The state of this InlineResponse20039.  # noqa: E501
+        :return: The note_events of this InlineResponse20039.  # noqa: E501
         :rtype: str
         """
-        return self._state
+        return self._note_events
 
-    @state.setter
-    def state(self, state):
-        """Sets the state of this InlineResponse20039.
+    @note_events.setter
+    def note_events(self, note_events):
+        """Sets the note_events of this InlineResponse20039.
 
 
-        :param state: The state of this InlineResponse20039.  # noqa: E501
+        :param note_events: The note_events of this InlineResponse20039.  # noqa: E501
         :type: str
         """
 
-        self._state = state
+        self._note_events = note_events
 
     @property
-    def title(self):
-        """Gets the title of this InlineResponse20039.  # noqa: E501
+    def password(self):
+        """Gets the password of this InlineResponse20039.  # noqa: E501
 
 
-        :return: The title of this InlineResponse20039.  # noqa: E501
+        :return: The password of this InlineResponse20039.  # noqa: E501
         :rtype: str
         """
-        return self._title
+        return self._password
 
-    @title.setter
-    def title(self, title):
-        """Sets the title of this InlineResponse20039.
+    @password.setter
+    def password(self, password):
+        """Sets the password of this InlineResponse20039.
 
 
-        :param title: The title of this InlineResponse20039.  # noqa: E501
+        :param password: The password of this InlineResponse20039.  # noqa: E501
         :type: str
         """
 
-        self._title = title
+        self._password = password
 
     @property
-    def updated_at(self):
-        """Gets the updated_at of this InlineResponse20039.  # noqa: E501
+    def project_id(self):
+        """Gets the project_id of this InlineResponse20039.  # noqa: E501
 
 
-        :return: The updated_at of this InlineResponse20039.  # noqa: E501
+        :return: The project_id of this InlineResponse20039.  # noqa: E501
         :rtype: str
         """
-        return self._updated_at
+        return self._project_id
 
-    @updated_at.setter
-    def updated_at(self, updated_at):
-        """Sets the updated_at of this InlineResponse20039.
+    @project_id.setter
+    def project_id(self, project_id):
+        """Sets the project_id of this InlineResponse20039.
 
 
-        :param updated_at: The updated_at of this InlineResponse20039.  # noqa: E501
+        :param project_id: The project_id of this InlineResponse20039.  # noqa: E501
         :type: str
         """
 
-        self._updated_at = updated_at
+        self._project_id = project_id
+
+    @property
+    def push_events(self):
+        """Gets the push_events of this InlineResponse20039.  # noqa: E501
+
+
+        :return: The push_events of this InlineResponse20039.  # noqa: E501
+        :rtype: str
+        """
+        return self._push_events
+
+    @push_events.setter
+    def push_events(self, push_events):
+        """Sets the push_events of this InlineResponse20039.
+
+
+        :param push_events: The push_events of this InlineResponse20039.  # noqa: E501
+        :type: str
+        """
+
+        self._push_events = push_events
+
+    @property
+    def result(self):
+        """Gets the result of this InlineResponse20039.  # noqa: E501
+
+
+        :return: The result of this InlineResponse20039.  # noqa: E501
+        :rtype: str
+        """
+        return self._result
+
+    @result.setter
+    def result(self, result):
+        """Sets the result of this InlineResponse20039.
+
+
+        :param result: The result of this InlineResponse20039.  # noqa: E501
+        :type: str
+        """
+
+        self._result = result
+
+    @property
+    def result_code(self):
+        """Gets the result_code of this InlineResponse20039.  # noqa: E501
+
+
+        :return: The result_code of this InlineResponse20039.  # noqa: E501
+        :rtype: str
+        """
+        return self._result_code
+
+    @result_code.setter
+    def result_code(self, result_code):
+        """Sets the result_code of this InlineResponse20039.
+
+
+        :param result_code: The result_code of this InlineResponse20039.  # noqa: E501
+        :type: str
+        """
+
+        self._result_code = result_code
+
+    @property
+    def tag_push_events(self):
+        """Gets the tag_push_events of this InlineResponse20039.  # noqa: E501
+
+
+        :return: The tag_push_events of this InlineResponse20039.  # noqa: E501
+        :rtype: str
+        """
+        return self._tag_push_events
+
+    @tag_push_events.setter
+    def tag_push_events(self, tag_push_events):
+        """Sets the tag_push_events of this InlineResponse20039.
+
+
+        :param tag_push_events: The tag_push_events of this InlineResponse20039.  # noqa: E501
+        :type: str
+        """
+
+        self._tag_push_events = tag_push_events
 
     @property
     def url(self):

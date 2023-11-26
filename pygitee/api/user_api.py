@@ -44,7 +44,7 @@ class UserApi(object):
         :param str access_token: 用户授权码
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20019
+        :return: InlineResponse20021
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -67,7 +67,7 @@ class UserApi(object):
         :param str access_token: 用户授权码
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20019
+        :return: InlineResponse20021
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -121,7 +121,7 @@ class UserApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20019',  # noqa: E501
+            response_type='InlineResponse20021',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -141,7 +141,7 @@ class UserApi(object):
         :param str access_token: 用户授权码
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20019
+        :return: InlineResponse20021
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -164,7 +164,7 @@ class UserApi(object):
         :param str access_token: 用户授权码
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20019
+        :return: InlineResponse20021
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -218,7 +218,100 @@ class UserApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20019',  # noqa: E501
+            response_type='InlineResponse20021',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def user_following_username_delete(self, username, **kwargs):  # noqa: E501
+        """取消关注一个用户  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.user_following_username_delete(username, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str username: 用户名(username/login) (required)
+        :param str access_token: 用户授权码
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.user_following_username_delete_with_http_info(username, **kwargs)  # noqa: E501
+        else:
+            (data) = self.user_following_username_delete_with_http_info(username, **kwargs)  # noqa: E501
+            return data
+
+    def user_following_username_delete_with_http_info(self, username, **kwargs):  # noqa: E501
+        """取消关注一个用户  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.user_following_username_delete_with_http_info(username, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str username: 用户名(username/login) (required)
+        :param str access_token: 用户授权码
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['username', 'access_token']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method user_following_username_delete" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'username' is set
+        if ('username' not in params or
+                params['username'] is None):
+            raise ValueError("Missing the required parameter `username` when calling `user_following_username_delete`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'username' in params:
+            path_params['username'] = params['username']  # noqa: E501
+
+        query_params = []
+        if 'access_token' in params:
+            query_params.append(('access_token', params['access_token']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/user/following/{username}', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -319,6 +412,103 @@ class UserApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def user_following_username_put(self, username, **kwargs):  # noqa: E501
+        """关注一个用户  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.user_following_username_put(username, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str username: 用户名(username/login) (required)
+        :param FollowingUsernameBody body:
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.user_following_username_put_with_http_info(username, **kwargs)  # noqa: E501
+        else:
+            (data) = self.user_following_username_put_with_http_info(username, **kwargs)  # noqa: E501
+            return data
+
+    def user_following_username_put_with_http_info(self, username, **kwargs):  # noqa: E501
+        """关注一个用户  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.user_following_username_put_with_http_info(username, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str username: 用户名(username/login) (required)
+        :param FollowingUsernameBody body:
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['username', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method user_following_username_put" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'username' is set
+        if ('username' not in params or
+                params['username'] is None):
+            raise ValueError("Missing the required parameter `username` when calling `user_following_username_put`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'username' in params:
+            path_params['username'] = params['username']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/user/following/{username}', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def user_get(self, **kwargs):  # noqa: E501
         """获取授权用户的资料  # noqa: E501
 
@@ -329,7 +519,7 @@ class UserApi(object):
 
         :param async_req bool
         :param str access_token: 用户授权码
-        :return: InlineResponse20051
+        :return: InlineResponse20054
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -350,7 +540,7 @@ class UserApi(object):
 
         :param async_req bool
         :param str access_token: 用户授权码
-        :return: InlineResponse20051
+        :return: InlineResponse20054
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -400,7 +590,7 @@ class UserApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20051',  # noqa: E501
+            response_type='InlineResponse20054',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -420,7 +610,7 @@ class UserApi(object):
         :param str access_token: 用户授权码
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20037
+        :return: InlineResponse20040
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -443,7 +633,7 @@ class UserApi(object):
         :param str access_token: 用户授权码
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20037
+        :return: InlineResponse20040
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -497,7 +687,100 @@ class UserApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20037',  # noqa: E501
+            response_type='InlineResponse20040',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def user_keys_id_delete(self, id, **kwargs):  # noqa: E501
+        """删除一个公钥  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.user_keys_id_delete(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int id: 公钥 ID (required)
+        :param str access_token: 用户授权码
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.user_keys_id_delete_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.user_keys_id_delete_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def user_keys_id_delete_with_http_info(self, id, **kwargs):  # noqa: E501
+        """删除一个公钥  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.user_keys_id_delete_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int id: 公钥 ID (required)
+        :param str access_token: 用户授权码
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'access_token']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method user_keys_id_delete" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `user_keys_id_delete`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+        if 'access_token' in params:
+            query_params.append(('access_token', params['access_token']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/user/keys/{id}', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -516,7 +799,7 @@ class UserApi(object):
         :param async_req bool
         :param int id: 公钥 ID (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20037
+        :return: InlineResponse20040
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -538,7 +821,7 @@ class UserApi(object):
         :param async_req bool
         :param int id: 公钥 ID (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20037
+        :return: InlineResponse20040
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -594,7 +877,100 @@ class UserApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20037',  # noqa: E501
+            response_type='InlineResponse20040',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def user_keys_post(self, **kwargs):  # noqa: E501
+        """添加一个公钥  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.user_keys_post(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param UserKeysBody body:
+        :return: InlineResponse20040
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.user_keys_post_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.user_keys_post_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def user_keys_post_with_http_info(self, **kwargs):  # noqa: E501
+        """添加一个公钥  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.user_keys_post_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param UserKeysBody body:
+        :return: InlineResponse20040
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method user_keys_post" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/user/keys', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse20040',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -613,7 +989,7 @@ class UserApi(object):
         :param async_req bool
         :param str path: Namespace path (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20053
+        :return: InlineResponse20055
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -635,7 +1011,7 @@ class UserApi(object):
         :param async_req bool
         :param str path: Namespace path (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20053
+        :return: InlineResponse20055
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -691,7 +1067,7 @@ class UserApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20053',  # noqa: E501
+            response_type='InlineResponse20055',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -710,7 +1086,7 @@ class UserApi(object):
         :param async_req bool
         :param str access_token: 用户授权码
         :param str mode: 参与方式: project(所有参与仓库的namepsce)、intrant(所加入的namespace)、all(包含前两者)，默认(intrant)
-        :return: InlineResponse20053
+        :return: InlineResponse20055
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -732,7 +1108,7 @@ class UserApi(object):
         :param async_req bool
         :param str access_token: 用户授权码
         :param str mode: 参与方式: project(所有参与仓库的namepsce)、intrant(所加入的namespace)、all(包含前两者)，默认(intrant)
-        :return: InlineResponse20053
+        :return: InlineResponse20055
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -778,6 +1154,99 @@ class UserApi(object):
 
         return self.api_client.call_api(
             '/user/namespaces', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse20055',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def user_patch(self, **kwargs):  # noqa: E501
+        """更新授权用户的资料  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.user_patch(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param UserBody body:
+        :return: InlineResponse20053
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.user_patch_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.user_patch_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def user_patch_with_http_info(self, **kwargs):  # noqa: E501
+        """更新授权用户的资料  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.user_patch_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param UserBody body:
+        :return: InlineResponse20053
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method user_patch" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/user', 'PATCH',
             path_params,
             query_params,
             header_params,
@@ -897,6 +1366,107 @@ class UserApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def user_starred_owner_repo_delete(self, owner, repo, **kwargs):  # noqa: E501
+        """取消 star 一个仓库  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.user_starred_owner_repo_delete(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param str access_token: 用户授权码
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.user_starred_owner_repo_delete_with_http_info(owner, repo, **kwargs)  # noqa: E501
+        else:
+            (data) = self.user_starred_owner_repo_delete_with_http_info(owner, repo, **kwargs)  # noqa: E501
+            return data
+
+    def user_starred_owner_repo_delete_with_http_info(self, owner, repo, **kwargs):  # noqa: E501
+        """取消 star 一个仓库  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.user_starred_owner_repo_delete_with_http_info(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param str access_token: 用户授权码
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'access_token']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method user_starred_owner_repo_delete" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `user_starred_owner_repo_delete`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `user_starred_owner_repo_delete`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+
+        query_params = []
+        if 'access_token' in params:
+            query_params.append(('access_token', params['access_token']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/user/starred/{owner}/{repo}', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def user_starred_owner_repo_get(self, owner, repo, **kwargs):  # noqa: E501
         """检查授权用户是否 star 了一个仓库  # noqa: E501
 
@@ -984,6 +1554,111 @@ class UserApi(object):
 
         return self.api_client.call_api(
             '/user/starred/{owner}/{repo}', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def user_starred_owner_repo_put(self, owner, repo, **kwargs):  # noqa: E501
+        """star 一个仓库  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.user_starred_owner_repo_put(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param OwnerRepoBody1 body:
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.user_starred_owner_repo_put_with_http_info(owner, repo, **kwargs)  # noqa: E501
+        else:
+            (data) = self.user_starred_owner_repo_put_with_http_info(owner, repo, **kwargs)  # noqa: E501
+            return data
+
+    def user_starred_owner_repo_put_with_http_info(self, owner, repo, **kwargs):  # noqa: E501
+        """star 一个仓库  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.user_starred_owner_repo_put_with_http_info(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param OwnerRepoBody1 body:
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method user_starred_owner_repo_put" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `user_starred_owner_repo_put`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `user_starred_owner_repo_put`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/user/starred/{owner}/{repo}', 'PUT',
             path_params,
             query_params,
             header_params,
@@ -1103,6 +1778,107 @@ class UserApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def user_subscriptions_owner_repo_delete(self, owner, repo, **kwargs):  # noqa: E501
+        """取消 watch 一个仓库  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.user_subscriptions_owner_repo_delete(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param str access_token: 用户授权码
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.user_subscriptions_owner_repo_delete_with_http_info(owner, repo, **kwargs)  # noqa: E501
+        else:
+            (data) = self.user_subscriptions_owner_repo_delete_with_http_info(owner, repo, **kwargs)  # noqa: E501
+            return data
+
+    def user_subscriptions_owner_repo_delete_with_http_info(self, owner, repo, **kwargs):  # noqa: E501
+        """取消 watch 一个仓库  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.user_subscriptions_owner_repo_delete_with_http_info(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param str access_token: 用户授权码
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'access_token']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method user_subscriptions_owner_repo_delete" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `user_subscriptions_owner_repo_delete`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `user_subscriptions_owner_repo_delete`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+
+        query_params = []
+        if 'access_token' in params:
+            query_params.append(('access_token', params['access_token']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/user/subscriptions/{owner}/{repo}', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def user_subscriptions_owner_repo_get(self, owner, repo, **kwargs):  # noqa: E501
         """检查授权用户是否 watch 了一个仓库  # noqa: E501
 
@@ -1204,6 +1980,111 @@ class UserApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def user_subscriptions_owner_repo_put(self, owner, repo, **kwargs):  # noqa: E501
+        """watch 一个仓库  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.user_subscriptions_owner_repo_put(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param OwnerRepoBody2 body:
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.user_subscriptions_owner_repo_put_with_http_info(owner, repo, **kwargs)  # noqa: E501
+        else:
+            (data) = self.user_subscriptions_owner_repo_put_with_http_info(owner, repo, **kwargs)  # noqa: E501
+            return data
+
+    def user_subscriptions_owner_repo_put_with_http_info(self, owner, repo, **kwargs):  # noqa: E501
+        """watch 一个仓库  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.user_subscriptions_owner_repo_put_with_http_info(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param OwnerRepoBody2 body:
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method user_subscriptions_owner_repo_put" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `user_subscriptions_owner_repo_put`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `user_subscriptions_owner_repo_put`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/user/subscriptions/{owner}/{repo}', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def users_organization_post(self, **kwargs):  # noqa: E501
         """创建组织  # noqa: E501
 
@@ -1214,7 +2095,7 @@ class UserApi(object):
 
         :param async_req bool
         :param UsersOrganizationBody body:
-        :return: InlineResponse20017
+        :return: InlineResponse20018
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1235,7 +2116,7 @@ class UserApi(object):
 
         :param async_req bool
         :param UsersOrganizationBody body:
-        :return: InlineResponse20017
+        :return: InlineResponse20018
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1289,7 +2170,7 @@ class UserApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20017',  # noqa: E501
+            response_type='InlineResponse20018',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1310,7 +2191,7 @@ class UserApi(object):
         :param str access_token: 用户授权码
         :param int prev_id: 滚动列表的最后一条记录的id
         :param int limit: 滚动列表每页的数量，最大为 100
-        :return: InlineResponse20012
+        :return: InlineResponse20013
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1334,7 +2215,7 @@ class UserApi(object):
         :param str access_token: 用户授权码
         :param int prev_id: 滚动列表的最后一条记录的id
         :param int limit: 滚动列表每页的数量，最大为 100
-        :return: InlineResponse20012
+        :return: InlineResponse20013
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1394,7 +2275,7 @@ class UserApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20012',  # noqa: E501
+            response_type='InlineResponse20013',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1415,7 +2296,7 @@ class UserApi(object):
         :param str access_token: 用户授权码
         :param int prev_id: 滚动列表的最后一条记录的id
         :param int limit: 滚动列表每页的数量，最大为 100
-        :return: InlineResponse20012
+        :return: InlineResponse20013
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1439,7 +2320,7 @@ class UserApi(object):
         :param str access_token: 用户授权码
         :param int prev_id: 滚动列表的最后一条记录的id
         :param int limit: 滚动列表每页的数量，最大为 100
-        :return: InlineResponse20012
+        :return: InlineResponse20013
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1499,7 +2380,7 @@ class UserApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20012',  # noqa: E501
+            response_type='InlineResponse20013',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1520,7 +2401,7 @@ class UserApi(object):
         :param str access_token: 用户授权码
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20019
+        :return: InlineResponse20021
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1544,7 +2425,7 @@ class UserApi(object):
         :param str access_token: 用户授权码
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20019
+        :return: InlineResponse20021
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1604,7 +2485,7 @@ class UserApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20019',  # noqa: E501
+            response_type='InlineResponse20021',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1625,7 +2506,7 @@ class UserApi(object):
         :param str access_token: 用户授权码
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20019
+        :return: InlineResponse20021
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1649,7 +2530,7 @@ class UserApi(object):
         :param str access_token: 用户授权码
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20019
+        :return: InlineResponse20021
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1709,7 +2590,7 @@ class UserApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20019',  # noqa: E501
+            response_type='InlineResponse20021',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1829,7 +2710,7 @@ class UserApi(object):
         :param async_req bool
         :param str username: 用户名(username/login) (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20054
+        :return: InlineResponse20056
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1851,7 +2732,7 @@ class UserApi(object):
         :param async_req bool
         :param str username: 用户名(username/login) (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20054
+        :return: InlineResponse20056
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1907,7 +2788,7 @@ class UserApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20054',  # noqa: E501
+            response_type='InlineResponse20056',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1928,7 +2809,7 @@ class UserApi(object):
         :param str access_token: 用户授权码
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20038
+        :return: InlineResponse20041
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1952,7 +2833,7 @@ class UserApi(object):
         :param str access_token: 用户授权码
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20038
+        :return: InlineResponse20041
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2012,7 +2893,7 @@ class UserApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20038',  # noqa: E501
+            response_type='InlineResponse20041',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -2033,7 +2914,7 @@ class UserApi(object):
         :param str access_token: 用户授权码
         :param int prev_id: 滚动列表的最后一条记录的id
         :param int limit: 滚动列表每页的数量，最大为 100
-        :return: InlineResponse20012
+        :return: InlineResponse20013
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2057,7 +2938,7 @@ class UserApi(object):
         :param str access_token: 用户授权码
         :param int prev_id: 滚动列表的最后一条记录的id
         :param int limit: 滚动列表每页的数量，最大为 100
-        :return: InlineResponse20012
+        :return: InlineResponse20013
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2117,7 +2998,7 @@ class UserApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20012',  # noqa: E501
+            response_type='InlineResponse20013',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -2138,7 +3019,7 @@ class UserApi(object):
         :param str access_token: 用户授权码
         :param int prev_id: 滚动列表的最后一条记录的id
         :param int limit: 滚动列表每页的数量，最大为 100
-        :return: InlineResponse20012
+        :return: InlineResponse20013
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2162,7 +3043,7 @@ class UserApi(object):
         :param str access_token: 用户授权码
         :param int prev_id: 滚动列表的最后一条记录的id
         :param int limit: 滚动列表每页的数量，最大为 100
-        :return: InlineResponse20012
+        :return: InlineResponse20013
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2222,7 +3103,7 @@ class UserApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20012',  # noqa: E501
+            response_type='InlineResponse20013',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

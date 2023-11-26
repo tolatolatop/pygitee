@@ -3,14 +3,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**author** | **str** |  | [optional] 
-**comments_url** | **str** |  | [optional] 
-**commit** | **str** |  | [optional] 
-**committer** | **str** |  | [optional] 
-**html_url** | **str** |  | [optional] 
-**parents** | **str** |  | [optional] 
-**sha** | **str** |  | [optional] 
-**url** | **str** |  | [optional] 
+**contexts** | [**Contexts**](Contexts.md) |  | [optional] 
+**id** | **str** |  | [optional] 
+**mergers** | [**Mergers**](Mergers.md) |  | [optional] 
+**mode** | **str** |  | [optional] 
+**project_id** | **str** |  | [optional] 
+**pushers** | [**Pushers**](Pushers.md) |  | [optional] 
+**strict** | **bool** |  | [optional] 
+**wildcard** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

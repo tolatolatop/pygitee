@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **search_users_get**
-> InlineResponse20050 search_users_get(q, access_token=access_token, page=page, per_page=per_page, sort=sort, order=order)
+> InlineResponse20053 search_users_get(q, access_token=access_token, page=page, per_page=per_page, sort=sort, order=order)
 
 搜索用户
 
@@ -257,7 +257,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20050**](InlineResponse20050.md)
+[**InlineResponse20053**](InlineResponse20053.md)
 
 ### Authorization
 

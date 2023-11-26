@@ -46,7 +46,7 @@ class RepoApi(object):
         :param str access_token: 用户授权码
         :param int prev_id: 滚动列表的最后一条记录的id
         :param int limit: 滚动列表每页的数量，最大为 100
-        :return: InlineResponse20012
+        :return: InlineResponse20013
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -71,7 +71,7 @@ class RepoApi(object):
         :param str access_token: 用户授权码
         :param int prev_id: 滚动列表的最后一条记录的id
         :param int limit: 滚动列表每页的数量，最大为 100
-        :return: InlineResponse20012
+        :return: InlineResponse20013
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -137,7 +137,108 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20012',  # noqa: E501
+            response_type='InlineResponse20013',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def repos_owner_repo_baidu_statistic_key_delete(self, owner, repo, **kwargs):  # noqa: E501
+        """删除仓库的百度统计 key  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_baidu_statistic_key_delete(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param str access_token: 用户授权码
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_baidu_statistic_key_delete_with_http_info(owner, repo, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_baidu_statistic_key_delete_with_http_info(owner, repo, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_baidu_statistic_key_delete_with_http_info(self, owner, repo, **kwargs):  # noqa: E501
+        """删除仓库的百度统计 key  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_baidu_statistic_key_delete_with_http_info(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param str access_token: 用户授权码
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'access_token']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_baidu_statistic_key_delete" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_baidu_statistic_key_delete`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_baidu_statistic_key_delete`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+
+        query_params = []
+        if 'access_token' in params:
+            query_params.append(('access_token', params['access_token']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/baidu_statistic_key', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -246,6 +347,111 @@ class RepoApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def repos_owner_repo_baidu_statistic_key_post(self, owner, repo, **kwargs):  # noqa: E501
+        """设置/更新仓库的百度统计 key  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_baidu_statistic_key_post(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param RepoBaiduStatisticKeyBody body:
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_baidu_statistic_key_post_with_http_info(owner, repo, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_baidu_statistic_key_post_with_http_info(owner, repo, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_baidu_statistic_key_post_with_http_info(self, owner, repo, **kwargs):  # noqa: E501
+        """设置/更新仓库的百度统计 key  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_baidu_statistic_key_post_with_http_info(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param RepoBaiduStatisticKeyBody body:
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_baidu_statistic_key_post" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_baidu_statistic_key_post`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_baidu_statistic_key_post`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/baidu_statistic_key', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def repos_owner_repo_blame_path_get(self, owner, repo, path, **kwargs):  # noqa: E501
         """Blame  # noqa: E501
 
@@ -260,7 +466,7 @@ class RepoApi(object):
         :param str path: 文件的路径（1 MB 以内的文件文件） (required)
         :param str access_token: 用户授权码
         :param str ref: 分支、tag 或 commit。默认: 仓库的默认分支（通常是 master）
-        :return: InlineResponse20021
+        :return: InlineResponse20024
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -285,7 +491,7 @@ class RepoApi(object):
         :param str path: 文件的路径（1 MB 以内的文件文件） (required)
         :param str access_token: 用户授权码
         :param str ref: 分支、tag 或 commit。默认: 仓库的默认分支（通常是 master）
-        :return: InlineResponse20021
+        :return: InlineResponse20024
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -355,7 +561,7 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20021',  # noqa: E501
+            response_type='InlineResponse20024',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -376,7 +582,7 @@ class RepoApi(object):
         :param str repo: 仓库路径(path) (required)
         :param str branch: 分支名称 (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20024
+        :return: InlineResponse20026
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -400,7 +606,7 @@ class RepoApi(object):
         :param str repo: 仓库路径(path) (required)
         :param str branch: 分支名称 (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20024
+        :return: InlineResponse20026
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -468,7 +674,116 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20024',  # noqa: E501
+            response_type='InlineResponse20026',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def repos_owner_repo_branches_branch_protection_delete(self, owner, repo, branch, **kwargs):  # noqa: E501
+        """取消保护分支的设置  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_branches_branch_protection_delete(owner, repo, branch, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param str branch: 分支名称 (required)
+        :param str access_token: 用户授权码
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_branches_branch_protection_delete_with_http_info(owner, repo, branch, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_branches_branch_protection_delete_with_http_info(owner, repo, branch, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_branches_branch_protection_delete_with_http_info(self, owner, repo, branch, **kwargs):  # noqa: E501
+        """取消保护分支的设置  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_branches_branch_protection_delete_with_http_info(owner, repo, branch, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param str branch: 分支名称 (required)
+        :param str access_token: 用户授权码
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'branch', 'access_token']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_branches_branch_protection_delete" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_branches_branch_protection_delete`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_branches_branch_protection_delete`")  # noqa: E501
+        # verify the required parameter 'branch' is set
+        if ('branch' not in params or
+                params['branch'] is None):
+            raise ValueError("Missing the required parameter `branch` when calling `repos_owner_repo_branches_branch_protection_delete`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+        if 'branch' in params:
+            path_params['branch'] = params['branch']  # noqa: E501
+
+        query_params = []
+        if 'access_token' in params:
+            query_params.append(('access_token', params['access_token']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/branches/{branch}/protection', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -489,7 +804,7 @@ class RepoApi(object):
         :param str repo: 仓库路径(path) (required)
         :param str branch: 分支名称 (required)
         :param BranchProtectionBody body:
-        :return: InlineResponse20024
+        :return: InlineResponse20026
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -513,7 +828,7 @@ class RepoApi(object):
         :param str repo: 仓库路径(path) (required)
         :param str branch: 分支名称 (required)
         :param BranchProtectionBody body:
-        :return: InlineResponse20024
+        :return: InlineResponse20026
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -585,7 +900,7 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20024',  # noqa: E501
+            response_type='InlineResponse20026',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -605,7 +920,7 @@ class RepoApi(object):
         :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
         :param str repo: 仓库路径(path) (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20022
+        :return: InlineResponse20025
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -628,7 +943,7 @@ class RepoApi(object):
         :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
         :param str repo: 仓库路径(path) (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20022
+        :return: InlineResponse20025
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -690,7 +1005,116 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20022',  # noqa: E501
+            response_type='InlineResponse20025',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def repos_owner_repo_branches_post(self, owner, repo, **kwargs):  # noqa: E501
+        """创建分支  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_branches_post(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param RepoBranchesBody body:
+        :return: InlineResponse20026
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_branches_post_with_http_info(owner, repo, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_branches_post_with_http_info(owner, repo, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_branches_post_with_http_info(self, owner, repo, **kwargs):  # noqa: E501
+        """创建分支  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_branches_post_with_http_info(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param RepoBranchesBody body:
+        :return: InlineResponse20026
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_branches_post" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_branches_post`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_branches_post`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/branches', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse20026',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -710,7 +1134,7 @@ class RepoApi(object):
         :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
         :param str repo: 仓库路径(path) (required)
         :param SettingNewBody body:
-        :return: InlineResponse20023
+        :return: InlineResponse20027
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -733,7 +1157,7 @@ class RepoApi(object):
         :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
         :param str repo: 仓库路径(path) (required)
         :param SettingNewBody body:
-        :return: InlineResponse20023
+        :return: InlineResponse20027
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -799,7 +1223,120 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20023',  # noqa: E501
+            response_type='InlineResponse20027',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def repos_owner_repo_branches_wildcard_setting_delete(self, owner, repo, wildcard, **kwargs):  # noqa: E501
+        """删除保护分支规则  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_branches_wildcard_setting_delete(owner, repo, wildcard, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param str wildcard: 分支/通配符 (required)
+        :param str access_token: 用户授权码
+        :return: InlineResponse20027
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_branches_wildcard_setting_delete_with_http_info(owner, repo, wildcard, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_branches_wildcard_setting_delete_with_http_info(owner, repo, wildcard, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_branches_wildcard_setting_delete_with_http_info(self, owner, repo, wildcard, **kwargs):  # noqa: E501
+        """删除保护分支规则  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_branches_wildcard_setting_delete_with_http_info(owner, repo, wildcard, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param str wildcard: 分支/通配符 (required)
+        :param str access_token: 用户授权码
+        :return: InlineResponse20027
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'wildcard', 'access_token']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_branches_wildcard_setting_delete" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_branches_wildcard_setting_delete`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_branches_wildcard_setting_delete`")  # noqa: E501
+        # verify the required parameter 'wildcard' is set
+        if ('wildcard' not in params or
+                params['wildcard'] is None):
+            raise ValueError("Missing the required parameter `wildcard` when calling `repos_owner_repo_branches_wildcard_setting_delete`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+        if 'wildcard' in params:
+            path_params['wildcard'] = params['wildcard']  # noqa: E501
+
+        query_params = []
+        if 'access_token' in params:
+            query_params.append(('access_token', params['access_token']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/branches/{wildcard}/setting', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse20027',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -820,7 +1357,7 @@ class RepoApi(object):
         :param str repo: 仓库路径(path) (required)
         :param str wildcard: 分支/通配符 (required)
         :param WildcardSettingBody body:
-        :return: InlineResponse20023
+        :return: InlineResponse20027
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -844,7 +1381,7 @@ class RepoApi(object):
         :param str repo: 仓库路径(path) (required)
         :param str wildcard: 分支/通配符 (required)
         :param WildcardSettingBody body:
-        :return: InlineResponse20023
+        :return: InlineResponse20027
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -916,7 +1453,7 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20023',  # noqa: E501
+            response_type='InlineResponse20027',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1043,7 +1580,7 @@ class RepoApi(object):
         :param str access_token: 用户授权码
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20025
+        :return: InlineResponse20028
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1068,7 +1605,7 @@ class RepoApi(object):
         :param str access_token: 用户授权码
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20025
+        :return: InlineResponse20028
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1134,7 +1671,116 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20025',  # noqa: E501
+            response_type='InlineResponse20028',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def repos_owner_repo_collaborators_username_delete(self, owner, repo, username, **kwargs):  # noqa: E501
+        """移除仓库成员  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_collaborators_username_delete(owner, repo, username, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param str username: 用户名(username/login) (required)
+        :param str access_token: 用户授权码
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_collaborators_username_delete_with_http_info(owner, repo, username, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_collaborators_username_delete_with_http_info(owner, repo, username, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_collaborators_username_delete_with_http_info(self, owner, repo, username, **kwargs):  # noqa: E501
+        """移除仓库成员  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_collaborators_username_delete_with_http_info(owner, repo, username, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param str username: 用户名(username/login) (required)
+        :param str access_token: 用户授权码
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'username', 'access_token']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_collaborators_username_delete" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_collaborators_username_delete`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_collaborators_username_delete`")  # noqa: E501
+        # verify the required parameter 'username' is set
+        if ('username' not in params or
+                params['username'] is None):
+            raise ValueError("Missing the required parameter `username` when calling `repos_owner_repo_collaborators_username_delete`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+        if 'username' in params:
+            path_params['username'] = params['username']  # noqa: E501
+
+        query_params = []
+        if 'access_token' in params:
+            query_params.append(('access_token', params['access_token']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/collaborators/{username}', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1264,7 +1910,7 @@ class RepoApi(object):
         :param str repo: 仓库路径(path) (required)
         :param str username: 用户名(username/login) (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20026
+        :return: InlineResponse20029
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1288,7 +1934,7 @@ class RepoApi(object):
         :param str repo: 仓库路径(path) (required)
         :param str username: 用户名(username/login) (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20026
+        :return: InlineResponse20029
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1356,7 +2002,124 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20026',  # noqa: E501
+            response_type='InlineResponse20029',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def repos_owner_repo_collaborators_username_put(self, owner, repo, username, **kwargs):  # noqa: E501
+        """添加仓库成员或更新仓库成员权限  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_collaborators_username_put(owner, repo, username, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param str username: 用户名(username/login) (required)
+        :param CollaboratorsUsernameBody body:
+        :return: InlineResponse20028
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_collaborators_username_put_with_http_info(owner, repo, username, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_collaborators_username_put_with_http_info(owner, repo, username, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_collaborators_username_put_with_http_info(self, owner, repo, username, **kwargs):  # noqa: E501
+        """添加仓库成员或更新仓库成员权限  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_collaborators_username_put_with_http_info(owner, repo, username, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param str username: 用户名(username/login) (required)
+        :param CollaboratorsUsernameBody body:
+        :return: InlineResponse20028
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'username', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_collaborators_username_put" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_collaborators_username_put`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_collaborators_username_put`")  # noqa: E501
+        # verify the required parameter 'username' is set
+        if ('username' not in params or
+                params['username'] is None):
+            raise ValueError("Missing the required parameter `username` when calling `repos_owner_repo_collaborators_username_put`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+        if 'username' in params:
+            path_params['username'] = params['username']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/collaborators/{username}', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse20028',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1383,7 +2146,7 @@ class RepoApi(object):
         :param str until: 提交的最后时间，时间格式为 ISO 8601
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20027
+        :return: InlineResponse20030
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1413,7 +2176,7 @@ class RepoApi(object):
         :param str until: 提交的最后时间，时间格式为 ISO 8601
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20027
+        :return: InlineResponse20030
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1489,7 +2252,108 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20027',  # noqa: E501
+            response_type='InlineResponse20030',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def repos_owner_repo_commits_post(self, owner, repo, **kwargs):  # noqa: E501
+        """提交多个文件变更  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_commits_post(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :return: InlineResponse20031
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_commits_post_with_http_info(owner, repo, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_commits_post_with_http_info(owner, repo, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_commits_post_with_http_info(self, owner, repo, **kwargs):  # noqa: E501
+        """提交多个文件变更  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_commits_post_with_http_info(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :return: InlineResponse20031
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_commits_post" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_commits_post`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_commits_post`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/commits', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse20031',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1510,7 +2374,7 @@ class RepoApi(object):
         :param str repo: 仓库路径(path) (required)
         :param str sha: 提交的SHA值或者分支名 (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20028
+        :return: InlineResponse20031
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1534,7 +2398,7 @@ class RepoApi(object):
         :param str repo: 仓库路径(path) (required)
         :param str sha: 提交的SHA值或者分支名 (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20028
+        :return: InlineResponse20031
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1602,7 +2466,7 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20028',  # noqa: E501
+            response_type='InlineResponse20031',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1626,7 +2490,7 @@ class RepoApi(object):
         :param str access_token: 用户授权码
         :param bool straight: 是否直对比。默认 false
         :param str suffix: 按照文件后缀过滤文件，如 `.txt`。只影响 `files`
-        :return: InlineResponse20029
+        :return: InlineResponse20032
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1653,7 +2517,7 @@ class RepoApi(object):
         :param str access_token: 用户授权码
         :param bool straight: 是否直对比。默认 false
         :param str suffix: 按照文件后缀过滤文件，如 `.txt`。只影响 `files`
-        :return: InlineResponse20029
+        :return: InlineResponse20032
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1731,7 +2595,156 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20029',  # noqa: E501
+            response_type='InlineResponse20032',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def repos_owner_repo_contents_path_delete(self, owner, repo, path, sha, message, **kwargs):  # noqa: E501
+        """删除文件  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_contents_path_delete(owner, repo, path, sha, message, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param str path: 文件的路径 (required)
+        :param str sha: 文件的 Blob SHA，可通过 [获取仓库具体路径下的内容] API 获取 (required)
+        :param str message: 提交信息 (required)
+        :param str access_token: 用户授权码
+        :param str branch: 分支名称。默认为仓库对默认分支
+        :param str committer_name: Committer的名字，默认为当前用户的名字
+        :param str committer_email: Committer的邮箱，默认为当前用户的邮箱
+        :param str author_name: Author的名字，默认为当前用户的名字
+        :param str author_email: Author的邮箱，默认为当前用户的邮箱
+        :return: InlineResponse20034
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_contents_path_delete_with_http_info(owner, repo, path, sha, message, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_contents_path_delete_with_http_info(owner, repo, path, sha, message, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_contents_path_delete_with_http_info(self, owner, repo, path, sha, message, **kwargs):  # noqa: E501
+        """删除文件  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_contents_path_delete_with_http_info(owner, repo, path, sha, message, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param str path: 文件的路径 (required)
+        :param str sha: 文件的 Blob SHA，可通过 [获取仓库具体路径下的内容] API 获取 (required)
+        :param str message: 提交信息 (required)
+        :param str access_token: 用户授权码
+        :param str branch: 分支名称。默认为仓库对默认分支
+        :param str committer_name: Committer的名字，默认为当前用户的名字
+        :param str committer_email: Committer的邮箱，默认为当前用户的邮箱
+        :param str author_name: Author的名字，默认为当前用户的名字
+        :param str author_email: Author的邮箱，默认为当前用户的邮箱
+        :return: InlineResponse20034
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'path', 'sha', 'message', 'access_token', 'branch', 'committer_name', 'committer_email', 'author_name', 'author_email']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_contents_path_delete" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_contents_path_delete`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_contents_path_delete`")  # noqa: E501
+        # verify the required parameter 'path' is set
+        if ('path' not in params or
+                params['path'] is None):
+            raise ValueError("Missing the required parameter `path` when calling `repos_owner_repo_contents_path_delete`")  # noqa: E501
+        # verify the required parameter 'sha' is set
+        if ('sha' not in params or
+                params['sha'] is None):
+            raise ValueError("Missing the required parameter `sha` when calling `repos_owner_repo_contents_path_delete`")  # noqa: E501
+        # verify the required parameter 'message' is set
+        if ('message' not in params or
+                params['message'] is None):
+            raise ValueError("Missing the required parameter `message` when calling `repos_owner_repo_contents_path_delete`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+        if 'path' in params:
+            path_params['path'] = params['path']  # noqa: E501
+
+        query_params = []
+        if 'access_token' in params:
+            query_params.append(('access_token', params['access_token']))  # noqa: E501
+        if 'sha' in params:
+            query_params.append(('sha', params['sha']))  # noqa: E501
+        if 'message' in params:
+            query_params.append(('message', params['message']))  # noqa: E501
+        if 'branch' in params:
+            query_params.append(('branch', params['branch']))  # noqa: E501
+        if 'committer_name' in params:
+            query_params.append(('committer[name]', params['committer_name']))  # noqa: E501
+        if 'committer_email' in params:
+            query_params.append(('committer[email]', params['committer_email']))  # noqa: E501
+        if 'author_name' in params:
+            query_params.append(('author[name]', params['author_name']))  # noqa: E501
+        if 'author_email' in params:
+            query_params.append(('author[email]', params['author_email']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/contents/{path}', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse20034',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1753,7 +2766,7 @@ class RepoApi(object):
         :param str path: 文件的路径 (required)
         :param str access_token: 用户授权码
         :param str ref: 分支、tag或commit。默认: 仓库的默认分支(通常是master)
-        :return: InlineResponse20030
+        :return: InlineResponse20033
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1778,7 +2791,7 @@ class RepoApi(object):
         :param str path: 文件的路径 (required)
         :param str access_token: 用户授权码
         :param str ref: 分支、tag或commit。默认: 仓库的默认分支(通常是master)
-        :return: InlineResponse20030
+        :return: InlineResponse20033
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1848,7 +2861,7 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20030',  # noqa: E501
+            response_type='InlineResponse20033',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1868,8 +2881,8 @@ class RepoApi(object):
         :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
         :param str repo: 仓库路径(path) (required)
         :param str path: 文件的路径 (required)
-        :param ContentsPathBody body:
-        :return: InlineResponse20031
+        :param ContentsPathBody1 body:
+        :return: InlineResponse20034
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1892,8 +2905,8 @@ class RepoApi(object):
         :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
         :param str repo: 仓库路径(path) (required)
         :param str path: 文件的路径 (required)
-        :param ContentsPathBody body:
-        :return: InlineResponse20031
+        :param ContentsPathBody1 body:
+        :return: InlineResponse20034
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1965,7 +2978,124 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20031',  # noqa: E501
+            response_type='InlineResponse20034',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def repos_owner_repo_contents_path_put(self, owner, repo, path, **kwargs):  # noqa: E501
+        """更新文件  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_contents_path_put(owner, repo, path, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param str path: 文件的路径 (required)
+        :param ContentsPathBody body:
+        :return: InlineResponse20034
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_contents_path_put_with_http_info(owner, repo, path, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_contents_path_put_with_http_info(owner, repo, path, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_contents_path_put_with_http_info(self, owner, repo, path, **kwargs):  # noqa: E501
+        """更新文件  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_contents_path_put_with_http_info(owner, repo, path, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param str path: 文件的路径 (required)
+        :param ContentsPathBody body:
+        :return: InlineResponse20034
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'path', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_contents_path_put" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_contents_path_put`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_contents_path_put`")  # noqa: E501
+        # verify the required parameter 'path' is set
+        if ('path' not in params or
+                params['path'] is None):
+            raise ValueError("Missing the required parameter `path` when calling `repos_owner_repo_contents_path_put`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+        if 'path' in params:
+            path_params['path'] = params['path']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/contents/{path}', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse20034',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1986,7 +3116,7 @@ class RepoApi(object):
         :param str repo: 仓库路径(path) (required)
         :param str access_token: 用户授权码
         :param str type: 贡献者类型
-        :return: InlineResponse20032
+        :return: InlineResponse20035
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2010,7 +3140,7 @@ class RepoApi(object):
         :param str repo: 仓库路径(path) (required)
         :param str access_token: 用户授权码
         :param str type: 贡献者类型
-        :return: InlineResponse20032
+        :return: InlineResponse20035
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2074,7 +3204,108 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20032',  # noqa: E501
+            response_type='InlineResponse20035',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def repos_owner_repo_delete(self, owner, repo, **kwargs):  # noqa: E501
+        """删除一个仓库  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_delete(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param str access_token: 用户授权码
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_delete_with_http_info(owner, repo, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_delete_with_http_info(owner, repo, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_delete_with_http_info(self, owner, repo, **kwargs):  # noqa: E501
+        """删除一个仓库  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_delete_with_http_info(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param str access_token: 用户授权码
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'access_token']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_delete" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_delete`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_delete`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+
+        query_params = []
+        if 'access_token' in params:
+            query_params.append(('access_token', params['access_token']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -2096,7 +3327,7 @@ class RepoApi(object):
         :param str access_token: 用户授权码
         :param int prev_id: 滚动列表的最后一条记录的id
         :param int limit: 滚动列表每页的数量，最大为 100
-        :return: InlineResponse20012
+        :return: InlineResponse20013
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2121,7 +3352,7 @@ class RepoApi(object):
         :param str access_token: 用户授权码
         :param int prev_id: 滚动列表的最后一条记录的id
         :param int limit: 滚动列表每页的数量，最大为 100
-        :return: InlineResponse20012
+        :return: InlineResponse20013
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2187,7 +3418,7 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20012',  # noqa: E501
+            response_type='InlineResponse20013',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -2298,6 +3529,115 @@ class RepoApi(object):
 
         return self.api_client.call_api(
             '/repos/{owner}/{repo}/forks', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse2007',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def repos_owner_repo_forks_post(self, owner, repo, **kwargs):  # noqa: E501
+        """Fork一个仓库  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_forks_post(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param RepoForksBody body:
+        :return: InlineResponse2007
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_forks_post_with_http_info(owner, repo, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_forks_post_with_http_info(owner, repo, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_forks_post_with_http_info(self, owner, repo, **kwargs):  # noqa: E501
+        """Fork一个仓库  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_forks_post_with_http_info(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param RepoForksBody body:
+        :return: InlineResponse2007
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_forks_post" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_forks_post`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_forks_post`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/forks', 'POST',
             path_params,
             query_params,
             header_params,
@@ -2430,7 +3770,7 @@ class RepoApi(object):
         :param str repo: 仓库路径(path) (required)
         :param str sha: 文件的 Blob SHA，可通过 [获取仓库具体路径下的内容] API 获取 (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20033
+        :return: InlineResponse20036
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2454,7 +3794,7 @@ class RepoApi(object):
         :param str repo: 仓库路径(path) (required)
         :param str sha: 文件的 Blob SHA，可通过 [获取仓库具体路径下的内容] API 获取 (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20033
+        :return: InlineResponse20036
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2522,7 +3862,7 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20033',  # noqa: E501
+            response_type='InlineResponse20036',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -2542,7 +3882,7 @@ class RepoApi(object):
         :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
         :param str repo: 仓库路径(path) (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20034
+        :return: InlineResponse20037
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2565,7 +3905,7 @@ class RepoApi(object):
         :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
         :param str repo: 仓库路径(path) (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20034
+        :return: InlineResponse20037
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2627,7 +3967,7 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20034',  # noqa: E501
+            response_type='InlineResponse20037',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -2649,7 +3989,7 @@ class RepoApi(object):
         :param str sha: 可以是分支名(如master)、Commit或者目录Tree的SHA值 (required)
         :param str access_token: 用户授权码
         :param int recursive: 赋值为1递归获取目录
-        :return: InlineResponse20035
+        :return: InlineResponse20038
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2674,7 +4014,7 @@ class RepoApi(object):
         :param str sha: 可以是分支名(如master)、Commit或者目录Tree的SHA值 (required)
         :param str access_token: 用户授权码
         :param int recursive: 赋值为1递归获取目录
-        :return: InlineResponse20035
+        :return: InlineResponse20038
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2744,7 +4084,7 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20035',  # noqa: E501
+            response_type='InlineResponse20038',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -2766,7 +4106,7 @@ class RepoApi(object):
         :param str access_token: 用户授权码
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20038
+        :return: InlineResponse20041
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2791,7 +4131,7 @@ class RepoApi(object):
         :param str access_token: 用户授权码
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20038
+        :return: InlineResponse20041
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2857,7 +4197,116 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20038',  # noqa: E501
+            response_type='InlineResponse20041',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def repos_owner_repo_keys_enable_id_delete(self, owner, repo, id, **kwargs):  # noqa: E501
+        """停用仓库公钥  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_keys_enable_id_delete(owner, repo, id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param int id: 公钥 ID (required)
+        :param str access_token: 用户授权码
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_keys_enable_id_delete_with_http_info(owner, repo, id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_keys_enable_id_delete_with_http_info(owner, repo, id, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_keys_enable_id_delete_with_http_info(self, owner, repo, id, **kwargs):  # noqa: E501
+        """停用仓库公钥  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_keys_enable_id_delete_with_http_info(owner, repo, id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param int id: 公钥 ID (required)
+        :param str access_token: 用户授权码
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'id', 'access_token']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_keys_enable_id_delete" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_keys_enable_id_delete`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_keys_enable_id_delete`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `repos_owner_repo_keys_enable_id_delete`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+        if 'access_token' in params:
+            query_params.append(('access_token', params['access_token']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/keys/enable/{id}', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -2992,7 +4441,7 @@ class RepoApi(object):
         :param str access_token: 用户授权码
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20037
+        :return: InlineResponse20040
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3017,7 +4466,7 @@ class RepoApi(object):
         :param str access_token: 用户授权码
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20037
+        :return: InlineResponse20040
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3083,7 +4532,116 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20037',  # noqa: E501
+            response_type='InlineResponse20040',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def repos_owner_repo_keys_id_delete(self, owner, repo, id, **kwargs):  # noqa: E501
+        """删除一个仓库公钥  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_keys_id_delete(owner, repo, id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param int id: 公钥 ID (required)
+        :param str access_token: 用户授权码
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_keys_id_delete_with_http_info(owner, repo, id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_keys_id_delete_with_http_info(owner, repo, id, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_keys_id_delete_with_http_info(self, owner, repo, id, **kwargs):  # noqa: E501
+        """删除一个仓库公钥  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_keys_id_delete_with_http_info(owner, repo, id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param int id: 公钥 ID (required)
+        :param str access_token: 用户授权码
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'id', 'access_token']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_keys_id_delete" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_keys_id_delete`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_keys_id_delete`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `repos_owner_repo_keys_id_delete`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+        if 'access_token' in params:
+            query_params.append(('access_token', params['access_token']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/keys/{id}', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -3104,7 +4662,7 @@ class RepoApi(object):
         :param str repo: 仓库路径(path) (required)
         :param int id: 公钥 ID (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20037
+        :return: InlineResponse20040
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3128,7 +4686,7 @@ class RepoApi(object):
         :param str repo: 仓库路径(path) (required)
         :param int id: 公钥 ID (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20037
+        :return: InlineResponse20040
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3196,7 +4754,116 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20037',  # noqa: E501
+            response_type='InlineResponse20040',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def repos_owner_repo_keys_post(self, owner, repo, **kwargs):  # noqa: E501
+        """为仓库添加公钥  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_keys_post(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param RepoKeysBody body:
+        :return: InlineResponse20040
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_keys_post_with_http_info(owner, repo, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_keys_post_with_http_info(owner, repo, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_keys_post_with_http_info(self, owner, repo, **kwargs):  # noqa: E501
+        """为仓库添加公钥  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_keys_post_with_http_info(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param RepoKeysBody body:
+        :return: InlineResponse20040
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_keys_post" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_keys_post`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_keys_post`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/keys', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse20040',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -3302,6 +4969,115 @@ class RepoApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='InlineResponse2005',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def repos_owner_repo_labels_name_delete(self, owner, repo, name, **kwargs):  # noqa: E501
+        """删除一个仓库任务标签  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_labels_name_delete(owner, repo, name, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param str name: 标签名称 (required)
+        :param str access_token: 用户授权码
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_labels_name_delete_with_http_info(owner, repo, name, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_labels_name_delete_with_http_info(owner, repo, name, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_labels_name_delete_with_http_info(self, owner, repo, name, **kwargs):  # noqa: E501
+        """删除一个仓库任务标签  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_labels_name_delete_with_http_info(owner, repo, name, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param str name: 标签名称 (required)
+        :param str access_token: 用户授权码
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'name', 'access_token']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_labels_name_delete" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_labels_name_delete`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_labels_name_delete`")  # noqa: E501
+        # verify the required parameter 'name' is set
+        if ('name' not in params or
+                params['name'] is None):
+            raise ValueError("Missing the required parameter `name` when calling `repos_owner_repo_labels_name_delete`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+        if 'name' in params:
+            path_params['name'] = params['name']  # noqa: E501
+
+        query_params = []
+        if 'access_token' in params:
+            query_params.append(('access_token', params['access_token']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/labels/{name}', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -3539,6 +5315,115 @@ class RepoApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def repos_owner_repo_labels_post(self, owner, repo, **kwargs):  # noqa: E501
+        """创建仓库任务标签  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_labels_post(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param RepoLabelsBody body:
+        :return: InlineResponse2005
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_labels_post_with_http_info(owner, repo, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_labels_post_with_http_info(owner, repo, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_labels_post_with_http_info(self, owner, repo, **kwargs):  # noqa: E501
+        """创建仓库任务标签  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_labels_post_with_http_info(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param RepoLabelsBody body:
+        :return: InlineResponse2005
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_labels_post" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_labels_post`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_labels_post`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/labels', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse2005',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def repos_owner_repo_license_get(self, owner, repo, **kwargs):  # noqa: E501
         """获取一个仓库使用的开源许可协议  # noqa: E501
 
@@ -3657,7 +5542,7 @@ class RepoApi(object):
         :param str direction: 升序(asc)或是降序(desc)。默认: asc
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20039
+        :return: InlineResponse20042
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3685,7 +5570,7 @@ class RepoApi(object):
         :param str direction: 升序(asc)或是降序(desc)。默认: asc
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20039
+        :return: InlineResponse20042
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3757,7 +5642,116 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20039',  # noqa: E501
+            response_type='InlineResponse20042',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def repos_owner_repo_milestones_number_delete(self, owner, repo, number, **kwargs):  # noqa: E501
+        """删除仓库单个里程碑  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_milestones_number_delete(owner, repo, number, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param int number: 里程碑序号(id) (required)
+        :param str access_token: 用户授权码
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_milestones_number_delete_with_http_info(owner, repo, number, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_milestones_number_delete_with_http_info(owner, repo, number, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_milestones_number_delete_with_http_info(self, owner, repo, number, **kwargs):  # noqa: E501
+        """删除仓库单个里程碑  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_milestones_number_delete_with_http_info(owner, repo, number, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param int number: 里程碑序号(id) (required)
+        :param str access_token: 用户授权码
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'number', 'access_token']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_milestones_number_delete" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_milestones_number_delete`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_milestones_number_delete`")  # noqa: E501
+        # verify the required parameter 'number' is set
+        if ('number' not in params or
+                params['number'] is None):
+            raise ValueError("Missing the required parameter `number` when calling `repos_owner_repo_milestones_number_delete`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+        if 'number' in params:
+            path_params['number'] = params['number']  # noqa: E501
+
+        query_params = []
+        if 'access_token' in params:
+            query_params.append(('access_token', params['access_token']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/milestones/{number}', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -3778,7 +5772,7 @@ class RepoApi(object):
         :param str repo: 仓库路径(path) (required)
         :param int number: 里程碑序号(id) (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20039
+        :return: InlineResponse20042
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3802,7 +5796,7 @@ class RepoApi(object):
         :param str repo: 仓库路径(path) (required)
         :param int number: 里程碑序号(id) (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20039
+        :return: InlineResponse20042
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3870,7 +5864,233 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20039',  # noqa: E501
+            response_type='InlineResponse20042',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def repos_owner_repo_milestones_number_patch(self, owner, repo, number, **kwargs):  # noqa: E501
+        """更新仓库里程碑  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_milestones_number_patch(owner, repo, number, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param int number: 里程碑序号(id) (required)
+        :param MilestonesNumberBody body:
+        :return: InlineResponse20042
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_milestones_number_patch_with_http_info(owner, repo, number, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_milestones_number_patch_with_http_info(owner, repo, number, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_milestones_number_patch_with_http_info(self, owner, repo, number, **kwargs):  # noqa: E501
+        """更新仓库里程碑  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_milestones_number_patch_with_http_info(owner, repo, number, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param int number: 里程碑序号(id) (required)
+        :param MilestonesNumberBody body:
+        :return: InlineResponse20042
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'number', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_milestones_number_patch" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_milestones_number_patch`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_milestones_number_patch`")  # noqa: E501
+        # verify the required parameter 'number' is set
+        if ('number' not in params or
+                params['number'] is None):
+            raise ValueError("Missing the required parameter `number` when calling `repos_owner_repo_milestones_number_patch`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+        if 'number' in params:
+            path_params['number'] = params['number']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/milestones/{number}', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse20042',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def repos_owner_repo_milestones_post(self, owner, repo, **kwargs):  # noqa: E501
+        """创建仓库里程碑  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_milestones_post(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param RepoMilestonesBody body:
+        :return: InlineResponse20042
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_milestones_post_with_http_info(owner, repo, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_milestones_post_with_http_info(owner, repo, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_milestones_post_with_http_info(self, owner, repo, **kwargs):  # noqa: E501
+        """创建仓库里程碑  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_milestones_post_with_http_info(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param RepoMilestonesBody body:
+        :return: InlineResponse20042
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_milestones_post" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_milestones_post`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_milestones_post`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/milestones', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse20042',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -4189,6 +6409,333 @@ class RepoApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def repos_owner_repo_pages_put(self, owner, repo, **kwargs):  # noqa: E501
+        """上传设置 Pages SSL 证书和域名  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_pages_put(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param RepoPagesBody body:
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_pages_put_with_http_info(owner, repo, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_pages_put_with_http_info(owner, repo, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_pages_put_with_http_info(self, owner, repo, **kwargs):  # noqa: E501
+        """上传设置 Pages SSL 证书和域名  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_pages_put_with_http_info(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param RepoPagesBody body:
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_pages_put" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_pages_put`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_pages_put`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/pages', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def repos_owner_repo_patch(self, owner, repo, **kwargs):  # noqa: E501
+        """更新仓库设置  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_patch(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param OwnerRepoBody body:
+        :return: InlineResponse2007
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_patch_with_http_info(owner, repo, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_patch_with_http_info(owner, repo, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_patch_with_http_info(self, owner, repo, **kwargs):  # noqa: E501
+        """更新仓库设置  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_patch_with_http_info(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param OwnerRepoBody body:
+        :return: InlineResponse2007
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_patch" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_patch`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_patch`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse2007',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def repos_owner_repo_project_labels_delete(self, body, owner, repo, **kwargs):  # noqa: E501
+        """删除仓库标签  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_project_labels_delete(body, owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param list body: 标签名数组，如: ["feat", "bug"] (required)
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param str access_token: 用户授权码
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_project_labels_delete_with_http_info(body, owner, repo, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_project_labels_delete_with_http_info(body, owner, repo, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_project_labels_delete_with_http_info(self, body, owner, repo, **kwargs):  # noqa: E501
+        """删除仓库标签  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_project_labels_delete_with_http_info(body, owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param list body: 标签名数组，如: ["feat", "bug"] (required)
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param str access_token: 用户授权码
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'owner', 'repo', 'access_token']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_project_labels_delete" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `repos_owner_repo_project_labels_delete`")  # noqa: E501
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_project_labels_delete`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_project_labels_delete`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+
+        query_params = []
+        if 'access_token' in params:
+            query_params.append(('access_token', params['access_token']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['*/*'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/project_labels', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def repos_owner_repo_project_labels_get(self, owner, repo, **kwargs):  # noqa: E501
         """获取仓库所有标签  # noqa: E501
 
@@ -4201,7 +6748,7 @@ class RepoApi(object):
         :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
         :param str repo: 仓库路径(path) (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20040
+        :return: InlineResponse20043
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4224,7 +6771,7 @@ class RepoApi(object):
         :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
         :param str repo: 仓库路径(path) (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20040
+        :return: InlineResponse20043
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4286,7 +6833,225 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20040',  # noqa: E501
+            response_type='InlineResponse20043',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def repos_owner_repo_project_labels_post(self, owner, repo, **kwargs):  # noqa: E501
+        """添加仓库标签  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_project_labels_post(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param RepoProjectLabelsBody1 body:
+        :return: InlineResponse20043
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_project_labels_post_with_http_info(owner, repo, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_project_labels_post_with_http_info(owner, repo, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_project_labels_post_with_http_info(self, owner, repo, **kwargs):  # noqa: E501
+        """添加仓库标签  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_project_labels_post_with_http_info(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param RepoProjectLabelsBody1 body:
+        :return: InlineResponse20043
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_project_labels_post" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_project_labels_post`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_project_labels_post`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/project_labels', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse20043',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def repos_owner_repo_project_labels_put(self, owner, repo, **kwargs):  # noqa: E501
+        """替换所有仓库标签  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_project_labels_put(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param RepoProjectLabelsBody body:
+        :return: InlineResponse20043
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_project_labels_put_with_http_info(owner, repo, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_project_labels_put_with_http_info(owner, repo, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_project_labels_put_with_http_info(self, owner, repo, **kwargs):  # noqa: E501
+        """替换所有仓库标签  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_project_labels_put_with_http_info(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param RepoProjectLabelsBody body:
+        :return: InlineResponse20043
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_project_labels_put" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_project_labels_put`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_project_labels_put`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/project_labels', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse20043',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -4439,6 +7204,244 @@ class RepoApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def repos_owner_repo_pulls_number_assignees_delete(self, owner, repo, number, assignees, **kwargs):  # noqa: E501
+        """取消用户审查 Pull Request  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_pulls_number_assignees_delete(owner, repo, number, assignees, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param int number: 第几个PR，即本仓库PR的序数 (required)
+        :param str assignees: 用户的个人空间地址, 以 , 分隔 (required)
+        :param str access_token: 用户授权码
+        :return: InlineResponse2001
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_pulls_number_assignees_delete_with_http_info(owner, repo, number, assignees, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_pulls_number_assignees_delete_with_http_info(owner, repo, number, assignees, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_pulls_number_assignees_delete_with_http_info(self, owner, repo, number, assignees, **kwargs):  # noqa: E501
+        """取消用户审查 Pull Request  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_pulls_number_assignees_delete_with_http_info(owner, repo, number, assignees, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param int number: 第几个PR，即本仓库PR的序数 (required)
+        :param str assignees: 用户的个人空间地址, 以 , 分隔 (required)
+        :param str access_token: 用户授权码
+        :return: InlineResponse2001
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'number', 'assignees', 'access_token']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_pulls_number_assignees_delete" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_pulls_number_assignees_delete`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_pulls_number_assignees_delete`")  # noqa: E501
+        # verify the required parameter 'number' is set
+        if ('number' not in params or
+                params['number'] is None):
+            raise ValueError("Missing the required parameter `number` when calling `repos_owner_repo_pulls_number_assignees_delete`")  # noqa: E501
+        # verify the required parameter 'assignees' is set
+        if ('assignees' not in params or
+                params['assignees'] is None):
+            raise ValueError("Missing the required parameter `assignees` when calling `repos_owner_repo_pulls_number_assignees_delete`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+        if 'number' in params:
+            path_params['number'] = params['number']  # noqa: E501
+
+        query_params = []
+        if 'access_token' in params:
+            query_params.append(('access_token', params['access_token']))  # noqa: E501
+        if 'assignees' in params:
+            query_params.append(('assignees', params['assignees']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/pulls/{number}/assignees', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse2001',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def repos_owner_repo_pulls_number_assignees_patch(self, owner, repo, number, **kwargs):  # noqa: E501
+        """重置 Pull Request 审查 的状态  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_pulls_number_assignees_patch(owner, repo, number, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param int number: 第几个PR，即本仓库PR的序数 (required)
+        :param NumberAssigneesBody1 body:
+        :return: InlineResponse2001
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_pulls_number_assignees_patch_with_http_info(owner, repo, number, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_pulls_number_assignees_patch_with_http_info(owner, repo, number, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_pulls_number_assignees_patch_with_http_info(self, owner, repo, number, **kwargs):  # noqa: E501
+        """重置 Pull Request 审查 的状态  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_pulls_number_assignees_patch_with_http_info(owner, repo, number, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param int number: 第几个PR，即本仓库PR的序数 (required)
+        :param NumberAssigneesBody1 body:
+        :return: InlineResponse2001
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'number', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_pulls_number_assignees_patch" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_pulls_number_assignees_patch`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_pulls_number_assignees_patch`")  # noqa: E501
+        # verify the required parameter 'number' is set
+        if ('number' not in params or
+                params['number'] is None):
+            raise ValueError("Missing the required parameter `number` when calling `repos_owner_repo_pulls_number_assignees_patch`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+        if 'number' in params:
+            path_params['number'] = params['number']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/pulls/{number}/assignees', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse2001',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def repos_owner_repo_pulls_number_assignees_post(self, owner, repo, number, **kwargs):  # noqa: E501
         """指派用户审查 Pull Request  # noqa: E501
 
@@ -4569,7 +7572,7 @@ class RepoApi(object):
         :param str repo: 仓库路径(path) (required)
         :param int number: 第几个PR，即本仓库PR的序数 (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20042
+        :return: InlineResponse20045
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4593,7 +7596,7 @@ class RepoApi(object):
         :param str repo: 仓库路径(path) (required)
         :param int number: 第几个PR，即本仓库PR的序数 (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20042
+        :return: InlineResponse20045
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4661,7 +7664,7 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20042',  # noqa: E501
+            response_type='InlineResponse20045',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -4682,7 +7685,7 @@ class RepoApi(object):
         :param str repo: 仓库路径(path) (required)
         :param int number: 第几个PR，即本仓库PR的序数 (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20043
+        :return: InlineResponse20046
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4706,7 +7709,7 @@ class RepoApi(object):
         :param str repo: 仓库路径(path) (required)
         :param int number: 第几个PR，即本仓库PR的序数 (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20043
+        :return: InlineResponse20046
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4774,7 +7777,7 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20043',  # noqa: E501
+            response_type='InlineResponse20046',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -5133,6 +8136,240 @@ class RepoApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def repos_owner_repo_pulls_number_labels_post(self, owner, repo, number, **kwargs):  # noqa: E501
+        """创建 Pull Request 标签  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_pulls_number_labels_post(owner, repo, number, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param int number: 第几个PR，即本仓库PR的序数 (required)
+        :param NumberLabelsBody3 body:
+        :return: InlineResponse2005
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_pulls_number_labels_post_with_http_info(owner, repo, number, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_pulls_number_labels_post_with_http_info(owner, repo, number, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_pulls_number_labels_post_with_http_info(self, owner, repo, number, **kwargs):  # noqa: E501
+        """创建 Pull Request 标签  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_pulls_number_labels_post_with_http_info(owner, repo, number, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param int number: 第几个PR，即本仓库PR的序数 (required)
+        :param NumberLabelsBody3 body:
+        :return: InlineResponse2005
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'number', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_pulls_number_labels_post" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_pulls_number_labels_post`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_pulls_number_labels_post`")  # noqa: E501
+        # verify the required parameter 'number' is set
+        if ('number' not in params or
+                params['number'] is None):
+            raise ValueError("Missing the required parameter `number` when calling `repos_owner_repo_pulls_number_labels_post`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+        if 'number' in params:
+            path_params['number'] = params['number']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/pulls/{number}/labels', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse2005',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def repos_owner_repo_pulls_number_labels_put(self, owner, repo, number, **kwargs):  # noqa: E501
+        """替换 Pull Request 所有标签  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_pulls_number_labels_put(owner, repo, number, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param int number: 第几个PR，即本仓库PR的序数 (required)
+        :param NumberLabelsBody2 body:
+        :return: InlineResponse2005
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_pulls_number_labels_put_with_http_info(owner, repo, number, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_pulls_number_labels_put_with_http_info(owner, repo, number, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_pulls_number_labels_put_with_http_info(self, owner, repo, number, **kwargs):  # noqa: E501
+        """替换 Pull Request 所有标签  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_pulls_number_labels_put_with_http_info(owner, repo, number, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param int number: 第几个PR，即本仓库PR的序数 (required)
+        :param NumberLabelsBody2 body:
+        :return: InlineResponse2005
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'number', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_pulls_number_labels_put" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_pulls_number_labels_put`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_pulls_number_labels_put`")  # noqa: E501
+        # verify the required parameter 'number' is set
+        if ('number' not in params or
+                params['number'] is None):
+            raise ValueError("Missing the required parameter `number` when calling `repos_owner_repo_pulls_number_labels_put`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+        if 'number' in params:
+            path_params['number'] = params['number']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/pulls/{number}/labels', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse2005',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def repos_owner_repo_pulls_number_merge_get(self, owner, repo, number, **kwargs):  # noqa: E501
         """判断Pull Request是否已经合并  # noqa: E501
 
@@ -5242,6 +8479,119 @@ class RepoApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def repos_owner_repo_pulls_number_merge_put(self, owner, repo, number, **kwargs):  # noqa: E501
+        """合并Pull Request  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_pulls_number_merge_put(owner, repo, number, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param int number: 第几个PR，即本仓库PR的序数 (required)
+        :param NumberMergeBody body:
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_pulls_number_merge_put_with_http_info(owner, repo, number, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_pulls_number_merge_put_with_http_info(owner, repo, number, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_pulls_number_merge_put_with_http_info(self, owner, repo, number, **kwargs):  # noqa: E501
+        """合并Pull Request  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_pulls_number_merge_put_with_http_info(owner, repo, number, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param int number: 第几个PR，即本仓库PR的序数 (required)
+        :param NumberMergeBody body:
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'number', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_pulls_number_merge_put" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_pulls_number_merge_put`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_pulls_number_merge_put`")  # noqa: E501
+        # verify the required parameter 'number' is set
+        if ('number' not in params or
+                params['number'] is None):
+            raise ValueError("Missing the required parameter `number` when calling `repos_owner_repo_pulls_number_merge_put`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+        if 'number' in params:
+            path_params['number'] = params['number']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/pulls/{number}/merge', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def repos_owner_repo_pulls_number_operate_logs_get(self, owner, repo, number, **kwargs):  # noqa: E501
         """获取某个Pull Request的操作日志  # noqa: E501
 
@@ -5256,7 +8606,7 @@ class RepoApi(object):
         :param int number: 第几个PR，即本仓库PR的序数 (required)
         :param str access_token: 用户授权码
         :param str sort: 按递增(asc)或递减(desc)排序，默认：递减
-        :return: InlineResponse20020
+        :return: InlineResponse20023
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -5281,7 +8631,7 @@ class RepoApi(object):
         :param int number: 第几个PR，即本仓库PR的序数 (required)
         :param str access_token: 用户授权码
         :param str sort: 按递增(asc)或递减(desc)排序，默认：递减
-        :return: InlineResponse20020
+        :return: InlineResponse20023
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -5351,7 +8701,124 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20020',  # noqa: E501
+            response_type='InlineResponse20023',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def repos_owner_repo_pulls_number_patch(self, owner, repo, number, **kwargs):  # noqa: E501
+        """更新Pull Request信息  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_pulls_number_patch(owner, repo, number, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param int number: 第几个PR，即本仓库PR的序数 (required)
+        :param PullsNumberBody body:
+        :return: InlineResponse2001
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_pulls_number_patch_with_http_info(owner, repo, number, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_pulls_number_patch_with_http_info(owner, repo, number, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_pulls_number_patch_with_http_info(self, owner, repo, number, **kwargs):  # noqa: E501
+        """更新Pull Request信息  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_pulls_number_patch_with_http_info(owner, repo, number, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param int number: 第几个PR，即本仓库PR的序数 (required)
+        :param PullsNumberBody body:
+        :return: InlineResponse2001
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'number', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_pulls_number_patch" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_pulls_number_patch`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_pulls_number_patch`")  # noqa: E501
+        # verify the required parameter 'number' is set
+        if ('number' not in params or
+                params['number'] is None):
+            raise ValueError("Missing the required parameter `number` when calling `repos_owner_repo_pulls_number_patch`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+        if 'number' in params:
+            path_params['number'] = params['number']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/pulls/{number}', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse2001',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -5585,6 +9052,244 @@ class RepoApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def repos_owner_repo_pulls_number_testers_delete(self, owner, repo, number, testers, **kwargs):  # noqa: E501
+        """取消用户测试 Pull Request  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_pulls_number_testers_delete(owner, repo, number, testers, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param int number: 第几个PR，即本仓库PR的序数 (required)
+        :param str testers: 用户的个人空间地址, 以 , 分隔 (required)
+        :param str access_token: 用户授权码
+        :return: InlineResponse2001
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_pulls_number_testers_delete_with_http_info(owner, repo, number, testers, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_pulls_number_testers_delete_with_http_info(owner, repo, number, testers, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_pulls_number_testers_delete_with_http_info(self, owner, repo, number, testers, **kwargs):  # noqa: E501
+        """取消用户测试 Pull Request  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_pulls_number_testers_delete_with_http_info(owner, repo, number, testers, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param int number: 第几个PR，即本仓库PR的序数 (required)
+        :param str testers: 用户的个人空间地址, 以 , 分隔 (required)
+        :param str access_token: 用户授权码
+        :return: InlineResponse2001
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'number', 'testers', 'access_token']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_pulls_number_testers_delete" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_pulls_number_testers_delete`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_pulls_number_testers_delete`")  # noqa: E501
+        # verify the required parameter 'number' is set
+        if ('number' not in params or
+                params['number'] is None):
+            raise ValueError("Missing the required parameter `number` when calling `repos_owner_repo_pulls_number_testers_delete`")  # noqa: E501
+        # verify the required parameter 'testers' is set
+        if ('testers' not in params or
+                params['testers'] is None):
+            raise ValueError("Missing the required parameter `testers` when calling `repos_owner_repo_pulls_number_testers_delete`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+        if 'number' in params:
+            path_params['number'] = params['number']  # noqa: E501
+
+        query_params = []
+        if 'access_token' in params:
+            query_params.append(('access_token', params['access_token']))  # noqa: E501
+        if 'testers' in params:
+            query_params.append(('testers', params['testers']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/pulls/{number}/testers', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse2001',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def repos_owner_repo_pulls_number_testers_patch(self, owner, repo, number, **kwargs):  # noqa: E501
+        """重置 Pull Request 测试 的状态  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_pulls_number_testers_patch(owner, repo, number, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param int number: 第几个PR，即本仓库PR的序数 (required)
+        :param NumberTestersBody1 body:
+        :return: InlineResponse2001
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_pulls_number_testers_patch_with_http_info(owner, repo, number, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_pulls_number_testers_patch_with_http_info(owner, repo, number, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_pulls_number_testers_patch_with_http_info(self, owner, repo, number, **kwargs):  # noqa: E501
+        """重置 Pull Request 测试 的状态  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_pulls_number_testers_patch_with_http_info(owner, repo, number, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param int number: 第几个PR，即本仓库PR的序数 (required)
+        :param NumberTestersBody1 body:
+        :return: InlineResponse2001
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'number', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_pulls_number_testers_patch" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_pulls_number_testers_patch`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_pulls_number_testers_patch`")  # noqa: E501
+        # verify the required parameter 'number' is set
+        if ('number' not in params or
+                params['number'] is None):
+            raise ValueError("Missing the required parameter `number` when calling `repos_owner_repo_pulls_number_testers_patch`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+        if 'number' in params:
+            path_params['number'] = params['number']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/pulls/{number}/testers', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse2001',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def repos_owner_repo_pulls_number_testers_post(self, owner, repo, number, **kwargs):  # noqa: E501
         """指派用户测试 Pull Request  # noqa: E501
 
@@ -5702,6 +9407,115 @@ class RepoApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def repos_owner_repo_pulls_post(self, owner, repo, **kwargs):  # noqa: E501
+        """创建Pull Request  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_pulls_post(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param RepoPullsBody body:
+        :return: InlineResponse2001
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_pulls_post_with_http_info(owner, repo, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_pulls_post_with_http_info(owner, repo, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_pulls_post_with_http_info(self, owner, repo, **kwargs):  # noqa: E501
+        """创建Pull Request  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_pulls_post_with_http_info(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param RepoPullsBody body:
+        :return: InlineResponse2001
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_pulls_post" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_pulls_post`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_pulls_post`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/pulls', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse2001',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def repos_owner_repo_push_config_get(self, owner, repo, **kwargs):  # noqa: E501
         """获取仓库推送规则设置  # noqa: E501
 
@@ -5714,7 +9528,7 @@ class RepoApi(object):
         :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
         :param str repo: 仓库路径(path) (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20044
+        :return: InlineResponse20047
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -5737,7 +9551,7 @@ class RepoApi(object):
         :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
         :param str repo: 仓库路径(path) (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20044
+        :return: InlineResponse20047
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -5799,7 +9613,116 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20044',  # noqa: E501
+            response_type='InlineResponse20047',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def repos_owner_repo_push_config_put(self, owner, repo, **kwargs):  # noqa: E501
+        """修改仓库推送规则设置  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_push_config_put(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param RepoPushConfigBody body:
+        :return: InlineResponse20047
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_push_config_put_with_http_info(owner, repo, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_push_config_put_with_http_info(owner, repo, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_push_config_put_with_http_info(self, owner, repo, **kwargs):  # noqa: E501
+        """修改仓库推送规则设置  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_push_config_put_with_http_info(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param RepoPushConfigBody body:
+        :return: InlineResponse20047
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_push_config_put" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_push_config_put`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_push_config_put`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/push_config', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse20047',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -5933,7 +9856,7 @@ class RepoApi(object):
         :param str repo: 仓库路径(path) (required)
         :param str access_token: 用户授权码
         :param str ref: 分支、tag或commit。默认: 仓库的默认分支(通常是master)
-        :return: InlineResponse20030
+        :return: InlineResponse20033
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -5957,7 +9880,7 @@ class RepoApi(object):
         :param str repo: 仓库路径(path) (required)
         :param str access_token: 用户授权码
         :param str ref: 分支、tag或commit。默认: 仓库的默认分支(通常是master)
-        :return: InlineResponse20030
+        :return: InlineResponse20033
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6021,7 +9944,7 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20030',  # noqa: E501
+            response_type='InlineResponse20033',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -6041,7 +9964,7 @@ class RepoApi(object):
         :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
         :param str repo: 仓库路径(path) (required)
         :param RepoReviewerBody body:
-        :return: InlineResponse20032
+        :return: InlineResponse20035
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6064,7 +9987,7 @@ class RepoApi(object):
         :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
         :param str repo: 仓库路径(path) (required)
         :param RepoReviewerBody body:
-        :return: InlineResponse20032
+        :return: InlineResponse20035
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6130,7 +10053,7 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20032',  # noqa: E501
+            response_type='InlineResponse20035',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -6152,7 +10075,7 @@ class RepoApi(object):
         :param str access_token: 用户授权码
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20046
+        :return: InlineResponse20049
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6177,7 +10100,7 @@ class RepoApi(object):
         :param str access_token: 用户授权码
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20046
+        :return: InlineResponse20049
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6243,7 +10166,7 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20046',  # noqa: E501
+            response_type='InlineResponse20049',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -6265,7 +10188,7 @@ class RepoApi(object):
         :param str access_token: 用户授权码
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20047
+        :return: InlineResponse20050
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6290,7 +10213,7 @@ class RepoApi(object):
         :param str access_token: 用户授权码
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20047
+        :return: InlineResponse20050
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6356,7 +10279,7 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20047',  # noqa: E501
+            response_type='InlineResponse20050',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -6376,7 +10299,7 @@ class RepoApi(object):
         :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
         :param str repo: 仓库路径(path) (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20048
+        :return: InlineResponse20051
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6399,7 +10322,7 @@ class RepoApi(object):
         :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
         :param str repo: 仓库路径(path) (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20048
+        :return: InlineResponse20051
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6461,7 +10384,116 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20048',  # noqa: E501
+            response_type='InlineResponse20051',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def repos_owner_repo_tags_post(self, owner, repo, **kwargs):  # noqa: E501
+        """创建一个仓库的 Tag  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_tags_post(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param RepoTagsBody body:
+        :return: InlineResponse20051
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_tags_post_with_http_info(owner, repo, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_tags_post_with_http_info(owner, repo, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_tags_post_with_http_info(self, owner, repo, **kwargs):  # noqa: E501
+        """创建一个仓库的 Tag  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_tags_post_with_http_info(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param RepoTagsBody body:
+        :return: InlineResponse20051
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_tags_post" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_tags_post`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_tags_post`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/tags', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse20051',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -6586,7 +10618,7 @@ class RepoApi(object):
         :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
         :param str repo: 仓库路径(path) (required)
         :param RepoTrafficdataBody body:
-        :return: InlineResponse20049
+        :return: InlineResponse20052
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6609,7 +10641,7 @@ class RepoApi(object):
         :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
         :param str repo: 仓库路径(path) (required)
         :param RepoTrafficdataBody body:
-        :return: InlineResponse20049
+        :return: InlineResponse20052
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6675,7 +10707,7 @@ class RepoApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20049',  # noqa: E501
+            response_type='InlineResponse20052',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -6895,6 +10927,99 @@ class RepoApi(object):
 
         return self.api_client.call_api(
             '/user/repos', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse2007',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def user_repos_post(self, **kwargs):  # noqa: E501
+        """创建一个仓库  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.user_repos_post(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param UserReposBody body:
+        :return: InlineResponse2007
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.user_repos_post_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.user_repos_post_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def user_repos_post_with_http_info(self, **kwargs):  # noqa: E501
+        """创建一个仓库  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.user_repos_post_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param UserReposBody body:
+        :return: InlineResponse2007
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method user_repos_post" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/user/repos', 'POST',
             path_params,
             query_params,
             header_params,

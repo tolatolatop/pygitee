@@ -3,14 +3,23 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**author_email_suffix** | **str** |  | [optional] 
-**commit_message_regex** | **str** |  | [optional] 
-**except_manager** | **str** |  | [optional] 
-**max_file_size** | **str** |  | [optional] 
-**restrict_author_email_suffix** | **str** |  | [optional] 
-**restrict_commit_message** | **str** |  | [optional] 
-**restrict_file_size** | **str** |  | [optional] 
-**restrict_push_own_commit** | **str** |  | [optional] 
+**links** | **str** |  | [optional] 
+**body** | **str** |  | [optional] 
+**comment_type** | **str** |  | [optional] 
+**commit_id** | **str** |  | [optional] 
+**created_at** | **str** |  | [optional] 
+**html_url** | **str** |  | [optional] 
+**id** | **str** |  | [optional] 
+**in_reply_to_id** | **str** |  | [optional] 
+**new_line** | **str** |  | [optional] 
+**original_commit_id** | **str** |  | [optional] 
+**original_position** | **str** |  | [optional] 
+**path** | **str** |  | [optional] 
+**position** | **str** |  | [optional] 
+**pull_request_url** | **str** |  | [optional] 
+**updated_at** | **str** |  | [optional] 
+**url** | **str** |  | [optional] 
+**user** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

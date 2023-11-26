@@ -28,39 +28,90 @@ class InlineResponse20033(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'links': 'str',
         'content': 'str',
+        'download_url': 'str',
         'encoding': 'str',
+        'html_url': 'str',
+        'name': 'str',
+        'path': 'str',
         'sha': 'str',
         'size': 'str',
+        'type': 'str',
         'url': 'str'
     }
 
     attribute_map = {
+        'links': '_links',
         'content': 'content',
+        'download_url': 'download_url',
         'encoding': 'encoding',
+        'html_url': 'html_url',
+        'name': 'name',
+        'path': 'path',
         'sha': 'sha',
         'size': 'size',
+        'type': 'type',
         'url': 'url'
     }
 
-    def __init__(self, content=None, encoding=None, sha=None, size=None, url=None):  # noqa: E501
+    def __init__(self, links=None, content=None, download_url=None, encoding=None, html_url=None, name=None, path=None, sha=None, size=None, type=None, url=None):  # noqa: E501
         """InlineResponse20033 - a model defined in Swagger"""  # noqa: E501
+        self._links = None
         self._content = None
+        self._download_url = None
         self._encoding = None
+        self._html_url = None
+        self._name = None
+        self._path = None
         self._sha = None
         self._size = None
+        self._type = None
         self._url = None
         self.discriminator = None
+        if links is not None:
+            self.links = links
         if content is not None:
             self.content = content
+        if download_url is not None:
+            self.download_url = download_url
         if encoding is not None:
             self.encoding = encoding
+        if html_url is not None:
+            self.html_url = html_url
+        if name is not None:
+            self.name = name
+        if path is not None:
+            self.path = path
         if sha is not None:
             self.sha = sha
         if size is not None:
             self.size = size
+        if type is not None:
+            self.type = type
         if url is not None:
             self.url = url
+
+    @property
+    def links(self):
+        """Gets the links of this InlineResponse20033.  # noqa: E501
+
+
+        :return: The links of this InlineResponse20033.  # noqa: E501
+        :rtype: str
+        """
+        return self._links
+
+    @links.setter
+    def links(self, links):
+        """Sets the links of this InlineResponse20033.
+
+
+        :param links: The links of this InlineResponse20033.  # noqa: E501
+        :type: str
+        """
+
+        self._links = links
 
     @property
     def content(self):
@@ -84,6 +135,27 @@ class InlineResponse20033(object):
         self._content = content
 
     @property
+    def download_url(self):
+        """Gets the download_url of this InlineResponse20033.  # noqa: E501
+
+
+        :return: The download_url of this InlineResponse20033.  # noqa: E501
+        :rtype: str
+        """
+        return self._download_url
+
+    @download_url.setter
+    def download_url(self, download_url):
+        """Sets the download_url of this InlineResponse20033.
+
+
+        :param download_url: The download_url of this InlineResponse20033.  # noqa: E501
+        :type: str
+        """
+
+        self._download_url = download_url
+
+    @property
     def encoding(self):
         """Gets the encoding of this InlineResponse20033.  # noqa: E501
 
@@ -103,6 +175,69 @@ class InlineResponse20033(object):
         """
 
         self._encoding = encoding
+
+    @property
+    def html_url(self):
+        """Gets the html_url of this InlineResponse20033.  # noqa: E501
+
+
+        :return: The html_url of this InlineResponse20033.  # noqa: E501
+        :rtype: str
+        """
+        return self._html_url
+
+    @html_url.setter
+    def html_url(self, html_url):
+        """Sets the html_url of this InlineResponse20033.
+
+
+        :param html_url: The html_url of this InlineResponse20033.  # noqa: E501
+        :type: str
+        """
+
+        self._html_url = html_url
+
+    @property
+    def name(self):
+        """Gets the name of this InlineResponse20033.  # noqa: E501
+
+
+        :return: The name of this InlineResponse20033.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this InlineResponse20033.
+
+
+        :param name: The name of this InlineResponse20033.  # noqa: E501
+        :type: str
+        """
+
+        self._name = name
+
+    @property
+    def path(self):
+        """Gets the path of this InlineResponse20033.  # noqa: E501
+
+
+        :return: The path of this InlineResponse20033.  # noqa: E501
+        :rtype: str
+        """
+        return self._path
+
+    @path.setter
+    def path(self, path):
+        """Sets the path of this InlineResponse20033.
+
+
+        :param path: The path of this InlineResponse20033.  # noqa: E501
+        :type: str
+        """
+
+        self._path = path
 
     @property
     def sha(self):
@@ -145,6 +280,27 @@ class InlineResponse20033(object):
         """
 
         self._size = size
+
+    @property
+    def type(self):
+        """Gets the type of this InlineResponse20033.  # noqa: E501
+
+
+        :return: The type of this InlineResponse20033.  # noqa: E501
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this InlineResponse20033.
+
+
+        :param type: The type of this InlineResponse20033.  # noqa: E501
+        :type: str
+        """
+
+        self._type = type
 
     @property
     def url(self):

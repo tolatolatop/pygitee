@@ -28,118 +28,66 @@ class InlineResponse20034(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'created_at': 'str',
-        'data': 'str',
-        'repo': 'Repo',
-        'total_score': 'str'
+        'commit': 'Commit',
+        'content': 'Content'
     }
 
     attribute_map = {
-        'created_at': 'created_at',
-        'data': 'data',
-        'repo': 'repo',
-        'total_score': 'total_score'
+        'commit': 'commit',
+        'content': 'content'
     }
 
-    def __init__(self, created_at=None, data=None, repo=None, total_score=None):  # noqa: E501
+    def __init__(self, commit=None, content=None):  # noqa: E501
         """InlineResponse20034 - a model defined in Swagger"""  # noqa: E501
-        self._created_at = None
-        self._data = None
-        self._repo = None
-        self._total_score = None
+        self._commit = None
+        self._content = None
         self.discriminator = None
-        if created_at is not None:
-            self.created_at = created_at
-        if data is not None:
-            self.data = data
-        if repo is not None:
-            self.repo = repo
-        if total_score is not None:
-            self.total_score = total_score
+        if commit is not None:
+            self.commit = commit
+        if content is not None:
+            self.content = content
 
     @property
-    def created_at(self):
-        """Gets the created_at of this InlineResponse20034.  # noqa: E501
+    def commit(self):
+        """Gets the commit of this InlineResponse20034.  # noqa: E501
 
 
-        :return: The created_at of this InlineResponse20034.  # noqa: E501
-        :rtype: str
+        :return: The commit of this InlineResponse20034.  # noqa: E501
+        :rtype: Commit
         """
-        return self._created_at
+        return self._commit
 
-    @created_at.setter
-    def created_at(self, created_at):
-        """Sets the created_at of this InlineResponse20034.
+    @commit.setter
+    def commit(self, commit):
+        """Sets the commit of this InlineResponse20034.
 
 
-        :param created_at: The created_at of this InlineResponse20034.  # noqa: E501
-        :type: str
+        :param commit: The commit of this InlineResponse20034.  # noqa: E501
+        :type: Commit
         """
 
-        self._created_at = created_at
+        self._commit = commit
 
     @property
-    def data(self):
-        """Gets the data of this InlineResponse20034.  # noqa: E501
+    def content(self):
+        """Gets the content of this InlineResponse20034.  # noqa: E501
 
 
-        :return: The data of this InlineResponse20034.  # noqa: E501
-        :rtype: str
+        :return: The content of this InlineResponse20034.  # noqa: E501
+        :rtype: Content
         """
-        return self._data
+        return self._content
 
-    @data.setter
-    def data(self, data):
-        """Sets the data of this InlineResponse20034.
-
-
-        :param data: The data of this InlineResponse20034.  # noqa: E501
-        :type: str
-        """
-
-        self._data = data
-
-    @property
-    def repo(self):
-        """Gets the repo of this InlineResponse20034.  # noqa: E501
+    @content.setter
+    def content(self, content):
+        """Sets the content of this InlineResponse20034.
 
 
-        :return: The repo of this InlineResponse20034.  # noqa: E501
-        :rtype: Repo
-        """
-        return self._repo
-
-    @repo.setter
-    def repo(self, repo):
-        """Sets the repo of this InlineResponse20034.
-
-
-        :param repo: The repo of this InlineResponse20034.  # noqa: E501
-        :type: Repo
+        :param content: The content of this InlineResponse20034.  # noqa: E501
+        :type: Content
         """
 
-        self._repo = repo
-
-    @property
-    def total_score(self):
-        """Gets the total_score of this InlineResponse20034.  # noqa: E501
-
-
-        :return: The total_score of this InlineResponse20034.  # noqa: E501
-        :rtype: str
-        """
-        return self._total_score
-
-    @total_score.setter
-    def total_score(self, total_score):
-        """Sets the total_score of this InlineResponse20034.
-
-
-        :param total_score: The total_score of this InlineResponse20034.  # noqa: E501
-        :type: str
-        """
-
-        self._total_score = total_score
+        self._content = content
 
     def to_dict(self):
         """Returns the model properties as a dict"""

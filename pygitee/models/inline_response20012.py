@@ -28,75 +28,39 @@ class InlineResponse20012(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'actor': 'str',
         'created_at': 'str',
-        'id': 'int',
-        'org': 'str',
-        'payload': 'object',
-        'public': 'str',
-        'repo': 'str',
-        'type': 'str'
+        'id': 'str',
+        'updated_at': 'str',
+        'url': 'str',
+        'user': 'str'
     }
 
     attribute_map = {
-        'actor': 'actor',
         'created_at': 'created_at',
         'id': 'id',
-        'org': 'org',
-        'payload': 'payload',
-        'public': 'public',
-        'repo': 'repo',
-        'type': 'type'
+        'updated_at': 'updated_at',
+        'url': 'url',
+        'user': 'user'
     }
 
-    def __init__(self, actor=None, created_at=None, id=None, org=None, payload=None, public=None, repo=None, type=None):  # noqa: E501
+    def __init__(self, created_at=None, id=None, updated_at=None, url=None, user=None):  # noqa: E501
         """InlineResponse20012 - a model defined in Swagger"""  # noqa: E501
-        self._actor = None
         self._created_at = None
         self._id = None
-        self._org = None
-        self._payload = None
-        self._public = None
-        self._repo = None
-        self._type = None
+        self._updated_at = None
+        self._url = None
+        self._user = None
         self.discriminator = None
-        if actor is not None:
-            self.actor = actor
         if created_at is not None:
             self.created_at = created_at
         if id is not None:
             self.id = id
-        if org is not None:
-            self.org = org
-        if payload is not None:
-            self.payload = payload
-        if public is not None:
-            self.public = public
-        if repo is not None:
-            self.repo = repo
-        if type is not None:
-            self.type = type
-
-    @property
-    def actor(self):
-        """Gets the actor of this InlineResponse20012.  # noqa: E501
-
-
-        :return: The actor of this InlineResponse20012.  # noqa: E501
-        :rtype: str
-        """
-        return self._actor
-
-    @actor.setter
-    def actor(self, actor):
-        """Sets the actor of this InlineResponse20012.
-
-
-        :param actor: The actor of this InlineResponse20012.  # noqa: E501
-        :type: str
-        """
-
-        self._actor = actor
+        if updated_at is not None:
+            self.updated_at = updated_at
+        if url is not None:
+            self.url = url
+        if user is not None:
+            self.user = user
 
     @property
     def created_at(self):
@@ -125,7 +89,7 @@ class InlineResponse20012(object):
 
 
         :return: The id of this InlineResponse20012.  # noqa: E501
-        :rtype: int
+        :rtype: str
         """
         return self._id
 
@@ -135,115 +99,73 @@ class InlineResponse20012(object):
 
 
         :param id: The id of this InlineResponse20012.  # noqa: E501
-        :type: int
+        :type: str
         """
 
         self._id = id
 
     @property
-    def org(self):
-        """Gets the org of this InlineResponse20012.  # noqa: E501
+    def updated_at(self):
+        """Gets the updated_at of this InlineResponse20012.  # noqa: E501
 
 
-        :return: The org of this InlineResponse20012.  # noqa: E501
+        :return: The updated_at of this InlineResponse20012.  # noqa: E501
         :rtype: str
         """
-        return self._org
+        return self._updated_at
 
-    @org.setter
-    def org(self, org):
-        """Sets the org of this InlineResponse20012.
+    @updated_at.setter
+    def updated_at(self, updated_at):
+        """Sets the updated_at of this InlineResponse20012.
 
 
-        :param org: The org of this InlineResponse20012.  # noqa: E501
+        :param updated_at: The updated_at of this InlineResponse20012.  # noqa: E501
         :type: str
         """
 
-        self._org = org
+        self._updated_at = updated_at
 
     @property
-    def payload(self):
-        """Gets the payload of this InlineResponse20012.  # noqa: E501
+    def url(self):
+        """Gets the url of this InlineResponse20012.  # noqa: E501
 
 
-        :return: The payload of this InlineResponse20012.  # noqa: E501
-        :rtype: object
-        """
-        return self._payload
-
-    @payload.setter
-    def payload(self, payload):
-        """Sets the payload of this InlineResponse20012.
-
-
-        :param payload: The payload of this InlineResponse20012.  # noqa: E501
-        :type: object
-        """
-
-        self._payload = payload
-
-    @property
-    def public(self):
-        """Gets the public of this InlineResponse20012.  # noqa: E501
-
-
-        :return: The public of this InlineResponse20012.  # noqa: E501
+        :return: The url of this InlineResponse20012.  # noqa: E501
         :rtype: str
         """
-        return self._public
+        return self._url
 
-    @public.setter
-    def public(self, public):
-        """Sets the public of this InlineResponse20012.
+    @url.setter
+    def url(self, url):
+        """Sets the url of this InlineResponse20012.
 
 
-        :param public: The public of this InlineResponse20012.  # noqa: E501
+        :param url: The url of this InlineResponse20012.  # noqa: E501
         :type: str
         """
 
-        self._public = public
+        self._url = url
 
     @property
-    def repo(self):
-        """Gets the repo of this InlineResponse20012.  # noqa: E501
+    def user(self):
+        """Gets the user of this InlineResponse20012.  # noqa: E501
 
 
-        :return: The repo of this InlineResponse20012.  # noqa: E501
+        :return: The user of this InlineResponse20012.  # noqa: E501
         :rtype: str
         """
-        return self._repo
+        return self._user
 
-    @repo.setter
-    def repo(self, repo):
-        """Sets the repo of this InlineResponse20012.
+    @user.setter
+    def user(self, user):
+        """Sets the user of this InlineResponse20012.
 
 
-        :param repo: The repo of this InlineResponse20012.  # noqa: E501
+        :param user: The user of this InlineResponse20012.  # noqa: E501
         :type: str
         """
 
-        self._repo = repo
-
-    @property
-    def type(self):
-        """Gets the type of this InlineResponse20012.  # noqa: E501
-
-
-        :return: The type of this InlineResponse20012.  # noqa: E501
-        :rtype: str
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this InlineResponse20012.
-
-
-        :param type: The type of this InlineResponse20012.  # noqa: E501
-        :type: str
-        """
-
-        self._type = type
+        self._user = user
 
     def to_dict(self):
         """Returns the model properties as a dict"""

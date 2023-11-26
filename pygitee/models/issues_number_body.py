@@ -31,11 +31,11 @@ class IssuesNumberBody(object):
         'access_token': 'str',
         'assignee': 'str',
         'body': 'str',
+        'branch': 'str',
         'collaborators': 'str',
         'labels': 'str',
         'milestone': 'int',
         'program': 'str',
-        'repo': 'str',
         'security_hole': 'bool',
         'state': 'str',
         'title': 'str'
@@ -45,26 +45,26 @@ class IssuesNumberBody(object):
         'access_token': 'access_token',
         'assignee': 'assignee',
         'body': 'body',
+        'branch': 'branch',
         'collaborators': 'collaborators',
         'labels': 'labels',
         'milestone': 'milestone',
         'program': 'program',
-        'repo': 'repo',
         'security_hole': 'security_hole',
         'state': 'state',
         'title': 'title'
     }
 
-    def __init__(self, access_token=None, assignee=None, body=None, collaborators=None, labels=None, milestone=None, program=None, repo=None, security_hole=None, state=None, title=None):  # noqa: E501
+    def __init__(self, access_token=None, assignee=None, body=None, branch=None, collaborators=None, labels=None, milestone=None, program=None, security_hole=None, state=None, title=None):  # noqa: E501
         """IssuesNumberBody - a model defined in Swagger"""  # noqa: E501
         self._access_token = None
         self._assignee = None
         self._body = None
+        self._branch = None
         self._collaborators = None
         self._labels = None
         self._milestone = None
         self._program = None
-        self._repo = None
         self._security_hole = None
         self._state = None
         self._title = None
@@ -75,6 +75,8 @@ class IssuesNumberBody(object):
             self.assignee = assignee
         if body is not None:
             self.body = body
+        if branch is not None:
+            self.branch = branch
         if collaborators is not None:
             self.collaborators = collaborators
         if labels is not None:
@@ -83,8 +85,6 @@ class IssuesNumberBody(object):
             self.milestone = milestone
         if program is not None:
             self.program = program
-        if repo is not None:
-            self.repo = repo
         if security_hole is not None:
             self.security_hole = security_hole
         if state is not None:
@@ -160,6 +160,29 @@ class IssuesNumberBody(object):
         """
 
         self._body = body
+
+    @property
+    def branch(self):
+        """Gets the branch of this IssuesNumberBody.  # noqa: E501
+
+        分支名称，传空串表示取消关联分支  # noqa: E501
+
+        :return: The branch of this IssuesNumberBody.  # noqa: E501
+        :rtype: str
+        """
+        return self._branch
+
+    @branch.setter
+    def branch(self, branch):
+        """Sets the branch of this IssuesNumberBody.
+
+        分支名称，传空串表示取消关联分支  # noqa: E501
+
+        :param branch: The branch of this IssuesNumberBody.  # noqa: E501
+        :type: str
+        """
+
+        self._branch = branch
 
     @property
     def collaborators(self):
@@ -252,29 +275,6 @@ class IssuesNumberBody(object):
         """
 
         self._program = program
-
-    @property
-    def repo(self):
-        """Gets the repo of this IssuesNumberBody.  # noqa: E501
-
-        仓库路径(path)  # noqa: E501
-
-        :return: The repo of this IssuesNumberBody.  # noqa: E501
-        :rtype: str
-        """
-        return self._repo
-
-    @repo.setter
-    def repo(self, repo):
-        """Sets the repo of this IssuesNumberBody.
-
-        仓库路径(path)  # noqa: E501
-
-        :param repo: The repo of this IssuesNumberBody.  # noqa: E501
-        :type: str
-        """
-
-        self._repo = repo
 
     @property
     def security_hole(self):

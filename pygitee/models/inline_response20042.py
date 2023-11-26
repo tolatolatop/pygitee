@@ -28,138 +28,158 @@ class InlineResponse20042(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'author': 'str',
-        'comments_url': 'str',
-        'commit': 'str',
-        'committer': 'str',
+        'closed_issues': 'int',
+        'created_at': 'str',
+        'description': 'str',
+        'due_on': 'str',
         'html_url': 'str',
-        'parents': 'Parents',
-        'sha': 'str',
+        'number': 'int',
+        'open_issues': 'int',
+        'repository_id': 'int',
+        'state': 'str',
+        'title': 'str',
+        'updated_at': 'str',
         'url': 'str'
     }
 
     attribute_map = {
-        'author': 'author',
-        'comments_url': 'comments_url',
-        'commit': 'commit',
-        'committer': 'committer',
+        'closed_issues': 'closed_issues',
+        'created_at': 'created_at',
+        'description': 'description',
+        'due_on': 'due_on',
         'html_url': 'html_url',
-        'parents': 'parents',
-        'sha': 'sha',
+        'number': 'number',
+        'open_issues': 'open_issues',
+        'repository_id': 'repository_id',
+        'state': 'state',
+        'title': 'title',
+        'updated_at': 'updated_at',
         'url': 'url'
     }
 
-    def __init__(self, author=None, comments_url=None, commit=None, committer=None, html_url=None, parents=None, sha=None, url=None):  # noqa: E501
+    def __init__(self, closed_issues=None, created_at=None, description=None, due_on=None, html_url=None, number=None, open_issues=None, repository_id=None, state=None, title=None, updated_at=None, url=None):  # noqa: E501
         """InlineResponse20042 - a model defined in Swagger"""  # noqa: E501
-        self._author = None
-        self._comments_url = None
-        self._commit = None
-        self._committer = None
+        self._closed_issues = None
+        self._created_at = None
+        self._description = None
+        self._due_on = None
         self._html_url = None
-        self._parents = None
-        self._sha = None
+        self._number = None
+        self._open_issues = None
+        self._repository_id = None
+        self._state = None
+        self._title = None
+        self._updated_at = None
         self._url = None
         self.discriminator = None
-        if author is not None:
-            self.author = author
-        if comments_url is not None:
-            self.comments_url = comments_url
-        if commit is not None:
-            self.commit = commit
-        if committer is not None:
-            self.committer = committer
+        if closed_issues is not None:
+            self.closed_issues = closed_issues
+        if created_at is not None:
+            self.created_at = created_at
+        if description is not None:
+            self.description = description
+        if due_on is not None:
+            self.due_on = due_on
         if html_url is not None:
             self.html_url = html_url
-        if parents is not None:
-            self.parents = parents
-        if sha is not None:
-            self.sha = sha
+        if number is not None:
+            self.number = number
+        if open_issues is not None:
+            self.open_issues = open_issues
+        if repository_id is not None:
+            self.repository_id = repository_id
+        if state is not None:
+            self.state = state
+        if title is not None:
+            self.title = title
+        if updated_at is not None:
+            self.updated_at = updated_at
         if url is not None:
             self.url = url
 
     @property
-    def author(self):
-        """Gets the author of this InlineResponse20042.  # noqa: E501
+    def closed_issues(self):
+        """Gets the closed_issues of this InlineResponse20042.  # noqa: E501
 
 
-        :return: The author of this InlineResponse20042.  # noqa: E501
-        :rtype: str
+        :return: The closed_issues of this InlineResponse20042.  # noqa: E501
+        :rtype: int
         """
-        return self._author
+        return self._closed_issues
 
-    @author.setter
-    def author(self, author):
-        """Sets the author of this InlineResponse20042.
+    @closed_issues.setter
+    def closed_issues(self, closed_issues):
+        """Sets the closed_issues of this InlineResponse20042.
 
 
-        :param author: The author of this InlineResponse20042.  # noqa: E501
-        :type: str
+        :param closed_issues: The closed_issues of this InlineResponse20042.  # noqa: E501
+        :type: int
         """
 
-        self._author = author
+        self._closed_issues = closed_issues
 
     @property
-    def comments_url(self):
-        """Gets the comments_url of this InlineResponse20042.  # noqa: E501
+    def created_at(self):
+        """Gets the created_at of this InlineResponse20042.  # noqa: E501
 
 
-        :return: The comments_url of this InlineResponse20042.  # noqa: E501
+        :return: The created_at of this InlineResponse20042.  # noqa: E501
         :rtype: str
         """
-        return self._comments_url
+        return self._created_at
 
-    @comments_url.setter
-    def comments_url(self, comments_url):
-        """Sets the comments_url of this InlineResponse20042.
+    @created_at.setter
+    def created_at(self, created_at):
+        """Sets the created_at of this InlineResponse20042.
 
 
-        :param comments_url: The comments_url of this InlineResponse20042.  # noqa: E501
+        :param created_at: The created_at of this InlineResponse20042.  # noqa: E501
         :type: str
         """
 
-        self._comments_url = comments_url
+        self._created_at = created_at
 
     @property
-    def commit(self):
-        """Gets the commit of this InlineResponse20042.  # noqa: E501
+    def description(self):
+        """Gets the description of this InlineResponse20042.  # noqa: E501
 
 
-        :return: The commit of this InlineResponse20042.  # noqa: E501
+        :return: The description of this InlineResponse20042.  # noqa: E501
         :rtype: str
         """
-        return self._commit
+        return self._description
 
-    @commit.setter
-    def commit(self, commit):
-        """Sets the commit of this InlineResponse20042.
+    @description.setter
+    def description(self, description):
+        """Sets the description of this InlineResponse20042.
 
 
-        :param commit: The commit of this InlineResponse20042.  # noqa: E501
+        :param description: The description of this InlineResponse20042.  # noqa: E501
         :type: str
         """
 
-        self._commit = commit
+        self._description = description
 
     @property
-    def committer(self):
-        """Gets the committer of this InlineResponse20042.  # noqa: E501
+    def due_on(self):
+        """Gets the due_on of this InlineResponse20042.  # noqa: E501
 
 
-        :return: The committer of this InlineResponse20042.  # noqa: E501
+        :return: The due_on of this InlineResponse20042.  # noqa: E501
         :rtype: str
         """
-        return self._committer
+        return self._due_on
 
-    @committer.setter
-    def committer(self, committer):
-        """Sets the committer of this InlineResponse20042.
+    @due_on.setter
+    def due_on(self, due_on):
+        """Sets the due_on of this InlineResponse20042.
 
 
-        :param committer: The committer of this InlineResponse20042.  # noqa: E501
+        :param due_on: The due_on of this InlineResponse20042.  # noqa: E501
         :type: str
         """
 
-        self._committer = committer
+        self._due_on = due_on
 
     @property
     def html_url(self):
@@ -183,46 +203,130 @@ class InlineResponse20042(object):
         self._html_url = html_url
 
     @property
-    def parents(self):
-        """Gets the parents of this InlineResponse20042.  # noqa: E501
+    def number(self):
+        """Gets the number of this InlineResponse20042.  # noqa: E501
 
 
-        :return: The parents of this InlineResponse20042.  # noqa: E501
-        :rtype: Parents
+        :return: The number of this InlineResponse20042.  # noqa: E501
+        :rtype: int
         """
-        return self._parents
+        return self._number
 
-    @parents.setter
-    def parents(self, parents):
-        """Sets the parents of this InlineResponse20042.
+    @number.setter
+    def number(self, number):
+        """Sets the number of this InlineResponse20042.
 
 
-        :param parents: The parents of this InlineResponse20042.  # noqa: E501
-        :type: Parents
+        :param number: The number of this InlineResponse20042.  # noqa: E501
+        :type: int
         """
 
-        self._parents = parents
+        self._number = number
 
     @property
-    def sha(self):
-        """Gets the sha of this InlineResponse20042.  # noqa: E501
+    def open_issues(self):
+        """Gets the open_issues of this InlineResponse20042.  # noqa: E501
 
 
-        :return: The sha of this InlineResponse20042.  # noqa: E501
+        :return: The open_issues of this InlineResponse20042.  # noqa: E501
+        :rtype: int
+        """
+        return self._open_issues
+
+    @open_issues.setter
+    def open_issues(self, open_issues):
+        """Sets the open_issues of this InlineResponse20042.
+
+
+        :param open_issues: The open_issues of this InlineResponse20042.  # noqa: E501
+        :type: int
+        """
+
+        self._open_issues = open_issues
+
+    @property
+    def repository_id(self):
+        """Gets the repository_id of this InlineResponse20042.  # noqa: E501
+
+
+        :return: The repository_id of this InlineResponse20042.  # noqa: E501
+        :rtype: int
+        """
+        return self._repository_id
+
+    @repository_id.setter
+    def repository_id(self, repository_id):
+        """Sets the repository_id of this InlineResponse20042.
+
+
+        :param repository_id: The repository_id of this InlineResponse20042.  # noqa: E501
+        :type: int
+        """
+
+        self._repository_id = repository_id
+
+    @property
+    def state(self):
+        """Gets the state of this InlineResponse20042.  # noqa: E501
+
+
+        :return: The state of this InlineResponse20042.  # noqa: E501
         :rtype: str
         """
-        return self._sha
+        return self._state
 
-    @sha.setter
-    def sha(self, sha):
-        """Sets the sha of this InlineResponse20042.
+    @state.setter
+    def state(self, state):
+        """Sets the state of this InlineResponse20042.
 
 
-        :param sha: The sha of this InlineResponse20042.  # noqa: E501
+        :param state: The state of this InlineResponse20042.  # noqa: E501
         :type: str
         """
 
-        self._sha = sha
+        self._state = state
+
+    @property
+    def title(self):
+        """Gets the title of this InlineResponse20042.  # noqa: E501
+
+
+        :return: The title of this InlineResponse20042.  # noqa: E501
+        :rtype: str
+        """
+        return self._title
+
+    @title.setter
+    def title(self, title):
+        """Sets the title of this InlineResponse20042.
+
+
+        :param title: The title of this InlineResponse20042.  # noqa: E501
+        :type: str
+        """
+
+        self._title = title
+
+    @property
+    def updated_at(self):
+        """Gets the updated_at of this InlineResponse20042.  # noqa: E501
+
+
+        :return: The updated_at of this InlineResponse20042.  # noqa: E501
+        :rtype: str
+        """
+        return self._updated_at
+
+    @updated_at.setter
+    def updated_at(self, updated_at):
+        """Sets the updated_at of this InlineResponse20042.
+
+
+        :param updated_at: The updated_at of this InlineResponse20042.  # noqa: E501
+        :type: str
+        """
+
+        self._updated_at = updated_at
 
     @property
     def url(self):

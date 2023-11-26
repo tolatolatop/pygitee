@@ -28,118 +28,92 @@ class InlineResponse20035(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'sha': 'str',
-        'tree': 'str',
-        'truncated': 'str',
-        'url': 'str'
+        'contributions': 'str',
+        'email': 'str',
+        'name': 'str'
     }
 
     attribute_map = {
-        'sha': 'sha',
-        'tree': 'tree',
-        'truncated': 'truncated',
-        'url': 'url'
+        'contributions': 'contributions',
+        'email': 'email',
+        'name': 'name'
     }
 
-    def __init__(self, sha=None, tree=None, truncated=None, url=None):  # noqa: E501
+    def __init__(self, contributions=None, email=None, name=None):  # noqa: E501
         """InlineResponse20035 - a model defined in Swagger"""  # noqa: E501
-        self._sha = None
-        self._tree = None
-        self._truncated = None
-        self._url = None
+        self._contributions = None
+        self._email = None
+        self._name = None
         self.discriminator = None
-        if sha is not None:
-            self.sha = sha
-        if tree is not None:
-            self.tree = tree
-        if truncated is not None:
-            self.truncated = truncated
-        if url is not None:
-            self.url = url
+        if contributions is not None:
+            self.contributions = contributions
+        if email is not None:
+            self.email = email
+        if name is not None:
+            self.name = name
 
     @property
-    def sha(self):
-        """Gets the sha of this InlineResponse20035.  # noqa: E501
+    def contributions(self):
+        """Gets the contributions of this InlineResponse20035.  # noqa: E501
 
 
-        :return: The sha of this InlineResponse20035.  # noqa: E501
+        :return: The contributions of this InlineResponse20035.  # noqa: E501
         :rtype: str
         """
-        return self._sha
+        return self._contributions
 
-    @sha.setter
-    def sha(self, sha):
-        """Sets the sha of this InlineResponse20035.
+    @contributions.setter
+    def contributions(self, contributions):
+        """Sets the contributions of this InlineResponse20035.
 
 
-        :param sha: The sha of this InlineResponse20035.  # noqa: E501
+        :param contributions: The contributions of this InlineResponse20035.  # noqa: E501
         :type: str
         """
 
-        self._sha = sha
+        self._contributions = contributions
 
     @property
-    def tree(self):
-        """Gets the tree of this InlineResponse20035.  # noqa: E501
+    def email(self):
+        """Gets the email of this InlineResponse20035.  # noqa: E501
 
 
-        :return: The tree of this InlineResponse20035.  # noqa: E501
+        :return: The email of this InlineResponse20035.  # noqa: E501
         :rtype: str
         """
-        return self._tree
+        return self._email
 
-    @tree.setter
-    def tree(self, tree):
-        """Sets the tree of this InlineResponse20035.
+    @email.setter
+    def email(self, email):
+        """Sets the email of this InlineResponse20035.
 
 
-        :param tree: The tree of this InlineResponse20035.  # noqa: E501
+        :param email: The email of this InlineResponse20035.  # noqa: E501
         :type: str
         """
 
-        self._tree = tree
+        self._email = email
 
     @property
-    def truncated(self):
-        """Gets the truncated of this InlineResponse20035.  # noqa: E501
+    def name(self):
+        """Gets the name of this InlineResponse20035.  # noqa: E501
 
 
-        :return: The truncated of this InlineResponse20035.  # noqa: E501
+        :return: The name of this InlineResponse20035.  # noqa: E501
         :rtype: str
         """
-        return self._truncated
+        return self._name
 
-    @truncated.setter
-    def truncated(self, truncated):
-        """Sets the truncated of this InlineResponse20035.
+    @name.setter
+    def name(self, name):
+        """Sets the name of this InlineResponse20035.
 
 
-        :param truncated: The truncated of this InlineResponse20035.  # noqa: E501
+        :param name: The name of this InlineResponse20035.  # noqa: E501
         :type: str
         """
 
-        self._truncated = truncated
-
-    @property
-    def url(self):
-        """Gets the url of this InlineResponse20035.  # noqa: E501
-
-
-        :return: The url of this InlineResponse20035.  # noqa: E501
-        :rtype: str
-        """
-        return self._url
-
-    @url.setter
-    def url(self, url):
-        """Sets the url of this InlineResponse20035.
-
-
-        :param url: The url of this InlineResponse20035.  # noqa: E501
-        :type: str
-        """
-
-        self._url = url
+        self._name = name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

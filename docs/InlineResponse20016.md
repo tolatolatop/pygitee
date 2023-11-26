@@ -3,15 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**actor** | [**Actor**](Actor.md) |  | [optional] 
 **content** | **str** |  | [optional] 
 **html_url** | **str** |  | [optional] 
 **id** | **int** |  | [optional] 
-**mute** | **str** |  | [optional] 
-**namespaces** | [**Namespaces**](Namespaces.md) |  | [optional] 
-**repository** | [**Repository**](Repository.md) |  | [optional] 
-**subject** | [**Subject**](Subject.md) |  | [optional] 
-**type** | **str** |  | [optional] 
+**sender** | [**Sender**](Sender.md) |  | [optional] 
 **unread** | **str** |  | [optional] 
 **updated_at** | **str** |  | [optional] 
 **url** | **str** |  | [optional] 

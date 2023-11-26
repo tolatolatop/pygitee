@@ -3,9 +3,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**message_count** | **int** |  | [optional] 
-**notification_count** | **int** |  | [optional] 
-**total_count** | **int** |  | [optional] 
+**actor** | **str** |  | [optional] 
+**created_at** | **str** |  | [optional] 
+**id** | **int** |  | [optional] 
+**org** | **str** |  | [optional] 
+**payload** | **object** |  | [optional] 
+**public** | **str** |  | [optional] 
+**repo** | **str** |  | [optional] 
+**type** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

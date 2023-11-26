@@ -35,7 +35,8 @@ class ContentsPathBody(object):
         'committer_email': 'str',
         'committer_name': 'str',
         'content': 'str',
-        'message': 'str'
+        'message': 'str',
+        'sha': 'str'
     }
 
     attribute_map = {
@@ -46,10 +47,11 @@ class ContentsPathBody(object):
         'committer_email': 'committer[email]',
         'committer_name': 'committer[name]',
         'content': 'content',
-        'message': 'message'
+        'message': 'message',
+        'sha': 'sha'
     }
 
-    def __init__(self, access_token=None, author_email=None, author_name=None, branch=None, committer_email=None, committer_name=None, content=None, message=None):  # noqa: E501
+    def __init__(self, access_token=None, author_email=None, author_name=None, branch=None, committer_email=None, committer_name=None, content=None, message=None, sha=None):  # noqa: E501
         """ContentsPathBody - a model defined in Swagger"""  # noqa: E501
         self._access_token = None
         self._author_email = None
@@ -59,6 +61,7 @@ class ContentsPathBody(object):
         self._committer_name = None
         self._content = None
         self._message = None
+        self._sha = None
         self.discriminator = None
         if access_token is not None:
             self.access_token = access_token
@@ -74,6 +77,7 @@ class ContentsPathBody(object):
             self.committer_name = committer_name
         self.content = content
         self.message = message
+        self.sha = sha
 
     @property
     def access_token(self):
@@ -262,6 +266,31 @@ class ContentsPathBody(object):
             raise ValueError("Invalid value for `message`, must not be `None`")  # noqa: E501
 
         self._message = message
+
+    @property
+    def sha(self):
+        """Gets the sha of this ContentsPathBody.  # noqa: E501
+
+        文件的 Blob SHA，可通过 [获取仓库具体路径下的内容] API 获取  # noqa: E501
+
+        :return: The sha of this ContentsPathBody.  # noqa: E501
+        :rtype: str
+        """
+        return self._sha
+
+    @sha.setter
+    def sha(self, sha):
+        """Sets the sha of this ContentsPathBody.
+
+        文件的 Blob SHA，可通过 [获取仓库具体路径下的内容] API 获取  # noqa: E501
+
+        :param sha: The sha of this ContentsPathBody.  # noqa: E501
+        :type: str
+        """
+        if sha is None:
+            raise ValueError("Invalid value for `sha`, must not be `None`")  # noqa: E501
+
+        self._sha = sha
 
     def to_dict(self):
         """Returns the model properties as a dict"""

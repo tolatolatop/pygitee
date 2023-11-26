@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    Gitee OpenApi
+    getV5ReposOwnerRepoSubscribers
 
-    All api provided by Gitee  # noqa: E501
+    列出 watch 了仓库的用户  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -46,6 +46,13 @@ class TestIssueApi(unittest.TestCase):
         """Test case for enterprises_enterprise_issues_number_labels_get
 
         获取企业某个Issue所有标签  # noqa: E501
+        """
+        pass
+
+    def test_enterprises_enterprise_issues_number_patch(self):
+        """Test case for enterprises_enterprise_issues_number_patch
+
+        更新企业的某个Issue  # noqa: E501
         """
         pass
 
@@ -112,6 +119,13 @@ class TestIssueApi(unittest.TestCase):
         """
         pass
 
+    def test_repos_owner_repo_issues_number_labels_delete(self):
+        """Test case for repos_owner_repo_issues_number_labels_delete
+
+        删除Issue所有标签  # noqa: E501
+        """
+        pass
+
     def test_repos_owner_repo_issues_number_labels_get(self):
         """Test case for repos_owner_repo_issues_number_labels_get
 
@@ -123,6 +137,20 @@ class TestIssueApi(unittest.TestCase):
         """Test case for repos_owner_repo_issues_number_labels_name_delete
 
         删除Issue标签  # noqa: E501
+        """
+        pass
+
+    def test_repos_owner_repo_issues_number_labels_post(self):
+        """Test case for repos_owner_repo_issues_number_labels_post
+
+        创建Issue标签  # noqa: E501
+        """
+        pass
+
+    def test_repos_owner_repo_issues_number_labels_put(self):
+        """Test case for repos_owner_repo_issues_number_labels_put
+
+        替换Issue所有标签  # noqa: E501
         """
         pass
 

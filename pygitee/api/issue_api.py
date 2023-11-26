@@ -407,6 +407,115 @@ class IssueApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def enterprises_enterprise_issues_number_patch(self, enterprise, number, **kwargs):  # noqa: E501
+        """更新企业的某个Issue  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.enterprises_enterprise_issues_number_patch(enterprise, number, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str enterprise: 企业的路径(path/login) (required)
+        :param str number: Issue 编号(区分大小写，无需添加 # 号) (required)
+        :param IssuesNumberBody body:
+        :return: InlineResponse2003
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.enterprises_enterprise_issues_number_patch_with_http_info(enterprise, number, **kwargs)  # noqa: E501
+        else:
+            (data) = self.enterprises_enterprise_issues_number_patch_with_http_info(enterprise, number, **kwargs)  # noqa: E501
+            return data
+
+    def enterprises_enterprise_issues_number_patch_with_http_info(self, enterprise, number, **kwargs):  # noqa: E501
+        """更新企业的某个Issue  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.enterprises_enterprise_issues_number_patch_with_http_info(enterprise, number, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str enterprise: 企业的路径(path/login) (required)
+        :param str number: Issue 编号(区分大小写，无需添加 # 号) (required)
+        :param IssuesNumberBody body:
+        :return: InlineResponse2003
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['enterprise', 'number', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method enterprises_enterprise_issues_number_patch" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'enterprise' is set
+        if ('enterprise' not in params or
+                params['enterprise'] is None):
+            raise ValueError("Missing the required parameter `enterprise` when calling `enterprises_enterprise_issues_number_patch`")  # noqa: E501
+        # verify the required parameter 'number' is set
+        if ('number' not in params or
+                params['number'] is None):
+            raise ValueError("Missing the required parameter `number` when calling `enterprises_enterprise_issues_number_patch`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'enterprise' in params:
+            path_params['enterprise'] = params['enterprise']  # noqa: E501
+        if 'number' in params:
+            path_params['number'] = params['number']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/enterprises/{enterprise}/issues/{number}', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse2003',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def enterprises_enterprise_issues_number_pull_requests_get(self, enterprise, number, **kwargs):  # noqa: E501
         """获取企业 issue 关联的 Pull Requests  # noqa: E501
 
@@ -808,7 +917,7 @@ class IssueApi(object):
         :param str access_token: 用户授权码
         :param str repo: 仓库路径(path)
         :param str sort: 按递增(asc)或递减(desc)排序，默认：递减
-        :return: InlineResponse20020
+        :return: InlineResponse20023
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -833,7 +942,7 @@ class IssueApi(object):
         :param str access_token: 用户授权码
         :param str repo: 仓库路径(path)
         :param str sort: 按递增(asc)或递减(desc)排序，默认：递减
-        :return: InlineResponse20020
+        :return: InlineResponse20023
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -899,7 +1008,7 @@ class IssueApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20020',  # noqa: E501
+            response_type='InlineResponse20023',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -918,7 +1027,7 @@ class IssueApi(object):
         :param async_req bool
         :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
         :param str number: Issue 编号(区分大小写，无需添加 # 号) (required)
-        :param IssuesNumberBody body:
+        :param IssuesNumberBody1 body:
         :return: InlineResponse2003
                  If the method is called asynchronously,
                  returns the request thread.
@@ -941,7 +1050,7 @@ class IssueApi(object):
         :param async_req bool
         :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
         :param str number: Issue 编号(区分大小写，无需添加 # 号) (required)
-        :param IssuesNumberBody body:
+        :param IssuesNumberBody1 body:
         :return: InlineResponse2003
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1504,6 +1613,115 @@ class IssueApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def repos_owner_repo_issues_number_labels_delete(self, owner, repo, number, **kwargs):  # noqa: E501
+        """删除Issue所有标签  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_issues_number_labels_delete(owner, repo, number, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param str number: Issue 编号(区分大小写，无需添加 # 号) (required)
+        :param str access_token: 用户授权码
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_issues_number_labels_delete_with_http_info(owner, repo, number, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_issues_number_labels_delete_with_http_info(owner, repo, number, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_issues_number_labels_delete_with_http_info(self, owner, repo, number, **kwargs):  # noqa: E501
+        """删除Issue所有标签  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_issues_number_labels_delete_with_http_info(owner, repo, number, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param str number: Issue 编号(区分大小写，无需添加 # 号) (required)
+        :param str access_token: 用户授权码
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'number', 'access_token']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_issues_number_labels_delete" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_issues_number_labels_delete`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_issues_number_labels_delete`")  # noqa: E501
+        # verify the required parameter 'number' is set
+        if ('number' not in params or
+                params['number'] is None):
+            raise ValueError("Missing the required parameter `number` when calling `repos_owner_repo_issues_number_labels_delete`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+        if 'number' in params:
+            path_params['number'] = params['number']  # noqa: E501
+
+        query_params = []
+        if 'access_token' in params:
+            query_params.append(('access_token', params['access_token']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/issues/{number}/labels', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def repos_owner_repo_issues_number_labels_get(self, owner, repo, number, **kwargs):  # noqa: E501
         """获取仓库任务的所有标签  # noqa: E501
 
@@ -1734,18 +1952,251 @@ class IssueApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def repos_owner_repo_pulls_number_issues_get(self, owner, repo, number, **kwargs):  # noqa: E501
-        """获取 Pull Request 关联的 issues  # noqa: E501
+    def repos_owner_repo_issues_number_labels_post(self, owner, repo, number, **kwargs):  # noqa: E501
+        """创建Issue标签  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.repos_owner_repo_pulls_number_issues_get(owner, repo, number, async_req=True)
+        >>> thread = api.repos_owner_repo_issues_number_labels_post(owner, repo, number, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
         :param str repo: 仓库路径(path) (required)
-        :param str number: (required)
+        :param str number: Issue 编号(区分大小写，无需添加 # 号) (required)
+        :param NumberLabelsBody1 body:
+        :return: InlineResponse2005
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_issues_number_labels_post_with_http_info(owner, repo, number, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_issues_number_labels_post_with_http_info(owner, repo, number, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_issues_number_labels_post_with_http_info(self, owner, repo, number, **kwargs):  # noqa: E501
+        """创建Issue标签  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_issues_number_labels_post_with_http_info(owner, repo, number, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param str number: Issue 编号(区分大小写，无需添加 # 号) (required)
+        :param NumberLabelsBody1 body:
+        :return: InlineResponse2005
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'number', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_issues_number_labels_post" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_issues_number_labels_post`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_issues_number_labels_post`")  # noqa: E501
+        # verify the required parameter 'number' is set
+        if ('number' not in params or
+                params['number'] is None):
+            raise ValueError("Missing the required parameter `number` when calling `repos_owner_repo_issues_number_labels_post`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+        if 'number' in params:
+            path_params['number'] = params['number']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/issues/{number}/labels', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse2005',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def repos_owner_repo_issues_number_labels_put(self, owner, repo, number, **kwargs):  # noqa: E501
+        """替换Issue所有标签  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_issues_number_labels_put(owner, repo, number, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param str number: Issue 编号(区分大小写，无需添加 # 号) (required)
+        :param NumberLabelsBody body:
+        :return: InlineResponse2005
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.repos_owner_repo_issues_number_labels_put_with_http_info(owner, repo, number, **kwargs)  # noqa: E501
+        else:
+            (data) = self.repos_owner_repo_issues_number_labels_put_with_http_info(owner, repo, number, **kwargs)  # noqa: E501
+            return data
+
+    def repos_owner_repo_issues_number_labels_put_with_http_info(self, owner, repo, number, **kwargs):  # noqa: E501
+        """替换Issue所有标签  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_issues_number_labels_put_with_http_info(owner, repo, number, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
+        :param str number: Issue 编号(区分大小写，无需添加 # 号) (required)
+        :param NumberLabelsBody body:
+        :return: InlineResponse2005
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['owner', 'repo', 'number', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method repos_owner_repo_issues_number_labels_put" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'owner' is set
+        if ('owner' not in params or
+                params['owner'] is None):
+            raise ValueError("Missing the required parameter `owner` when calling `repos_owner_repo_issues_number_labels_put`")  # noqa: E501
+        # verify the required parameter 'repo' is set
+        if ('repo' not in params or
+                params['repo'] is None):
+            raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_issues_number_labels_put`")  # noqa: E501
+        # verify the required parameter 'number' is set
+        if ('number' not in params or
+                params['number'] is None):
+            raise ValueError("Missing the required parameter `number` when calling `repos_owner_repo_issues_number_labels_put`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'owner' in params:
+            path_params['owner'] = params['owner']  # noqa: E501
+        if 'repo' in params:
+            path_params['repo'] = params['repo']  # noqa: E501
+        if 'number' in params:
+            path_params['number'] = params['number']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/repos/{owner}/{repo}/issues/{number}/labels', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse2005',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def repos_owner_repo_pulls_number_issues_get(self, owner, repo, **kwargs):  # noqa: E501
+        """获取 Pull Request 关联的 issues  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.repos_owner_repo_pulls_number_issues_get(owner, repo, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
+        :param str repo: 仓库路径(path) (required)
         :param str access_token: 用户授权码
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
@@ -1755,23 +2206,22 @@ class IssueApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.repos_owner_repo_pulls_number_issues_get_with_http_info(owner, repo, number, **kwargs)  # noqa: E501
+            return self.repos_owner_repo_pulls_number_issues_get_with_http_info(owner, repo, **kwargs)  # noqa: E501
         else:
-            (data) = self.repos_owner_repo_pulls_number_issues_get_with_http_info(owner, repo, number, **kwargs)  # noqa: E501
+            (data) = self.repos_owner_repo_pulls_number_issues_get_with_http_info(owner, repo, **kwargs)  # noqa: E501
             return data
 
-    def repos_owner_repo_pulls_number_issues_get_with_http_info(self, owner, repo, number, **kwargs):  # noqa: E501
+    def repos_owner_repo_pulls_number_issues_get_with_http_info(self, owner, repo, **kwargs):  # noqa: E501
         """获取 Pull Request 关联的 issues  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.repos_owner_repo_pulls_number_issues_get_with_http_info(owner, repo, number, async_req=True)
+        >>> thread = api.repos_owner_repo_pulls_number_issues_get_with_http_info(owner, repo, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str owner: 仓库所属空间地址(企业、组织或个人的地址path) (required)
         :param str repo: 仓库路径(path) (required)
-        :param str number: (required)
         :param str access_token: 用户授权码
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
@@ -1780,7 +2230,7 @@ class IssueApi(object):
                  returns the request thread.
         """
 
-        all_params = ['owner', 'repo', 'number', 'access_token', 'page', 'per_page']  # noqa: E501
+        all_params = ['owner', 'repo', 'access_token', 'page', 'per_page']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1803,10 +2253,6 @@ class IssueApi(object):
         if ('repo' not in params or
                 params['repo'] is None):
             raise ValueError("Missing the required parameter `repo` when calling `repos_owner_repo_pulls_number_issues_get`")  # noqa: E501
-        # verify the required parameter 'number' is set
-        if ('number' not in params or
-                params['number'] is None):
-            raise ValueError("Missing the required parameter `number` when calling `repos_owner_repo_pulls_number_issues_get`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1815,8 +2261,6 @@ class IssueApi(object):
             path_params['owner'] = params['owner']  # noqa: E501
         if 'repo' in params:
             path_params['repo'] = params['repo']  # noqa: E501
-        if 'number' in params:
-            path_params['number'] = params['number']  # noqa: E501
 
         query_params = []
         if 'access_token' in params:

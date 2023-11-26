@@ -29,13 +29,8 @@ class InlineResponse20050(object):
     """
     swagger_types = {
         'avatar_url': 'str',
-        'bio': 'str',
-        'blog': 'str',
-        'created_at': 'str',
         'events_url': 'str',
-        'followers': 'str',
         'followers_url': 'str',
-        'following': 'str',
         'following_url': 'str',
         'gists_url': 'str',
         'html_url': 'str',
@@ -44,30 +39,20 @@ class InlineResponse20050(object):
         'member_role': 'str',
         'name': 'str',
         'organizations_url': 'str',
-        'public_gists': 'str',
-        'public_repos': 'str',
         'received_events_url': 'str',
         'remark': 'str',
         'repos_url': 'str',
-        'stared': 'str',
         'starred_url': 'str',
         'subscriptions_url': 'str',
         'type': 'str',
-        'updated_at': 'str',
         'url': 'str',
-        'watched': 'str',
-        'weibo': 'str'
+        'watch_at': 'str'
     }
 
     attribute_map = {
         'avatar_url': 'avatar_url',
-        'bio': 'bio',
-        'blog': 'blog',
-        'created_at': 'created_at',
         'events_url': 'events_url',
-        'followers': 'followers',
         'followers_url': 'followers_url',
-        'following': 'following',
         'following_url': 'following_url',
         'gists_url': 'gists_url',
         'html_url': 'html_url',
@@ -76,31 +61,21 @@ class InlineResponse20050(object):
         'member_role': 'member_role',
         'name': 'name',
         'organizations_url': 'organizations_url',
-        'public_gists': 'public_gists',
-        'public_repos': 'public_repos',
         'received_events_url': 'received_events_url',
         'remark': 'remark',
         'repos_url': 'repos_url',
-        'stared': 'stared',
         'starred_url': 'starred_url',
         'subscriptions_url': 'subscriptions_url',
         'type': 'type',
-        'updated_at': 'updated_at',
         'url': 'url',
-        'watched': 'watched',
-        'weibo': 'weibo'
+        'watch_at': 'watch_at'
     }
 
-    def __init__(self, avatar_url=None, bio=None, blog=None, created_at=None, events_url=None, followers=None, followers_url=None, following=None, following_url=None, gists_url=None, html_url=None, id=None, login=None, member_role=None, name=None, organizations_url=None, public_gists=None, public_repos=None, received_events_url=None, remark=None, repos_url=None, stared=None, starred_url=None, subscriptions_url=None, type=None, updated_at=None, url=None, watched=None, weibo=None):  # noqa: E501
+    def __init__(self, avatar_url=None, events_url=None, followers_url=None, following_url=None, gists_url=None, html_url=None, id=None, login=None, member_role=None, name=None, organizations_url=None, received_events_url=None, remark=None, repos_url=None, starred_url=None, subscriptions_url=None, type=None, url=None, watch_at=None):  # noqa: E501
         """InlineResponse20050 - a model defined in Swagger"""  # noqa: E501
         self._avatar_url = None
-        self._bio = None
-        self._blog = None
-        self._created_at = None
         self._events_url = None
-        self._followers = None
         self._followers_url = None
-        self._following = None
         self._following_url = None
         self._gists_url = None
         self._html_url = None
@@ -109,36 +84,21 @@ class InlineResponse20050(object):
         self._member_role = None
         self._name = None
         self._organizations_url = None
-        self._public_gists = None
-        self._public_repos = None
         self._received_events_url = None
         self._remark = None
         self._repos_url = None
-        self._stared = None
         self._starred_url = None
         self._subscriptions_url = None
         self._type = None
-        self._updated_at = None
         self._url = None
-        self._watched = None
-        self._weibo = None
+        self._watch_at = None
         self.discriminator = None
         if avatar_url is not None:
             self.avatar_url = avatar_url
-        if bio is not None:
-            self.bio = bio
-        if blog is not None:
-            self.blog = blog
-        if created_at is not None:
-            self.created_at = created_at
         if events_url is not None:
             self.events_url = events_url
-        if followers is not None:
-            self.followers = followers
         if followers_url is not None:
             self.followers_url = followers_url
-        if following is not None:
-            self.following = following
         if following_url is not None:
             self.following_url = following_url
         if gists_url is not None:
@@ -155,32 +115,22 @@ class InlineResponse20050(object):
             self.name = name
         if organizations_url is not None:
             self.organizations_url = organizations_url
-        if public_gists is not None:
-            self.public_gists = public_gists
-        if public_repos is not None:
-            self.public_repos = public_repos
         if received_events_url is not None:
             self.received_events_url = received_events_url
         if remark is not None:
             self.remark = remark
         if repos_url is not None:
             self.repos_url = repos_url
-        if stared is not None:
-            self.stared = stared
         if starred_url is not None:
             self.starred_url = starred_url
         if subscriptions_url is not None:
             self.subscriptions_url = subscriptions_url
         if type is not None:
             self.type = type
-        if updated_at is not None:
-            self.updated_at = updated_at
         if url is not None:
             self.url = url
-        if watched is not None:
-            self.watched = watched
-        if weibo is not None:
-            self.weibo = weibo
+        if watch_at is not None:
+            self.watch_at = watch_at
 
     @property
     def avatar_url(self):
@@ -204,69 +154,6 @@ class InlineResponse20050(object):
         self._avatar_url = avatar_url
 
     @property
-    def bio(self):
-        """Gets the bio of this InlineResponse20050.  # noqa: E501
-
-
-        :return: The bio of this InlineResponse20050.  # noqa: E501
-        :rtype: str
-        """
-        return self._bio
-
-    @bio.setter
-    def bio(self, bio):
-        """Sets the bio of this InlineResponse20050.
-
-
-        :param bio: The bio of this InlineResponse20050.  # noqa: E501
-        :type: str
-        """
-
-        self._bio = bio
-
-    @property
-    def blog(self):
-        """Gets the blog of this InlineResponse20050.  # noqa: E501
-
-
-        :return: The blog of this InlineResponse20050.  # noqa: E501
-        :rtype: str
-        """
-        return self._blog
-
-    @blog.setter
-    def blog(self, blog):
-        """Sets the blog of this InlineResponse20050.
-
-
-        :param blog: The blog of this InlineResponse20050.  # noqa: E501
-        :type: str
-        """
-
-        self._blog = blog
-
-    @property
-    def created_at(self):
-        """Gets the created_at of this InlineResponse20050.  # noqa: E501
-
-
-        :return: The created_at of this InlineResponse20050.  # noqa: E501
-        :rtype: str
-        """
-        return self._created_at
-
-    @created_at.setter
-    def created_at(self, created_at):
-        """Sets the created_at of this InlineResponse20050.
-
-
-        :param created_at: The created_at of this InlineResponse20050.  # noqa: E501
-        :type: str
-        """
-
-        self._created_at = created_at
-
-    @property
     def events_url(self):
         """Gets the events_url of this InlineResponse20050.  # noqa: E501
 
@@ -288,27 +175,6 @@ class InlineResponse20050(object):
         self._events_url = events_url
 
     @property
-    def followers(self):
-        """Gets the followers of this InlineResponse20050.  # noqa: E501
-
-
-        :return: The followers of this InlineResponse20050.  # noqa: E501
-        :rtype: str
-        """
-        return self._followers
-
-    @followers.setter
-    def followers(self, followers):
-        """Sets the followers of this InlineResponse20050.
-
-
-        :param followers: The followers of this InlineResponse20050.  # noqa: E501
-        :type: str
-        """
-
-        self._followers = followers
-
-    @property
     def followers_url(self):
         """Gets the followers_url of this InlineResponse20050.  # noqa: E501
 
@@ -328,27 +194,6 @@ class InlineResponse20050(object):
         """
 
         self._followers_url = followers_url
-
-    @property
-    def following(self):
-        """Gets the following of this InlineResponse20050.  # noqa: E501
-
-
-        :return: The following of this InlineResponse20050.  # noqa: E501
-        :rtype: str
-        """
-        return self._following
-
-    @following.setter
-    def following(self, following):
-        """Sets the following of this InlineResponse20050.
-
-
-        :param following: The following of this InlineResponse20050.  # noqa: E501
-        :type: str
-        """
-
-        self._following = following
 
     @property
     def following_url(self):
@@ -519,48 +364,6 @@ class InlineResponse20050(object):
         self._organizations_url = organizations_url
 
     @property
-    def public_gists(self):
-        """Gets the public_gists of this InlineResponse20050.  # noqa: E501
-
-
-        :return: The public_gists of this InlineResponse20050.  # noqa: E501
-        :rtype: str
-        """
-        return self._public_gists
-
-    @public_gists.setter
-    def public_gists(self, public_gists):
-        """Sets the public_gists of this InlineResponse20050.
-
-
-        :param public_gists: The public_gists of this InlineResponse20050.  # noqa: E501
-        :type: str
-        """
-
-        self._public_gists = public_gists
-
-    @property
-    def public_repos(self):
-        """Gets the public_repos of this InlineResponse20050.  # noqa: E501
-
-
-        :return: The public_repos of this InlineResponse20050.  # noqa: E501
-        :rtype: str
-        """
-        return self._public_repos
-
-    @public_repos.setter
-    def public_repos(self, public_repos):
-        """Sets the public_repos of this InlineResponse20050.
-
-
-        :param public_repos: The public_repos of this InlineResponse20050.  # noqa: E501
-        :type: str
-        """
-
-        self._public_repos = public_repos
-
-    @property
     def received_events_url(self):
         """Gets the received_events_url of this InlineResponse20050.  # noqa: E501
 
@@ -622,27 +425,6 @@ class InlineResponse20050(object):
         """
 
         self._repos_url = repos_url
-
-    @property
-    def stared(self):
-        """Gets the stared of this InlineResponse20050.  # noqa: E501
-
-
-        :return: The stared of this InlineResponse20050.  # noqa: E501
-        :rtype: str
-        """
-        return self._stared
-
-    @stared.setter
-    def stared(self, stared):
-        """Sets the stared of this InlineResponse20050.
-
-
-        :param stared: The stared of this InlineResponse20050.  # noqa: E501
-        :type: str
-        """
-
-        self._stared = stared
 
     @property
     def starred_url(self):
@@ -708,27 +490,6 @@ class InlineResponse20050(object):
         self._type = type
 
     @property
-    def updated_at(self):
-        """Gets the updated_at of this InlineResponse20050.  # noqa: E501
-
-
-        :return: The updated_at of this InlineResponse20050.  # noqa: E501
-        :rtype: str
-        """
-        return self._updated_at
-
-    @updated_at.setter
-    def updated_at(self, updated_at):
-        """Sets the updated_at of this InlineResponse20050.
-
-
-        :param updated_at: The updated_at of this InlineResponse20050.  # noqa: E501
-        :type: str
-        """
-
-        self._updated_at = updated_at
-
-    @property
     def url(self):
         """Gets the url of this InlineResponse20050.  # noqa: E501
 
@@ -750,46 +511,25 @@ class InlineResponse20050(object):
         self._url = url
 
     @property
-    def watched(self):
-        """Gets the watched of this InlineResponse20050.  # noqa: E501
+    def watch_at(self):
+        """Gets the watch_at of this InlineResponse20050.  # noqa: E501
 
 
-        :return: The watched of this InlineResponse20050.  # noqa: E501
+        :return: The watch_at of this InlineResponse20050.  # noqa: E501
         :rtype: str
         """
-        return self._watched
+        return self._watch_at
 
-    @watched.setter
-    def watched(self, watched):
-        """Sets the watched of this InlineResponse20050.
+    @watch_at.setter
+    def watch_at(self, watch_at):
+        """Sets the watch_at of this InlineResponse20050.
 
 
-        :param watched: The watched of this InlineResponse20050.  # noqa: E501
+        :param watch_at: The watch_at of this InlineResponse20050.  # noqa: E501
         :type: str
         """
 
-        self._watched = watched
-
-    @property
-    def weibo(self):
-        """Gets the weibo of this InlineResponse20050.  # noqa: E501
-
-
-        :return: The weibo of this InlineResponse20050.  # noqa: E501
-        :rtype: str
-        """
-        return self._weibo
-
-    @weibo.setter
-    def weibo(self, weibo):
-        """Sets the weibo of this InlineResponse20050.
-
-
-        :param weibo: The weibo of this InlineResponse20050.  # noqa: E501
-        :type: str
-        """
-
-        self._weibo = weibo
+        self._watch_at = watch_at
 
     def to_dict(self):
         """Returns the model properties as a dict"""

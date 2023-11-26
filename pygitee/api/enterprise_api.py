@@ -440,6 +440,103 @@ class EnterpriseApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def enterprises_enterprise_members_post(self, enterprise, **kwargs):  # noqa: E501
+        """添加或邀请企业成员  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.enterprises_enterprise_members_post(enterprise, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str enterprise: 企业的路径(path/login) (required)
+        :param EnterpriseMembersBody body:
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.enterprises_enterprise_members_post_with_http_info(enterprise, **kwargs)  # noqa: E501
+        else:
+            (data) = self.enterprises_enterprise_members_post_with_http_info(enterprise, **kwargs)  # noqa: E501
+            return data
+
+    def enterprises_enterprise_members_post_with_http_info(self, enterprise, **kwargs):  # noqa: E501
+        """添加或邀请企业成员  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.enterprises_enterprise_members_post_with_http_info(enterprise, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str enterprise: 企业的路径(path/login) (required)
+        :param EnterpriseMembersBody body:
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['enterprise', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method enterprises_enterprise_members_post" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'enterprise' is set
+        if ('enterprise' not in params or
+                params['enterprise'] is None):
+            raise ValueError("Missing the required parameter `enterprise` when calling `enterprises_enterprise_members_post`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'enterprise' in params:
+            path_params['enterprise'] = params['enterprise']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/enterprises/{enterprise}/members', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def enterprises_enterprise_members_username_get(self, enterprise, username, **kwargs):  # noqa: E501
         """获取企业的一个成员  # noqa: E501
 
@@ -531,6 +628,115 @@ class EnterpriseApi(object):
 
         return self.api_client.call_api(
             '/enterprises/{enterprise}/members/{username}', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse2006',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def enterprises_enterprise_members_username_put(self, enterprise, username, **kwargs):  # noqa: E501
+        """修改企业成员权限或备注  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.enterprises_enterprise_members_username_put(enterprise, username, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str enterprise: 企业的路径(path/login) (required)
+        :param str username: 用户名(username/login) (required)
+        :param MembersUsernameBody body:
+        :return: InlineResponse2006
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.enterprises_enterprise_members_username_put_with_http_info(enterprise, username, **kwargs)  # noqa: E501
+        else:
+            (data) = self.enterprises_enterprise_members_username_put_with_http_info(enterprise, username, **kwargs)  # noqa: E501
+            return data
+
+    def enterprises_enterprise_members_username_put_with_http_info(self, enterprise, username, **kwargs):  # noqa: E501
+        """修改企业成员权限或备注  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.enterprises_enterprise_members_username_put_with_http_info(enterprise, username, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str enterprise: 企业的路径(path/login) (required)
+        :param str username: 用户名(username/login) (required)
+        :param MembersUsernameBody body:
+        :return: InlineResponse2006
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['enterprise', 'username', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method enterprises_enterprise_members_username_put" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'enterprise' is set
+        if ('enterprise' not in params or
+                params['enterprise'] is None):
+            raise ValueError("Missing the required parameter `enterprise` when calling `enterprises_enterprise_members_username_put`")  # noqa: E501
+        # verify the required parameter 'username' is set
+        if ('username' not in params or
+                params['username'] is None):
+            raise ValueError("Missing the required parameter `username` when calling `enterprises_enterprise_members_username_put`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'enterprise' in params:
+            path_params['enterprise'] = params['enterprise']  # noqa: E501
+        if 'username' in params:
+            path_params['username'] = params['username']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/enterprises/{enterprise}/members/{username}', 'PUT',
             path_params,
             query_params,
             header_params,
@@ -644,6 +850,107 @@ class EnterpriseApi(object):
 
         return self.api_client.call_api(
             '/enterprises/{enterprise}/repos', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse2007',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def enterprises_enterprise_repos_post(self, enterprise, **kwargs):  # noqa: E501
+        """创建企业仓库  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.enterprises_enterprise_repos_post(enterprise, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str enterprise: 企业的路径(path/login) (required)
+        :param EnterpriseReposBody body:
+        :return: InlineResponse2007
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.enterprises_enterprise_repos_post_with_http_info(enterprise, **kwargs)  # noqa: E501
+        else:
+            (data) = self.enterprises_enterprise_repos_post_with_http_info(enterprise, **kwargs)  # noqa: E501
+            return data
+
+    def enterprises_enterprise_repos_post_with_http_info(self, enterprise, **kwargs):  # noqa: E501
+        """创建企业仓库  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.enterprises_enterprise_repos_post_with_http_info(enterprise, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str enterprise: 企业的路径(path/login) (required)
+        :param EnterpriseReposBody body:
+        :return: InlineResponse2007
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['enterprise', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method enterprises_enterprise_repos_post" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'enterprise' is set
+        if ('enterprise' not in params or
+                params['enterprise'] is None):
+            raise ValueError("Missing the required parameter `enterprise` when calling `enterprises_enterprise_repos_post`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'enterprise' in params:
+            path_params['enterprise'] = params['enterprise']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/enterprises/{enterprise}/repos', 'POST',
             path_params,
             query_params,
             header_params,

@@ -418,7 +418,7 @@ class SearchApi(object):
         :param int per_page: 每页的数量，最大为 100
         :param str sort: 排序字段，joined_at(注册时间)，默认为最佳匹配
         :param str order: 排序顺序: desc(default)、asc
-        :return: InlineResponse20050
+        :return: InlineResponse20053
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -444,7 +444,7 @@ class SearchApi(object):
         :param int per_page: 每页的数量，最大为 100
         :param str sort: 排序字段，joined_at(注册时间)，默认为最佳匹配
         :param str order: 排序顺序: desc(default)、asc
-        :return: InlineResponse20050
+        :return: InlineResponse20053
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -508,7 +508,7 @@ class SearchApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20050',  # noqa: E501
+            response_type='InlineResponse20053',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

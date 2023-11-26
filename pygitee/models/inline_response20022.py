@@ -28,118 +28,196 @@ class InlineResponse20022(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'commit': 'str',
-        'name': 'str',
-        'protected': 'str',
-        'protection_url': 'str'
+        'active': 'str',
+        'organization': 'Organization',
+        'organization_url': 'str',
+        'remark': 'str',
+        'role': 'str',
+        'url': 'str',
+        'user': 'str'
     }
 
     attribute_map = {
-        'commit': 'commit',
-        'name': 'name',
-        'protected': 'protected',
-        'protection_url': 'protection_url'
+        'active': 'active',
+        'organization': 'organization',
+        'organization_url': 'organization_url',
+        'remark': 'remark',
+        'role': 'role',
+        'url': 'url',
+        'user': 'user'
     }
 
-    def __init__(self, commit=None, name=None, protected=None, protection_url=None):  # noqa: E501
+    def __init__(self, active=None, organization=None, organization_url=None, remark=None, role=None, url=None, user=None):  # noqa: E501
         """InlineResponse20022 - a model defined in Swagger"""  # noqa: E501
-        self._commit = None
-        self._name = None
-        self._protected = None
-        self._protection_url = None
+        self._active = None
+        self._organization = None
+        self._organization_url = None
+        self._remark = None
+        self._role = None
+        self._url = None
+        self._user = None
         self.discriminator = None
-        if commit is not None:
-            self.commit = commit
-        if name is not None:
-            self.name = name
-        if protected is not None:
-            self.protected = protected
-        if protection_url is not None:
-            self.protection_url = protection_url
+        if active is not None:
+            self.active = active
+        if organization is not None:
+            self.organization = organization
+        if organization_url is not None:
+            self.organization_url = organization_url
+        if remark is not None:
+            self.remark = remark
+        if role is not None:
+            self.role = role
+        if url is not None:
+            self.url = url
+        if user is not None:
+            self.user = user
 
     @property
-    def commit(self):
-        """Gets the commit of this InlineResponse20022.  # noqa: E501
+    def active(self):
+        """Gets the active of this InlineResponse20022.  # noqa: E501
 
 
-        :return: The commit of this InlineResponse20022.  # noqa: E501
+        :return: The active of this InlineResponse20022.  # noqa: E501
         :rtype: str
         """
-        return self._commit
+        return self._active
 
-    @commit.setter
-    def commit(self, commit):
-        """Sets the commit of this InlineResponse20022.
+    @active.setter
+    def active(self, active):
+        """Sets the active of this InlineResponse20022.
 
 
-        :param commit: The commit of this InlineResponse20022.  # noqa: E501
+        :param active: The active of this InlineResponse20022.  # noqa: E501
         :type: str
         """
 
-        self._commit = commit
+        self._active = active
 
     @property
-    def name(self):
-        """Gets the name of this InlineResponse20022.  # noqa: E501
+    def organization(self):
+        """Gets the organization of this InlineResponse20022.  # noqa: E501
 
 
-        :return: The name of this InlineResponse20022.  # noqa: E501
+        :return: The organization of this InlineResponse20022.  # noqa: E501
+        :rtype: Organization
+        """
+        return self._organization
+
+    @organization.setter
+    def organization(self, organization):
+        """Sets the organization of this InlineResponse20022.
+
+
+        :param organization: The organization of this InlineResponse20022.  # noqa: E501
+        :type: Organization
+        """
+
+        self._organization = organization
+
+    @property
+    def organization_url(self):
+        """Gets the organization_url of this InlineResponse20022.  # noqa: E501
+
+
+        :return: The organization_url of this InlineResponse20022.  # noqa: E501
         :rtype: str
         """
-        return self._name
+        return self._organization_url
 
-    @name.setter
-    def name(self, name):
-        """Sets the name of this InlineResponse20022.
+    @organization_url.setter
+    def organization_url(self, organization_url):
+        """Sets the organization_url of this InlineResponse20022.
 
 
-        :param name: The name of this InlineResponse20022.  # noqa: E501
+        :param organization_url: The organization_url of this InlineResponse20022.  # noqa: E501
         :type: str
         """
 
-        self._name = name
+        self._organization_url = organization_url
 
     @property
-    def protected(self):
-        """Gets the protected of this InlineResponse20022.  # noqa: E501
+    def remark(self):
+        """Gets the remark of this InlineResponse20022.  # noqa: E501
 
 
-        :return: The protected of this InlineResponse20022.  # noqa: E501
+        :return: The remark of this InlineResponse20022.  # noqa: E501
         :rtype: str
         """
-        return self._protected
+        return self._remark
 
-    @protected.setter
-    def protected(self, protected):
-        """Sets the protected of this InlineResponse20022.
+    @remark.setter
+    def remark(self, remark):
+        """Sets the remark of this InlineResponse20022.
 
 
-        :param protected: The protected of this InlineResponse20022.  # noqa: E501
+        :param remark: The remark of this InlineResponse20022.  # noqa: E501
         :type: str
         """
 
-        self._protected = protected
+        self._remark = remark
 
     @property
-    def protection_url(self):
-        """Gets the protection_url of this InlineResponse20022.  # noqa: E501
+    def role(self):
+        """Gets the role of this InlineResponse20022.  # noqa: E501
 
 
-        :return: The protection_url of this InlineResponse20022.  # noqa: E501
+        :return: The role of this InlineResponse20022.  # noqa: E501
         :rtype: str
         """
-        return self._protection_url
+        return self._role
 
-    @protection_url.setter
-    def protection_url(self, protection_url):
-        """Sets the protection_url of this InlineResponse20022.
+    @role.setter
+    def role(self, role):
+        """Sets the role of this InlineResponse20022.
 
 
-        :param protection_url: The protection_url of this InlineResponse20022.  # noqa: E501
+        :param role: The role of this InlineResponse20022.  # noqa: E501
         :type: str
         """
 
-        self._protection_url = protection_url
+        self._role = role
+
+    @property
+    def url(self):
+        """Gets the url of this InlineResponse20022.  # noqa: E501
+
+
+        :return: The url of this InlineResponse20022.  # noqa: E501
+        :rtype: str
+        """
+        return self._url
+
+    @url.setter
+    def url(self, url):
+        """Sets the url of this InlineResponse20022.
+
+
+        :param url: The url of this InlineResponse20022.  # noqa: E501
+        :type: str
+        """
+
+        self._url = url
+
+    @property
+    def user(self):
+        """Gets the user of this InlineResponse20022.  # noqa: E501
+
+
+        :return: The user of this InlineResponse20022.  # noqa: E501
+        :rtype: str
+        """
+        return self._user
+
+    @user.setter
+    def user(self, user):
+        """Sets the user of this InlineResponse20022.
+
+
+        :param user: The user of this InlineResponse20022.  # noqa: E501
+        :type: str
+        """
+
+        self._user = user
 
     def to_dict(self):
         """Returns the model properties as a dict"""

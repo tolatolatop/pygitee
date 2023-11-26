@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    Gitee OpenApi
+    getV5ReposOwnerRepoSubscribers
 
-    All api provided by Gitee  # noqa: E501
+    列出 watch 了仓库的用户  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -42,6 +42,20 @@ class TestGistsApi(unittest.TestCase):
         """
         pass
 
+    def test_gists_id_delete(self):
+        """Test case for gists_id_delete
+
+        删除指定代码片段  # noqa: E501
+        """
+        pass
+
+    def test_gists_id_forks_get(self):
+        """Test case for gists_id_forks_get
+
+        获取 Fork 了指定代码片段的列表  # noqa: E501
+        """
+        pass
+
     def test_gists_id_forks_post(self):
         """Test case for gists_id_forks_post
 
@@ -56,10 +70,38 @@ class TestGistsApi(unittest.TestCase):
         """
         pass
 
+    def test_gists_id_patch(self):
+        """Test case for gists_id_patch
+
+        修改代码片段  # noqa: E501
+        """
+        pass
+
+    def test_gists_id_star_delete(self):
+        """Test case for gists_id_star_delete
+
+        取消Star代码片段  # noqa: E501
+        """
+        pass
+
+    def test_gists_id_star_get(self):
+        """Test case for gists_id_star_get
+
+        判断代码片段是否已Star  # noqa: E501
+        """
+        pass
+
     def test_gists_id_star_put(self):
         """Test case for gists_id_star_put
 
         Star代码片段  # noqa: E501
+        """
+        pass
+
+    def test_gists_post(self):
+        """Test case for gists_post
+
+        创建代码片段  # noqa: E501
         """
         pass
 

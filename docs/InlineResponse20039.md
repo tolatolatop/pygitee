@@ -3,17 +3,17 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**closed_issues** | **int** |  | [optional] 
 **created_at** | **str** |  | [optional] 
-**description** | **str** |  | [optional] 
-**due_on** | **str** |  | [optional] 
-**html_url** | **str** |  | [optional] 
-**number** | **int** |  | [optional] 
-**open_issues** | **int** |  | [optional] 
-**repository_id** | **int** |  | [optional] 
-**state** | **str** |  | [optional] 
-**title** | **str** |  | [optional] 
-**updated_at** | **str** |  | [optional] 
+**id** | **str** |  | [optional] 
+**issues_events** | **str** |  | [optional] 
+**merge_requests_events** | **str** |  | [optional] 
+**note_events** | **str** |  | [optional] 
+**password** | **str** |  | [optional] 
+**project_id** | **str** |  | [optional] 
+**push_events** | **str** |  | [optional] 
+**result** | **str** |  | [optional] 
+**result_code** | **str** |  | [optional] 
+**tag_push_events** | **str** |  | [optional] 
 **url** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -45,7 +45,7 @@ class OrgsApi(object):
         :param str access_token: 用户授权码
         :param int prev_id: 滚动列表的最后一条记录的id
         :param int limit: 滚动列表每页的数量，最大为 100
-        :return: InlineResponse20012
+        :return: InlineResponse20013
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -69,7 +69,7 @@ class OrgsApi(object):
         :param str access_token: 用户授权码
         :param int prev_id: 滚动列表的最后一条记录的id
         :param int limit: 滚动列表每页的数量，最大为 100
-        :return: InlineResponse20012
+        :return: InlineResponse20013
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -129,7 +129,7 @@ class OrgsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20012',  # noqa: E501
+            response_type='InlineResponse20013',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -150,7 +150,7 @@ class OrgsApi(object):
         :param str access_token: 用户授权码
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20018
+        :return: InlineResponse20020
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -174,7 +174,7 @@ class OrgsApi(object):
         :param str access_token: 用户授权码
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20018
+        :return: InlineResponse20020
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -234,7 +234,7 @@ class OrgsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20018',  # noqa: E501
+            response_type='InlineResponse20020',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -253,7 +253,7 @@ class OrgsApi(object):
         :param async_req bool
         :param str org: 组织的路径(path/login) (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20017
+        :return: InlineResponse20018
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -275,7 +275,7 @@ class OrgsApi(object):
         :param async_req bool
         :param str org: 组织的路径(path/login) (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20017
+        :return: InlineResponse20018
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -331,7 +331,7 @@ class OrgsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20017',  # noqa: E501
+            response_type='InlineResponse20018',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -353,7 +353,7 @@ class OrgsApi(object):
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
         :param str role: 根据角色筛选成员
-        :return: InlineResponse20019
+        :return: InlineResponse20021
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -378,7 +378,7 @@ class OrgsApi(object):
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
         :param str role: 根据角色筛选成员
-        :return: InlineResponse20019
+        :return: InlineResponse20021
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -440,7 +440,7 @@ class OrgsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20019',  # noqa: E501
+            response_type='InlineResponse20021',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -542,6 +542,321 @@ class OrgsApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def orgs_org_memberships_username_get(self, org, username, **kwargs):  # noqa: E501
+        """获取授权用户所属组织的一个成员  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.orgs_org_memberships_username_get(org, username, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str org: 组织的路径(path/login) (required)
+        :param str username: 用户名(username/login) (required)
+        :param str access_token: 用户授权码
+        :return: InlineResponse20022
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.orgs_org_memberships_username_get_with_http_info(org, username, **kwargs)  # noqa: E501
+        else:
+            (data) = self.orgs_org_memberships_username_get_with_http_info(org, username, **kwargs)  # noqa: E501
+            return data
+
+    def orgs_org_memberships_username_get_with_http_info(self, org, username, **kwargs):  # noqa: E501
+        """获取授权用户所属组织的一个成员  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.orgs_org_memberships_username_get_with_http_info(org, username, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str org: 组织的路径(path/login) (required)
+        :param str username: 用户名(username/login) (required)
+        :param str access_token: 用户授权码
+        :return: InlineResponse20022
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['org', 'username', 'access_token']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method orgs_org_memberships_username_get" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'org' is set
+        if ('org' not in params or
+                params['org'] is None):
+            raise ValueError("Missing the required parameter `org` when calling `orgs_org_memberships_username_get`")  # noqa: E501
+        # verify the required parameter 'username' is set
+        if ('username' not in params or
+                params['username'] is None):
+            raise ValueError("Missing the required parameter `username` when calling `orgs_org_memberships_username_get`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'org' in params:
+            path_params['org'] = params['org']  # noqa: E501
+        if 'username' in params:
+            path_params['username'] = params['username']  # noqa: E501
+
+        query_params = []
+        if 'access_token' in params:
+            query_params.append(('access_token', params['access_token']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/orgs/{org}/memberships/{username}', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse20022',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def orgs_org_memberships_username_put(self, org, username, **kwargs):  # noqa: E501
+        """增加或更新授权用户所管理组织的成员  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.orgs_org_memberships_username_put(org, username, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str org: 组织的路径(path/login) (required)
+        :param str username: 用户名(username/login) (required)
+        :param MembershipsUsernameBody body:
+        :return: InlineResponse20022
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.orgs_org_memberships_username_put_with_http_info(org, username, **kwargs)  # noqa: E501
+        else:
+            (data) = self.orgs_org_memberships_username_put_with_http_info(org, username, **kwargs)  # noqa: E501
+            return data
+
+    def orgs_org_memberships_username_put_with_http_info(self, org, username, **kwargs):  # noqa: E501
+        """增加或更新授权用户所管理组织的成员  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.orgs_org_memberships_username_put_with_http_info(org, username, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str org: 组织的路径(path/login) (required)
+        :param str username: 用户名(username/login) (required)
+        :param MembershipsUsernameBody body:
+        :return: InlineResponse20022
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['org', 'username', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method orgs_org_memberships_username_put" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'org' is set
+        if ('org' not in params or
+                params['org'] is None):
+            raise ValueError("Missing the required parameter `org` when calling `orgs_org_memberships_username_put`")  # noqa: E501
+        # verify the required parameter 'username' is set
+        if ('username' not in params or
+                params['username'] is None):
+            raise ValueError("Missing the required parameter `username` when calling `orgs_org_memberships_username_put`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'org' in params:
+            path_params['org'] = params['org']  # noqa: E501
+        if 'username' in params:
+            path_params['username'] = params['username']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/orgs/{org}/memberships/{username}', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse20022',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def orgs_org_patch(self, org, **kwargs):  # noqa: E501
+        """更新授权用户所管理的组织资料  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.orgs_org_patch(org, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str org: 组织的路径(path/login) (required)
+        :param OrgsOrgBody body:
+        :return: InlineResponse20019
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.orgs_org_patch_with_http_info(org, **kwargs)  # noqa: E501
+        else:
+            (data) = self.orgs_org_patch_with_http_info(org, **kwargs)  # noqa: E501
+            return data
+
+    def orgs_org_patch_with_http_info(self, org, **kwargs):  # noqa: E501
+        """更新授权用户所管理的组织资料  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.orgs_org_patch_with_http_info(org, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str org: 组织的路径(path/login) (required)
+        :param OrgsOrgBody body:
+        :return: InlineResponse20019
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['org', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method orgs_org_patch" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'org' is set
+        if ('org' not in params or
+                params['org'] is None):
+            raise ValueError("Missing the required parameter `org` when calling `orgs_org_patch`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'org' in params:
+            path_params['org'] = params['org']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/orgs/{org}', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse20019',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -658,6 +973,107 @@ class OrgsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def orgs_org_repos_post(self, org, **kwargs):  # noqa: E501
+        """创建组织仓库  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.orgs_org_repos_post(org, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str org: 组织的路径(path/login) (required)
+        :param OrgReposBody body:
+        :return: InlineResponse2007
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.orgs_org_repos_post_with_http_info(org, **kwargs)  # noqa: E501
+        else:
+            (data) = self.orgs_org_repos_post_with_http_info(org, **kwargs)  # noqa: E501
+            return data
+
+    def orgs_org_repos_post_with_http_info(self, org, **kwargs):  # noqa: E501
+        """创建组织仓库  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.orgs_org_repos_post_with_http_info(org, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str org: 组织的路径(path/login) (required)
+        :param OrgReposBody body:
+        :return: InlineResponse2007
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['org', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method orgs_org_repos_post" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'org' is set
+        if ('org' not in params or
+                params['org'] is None):
+            raise ValueError("Missing the required parameter `org` when calling `orgs_org_repos_post`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'org' in params:
+            path_params['org'] = params['org']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/orgs/{org}/repos', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse2007',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def user_memberships_orgs_get(self, **kwargs):  # noqa: E501
         """列出授权用户在所属组织的成员资料  # noqa: E501
 
@@ -671,7 +1087,7 @@ class OrgsApi(object):
         :param bool active: 根据成员是否已激活进行筛选资料，缺省返回所有资料
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20052
+        :return: InlineResponse20022
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -695,7 +1111,7 @@ class OrgsApi(object):
         :param bool active: 根据成员是否已激活进行筛选资料，缺省返回所有资料
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20052
+        :return: InlineResponse20022
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -751,7 +1167,100 @@ class OrgsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20052',  # noqa: E501
+            response_type='InlineResponse20022',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def user_memberships_orgs_org_delete(self, org, **kwargs):  # noqa: E501
+        """退出一个组织  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.user_memberships_orgs_org_delete(org, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str org: 组织的路径(path/login) (required)
+        :param str access_token: 用户授权码
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.user_memberships_orgs_org_delete_with_http_info(org, **kwargs)  # noqa: E501
+        else:
+            (data) = self.user_memberships_orgs_org_delete_with_http_info(org, **kwargs)  # noqa: E501
+            return data
+
+    def user_memberships_orgs_org_delete_with_http_info(self, org, **kwargs):  # noqa: E501
+        """退出一个组织  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.user_memberships_orgs_org_delete_with_http_info(org, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str org: 组织的路径(path/login) (required)
+        :param str access_token: 用户授权码
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['org', 'access_token']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method user_memberships_orgs_org_delete" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'org' is set
+        if ('org' not in params or
+                params['org'] is None):
+            raise ValueError("Missing the required parameter `org` when calling `user_memberships_orgs_org_delete`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'org' in params:
+            path_params['org'] = params['org']  # noqa: E501
+
+        query_params = []
+        if 'access_token' in params:
+            query_params.append(('access_token', params['access_token']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/user/memberships/orgs/{org}', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -770,7 +1279,7 @@ class OrgsApi(object):
         :param async_req bool
         :param str org: 组织的路径(path/login) (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20052
+        :return: InlineResponse20022
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -792,7 +1301,7 @@ class OrgsApi(object):
         :param async_req bool
         :param str org: 组织的路径(path/login) (required)
         :param str access_token: 用户授权码
-        :return: InlineResponse20052
+        :return: InlineResponse20022
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -848,7 +1357,108 @@ class OrgsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20052',  # noqa: E501
+            response_type='InlineResponse20022',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def user_memberships_orgs_org_patch(self, org, **kwargs):  # noqa: E501
+        """更新授权用户在一个组织的成员资料  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.user_memberships_orgs_org_patch(org, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str org: 组织的路径(path/login) (required)
+        :param OrgsOrgBody1 body:
+        :return: InlineResponse20022
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.user_memberships_orgs_org_patch_with_http_info(org, **kwargs)  # noqa: E501
+        else:
+            (data) = self.user_memberships_orgs_org_patch_with_http_info(org, **kwargs)  # noqa: E501
+            return data
+
+    def user_memberships_orgs_org_patch_with_http_info(self, org, **kwargs):  # noqa: E501
+        """更新授权用户在一个组织的成员资料  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.user_memberships_orgs_org_patch_with_http_info(org, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str org: 组织的路径(path/login) (required)
+        :param OrgsOrgBody1 body:
+        :return: InlineResponse20022
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['org', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method user_memberships_orgs_org_patch" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'org' is set
+        if ('org' not in params or
+                params['org'] is None):
+            raise ValueError("Missing the required parameter `org` when calling `user_memberships_orgs_org_patch`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'org' in params:
+            path_params['org'] = params['org']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['access_token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/user/memberships/orgs/{org}', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='InlineResponse20022',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -869,7 +1479,7 @@ class OrgsApi(object):
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
         :param bool admin: 只列出授权用户管理的组织
-        :return: InlineResponse20017
+        :return: InlineResponse20018
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -893,7 +1503,7 @@ class OrgsApi(object):
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
         :param bool admin: 只列出授权用户管理的组织
-        :return: InlineResponse20017
+        :return: InlineResponse20018
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -949,7 +1559,7 @@ class OrgsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20017',  # noqa: E501
+            response_type='InlineResponse20018',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -971,7 +1581,7 @@ class OrgsApi(object):
         :param str access_token: 用户授权码
         :param int prev_id: 滚动列表的最后一条记录的id
         :param int limit: 滚动列表每页的数量，最大为 100
-        :return: InlineResponse20012
+        :return: InlineResponse20013
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -996,7 +1606,7 @@ class OrgsApi(object):
         :param str access_token: 用户授权码
         :param int prev_id: 滚动列表的最后一条记录的id
         :param int limit: 滚动列表每页的数量，最大为 100
-        :return: InlineResponse20012
+        :return: InlineResponse20013
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1062,7 +1672,7 @@ class OrgsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20012',  # noqa: E501
+            response_type='InlineResponse20013',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1083,7 +1693,7 @@ class OrgsApi(object):
         :param str access_token: 用户授权码
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20017
+        :return: InlineResponse20018
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1107,7 +1717,7 @@ class OrgsApi(object):
         :param str access_token: 用户授权码
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
-        :return: InlineResponse20017
+        :return: InlineResponse20018
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1167,7 +1777,7 @@ class OrgsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20017',  # noqa: E501
+            response_type='InlineResponse20018',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

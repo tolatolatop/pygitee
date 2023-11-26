@@ -28,174 +28,214 @@ class InlineResponse20028(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'author': 'str',
-        'comments_url': 'str',
-        'commit': 'str',
-        'committer': 'str',
-        'files': 'Files',
+        'avatar_url': 'str',
+        'events_url': 'str',
+        'followers_url': 'str',
+        'following_url': 'str',
+        'gists_url': 'str',
         'html_url': 'str',
-        'parents': 'str',
-        'sha': 'str',
-        'stats': 'str',
-        'truncated': 'bool',
+        'id': 'int',
+        'login': 'str',
+        'member_role': 'str',
+        'name': 'str',
+        'organizations_url': 'str',
+        'permissions': 'str',
+        'received_events_url': 'str',
+        'remark': 'str',
+        'repos_url': 'str',
+        'starred_url': 'str',
+        'subscriptions_url': 'str',
+        'type': 'str',
         'url': 'str'
     }
 
     attribute_map = {
-        'author': 'author',
-        'comments_url': 'comments_url',
-        'commit': 'commit',
-        'committer': 'committer',
-        'files': 'files',
+        'avatar_url': 'avatar_url',
+        'events_url': 'events_url',
+        'followers_url': 'followers_url',
+        'following_url': 'following_url',
+        'gists_url': 'gists_url',
         'html_url': 'html_url',
-        'parents': 'parents',
-        'sha': 'sha',
-        'stats': 'stats',
-        'truncated': 'truncated',
+        'id': 'id',
+        'login': 'login',
+        'member_role': 'member_role',
+        'name': 'name',
+        'organizations_url': 'organizations_url',
+        'permissions': 'permissions',
+        'received_events_url': 'received_events_url',
+        'remark': 'remark',
+        'repos_url': 'repos_url',
+        'starred_url': 'starred_url',
+        'subscriptions_url': 'subscriptions_url',
+        'type': 'type',
         'url': 'url'
     }
 
-    def __init__(self, author=None, comments_url=None, commit=None, committer=None, files=None, html_url=None, parents=None, sha=None, stats=None, truncated=None, url=None):  # noqa: E501
+    def __init__(self, avatar_url=None, events_url=None, followers_url=None, following_url=None, gists_url=None, html_url=None, id=None, login=None, member_role=None, name=None, organizations_url=None, permissions=None, received_events_url=None, remark=None, repos_url=None, starred_url=None, subscriptions_url=None, type=None, url=None):  # noqa: E501
         """InlineResponse20028 - a model defined in Swagger"""  # noqa: E501
-        self._author = None
-        self._comments_url = None
-        self._commit = None
-        self._committer = None
-        self._files = None
+        self._avatar_url = None
+        self._events_url = None
+        self._followers_url = None
+        self._following_url = None
+        self._gists_url = None
         self._html_url = None
-        self._parents = None
-        self._sha = None
-        self._stats = None
-        self._truncated = None
+        self._id = None
+        self._login = None
+        self._member_role = None
+        self._name = None
+        self._organizations_url = None
+        self._permissions = None
+        self._received_events_url = None
+        self._remark = None
+        self._repos_url = None
+        self._starred_url = None
+        self._subscriptions_url = None
+        self._type = None
         self._url = None
         self.discriminator = None
-        if author is not None:
-            self.author = author
-        if comments_url is not None:
-            self.comments_url = comments_url
-        if commit is not None:
-            self.commit = commit
-        if committer is not None:
-            self.committer = committer
-        if files is not None:
-            self.files = files
+        if avatar_url is not None:
+            self.avatar_url = avatar_url
+        if events_url is not None:
+            self.events_url = events_url
+        if followers_url is not None:
+            self.followers_url = followers_url
+        if following_url is not None:
+            self.following_url = following_url
+        if gists_url is not None:
+            self.gists_url = gists_url
         if html_url is not None:
             self.html_url = html_url
-        if parents is not None:
-            self.parents = parents
-        if sha is not None:
-            self.sha = sha
-        if stats is not None:
-            self.stats = stats
-        if truncated is not None:
-            self.truncated = truncated
+        if id is not None:
+            self.id = id
+        if login is not None:
+            self.login = login
+        if member_role is not None:
+            self.member_role = member_role
+        if name is not None:
+            self.name = name
+        if organizations_url is not None:
+            self.organizations_url = organizations_url
+        if permissions is not None:
+            self.permissions = permissions
+        if received_events_url is not None:
+            self.received_events_url = received_events_url
+        if remark is not None:
+            self.remark = remark
+        if repos_url is not None:
+            self.repos_url = repos_url
+        if starred_url is not None:
+            self.starred_url = starred_url
+        if subscriptions_url is not None:
+            self.subscriptions_url = subscriptions_url
+        if type is not None:
+            self.type = type
         if url is not None:
             self.url = url
 
     @property
-    def author(self):
-        """Gets the author of this InlineResponse20028.  # noqa: E501
+    def avatar_url(self):
+        """Gets the avatar_url of this InlineResponse20028.  # noqa: E501
 
 
-        :return: The author of this InlineResponse20028.  # noqa: E501
+        :return: The avatar_url of this InlineResponse20028.  # noqa: E501
         :rtype: str
         """
-        return self._author
+        return self._avatar_url
 
-    @author.setter
-    def author(self, author):
-        """Sets the author of this InlineResponse20028.
+    @avatar_url.setter
+    def avatar_url(self, avatar_url):
+        """Sets the avatar_url of this InlineResponse20028.
 
 
-        :param author: The author of this InlineResponse20028.  # noqa: E501
+        :param avatar_url: The avatar_url of this InlineResponse20028.  # noqa: E501
         :type: str
         """
 
-        self._author = author
+        self._avatar_url = avatar_url
 
     @property
-    def comments_url(self):
-        """Gets the comments_url of this InlineResponse20028.  # noqa: E501
+    def events_url(self):
+        """Gets the events_url of this InlineResponse20028.  # noqa: E501
 
 
-        :return: The comments_url of this InlineResponse20028.  # noqa: E501
+        :return: The events_url of this InlineResponse20028.  # noqa: E501
         :rtype: str
         """
-        return self._comments_url
+        return self._events_url
 
-    @comments_url.setter
-    def comments_url(self, comments_url):
-        """Sets the comments_url of this InlineResponse20028.
+    @events_url.setter
+    def events_url(self, events_url):
+        """Sets the events_url of this InlineResponse20028.
 
 
-        :param comments_url: The comments_url of this InlineResponse20028.  # noqa: E501
+        :param events_url: The events_url of this InlineResponse20028.  # noqa: E501
         :type: str
         """
 
-        self._comments_url = comments_url
+        self._events_url = events_url
 
     @property
-    def commit(self):
-        """Gets the commit of this InlineResponse20028.  # noqa: E501
+    def followers_url(self):
+        """Gets the followers_url of this InlineResponse20028.  # noqa: E501
 
 
-        :return: The commit of this InlineResponse20028.  # noqa: E501
+        :return: The followers_url of this InlineResponse20028.  # noqa: E501
         :rtype: str
         """
-        return self._commit
+        return self._followers_url
 
-    @commit.setter
-    def commit(self, commit):
-        """Sets the commit of this InlineResponse20028.
+    @followers_url.setter
+    def followers_url(self, followers_url):
+        """Sets the followers_url of this InlineResponse20028.
 
 
-        :param commit: The commit of this InlineResponse20028.  # noqa: E501
+        :param followers_url: The followers_url of this InlineResponse20028.  # noqa: E501
         :type: str
         """
 
-        self._commit = commit
+        self._followers_url = followers_url
 
     @property
-    def committer(self):
-        """Gets the committer of this InlineResponse20028.  # noqa: E501
+    def following_url(self):
+        """Gets the following_url of this InlineResponse20028.  # noqa: E501
 
 
-        :return: The committer of this InlineResponse20028.  # noqa: E501
+        :return: The following_url of this InlineResponse20028.  # noqa: E501
         :rtype: str
         """
-        return self._committer
+        return self._following_url
 
-    @committer.setter
-    def committer(self, committer):
-        """Sets the committer of this InlineResponse20028.
+    @following_url.setter
+    def following_url(self, following_url):
+        """Sets the following_url of this InlineResponse20028.
 
 
-        :param committer: The committer of this InlineResponse20028.  # noqa: E501
+        :param following_url: The following_url of this InlineResponse20028.  # noqa: E501
         :type: str
         """
 
-        self._committer = committer
+        self._following_url = following_url
 
     @property
-    def files(self):
-        """Gets the files of this InlineResponse20028.  # noqa: E501
+    def gists_url(self):
+        """Gets the gists_url of this InlineResponse20028.  # noqa: E501
 
 
-        :return: The files of this InlineResponse20028.  # noqa: E501
-        :rtype: Files
+        :return: The gists_url of this InlineResponse20028.  # noqa: E501
+        :rtype: str
         """
-        return self._files
+        return self._gists_url
 
-    @files.setter
-    def files(self, files):
-        """Sets the files of this InlineResponse20028.
+    @gists_url.setter
+    def gists_url(self, gists_url):
+        """Sets the gists_url of this InlineResponse20028.
 
 
-        :param files: The files of this InlineResponse20028.  # noqa: E501
-        :type: Files
+        :param gists_url: The gists_url of this InlineResponse20028.  # noqa: E501
+        :type: str
         """
 
-        self._files = files
+        self._gists_url = gists_url
 
     @property
     def html_url(self):
@@ -219,88 +259,256 @@ class InlineResponse20028(object):
         self._html_url = html_url
 
     @property
-    def parents(self):
-        """Gets the parents of this InlineResponse20028.  # noqa: E501
+    def id(self):
+        """Gets the id of this InlineResponse20028.  # noqa: E501
 
 
-        :return: The parents of this InlineResponse20028.  # noqa: E501
+        :return: The id of this InlineResponse20028.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this InlineResponse20028.
+
+
+        :param id: The id of this InlineResponse20028.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
+
+    @property
+    def login(self):
+        """Gets the login of this InlineResponse20028.  # noqa: E501
+
+
+        :return: The login of this InlineResponse20028.  # noqa: E501
         :rtype: str
         """
-        return self._parents
+        return self._login
 
-    @parents.setter
-    def parents(self, parents):
-        """Sets the parents of this InlineResponse20028.
+    @login.setter
+    def login(self, login):
+        """Sets the login of this InlineResponse20028.
 
 
-        :param parents: The parents of this InlineResponse20028.  # noqa: E501
+        :param login: The login of this InlineResponse20028.  # noqa: E501
         :type: str
         """
 
-        self._parents = parents
+        self._login = login
 
     @property
-    def sha(self):
-        """Gets the sha of this InlineResponse20028.  # noqa: E501
+    def member_role(self):
+        """Gets the member_role of this InlineResponse20028.  # noqa: E501
 
 
-        :return: The sha of this InlineResponse20028.  # noqa: E501
+        :return: The member_role of this InlineResponse20028.  # noqa: E501
         :rtype: str
         """
-        return self._sha
+        return self._member_role
 
-    @sha.setter
-    def sha(self, sha):
-        """Sets the sha of this InlineResponse20028.
+    @member_role.setter
+    def member_role(self, member_role):
+        """Sets the member_role of this InlineResponse20028.
 
 
-        :param sha: The sha of this InlineResponse20028.  # noqa: E501
+        :param member_role: The member_role of this InlineResponse20028.  # noqa: E501
         :type: str
         """
 
-        self._sha = sha
+        self._member_role = member_role
 
     @property
-    def stats(self):
-        """Gets the stats of this InlineResponse20028.  # noqa: E501
+    def name(self):
+        """Gets the name of this InlineResponse20028.  # noqa: E501
 
 
-        :return: The stats of this InlineResponse20028.  # noqa: E501
+        :return: The name of this InlineResponse20028.  # noqa: E501
         :rtype: str
         """
-        return self._stats
+        return self._name
 
-    @stats.setter
-    def stats(self, stats):
-        """Sets the stats of this InlineResponse20028.
+    @name.setter
+    def name(self, name):
+        """Sets the name of this InlineResponse20028.
 
 
-        :param stats: The stats of this InlineResponse20028.  # noqa: E501
+        :param name: The name of this InlineResponse20028.  # noqa: E501
         :type: str
         """
 
-        self._stats = stats
+        self._name = name
 
     @property
-    def truncated(self):
-        """Gets the truncated of this InlineResponse20028.  # noqa: E501
+    def organizations_url(self):
+        """Gets the organizations_url of this InlineResponse20028.  # noqa: E501
 
 
-        :return: The truncated of this InlineResponse20028.  # noqa: E501
-        :rtype: bool
+        :return: The organizations_url of this InlineResponse20028.  # noqa: E501
+        :rtype: str
         """
-        return self._truncated
+        return self._organizations_url
 
-    @truncated.setter
-    def truncated(self, truncated):
-        """Sets the truncated of this InlineResponse20028.
+    @organizations_url.setter
+    def organizations_url(self, organizations_url):
+        """Sets the organizations_url of this InlineResponse20028.
 
 
-        :param truncated: The truncated of this InlineResponse20028.  # noqa: E501
-        :type: bool
+        :param organizations_url: The organizations_url of this InlineResponse20028.  # noqa: E501
+        :type: str
         """
 
-        self._truncated = truncated
+        self._organizations_url = organizations_url
+
+    @property
+    def permissions(self):
+        """Gets the permissions of this InlineResponse20028.  # noqa: E501
+
+
+        :return: The permissions of this InlineResponse20028.  # noqa: E501
+        :rtype: str
+        """
+        return self._permissions
+
+    @permissions.setter
+    def permissions(self, permissions):
+        """Sets the permissions of this InlineResponse20028.
+
+
+        :param permissions: The permissions of this InlineResponse20028.  # noqa: E501
+        :type: str
+        """
+
+        self._permissions = permissions
+
+    @property
+    def received_events_url(self):
+        """Gets the received_events_url of this InlineResponse20028.  # noqa: E501
+
+
+        :return: The received_events_url of this InlineResponse20028.  # noqa: E501
+        :rtype: str
+        """
+        return self._received_events_url
+
+    @received_events_url.setter
+    def received_events_url(self, received_events_url):
+        """Sets the received_events_url of this InlineResponse20028.
+
+
+        :param received_events_url: The received_events_url of this InlineResponse20028.  # noqa: E501
+        :type: str
+        """
+
+        self._received_events_url = received_events_url
+
+    @property
+    def remark(self):
+        """Gets the remark of this InlineResponse20028.  # noqa: E501
+
+
+        :return: The remark of this InlineResponse20028.  # noqa: E501
+        :rtype: str
+        """
+        return self._remark
+
+    @remark.setter
+    def remark(self, remark):
+        """Sets the remark of this InlineResponse20028.
+
+
+        :param remark: The remark of this InlineResponse20028.  # noqa: E501
+        :type: str
+        """
+
+        self._remark = remark
+
+    @property
+    def repos_url(self):
+        """Gets the repos_url of this InlineResponse20028.  # noqa: E501
+
+
+        :return: The repos_url of this InlineResponse20028.  # noqa: E501
+        :rtype: str
+        """
+        return self._repos_url
+
+    @repos_url.setter
+    def repos_url(self, repos_url):
+        """Sets the repos_url of this InlineResponse20028.
+
+
+        :param repos_url: The repos_url of this InlineResponse20028.  # noqa: E501
+        :type: str
+        """
+
+        self._repos_url = repos_url
+
+    @property
+    def starred_url(self):
+        """Gets the starred_url of this InlineResponse20028.  # noqa: E501
+
+
+        :return: The starred_url of this InlineResponse20028.  # noqa: E501
+        :rtype: str
+        """
+        return self._starred_url
+
+    @starred_url.setter
+    def starred_url(self, starred_url):
+        """Sets the starred_url of this InlineResponse20028.
+
+
+        :param starred_url: The starred_url of this InlineResponse20028.  # noqa: E501
+        :type: str
+        """
+
+        self._starred_url = starred_url
+
+    @property
+    def subscriptions_url(self):
+        """Gets the subscriptions_url of this InlineResponse20028.  # noqa: E501
+
+
+        :return: The subscriptions_url of this InlineResponse20028.  # noqa: E501
+        :rtype: str
+        """
+        return self._subscriptions_url
+
+    @subscriptions_url.setter
+    def subscriptions_url(self, subscriptions_url):
+        """Sets the subscriptions_url of this InlineResponse20028.
+
+
+        :param subscriptions_url: The subscriptions_url of this InlineResponse20028.  # noqa: E501
+        :type: str
+        """
+
+        self._subscriptions_url = subscriptions_url
+
+    @property
+    def type(self):
+        """Gets the type of this InlineResponse20028.  # noqa: E501
+
+
+        :return: The type of this InlineResponse20028.  # noqa: E501
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this InlineResponse20028.
+
+
+        :param type: The type of this InlineResponse20028.  # noqa: E501
+        :type: str
+        """
+
+        self._type = type
 
     @property
     def url(self):

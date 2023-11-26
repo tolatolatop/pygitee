@@ -28,222 +28,456 @@ class InlineResponse20044(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'author_email_suffix': 'str',
-        'commit_message_regex': 'str',
-        'except_manager': 'str',
-        'max_file_size': 'str',
-        'restrict_author_email_suffix': 'str',
-        'restrict_commit_message': 'str',
-        'restrict_file_size': 'str',
-        'restrict_push_own_commit': 'str'
+        'links': 'str',
+        'body': 'str',
+        'comment_type': 'str',
+        'commit_id': 'str',
+        'created_at': 'str',
+        'html_url': 'str',
+        'id': 'str',
+        'in_reply_to_id': 'str',
+        'new_line': 'str',
+        'original_commit_id': 'str',
+        'original_position': 'str',
+        'path': 'str',
+        'position': 'str',
+        'pull_request_url': 'str',
+        'updated_at': 'str',
+        'url': 'str',
+        'user': 'str'
     }
 
     attribute_map = {
-        'author_email_suffix': 'author_email_suffix',
-        'commit_message_regex': 'commit_message_regex',
-        'except_manager': 'except_manager',
-        'max_file_size': 'max_file_size',
-        'restrict_author_email_suffix': 'restrict_author_email_suffix',
-        'restrict_commit_message': 'restrict_commit_message',
-        'restrict_file_size': 'restrict_file_size',
-        'restrict_push_own_commit': 'restrict_push_own_commit'
+        'links': '_links',
+        'body': 'body',
+        'comment_type': 'comment_type',
+        'commit_id': 'commit_id',
+        'created_at': 'created_at',
+        'html_url': 'html_url',
+        'id': 'id',
+        'in_reply_to_id': 'in_reply_to_id',
+        'new_line': 'new_line',
+        'original_commit_id': 'original_commit_id',
+        'original_position': 'original_position',
+        'path': 'path',
+        'position': 'position',
+        'pull_request_url': 'pull_request_url',
+        'updated_at': 'updated_at',
+        'url': 'url',
+        'user': 'user'
     }
 
-    def __init__(self, author_email_suffix=None, commit_message_regex=None, except_manager=None, max_file_size=None, restrict_author_email_suffix=None, restrict_commit_message=None, restrict_file_size=None, restrict_push_own_commit=None):  # noqa: E501
+    def __init__(self, links=None, body=None, comment_type=None, commit_id=None, created_at=None, html_url=None, id=None, in_reply_to_id=None, new_line=None, original_commit_id=None, original_position=None, path=None, position=None, pull_request_url=None, updated_at=None, url=None, user=None):  # noqa: E501
         """InlineResponse20044 - a model defined in Swagger"""  # noqa: E501
-        self._author_email_suffix = None
-        self._commit_message_regex = None
-        self._except_manager = None
-        self._max_file_size = None
-        self._restrict_author_email_suffix = None
-        self._restrict_commit_message = None
-        self._restrict_file_size = None
-        self._restrict_push_own_commit = None
+        self._links = None
+        self._body = None
+        self._comment_type = None
+        self._commit_id = None
+        self._created_at = None
+        self._html_url = None
+        self._id = None
+        self._in_reply_to_id = None
+        self._new_line = None
+        self._original_commit_id = None
+        self._original_position = None
+        self._path = None
+        self._position = None
+        self._pull_request_url = None
+        self._updated_at = None
+        self._url = None
+        self._user = None
         self.discriminator = None
-        if author_email_suffix is not None:
-            self.author_email_suffix = author_email_suffix
-        if commit_message_regex is not None:
-            self.commit_message_regex = commit_message_regex
-        if except_manager is not None:
-            self.except_manager = except_manager
-        if max_file_size is not None:
-            self.max_file_size = max_file_size
-        if restrict_author_email_suffix is not None:
-            self.restrict_author_email_suffix = restrict_author_email_suffix
-        if restrict_commit_message is not None:
-            self.restrict_commit_message = restrict_commit_message
-        if restrict_file_size is not None:
-            self.restrict_file_size = restrict_file_size
-        if restrict_push_own_commit is not None:
-            self.restrict_push_own_commit = restrict_push_own_commit
+        if links is not None:
+            self.links = links
+        if body is not None:
+            self.body = body
+        if comment_type is not None:
+            self.comment_type = comment_type
+        if commit_id is not None:
+            self.commit_id = commit_id
+        if created_at is not None:
+            self.created_at = created_at
+        if html_url is not None:
+            self.html_url = html_url
+        if id is not None:
+            self.id = id
+        if in_reply_to_id is not None:
+            self.in_reply_to_id = in_reply_to_id
+        if new_line is not None:
+            self.new_line = new_line
+        if original_commit_id is not None:
+            self.original_commit_id = original_commit_id
+        if original_position is not None:
+            self.original_position = original_position
+        if path is not None:
+            self.path = path
+        if position is not None:
+            self.position = position
+        if pull_request_url is not None:
+            self.pull_request_url = pull_request_url
+        if updated_at is not None:
+            self.updated_at = updated_at
+        if url is not None:
+            self.url = url
+        if user is not None:
+            self.user = user
 
     @property
-    def author_email_suffix(self):
-        """Gets the author_email_suffix of this InlineResponse20044.  # noqa: E501
+    def links(self):
+        """Gets the links of this InlineResponse20044.  # noqa: E501
 
 
-        :return: The author_email_suffix of this InlineResponse20044.  # noqa: E501
+        :return: The links of this InlineResponse20044.  # noqa: E501
         :rtype: str
         """
-        return self._author_email_suffix
+        return self._links
 
-    @author_email_suffix.setter
-    def author_email_suffix(self, author_email_suffix):
-        """Sets the author_email_suffix of this InlineResponse20044.
+    @links.setter
+    def links(self, links):
+        """Sets the links of this InlineResponse20044.
 
 
-        :param author_email_suffix: The author_email_suffix of this InlineResponse20044.  # noqa: E501
+        :param links: The links of this InlineResponse20044.  # noqa: E501
         :type: str
         """
 
-        self._author_email_suffix = author_email_suffix
+        self._links = links
 
     @property
-    def commit_message_regex(self):
-        """Gets the commit_message_regex of this InlineResponse20044.  # noqa: E501
+    def body(self):
+        """Gets the body of this InlineResponse20044.  # noqa: E501
 
 
-        :return: The commit_message_regex of this InlineResponse20044.  # noqa: E501
+        :return: The body of this InlineResponse20044.  # noqa: E501
         :rtype: str
         """
-        return self._commit_message_regex
+        return self._body
 
-    @commit_message_regex.setter
-    def commit_message_regex(self, commit_message_regex):
-        """Sets the commit_message_regex of this InlineResponse20044.
+    @body.setter
+    def body(self, body):
+        """Sets the body of this InlineResponse20044.
 
 
-        :param commit_message_regex: The commit_message_regex of this InlineResponse20044.  # noqa: E501
+        :param body: The body of this InlineResponse20044.  # noqa: E501
         :type: str
         """
 
-        self._commit_message_regex = commit_message_regex
+        self._body = body
 
     @property
-    def except_manager(self):
-        """Gets the except_manager of this InlineResponse20044.  # noqa: E501
+    def comment_type(self):
+        """Gets the comment_type of this InlineResponse20044.  # noqa: E501
 
 
-        :return: The except_manager of this InlineResponse20044.  # noqa: E501
+        :return: The comment_type of this InlineResponse20044.  # noqa: E501
         :rtype: str
         """
-        return self._except_manager
+        return self._comment_type
 
-    @except_manager.setter
-    def except_manager(self, except_manager):
-        """Sets the except_manager of this InlineResponse20044.
+    @comment_type.setter
+    def comment_type(self, comment_type):
+        """Sets the comment_type of this InlineResponse20044.
 
 
-        :param except_manager: The except_manager of this InlineResponse20044.  # noqa: E501
+        :param comment_type: The comment_type of this InlineResponse20044.  # noqa: E501
         :type: str
         """
 
-        self._except_manager = except_manager
+        self._comment_type = comment_type
 
     @property
-    def max_file_size(self):
-        """Gets the max_file_size of this InlineResponse20044.  # noqa: E501
+    def commit_id(self):
+        """Gets the commit_id of this InlineResponse20044.  # noqa: E501
 
 
-        :return: The max_file_size of this InlineResponse20044.  # noqa: E501
+        :return: The commit_id of this InlineResponse20044.  # noqa: E501
         :rtype: str
         """
-        return self._max_file_size
+        return self._commit_id
 
-    @max_file_size.setter
-    def max_file_size(self, max_file_size):
-        """Sets the max_file_size of this InlineResponse20044.
+    @commit_id.setter
+    def commit_id(self, commit_id):
+        """Sets the commit_id of this InlineResponse20044.
 
 
-        :param max_file_size: The max_file_size of this InlineResponse20044.  # noqa: E501
+        :param commit_id: The commit_id of this InlineResponse20044.  # noqa: E501
         :type: str
         """
 
-        self._max_file_size = max_file_size
+        self._commit_id = commit_id
 
     @property
-    def restrict_author_email_suffix(self):
-        """Gets the restrict_author_email_suffix of this InlineResponse20044.  # noqa: E501
+    def created_at(self):
+        """Gets the created_at of this InlineResponse20044.  # noqa: E501
 
 
-        :return: The restrict_author_email_suffix of this InlineResponse20044.  # noqa: E501
+        :return: The created_at of this InlineResponse20044.  # noqa: E501
         :rtype: str
         """
-        return self._restrict_author_email_suffix
+        return self._created_at
 
-    @restrict_author_email_suffix.setter
-    def restrict_author_email_suffix(self, restrict_author_email_suffix):
-        """Sets the restrict_author_email_suffix of this InlineResponse20044.
+    @created_at.setter
+    def created_at(self, created_at):
+        """Sets the created_at of this InlineResponse20044.
 
 
-        :param restrict_author_email_suffix: The restrict_author_email_suffix of this InlineResponse20044.  # noqa: E501
+        :param created_at: The created_at of this InlineResponse20044.  # noqa: E501
         :type: str
         """
 
-        self._restrict_author_email_suffix = restrict_author_email_suffix
+        self._created_at = created_at
 
     @property
-    def restrict_commit_message(self):
-        """Gets the restrict_commit_message of this InlineResponse20044.  # noqa: E501
+    def html_url(self):
+        """Gets the html_url of this InlineResponse20044.  # noqa: E501
 
 
-        :return: The restrict_commit_message of this InlineResponse20044.  # noqa: E501
+        :return: The html_url of this InlineResponse20044.  # noqa: E501
         :rtype: str
         """
-        return self._restrict_commit_message
+        return self._html_url
 
-    @restrict_commit_message.setter
-    def restrict_commit_message(self, restrict_commit_message):
-        """Sets the restrict_commit_message of this InlineResponse20044.
+    @html_url.setter
+    def html_url(self, html_url):
+        """Sets the html_url of this InlineResponse20044.
 
 
-        :param restrict_commit_message: The restrict_commit_message of this InlineResponse20044.  # noqa: E501
+        :param html_url: The html_url of this InlineResponse20044.  # noqa: E501
         :type: str
         """
 
-        self._restrict_commit_message = restrict_commit_message
+        self._html_url = html_url
 
     @property
-    def restrict_file_size(self):
-        """Gets the restrict_file_size of this InlineResponse20044.  # noqa: E501
+    def id(self):
+        """Gets the id of this InlineResponse20044.  # noqa: E501
 
 
-        :return: The restrict_file_size of this InlineResponse20044.  # noqa: E501
+        :return: The id of this InlineResponse20044.  # noqa: E501
         :rtype: str
         """
-        return self._restrict_file_size
+        return self._id
 
-    @restrict_file_size.setter
-    def restrict_file_size(self, restrict_file_size):
-        """Sets the restrict_file_size of this InlineResponse20044.
+    @id.setter
+    def id(self, id):
+        """Sets the id of this InlineResponse20044.
 
 
-        :param restrict_file_size: The restrict_file_size of this InlineResponse20044.  # noqa: E501
+        :param id: The id of this InlineResponse20044.  # noqa: E501
         :type: str
         """
 
-        self._restrict_file_size = restrict_file_size
+        self._id = id
 
     @property
-    def restrict_push_own_commit(self):
-        """Gets the restrict_push_own_commit of this InlineResponse20044.  # noqa: E501
+    def in_reply_to_id(self):
+        """Gets the in_reply_to_id of this InlineResponse20044.  # noqa: E501
 
 
-        :return: The restrict_push_own_commit of this InlineResponse20044.  # noqa: E501
+        :return: The in_reply_to_id of this InlineResponse20044.  # noqa: E501
         :rtype: str
         """
-        return self._restrict_push_own_commit
+        return self._in_reply_to_id
 
-    @restrict_push_own_commit.setter
-    def restrict_push_own_commit(self, restrict_push_own_commit):
-        """Sets the restrict_push_own_commit of this InlineResponse20044.
+    @in_reply_to_id.setter
+    def in_reply_to_id(self, in_reply_to_id):
+        """Sets the in_reply_to_id of this InlineResponse20044.
 
 
-        :param restrict_push_own_commit: The restrict_push_own_commit of this InlineResponse20044.  # noqa: E501
+        :param in_reply_to_id: The in_reply_to_id of this InlineResponse20044.  # noqa: E501
         :type: str
         """
 
-        self._restrict_push_own_commit = restrict_push_own_commit
+        self._in_reply_to_id = in_reply_to_id
+
+    @property
+    def new_line(self):
+        """Gets the new_line of this InlineResponse20044.  # noqa: E501
+
+
+        :return: The new_line of this InlineResponse20044.  # noqa: E501
+        :rtype: str
+        """
+        return self._new_line
+
+    @new_line.setter
+    def new_line(self, new_line):
+        """Sets the new_line of this InlineResponse20044.
+
+
+        :param new_line: The new_line of this InlineResponse20044.  # noqa: E501
+        :type: str
+        """
+
+        self._new_line = new_line
+
+    @property
+    def original_commit_id(self):
+        """Gets the original_commit_id of this InlineResponse20044.  # noqa: E501
+
+
+        :return: The original_commit_id of this InlineResponse20044.  # noqa: E501
+        :rtype: str
+        """
+        return self._original_commit_id
+
+    @original_commit_id.setter
+    def original_commit_id(self, original_commit_id):
+        """Sets the original_commit_id of this InlineResponse20044.
+
+
+        :param original_commit_id: The original_commit_id of this InlineResponse20044.  # noqa: E501
+        :type: str
+        """
+
+        self._original_commit_id = original_commit_id
+
+    @property
+    def original_position(self):
+        """Gets the original_position of this InlineResponse20044.  # noqa: E501
+
+
+        :return: The original_position of this InlineResponse20044.  # noqa: E501
+        :rtype: str
+        """
+        return self._original_position
+
+    @original_position.setter
+    def original_position(self, original_position):
+        """Sets the original_position of this InlineResponse20044.
+
+
+        :param original_position: The original_position of this InlineResponse20044.  # noqa: E501
+        :type: str
+        """
+
+        self._original_position = original_position
+
+    @property
+    def path(self):
+        """Gets the path of this InlineResponse20044.  # noqa: E501
+
+
+        :return: The path of this InlineResponse20044.  # noqa: E501
+        :rtype: str
+        """
+        return self._path
+
+    @path.setter
+    def path(self, path):
+        """Sets the path of this InlineResponse20044.
+
+
+        :param path: The path of this InlineResponse20044.  # noqa: E501
+        :type: str
+        """
+
+        self._path = path
+
+    @property
+    def position(self):
+        """Gets the position of this InlineResponse20044.  # noqa: E501
+
+
+        :return: The position of this InlineResponse20044.  # noqa: E501
+        :rtype: str
+        """
+        return self._position
+
+    @position.setter
+    def position(self, position):
+        """Sets the position of this InlineResponse20044.
+
+
+        :param position: The position of this InlineResponse20044.  # noqa: E501
+        :type: str
+        """
+
+        self._position = position
+
+    @property
+    def pull_request_url(self):
+        """Gets the pull_request_url of this InlineResponse20044.  # noqa: E501
+
+
+        :return: The pull_request_url of this InlineResponse20044.  # noqa: E501
+        :rtype: str
+        """
+        return self._pull_request_url
+
+    @pull_request_url.setter
+    def pull_request_url(self, pull_request_url):
+        """Sets the pull_request_url of this InlineResponse20044.
+
+
+        :param pull_request_url: The pull_request_url of this InlineResponse20044.  # noqa: E501
+        :type: str
+        """
+
+        self._pull_request_url = pull_request_url
+
+    @property
+    def updated_at(self):
+        """Gets the updated_at of this InlineResponse20044.  # noqa: E501
+
+
+        :return: The updated_at of this InlineResponse20044.  # noqa: E501
+        :rtype: str
+        """
+        return self._updated_at
+
+    @updated_at.setter
+    def updated_at(self, updated_at):
+        """Sets the updated_at of this InlineResponse20044.
+
+
+        :param updated_at: The updated_at of this InlineResponse20044.  # noqa: E501
+        :type: str
+        """
+
+        self._updated_at = updated_at
+
+    @property
+    def url(self):
+        """Gets the url of this InlineResponse20044.  # noqa: E501
+
+
+        :return: The url of this InlineResponse20044.  # noqa: E501
+        :rtype: str
+        """
+        return self._url
+
+    @url.setter
+    def url(self, url):
+        """Sets the url of this InlineResponse20044.
+
+
+        :param url: The url of this InlineResponse20044.  # noqa: E501
+        :type: str
+        """
+
+        self._url = url
+
+    @property
+    def user(self):
+        """Gets the user of this InlineResponse20044.  # noqa: E501
+
+
+        :return: The user of this InlineResponse20044.  # noqa: E501
+        :rtype: str
+        """
+        return self._user
+
+    @user.setter
+    def user(self, user):
+        """Sets the user of this InlineResponse20044.
+
+
+        :param user: The user of this InlineResponse20044.  # noqa: E501
+        :type: str
+        """
+
+        self._user = user
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    Gitee OpenApi
+    getV5ReposOwnerRepoSubscribers
 
-    All api provided by Gitee  # noqa: E501
+    列出 watch 了仓库的用户  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     

@@ -28,71 +28,164 @@ class InlineResponse20048(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'commit': 'str',
-        'message': 'str',
-        'name': 'str'
+        'assets': 'str',
+        'author': 'str',
+        'body': 'str',
+        'created_at': 'str',
+        'id': 'int',
+        'name': 'str',
+        'prerelease': 'str',
+        'tag_name': 'str',
+        'target_commitish': 'str'
     }
 
     attribute_map = {
-        'commit': 'commit',
-        'message': 'message',
-        'name': 'name'
+        'assets': 'assets',
+        'author': 'author',
+        'body': 'body',
+        'created_at': 'created_at',
+        'id': 'id',
+        'name': 'name',
+        'prerelease': 'prerelease',
+        'tag_name': 'tag_name',
+        'target_commitish': 'target_commitish'
     }
 
-    def __init__(self, commit=None, message=None, name=None):  # noqa: E501
+    def __init__(self, assets=None, author=None, body=None, created_at=None, id=None, name=None, prerelease=None, tag_name=None, target_commitish=None):  # noqa: E501
         """InlineResponse20048 - a model defined in Swagger"""  # noqa: E501
-        self._commit = None
-        self._message = None
+        self._assets = None
+        self._author = None
+        self._body = None
+        self._created_at = None
+        self._id = None
         self._name = None
+        self._prerelease = None
+        self._tag_name = None
+        self._target_commitish = None
         self.discriminator = None
-        if commit is not None:
-            self.commit = commit
-        if message is not None:
-            self.message = message
+        if assets is not None:
+            self.assets = assets
+        if author is not None:
+            self.author = author
+        if body is not None:
+            self.body = body
+        if created_at is not None:
+            self.created_at = created_at
+        if id is not None:
+            self.id = id
         if name is not None:
             self.name = name
+        if prerelease is not None:
+            self.prerelease = prerelease
+        if tag_name is not None:
+            self.tag_name = tag_name
+        if target_commitish is not None:
+            self.target_commitish = target_commitish
 
     @property
-    def commit(self):
-        """Gets the commit of this InlineResponse20048.  # noqa: E501
+    def assets(self):
+        """Gets the assets of this InlineResponse20048.  # noqa: E501
 
 
-        :return: The commit of this InlineResponse20048.  # noqa: E501
+        :return: The assets of this InlineResponse20048.  # noqa: E501
         :rtype: str
         """
-        return self._commit
+        return self._assets
 
-    @commit.setter
-    def commit(self, commit):
-        """Sets the commit of this InlineResponse20048.
+    @assets.setter
+    def assets(self, assets):
+        """Sets the assets of this InlineResponse20048.
 
 
-        :param commit: The commit of this InlineResponse20048.  # noqa: E501
+        :param assets: The assets of this InlineResponse20048.  # noqa: E501
         :type: str
         """
 
-        self._commit = commit
+        self._assets = assets
 
     @property
-    def message(self):
-        """Gets the message of this InlineResponse20048.  # noqa: E501
+    def author(self):
+        """Gets the author of this InlineResponse20048.  # noqa: E501
 
 
-        :return: The message of this InlineResponse20048.  # noqa: E501
+        :return: The author of this InlineResponse20048.  # noqa: E501
         :rtype: str
         """
-        return self._message
+        return self._author
 
-    @message.setter
-    def message(self, message):
-        """Sets the message of this InlineResponse20048.
+    @author.setter
+    def author(self, author):
+        """Sets the author of this InlineResponse20048.
 
 
-        :param message: The message of this InlineResponse20048.  # noqa: E501
+        :param author: The author of this InlineResponse20048.  # noqa: E501
         :type: str
         """
 
-        self._message = message
+        self._author = author
+
+    @property
+    def body(self):
+        """Gets the body of this InlineResponse20048.  # noqa: E501
+
+
+        :return: The body of this InlineResponse20048.  # noqa: E501
+        :rtype: str
+        """
+        return self._body
+
+    @body.setter
+    def body(self, body):
+        """Sets the body of this InlineResponse20048.
+
+
+        :param body: The body of this InlineResponse20048.  # noqa: E501
+        :type: str
+        """
+
+        self._body = body
+
+    @property
+    def created_at(self):
+        """Gets the created_at of this InlineResponse20048.  # noqa: E501
+
+
+        :return: The created_at of this InlineResponse20048.  # noqa: E501
+        :rtype: str
+        """
+        return self._created_at
+
+    @created_at.setter
+    def created_at(self, created_at):
+        """Sets the created_at of this InlineResponse20048.
+
+
+        :param created_at: The created_at of this InlineResponse20048.  # noqa: E501
+        :type: str
+        """
+
+        self._created_at = created_at
+
+    @property
+    def id(self):
+        """Gets the id of this InlineResponse20048.  # noqa: E501
+
+
+        :return: The id of this InlineResponse20048.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this InlineResponse20048.
+
+
+        :param id: The id of this InlineResponse20048.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
 
     @property
     def name(self):
@@ -114,6 +207,69 @@ class InlineResponse20048(object):
         """
 
         self._name = name
+
+    @property
+    def prerelease(self):
+        """Gets the prerelease of this InlineResponse20048.  # noqa: E501
+
+
+        :return: The prerelease of this InlineResponse20048.  # noqa: E501
+        :rtype: str
+        """
+        return self._prerelease
+
+    @prerelease.setter
+    def prerelease(self, prerelease):
+        """Sets the prerelease of this InlineResponse20048.
+
+
+        :param prerelease: The prerelease of this InlineResponse20048.  # noqa: E501
+        :type: str
+        """
+
+        self._prerelease = prerelease
+
+    @property
+    def tag_name(self):
+        """Gets the tag_name of this InlineResponse20048.  # noqa: E501
+
+
+        :return: The tag_name of this InlineResponse20048.  # noqa: E501
+        :rtype: str
+        """
+        return self._tag_name
+
+    @tag_name.setter
+    def tag_name(self, tag_name):
+        """Sets the tag_name of this InlineResponse20048.
+
+
+        :param tag_name: The tag_name of this InlineResponse20048.  # noqa: E501
+        :type: str
+        """
+
+        self._tag_name = tag_name
+
+    @property
+    def target_commitish(self):
+        """Gets the target_commitish of this InlineResponse20048.  # noqa: E501
+
+
+        :return: The target_commitish of this InlineResponse20048.  # noqa: E501
+        :rtype: str
+        """
+        return self._target_commitish
+
+    @target_commitish.setter
+    def target_commitish(self, target_commitish):
+        """Sets the target_commitish of this InlineResponse20048.
+
+
+        :param target_commitish: The target_commitish of this InlineResponse20048.  # noqa: E501
+        :type: str
+        """
+
+        self._target_commitish = target_commitish
 
     def to_dict(self):
         """Returns the model properties as a dict"""

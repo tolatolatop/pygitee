@@ -28,153 +28,138 @@ class InlineResponse20030(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'links': 'str',
-        'content': 'str',
-        'download_url': 'str',
-        'encoding': 'str',
+        'author': 'str',
+        'comments_url': 'str',
+        'commit': 'str',
+        'committer': 'str',
         'html_url': 'str',
-        'name': 'str',
-        'path': 'str',
+        'parents': 'str',
         'sha': 'str',
-        'size': 'str',
-        'type': 'str',
         'url': 'str'
     }
 
     attribute_map = {
-        'links': '_links',
-        'content': 'content',
-        'download_url': 'download_url',
-        'encoding': 'encoding',
+        'author': 'author',
+        'comments_url': 'comments_url',
+        'commit': 'commit',
+        'committer': 'committer',
         'html_url': 'html_url',
-        'name': 'name',
-        'path': 'path',
+        'parents': 'parents',
         'sha': 'sha',
-        'size': 'size',
-        'type': 'type',
         'url': 'url'
     }
 
-    def __init__(self, links=None, content=None, download_url=None, encoding=None, html_url=None, name=None, path=None, sha=None, size=None, type=None, url=None):  # noqa: E501
+    def __init__(self, author=None, comments_url=None, commit=None, committer=None, html_url=None, parents=None, sha=None, url=None):  # noqa: E501
         """InlineResponse20030 - a model defined in Swagger"""  # noqa: E501
-        self._links = None
-        self._content = None
-        self._download_url = None
-        self._encoding = None
+        self._author = None
+        self._comments_url = None
+        self._commit = None
+        self._committer = None
         self._html_url = None
-        self._name = None
-        self._path = None
+        self._parents = None
         self._sha = None
-        self._size = None
-        self._type = None
         self._url = None
         self.discriminator = None
-        if links is not None:
-            self.links = links
-        if content is not None:
-            self.content = content
-        if download_url is not None:
-            self.download_url = download_url
-        if encoding is not None:
-            self.encoding = encoding
+        if author is not None:
+            self.author = author
+        if comments_url is not None:
+            self.comments_url = comments_url
+        if commit is not None:
+            self.commit = commit
+        if committer is not None:
+            self.committer = committer
         if html_url is not None:
             self.html_url = html_url
-        if name is not None:
-            self.name = name
-        if path is not None:
-            self.path = path
+        if parents is not None:
+            self.parents = parents
         if sha is not None:
             self.sha = sha
-        if size is not None:
-            self.size = size
-        if type is not None:
-            self.type = type
         if url is not None:
             self.url = url
 
     @property
-    def links(self):
-        """Gets the links of this InlineResponse20030.  # noqa: E501
+    def author(self):
+        """Gets the author of this InlineResponse20030.  # noqa: E501
 
 
-        :return: The links of this InlineResponse20030.  # noqa: E501
+        :return: The author of this InlineResponse20030.  # noqa: E501
         :rtype: str
         """
-        return self._links
+        return self._author
 
-    @links.setter
-    def links(self, links):
-        """Sets the links of this InlineResponse20030.
+    @author.setter
+    def author(self, author):
+        """Sets the author of this InlineResponse20030.
 
 
-        :param links: The links of this InlineResponse20030.  # noqa: E501
+        :param author: The author of this InlineResponse20030.  # noqa: E501
         :type: str
         """
 
-        self._links = links
+        self._author = author
 
     @property
-    def content(self):
-        """Gets the content of this InlineResponse20030.  # noqa: E501
+    def comments_url(self):
+        """Gets the comments_url of this InlineResponse20030.  # noqa: E501
 
 
-        :return: The content of this InlineResponse20030.  # noqa: E501
+        :return: The comments_url of this InlineResponse20030.  # noqa: E501
         :rtype: str
         """
-        return self._content
+        return self._comments_url
 
-    @content.setter
-    def content(self, content):
-        """Sets the content of this InlineResponse20030.
+    @comments_url.setter
+    def comments_url(self, comments_url):
+        """Sets the comments_url of this InlineResponse20030.
 
 
-        :param content: The content of this InlineResponse20030.  # noqa: E501
+        :param comments_url: The comments_url of this InlineResponse20030.  # noqa: E501
         :type: str
         """
 
-        self._content = content
+        self._comments_url = comments_url
 
     @property
-    def download_url(self):
-        """Gets the download_url of this InlineResponse20030.  # noqa: E501
+    def commit(self):
+        """Gets the commit of this InlineResponse20030.  # noqa: E501
 
 
-        :return: The download_url of this InlineResponse20030.  # noqa: E501
+        :return: The commit of this InlineResponse20030.  # noqa: E501
         :rtype: str
         """
-        return self._download_url
+        return self._commit
 
-    @download_url.setter
-    def download_url(self, download_url):
-        """Sets the download_url of this InlineResponse20030.
+    @commit.setter
+    def commit(self, commit):
+        """Sets the commit of this InlineResponse20030.
 
 
-        :param download_url: The download_url of this InlineResponse20030.  # noqa: E501
+        :param commit: The commit of this InlineResponse20030.  # noqa: E501
         :type: str
         """
 
-        self._download_url = download_url
+        self._commit = commit
 
     @property
-    def encoding(self):
-        """Gets the encoding of this InlineResponse20030.  # noqa: E501
+    def committer(self):
+        """Gets the committer of this InlineResponse20030.  # noqa: E501
 
 
-        :return: The encoding of this InlineResponse20030.  # noqa: E501
+        :return: The committer of this InlineResponse20030.  # noqa: E501
         :rtype: str
         """
-        return self._encoding
+        return self._committer
 
-    @encoding.setter
-    def encoding(self, encoding):
-        """Sets the encoding of this InlineResponse20030.
+    @committer.setter
+    def committer(self, committer):
+        """Sets the committer of this InlineResponse20030.
 
 
-        :param encoding: The encoding of this InlineResponse20030.  # noqa: E501
+        :param committer: The committer of this InlineResponse20030.  # noqa: E501
         :type: str
         """
 
-        self._encoding = encoding
+        self._committer = committer
 
     @property
     def html_url(self):
@@ -198,46 +183,25 @@ class InlineResponse20030(object):
         self._html_url = html_url
 
     @property
-    def name(self):
-        """Gets the name of this InlineResponse20030.  # noqa: E501
+    def parents(self):
+        """Gets the parents of this InlineResponse20030.  # noqa: E501
 
 
-        :return: The name of this InlineResponse20030.  # noqa: E501
+        :return: The parents of this InlineResponse20030.  # noqa: E501
         :rtype: str
         """
-        return self._name
+        return self._parents
 
-    @name.setter
-    def name(self, name):
-        """Sets the name of this InlineResponse20030.
+    @parents.setter
+    def parents(self, parents):
+        """Sets the parents of this InlineResponse20030.
 
 
-        :param name: The name of this InlineResponse20030.  # noqa: E501
+        :param parents: The parents of this InlineResponse20030.  # noqa: E501
         :type: str
         """
 
-        self._name = name
-
-    @property
-    def path(self):
-        """Gets the path of this InlineResponse20030.  # noqa: E501
-
-
-        :return: The path of this InlineResponse20030.  # noqa: E501
-        :rtype: str
-        """
-        return self._path
-
-    @path.setter
-    def path(self, path):
-        """Sets the path of this InlineResponse20030.
-
-
-        :param path: The path of this InlineResponse20030.  # noqa: E501
-        :type: str
-        """
-
-        self._path = path
+        self._parents = parents
 
     @property
     def sha(self):
@@ -259,48 +223,6 @@ class InlineResponse20030(object):
         """
 
         self._sha = sha
-
-    @property
-    def size(self):
-        """Gets the size of this InlineResponse20030.  # noqa: E501
-
-
-        :return: The size of this InlineResponse20030.  # noqa: E501
-        :rtype: str
-        """
-        return self._size
-
-    @size.setter
-    def size(self, size):
-        """Sets the size of this InlineResponse20030.
-
-
-        :param size: The size of this InlineResponse20030.  # noqa: E501
-        :type: str
-        """
-
-        self._size = size
-
-    @property
-    def type(self):
-        """Gets the type of this InlineResponse20030.  # noqa: E501
-
-
-        :return: The type of this InlineResponse20030.  # noqa: E501
-        :rtype: str
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this InlineResponse20030.
-
-
-        :param type: The type of this InlineResponse20030.  # noqa: E501
-        :type: str
-        """
-
-        self._type = type
 
     @property
     def url(self):

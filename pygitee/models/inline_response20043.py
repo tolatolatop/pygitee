@@ -28,222 +28,92 @@ class InlineResponse20043(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'additions': 'str',
-        'blob_url': 'str',
-        'deletions': 'str',
-        'filename': 'str',
-        'patch': 'str',
-        'raw_url': 'str',
-        'sha': 'str',
-        'status': 'str'
+        'id': 'int',
+        'ident': 'str',
+        'name': 'str'
     }
 
     attribute_map = {
-        'additions': 'additions',
-        'blob_url': 'blob_url',
-        'deletions': 'deletions',
-        'filename': 'filename',
-        'patch': 'patch',
-        'raw_url': 'raw_url',
-        'sha': 'sha',
-        'status': 'status'
+        'id': 'id',
+        'ident': 'ident',
+        'name': 'name'
     }
 
-    def __init__(self, additions=None, blob_url=None, deletions=None, filename=None, patch=None, raw_url=None, sha=None, status=None):  # noqa: E501
+    def __init__(self, id=None, ident=None, name=None):  # noqa: E501
         """InlineResponse20043 - a model defined in Swagger"""  # noqa: E501
-        self._additions = None
-        self._blob_url = None
-        self._deletions = None
-        self._filename = None
-        self._patch = None
-        self._raw_url = None
-        self._sha = None
-        self._status = None
+        self._id = None
+        self._ident = None
+        self._name = None
         self.discriminator = None
-        if additions is not None:
-            self.additions = additions
-        if blob_url is not None:
-            self.blob_url = blob_url
-        if deletions is not None:
-            self.deletions = deletions
-        if filename is not None:
-            self.filename = filename
-        if patch is not None:
-            self.patch = patch
-        if raw_url is not None:
-            self.raw_url = raw_url
-        if sha is not None:
-            self.sha = sha
-        if status is not None:
-            self.status = status
+        if id is not None:
+            self.id = id
+        if ident is not None:
+            self.ident = ident
+        if name is not None:
+            self.name = name
 
     @property
-    def additions(self):
-        """Gets the additions of this InlineResponse20043.  # noqa: E501
+    def id(self):
+        """Gets the id of this InlineResponse20043.  # noqa: E501
 
 
-        :return: The additions of this InlineResponse20043.  # noqa: E501
+        :return: The id of this InlineResponse20043.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this InlineResponse20043.
+
+
+        :param id: The id of this InlineResponse20043.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
+
+    @property
+    def ident(self):
+        """Gets the ident of this InlineResponse20043.  # noqa: E501
+
+
+        :return: The ident of this InlineResponse20043.  # noqa: E501
         :rtype: str
         """
-        return self._additions
+        return self._ident
 
-    @additions.setter
-    def additions(self, additions):
-        """Sets the additions of this InlineResponse20043.
+    @ident.setter
+    def ident(self, ident):
+        """Sets the ident of this InlineResponse20043.
 
 
-        :param additions: The additions of this InlineResponse20043.  # noqa: E501
+        :param ident: The ident of this InlineResponse20043.  # noqa: E501
         :type: str
         """
 
-        self._additions = additions
+        self._ident = ident
 
     @property
-    def blob_url(self):
-        """Gets the blob_url of this InlineResponse20043.  # noqa: E501
+    def name(self):
+        """Gets the name of this InlineResponse20043.  # noqa: E501
 
 
-        :return: The blob_url of this InlineResponse20043.  # noqa: E501
+        :return: The name of this InlineResponse20043.  # noqa: E501
         :rtype: str
         """
-        return self._blob_url
+        return self._name
 
-    @blob_url.setter
-    def blob_url(self, blob_url):
-        """Sets the blob_url of this InlineResponse20043.
+    @name.setter
+    def name(self, name):
+        """Sets the name of this InlineResponse20043.
 
 
-        :param blob_url: The blob_url of this InlineResponse20043.  # noqa: E501
+        :param name: The name of this InlineResponse20043.  # noqa: E501
         :type: str
         """
 
-        self._blob_url = blob_url
-
-    @property
-    def deletions(self):
-        """Gets the deletions of this InlineResponse20043.  # noqa: E501
-
-
-        :return: The deletions of this InlineResponse20043.  # noqa: E501
-        :rtype: str
-        """
-        return self._deletions
-
-    @deletions.setter
-    def deletions(self, deletions):
-        """Sets the deletions of this InlineResponse20043.
-
-
-        :param deletions: The deletions of this InlineResponse20043.  # noqa: E501
-        :type: str
-        """
-
-        self._deletions = deletions
-
-    @property
-    def filename(self):
-        """Gets the filename of this InlineResponse20043.  # noqa: E501
-
-
-        :return: The filename of this InlineResponse20043.  # noqa: E501
-        :rtype: str
-        """
-        return self._filename
-
-    @filename.setter
-    def filename(self, filename):
-        """Sets the filename of this InlineResponse20043.
-
-
-        :param filename: The filename of this InlineResponse20043.  # noqa: E501
-        :type: str
-        """
-
-        self._filename = filename
-
-    @property
-    def patch(self):
-        """Gets the patch of this InlineResponse20043.  # noqa: E501
-
-
-        :return: The patch of this InlineResponse20043.  # noqa: E501
-        :rtype: str
-        """
-        return self._patch
-
-    @patch.setter
-    def patch(self, patch):
-        """Sets the patch of this InlineResponse20043.
-
-
-        :param patch: The patch of this InlineResponse20043.  # noqa: E501
-        :type: str
-        """
-
-        self._patch = patch
-
-    @property
-    def raw_url(self):
-        """Gets the raw_url of this InlineResponse20043.  # noqa: E501
-
-
-        :return: The raw_url of this InlineResponse20043.  # noqa: E501
-        :rtype: str
-        """
-        return self._raw_url
-
-    @raw_url.setter
-    def raw_url(self, raw_url):
-        """Sets the raw_url of this InlineResponse20043.
-
-
-        :param raw_url: The raw_url of this InlineResponse20043.  # noqa: E501
-        :type: str
-        """
-
-        self._raw_url = raw_url
-
-    @property
-    def sha(self):
-        """Gets the sha of this InlineResponse20043.  # noqa: E501
-
-
-        :return: The sha of this InlineResponse20043.  # noqa: E501
-        :rtype: str
-        """
-        return self._sha
-
-    @sha.setter
-    def sha(self, sha):
-        """Sets the sha of this InlineResponse20043.
-
-
-        :param sha: The sha of this InlineResponse20043.  # noqa: E501
-        :type: str
-        """
-
-        self._sha = sha
-
-    @property
-    def status(self):
-        """Gets the status of this InlineResponse20043.  # noqa: E501
-
-
-        :return: The status of this InlineResponse20043.  # noqa: E501
-        :rtype: str
-        """
-        return self._status
-
-    @status.setter
-    def status(self, status):
-        """Sets the status of this InlineResponse20043.
-
-
-        :param status: The status of this InlineResponse20043.  # noqa: E501
-        :type: str
-        """
-
-        self._status = status
+        self._name = name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

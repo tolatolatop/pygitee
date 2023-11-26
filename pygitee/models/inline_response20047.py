@@ -28,508 +28,222 @@ class InlineResponse20047(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'avatar_url': 'str',
-        'events_url': 'str',
-        'followers_url': 'str',
-        'following_url': 'str',
-        'gists_url': 'str',
-        'html_url': 'str',
-        'id': 'int',
-        'login': 'str',
-        'member_role': 'str',
-        'name': 'str',
-        'organizations_url': 'str',
-        'received_events_url': 'str',
-        'remark': 'str',
-        'repos_url': 'str',
-        'starred_url': 'str',
-        'subscriptions_url': 'str',
-        'type': 'str',
-        'url': 'str',
-        'watch_at': 'str'
+        'author_email_suffix': 'str',
+        'commit_message_regex': 'str',
+        'except_manager': 'str',
+        'max_file_size': 'str',
+        'restrict_author_email_suffix': 'str',
+        'restrict_commit_message': 'str',
+        'restrict_file_size': 'str',
+        'restrict_push_own_commit': 'str'
     }
 
     attribute_map = {
-        'avatar_url': 'avatar_url',
-        'events_url': 'events_url',
-        'followers_url': 'followers_url',
-        'following_url': 'following_url',
-        'gists_url': 'gists_url',
-        'html_url': 'html_url',
-        'id': 'id',
-        'login': 'login',
-        'member_role': 'member_role',
-        'name': 'name',
-        'organizations_url': 'organizations_url',
-        'received_events_url': 'received_events_url',
-        'remark': 'remark',
-        'repos_url': 'repos_url',
-        'starred_url': 'starred_url',
-        'subscriptions_url': 'subscriptions_url',
-        'type': 'type',
-        'url': 'url',
-        'watch_at': 'watch_at'
+        'author_email_suffix': 'author_email_suffix',
+        'commit_message_regex': 'commit_message_regex',
+        'except_manager': 'except_manager',
+        'max_file_size': 'max_file_size',
+        'restrict_author_email_suffix': 'restrict_author_email_suffix',
+        'restrict_commit_message': 'restrict_commit_message',
+        'restrict_file_size': 'restrict_file_size',
+        'restrict_push_own_commit': 'restrict_push_own_commit'
     }
 
-    def __init__(self, avatar_url=None, events_url=None, followers_url=None, following_url=None, gists_url=None, html_url=None, id=None, login=None, member_role=None, name=None, organizations_url=None, received_events_url=None, remark=None, repos_url=None, starred_url=None, subscriptions_url=None, type=None, url=None, watch_at=None):  # noqa: E501
+    def __init__(self, author_email_suffix=None, commit_message_regex=None, except_manager=None, max_file_size=None, restrict_author_email_suffix=None, restrict_commit_message=None, restrict_file_size=None, restrict_push_own_commit=None):  # noqa: E501
         """InlineResponse20047 - a model defined in Swagger"""  # noqa: E501
-        self._avatar_url = None
-        self._events_url = None
-        self._followers_url = None
-        self._following_url = None
-        self._gists_url = None
-        self._html_url = None
-        self._id = None
-        self._login = None
-        self._member_role = None
-        self._name = None
-        self._organizations_url = None
-        self._received_events_url = None
-        self._remark = None
-        self._repos_url = None
-        self._starred_url = None
-        self._subscriptions_url = None
-        self._type = None
-        self._url = None
-        self._watch_at = None
+        self._author_email_suffix = None
+        self._commit_message_regex = None
+        self._except_manager = None
+        self._max_file_size = None
+        self._restrict_author_email_suffix = None
+        self._restrict_commit_message = None
+        self._restrict_file_size = None
+        self._restrict_push_own_commit = None
         self.discriminator = None
-        if avatar_url is not None:
-            self.avatar_url = avatar_url
-        if events_url is not None:
-            self.events_url = events_url
-        if followers_url is not None:
-            self.followers_url = followers_url
-        if following_url is not None:
-            self.following_url = following_url
-        if gists_url is not None:
-            self.gists_url = gists_url
-        if html_url is not None:
-            self.html_url = html_url
-        if id is not None:
-            self.id = id
-        if login is not None:
-            self.login = login
-        if member_role is not None:
-            self.member_role = member_role
-        if name is not None:
-            self.name = name
-        if organizations_url is not None:
-            self.organizations_url = organizations_url
-        if received_events_url is not None:
-            self.received_events_url = received_events_url
-        if remark is not None:
-            self.remark = remark
-        if repos_url is not None:
-            self.repos_url = repos_url
-        if starred_url is not None:
-            self.starred_url = starred_url
-        if subscriptions_url is not None:
-            self.subscriptions_url = subscriptions_url
-        if type is not None:
-            self.type = type
-        if url is not None:
-            self.url = url
-        if watch_at is not None:
-            self.watch_at = watch_at
+        if author_email_suffix is not None:
+            self.author_email_suffix = author_email_suffix
+        if commit_message_regex is not None:
+            self.commit_message_regex = commit_message_regex
+        if except_manager is not None:
+            self.except_manager = except_manager
+        if max_file_size is not None:
+            self.max_file_size = max_file_size
+        if restrict_author_email_suffix is not None:
+            self.restrict_author_email_suffix = restrict_author_email_suffix
+        if restrict_commit_message is not None:
+            self.restrict_commit_message = restrict_commit_message
+        if restrict_file_size is not None:
+            self.restrict_file_size = restrict_file_size
+        if restrict_push_own_commit is not None:
+            self.restrict_push_own_commit = restrict_push_own_commit
 
     @property
-    def avatar_url(self):
-        """Gets the avatar_url of this InlineResponse20047.  # noqa: E501
+    def author_email_suffix(self):
+        """Gets the author_email_suffix of this InlineResponse20047.  # noqa: E501
 
 
-        :return: The avatar_url of this InlineResponse20047.  # noqa: E501
+        :return: The author_email_suffix of this InlineResponse20047.  # noqa: E501
         :rtype: str
         """
-        return self._avatar_url
+        return self._author_email_suffix
 
-    @avatar_url.setter
-    def avatar_url(self, avatar_url):
-        """Sets the avatar_url of this InlineResponse20047.
+    @author_email_suffix.setter
+    def author_email_suffix(self, author_email_suffix):
+        """Sets the author_email_suffix of this InlineResponse20047.
 
 
-        :param avatar_url: The avatar_url of this InlineResponse20047.  # noqa: E501
+        :param author_email_suffix: The author_email_suffix of this InlineResponse20047.  # noqa: E501
         :type: str
         """
 
-        self._avatar_url = avatar_url
+        self._author_email_suffix = author_email_suffix
 
     @property
-    def events_url(self):
-        """Gets the events_url of this InlineResponse20047.  # noqa: E501
+    def commit_message_regex(self):
+        """Gets the commit_message_regex of this InlineResponse20047.  # noqa: E501
 
 
-        :return: The events_url of this InlineResponse20047.  # noqa: E501
+        :return: The commit_message_regex of this InlineResponse20047.  # noqa: E501
         :rtype: str
         """
-        return self._events_url
+        return self._commit_message_regex
 
-    @events_url.setter
-    def events_url(self, events_url):
-        """Sets the events_url of this InlineResponse20047.
+    @commit_message_regex.setter
+    def commit_message_regex(self, commit_message_regex):
+        """Sets the commit_message_regex of this InlineResponse20047.
 
 
-        :param events_url: The events_url of this InlineResponse20047.  # noqa: E501
+        :param commit_message_regex: The commit_message_regex of this InlineResponse20047.  # noqa: E501
         :type: str
         """
 
-        self._events_url = events_url
+        self._commit_message_regex = commit_message_regex
 
     @property
-    def followers_url(self):
-        """Gets the followers_url of this InlineResponse20047.  # noqa: E501
+    def except_manager(self):
+        """Gets the except_manager of this InlineResponse20047.  # noqa: E501
 
 
-        :return: The followers_url of this InlineResponse20047.  # noqa: E501
+        :return: The except_manager of this InlineResponse20047.  # noqa: E501
         :rtype: str
         """
-        return self._followers_url
+        return self._except_manager
 
-    @followers_url.setter
-    def followers_url(self, followers_url):
-        """Sets the followers_url of this InlineResponse20047.
+    @except_manager.setter
+    def except_manager(self, except_manager):
+        """Sets the except_manager of this InlineResponse20047.
 
 
-        :param followers_url: The followers_url of this InlineResponse20047.  # noqa: E501
+        :param except_manager: The except_manager of this InlineResponse20047.  # noqa: E501
         :type: str
         """
 
-        self._followers_url = followers_url
+        self._except_manager = except_manager
 
     @property
-    def following_url(self):
-        """Gets the following_url of this InlineResponse20047.  # noqa: E501
+    def max_file_size(self):
+        """Gets the max_file_size of this InlineResponse20047.  # noqa: E501
 
 
-        :return: The following_url of this InlineResponse20047.  # noqa: E501
+        :return: The max_file_size of this InlineResponse20047.  # noqa: E501
         :rtype: str
         """
-        return self._following_url
+        return self._max_file_size
 
-    @following_url.setter
-    def following_url(self, following_url):
-        """Sets the following_url of this InlineResponse20047.
+    @max_file_size.setter
+    def max_file_size(self, max_file_size):
+        """Sets the max_file_size of this InlineResponse20047.
 
 
-        :param following_url: The following_url of this InlineResponse20047.  # noqa: E501
+        :param max_file_size: The max_file_size of this InlineResponse20047.  # noqa: E501
         :type: str
         """
 
-        self._following_url = following_url
+        self._max_file_size = max_file_size
 
     @property
-    def gists_url(self):
-        """Gets the gists_url of this InlineResponse20047.  # noqa: E501
+    def restrict_author_email_suffix(self):
+        """Gets the restrict_author_email_suffix of this InlineResponse20047.  # noqa: E501
 
 
-        :return: The gists_url of this InlineResponse20047.  # noqa: E501
+        :return: The restrict_author_email_suffix of this InlineResponse20047.  # noqa: E501
         :rtype: str
         """
-        return self._gists_url
+        return self._restrict_author_email_suffix
 
-    @gists_url.setter
-    def gists_url(self, gists_url):
-        """Sets the gists_url of this InlineResponse20047.
+    @restrict_author_email_suffix.setter
+    def restrict_author_email_suffix(self, restrict_author_email_suffix):
+        """Sets the restrict_author_email_suffix of this InlineResponse20047.
 
 
-        :param gists_url: The gists_url of this InlineResponse20047.  # noqa: E501
+        :param restrict_author_email_suffix: The restrict_author_email_suffix of this InlineResponse20047.  # noqa: E501
         :type: str
         """
 
-        self._gists_url = gists_url
+        self._restrict_author_email_suffix = restrict_author_email_suffix
 
     @property
-    def html_url(self):
-        """Gets the html_url of this InlineResponse20047.  # noqa: E501
+    def restrict_commit_message(self):
+        """Gets the restrict_commit_message of this InlineResponse20047.  # noqa: E501
 
 
-        :return: The html_url of this InlineResponse20047.  # noqa: E501
+        :return: The restrict_commit_message of this InlineResponse20047.  # noqa: E501
         :rtype: str
         """
-        return self._html_url
+        return self._restrict_commit_message
 
-    @html_url.setter
-    def html_url(self, html_url):
-        """Sets the html_url of this InlineResponse20047.
+    @restrict_commit_message.setter
+    def restrict_commit_message(self, restrict_commit_message):
+        """Sets the restrict_commit_message of this InlineResponse20047.
 
 
-        :param html_url: The html_url of this InlineResponse20047.  # noqa: E501
+        :param restrict_commit_message: The restrict_commit_message of this InlineResponse20047.  # noqa: E501
         :type: str
         """
 
-        self._html_url = html_url
+        self._restrict_commit_message = restrict_commit_message
 
     @property
-    def id(self):
-        """Gets the id of this InlineResponse20047.  # noqa: E501
+    def restrict_file_size(self):
+        """Gets the restrict_file_size of this InlineResponse20047.  # noqa: E501
 
 
-        :return: The id of this InlineResponse20047.  # noqa: E501
-        :rtype: int
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this InlineResponse20047.
-
-
-        :param id: The id of this InlineResponse20047.  # noqa: E501
-        :type: int
-        """
-
-        self._id = id
-
-    @property
-    def login(self):
-        """Gets the login of this InlineResponse20047.  # noqa: E501
-
-
-        :return: The login of this InlineResponse20047.  # noqa: E501
+        :return: The restrict_file_size of this InlineResponse20047.  # noqa: E501
         :rtype: str
         """
-        return self._login
+        return self._restrict_file_size
 
-    @login.setter
-    def login(self, login):
-        """Sets the login of this InlineResponse20047.
+    @restrict_file_size.setter
+    def restrict_file_size(self, restrict_file_size):
+        """Sets the restrict_file_size of this InlineResponse20047.
 
 
-        :param login: The login of this InlineResponse20047.  # noqa: E501
+        :param restrict_file_size: The restrict_file_size of this InlineResponse20047.  # noqa: E501
         :type: str
         """
 
-        self._login = login
+        self._restrict_file_size = restrict_file_size
 
     @property
-    def member_role(self):
-        """Gets the member_role of this InlineResponse20047.  # noqa: E501
+    def restrict_push_own_commit(self):
+        """Gets the restrict_push_own_commit of this InlineResponse20047.  # noqa: E501
 
 
-        :return: The member_role of this InlineResponse20047.  # noqa: E501
+        :return: The restrict_push_own_commit of this InlineResponse20047.  # noqa: E501
         :rtype: str
         """
-        return self._member_role
+        return self._restrict_push_own_commit
 
-    @member_role.setter
-    def member_role(self, member_role):
-        """Sets the member_role of this InlineResponse20047.
+    @restrict_push_own_commit.setter
+    def restrict_push_own_commit(self, restrict_push_own_commit):
+        """Sets the restrict_push_own_commit of this InlineResponse20047.
 
 
-        :param member_role: The member_role of this InlineResponse20047.  # noqa: E501
+        :param restrict_push_own_commit: The restrict_push_own_commit of this InlineResponse20047.  # noqa: E501
         :type: str
         """
 
-        self._member_role = member_role
-
-    @property
-    def name(self):
-        """Gets the name of this InlineResponse20047.  # noqa: E501
-
-
-        :return: The name of this InlineResponse20047.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this InlineResponse20047.
-
-
-        :param name: The name of this InlineResponse20047.  # noqa: E501
-        :type: str
-        """
-
-        self._name = name
-
-    @property
-    def organizations_url(self):
-        """Gets the organizations_url of this InlineResponse20047.  # noqa: E501
-
-
-        :return: The organizations_url of this InlineResponse20047.  # noqa: E501
-        :rtype: str
-        """
-        return self._organizations_url
-
-    @organizations_url.setter
-    def organizations_url(self, organizations_url):
-        """Sets the organizations_url of this InlineResponse20047.
-
-
-        :param organizations_url: The organizations_url of this InlineResponse20047.  # noqa: E501
-        :type: str
-        """
-
-        self._organizations_url = organizations_url
-
-    @property
-    def received_events_url(self):
-        """Gets the received_events_url of this InlineResponse20047.  # noqa: E501
-
-
-        :return: The received_events_url of this InlineResponse20047.  # noqa: E501
-        :rtype: str
-        """
-        return self._received_events_url
-
-    @received_events_url.setter
-    def received_events_url(self, received_events_url):
-        """Sets the received_events_url of this InlineResponse20047.
-
-
-        :param received_events_url: The received_events_url of this InlineResponse20047.  # noqa: E501
-        :type: str
-        """
-
-        self._received_events_url = received_events_url
-
-    @property
-    def remark(self):
-        """Gets the remark of this InlineResponse20047.  # noqa: E501
-
-
-        :return: The remark of this InlineResponse20047.  # noqa: E501
-        :rtype: str
-        """
-        return self._remark
-
-    @remark.setter
-    def remark(self, remark):
-        """Sets the remark of this InlineResponse20047.
-
-
-        :param remark: The remark of this InlineResponse20047.  # noqa: E501
-        :type: str
-        """
-
-        self._remark = remark
-
-    @property
-    def repos_url(self):
-        """Gets the repos_url of this InlineResponse20047.  # noqa: E501
-
-
-        :return: The repos_url of this InlineResponse20047.  # noqa: E501
-        :rtype: str
-        """
-        return self._repos_url
-
-    @repos_url.setter
-    def repos_url(self, repos_url):
-        """Sets the repos_url of this InlineResponse20047.
-
-
-        :param repos_url: The repos_url of this InlineResponse20047.  # noqa: E501
-        :type: str
-        """
-
-        self._repos_url = repos_url
-
-    @property
-    def starred_url(self):
-        """Gets the starred_url of this InlineResponse20047.  # noqa: E501
-
-
-        :return: The starred_url of this InlineResponse20047.  # noqa: E501
-        :rtype: str
-        """
-        return self._starred_url
-
-    @starred_url.setter
-    def starred_url(self, starred_url):
-        """Sets the starred_url of this InlineResponse20047.
-
-
-        :param starred_url: The starred_url of this InlineResponse20047.  # noqa: E501
-        :type: str
-        """
-
-        self._starred_url = starred_url
-
-    @property
-    def subscriptions_url(self):
-        """Gets the subscriptions_url of this InlineResponse20047.  # noqa: E501
-
-
-        :return: The subscriptions_url of this InlineResponse20047.  # noqa: E501
-        :rtype: str
-        """
-        return self._subscriptions_url
-
-    @subscriptions_url.setter
-    def subscriptions_url(self, subscriptions_url):
-        """Sets the subscriptions_url of this InlineResponse20047.
-
-
-        :param subscriptions_url: The subscriptions_url of this InlineResponse20047.  # noqa: E501
-        :type: str
-        """
-
-        self._subscriptions_url = subscriptions_url
-
-    @property
-    def type(self):
-        """Gets the type of this InlineResponse20047.  # noqa: E501
-
-
-        :return: The type of this InlineResponse20047.  # noqa: E501
-        :rtype: str
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this InlineResponse20047.
-
-
-        :param type: The type of this InlineResponse20047.  # noqa: E501
-        :type: str
-        """
-
-        self._type = type
-
-    @property
-    def url(self):
-        """Gets the url of this InlineResponse20047.  # noqa: E501
-
-
-        :return: The url of this InlineResponse20047.  # noqa: E501
-        :rtype: str
-        """
-        return self._url
-
-    @url.setter
-    def url(self, url):
-        """Sets the url of this InlineResponse20047.
-
-
-        :param url: The url of this InlineResponse20047.  # noqa: E501
-        :type: str
-        """
-
-        self._url = url
-
-    @property
-    def watch_at(self):
-        """Gets the watch_at of this InlineResponse20047.  # noqa: E501
-
-
-        :return: The watch_at of this InlineResponse20047.  # noqa: E501
-        :rtype: str
-        """
-        return self._watch_at
-
-    @watch_at.setter
-    def watch_at(self, watch_at):
-        """Sets the watch_at of this InlineResponse20047.
-
-
-        :param watch_at: The watch_at of this InlineResponse20047.  # noqa: E501
-        :type: str
-        """
-
-        self._watch_at = watch_at
+        self._restrict_push_own_commit = restrict_push_own_commit
 
     def to_dict(self):
         """Returns the model properties as a dict"""

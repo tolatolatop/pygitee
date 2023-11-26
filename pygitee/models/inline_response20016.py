@@ -28,95 +28,49 @@ class InlineResponse20016(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'actor': 'Actor',
         'content': 'str',
         'html_url': 'str',
         'id': 'int',
-        'mute': 'str',
-        'namespaces': 'Namespaces',
-        'repository': 'Repository',
-        'subject': 'Subject',
-        'type': 'str',
+        'sender': 'Sender',
         'unread': 'str',
         'updated_at': 'str',
         'url': 'str'
     }
 
     attribute_map = {
-        'actor': 'actor',
         'content': 'content',
         'html_url': 'html_url',
         'id': 'id',
-        'mute': 'mute',
-        'namespaces': 'namespaces',
-        'repository': 'repository',
-        'subject': 'subject',
-        'type': 'type',
+        'sender': 'sender',
         'unread': 'unread',
         'updated_at': 'updated_at',
         'url': 'url'
     }
 
-    def __init__(self, actor=None, content=None, html_url=None, id=None, mute=None, namespaces=None, repository=None, subject=None, type=None, unread=None, updated_at=None, url=None):  # noqa: E501
+    def __init__(self, content=None, html_url=None, id=None, sender=None, unread=None, updated_at=None, url=None):  # noqa: E501
         """InlineResponse20016 - a model defined in Swagger"""  # noqa: E501
-        self._actor = None
         self._content = None
         self._html_url = None
         self._id = None
-        self._mute = None
-        self._namespaces = None
-        self._repository = None
-        self._subject = None
-        self._type = None
+        self._sender = None
         self._unread = None
         self._updated_at = None
         self._url = None
         self.discriminator = None
-        if actor is not None:
-            self.actor = actor
         if content is not None:
             self.content = content
         if html_url is not None:
             self.html_url = html_url
         if id is not None:
             self.id = id
-        if mute is not None:
-            self.mute = mute
-        if namespaces is not None:
-            self.namespaces = namespaces
-        if repository is not None:
-            self.repository = repository
-        if subject is not None:
-            self.subject = subject
-        if type is not None:
-            self.type = type
+        if sender is not None:
+            self.sender = sender
         if unread is not None:
             self.unread = unread
         if updated_at is not None:
             self.updated_at = updated_at
         if url is not None:
             self.url = url
-
-    @property
-    def actor(self):
-        """Gets the actor of this InlineResponse20016.  # noqa: E501
-
-
-        :return: The actor of this InlineResponse20016.  # noqa: E501
-        :rtype: Actor
-        """
-        return self._actor
-
-    @actor.setter
-    def actor(self, actor):
-        """Sets the actor of this InlineResponse20016.
-
-
-        :param actor: The actor of this InlineResponse20016.  # noqa: E501
-        :type: Actor
-        """
-
-        self._actor = actor
 
     @property
     def content(self):
@@ -182,109 +136,25 @@ class InlineResponse20016(object):
         self._id = id
 
     @property
-    def mute(self):
-        """Gets the mute of this InlineResponse20016.  # noqa: E501
+    def sender(self):
+        """Gets the sender of this InlineResponse20016.  # noqa: E501
 
 
-        :return: The mute of this InlineResponse20016.  # noqa: E501
-        :rtype: str
+        :return: The sender of this InlineResponse20016.  # noqa: E501
+        :rtype: Sender
         """
-        return self._mute
+        return self._sender
 
-    @mute.setter
-    def mute(self, mute):
-        """Sets the mute of this InlineResponse20016.
-
-
-        :param mute: The mute of this InlineResponse20016.  # noqa: E501
-        :type: str
-        """
-
-        self._mute = mute
-
-    @property
-    def namespaces(self):
-        """Gets the namespaces of this InlineResponse20016.  # noqa: E501
+    @sender.setter
+    def sender(self, sender):
+        """Sets the sender of this InlineResponse20016.
 
 
-        :return: The namespaces of this InlineResponse20016.  # noqa: E501
-        :rtype: Namespaces
-        """
-        return self._namespaces
-
-    @namespaces.setter
-    def namespaces(self, namespaces):
-        """Sets the namespaces of this InlineResponse20016.
-
-
-        :param namespaces: The namespaces of this InlineResponse20016.  # noqa: E501
-        :type: Namespaces
+        :param sender: The sender of this InlineResponse20016.  # noqa: E501
+        :type: Sender
         """
 
-        self._namespaces = namespaces
-
-    @property
-    def repository(self):
-        """Gets the repository of this InlineResponse20016.  # noqa: E501
-
-
-        :return: The repository of this InlineResponse20016.  # noqa: E501
-        :rtype: Repository
-        """
-        return self._repository
-
-    @repository.setter
-    def repository(self, repository):
-        """Sets the repository of this InlineResponse20016.
-
-
-        :param repository: The repository of this InlineResponse20016.  # noqa: E501
-        :type: Repository
-        """
-
-        self._repository = repository
-
-    @property
-    def subject(self):
-        """Gets the subject of this InlineResponse20016.  # noqa: E501
-
-
-        :return: The subject of this InlineResponse20016.  # noqa: E501
-        :rtype: Subject
-        """
-        return self._subject
-
-    @subject.setter
-    def subject(self, subject):
-        """Sets the subject of this InlineResponse20016.
-
-
-        :param subject: The subject of this InlineResponse20016.  # noqa: E501
-        :type: Subject
-        """
-
-        self._subject = subject
-
-    @property
-    def type(self):
-        """Gets the type of this InlineResponse20016.  # noqa: E501
-
-
-        :return: The type of this InlineResponse20016.  # noqa: E501
-        :rtype: str
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this InlineResponse20016.
-
-
-        :param type: The type of this InlineResponse20016.  # noqa: E501
-        :type: str
-        """
-
-        self._type = type
+        self._sender = sender
 
     @property
     def unread(self):

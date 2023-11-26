@@ -28,222 +28,222 @@ class InlineResponse20027(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'author': 'str',
-        'comments_url': 'str',
-        'commit': 'str',
-        'committer': 'str',
-        'html_url': 'str',
-        'parents': 'str',
-        'sha': 'str',
-        'url': 'str'
+        'contexts': 'Contexts',
+        'id': 'str',
+        'mergers': 'Mergers',
+        'mode': 'str',
+        'project_id': 'str',
+        'pushers': 'Pushers',
+        'strict': 'bool',
+        'wildcard': 'str'
     }
 
     attribute_map = {
-        'author': 'author',
-        'comments_url': 'comments_url',
-        'commit': 'commit',
-        'committer': 'committer',
-        'html_url': 'html_url',
-        'parents': 'parents',
-        'sha': 'sha',
-        'url': 'url'
+        'contexts': 'contexts',
+        'id': 'id',
+        'mergers': 'mergers',
+        'mode': 'mode',
+        'project_id': 'project_id',
+        'pushers': 'pushers',
+        'strict': 'strict',
+        'wildcard': 'wildcard'
     }
 
-    def __init__(self, author=None, comments_url=None, commit=None, committer=None, html_url=None, parents=None, sha=None, url=None):  # noqa: E501
+    def __init__(self, contexts=None, id=None, mergers=None, mode=None, project_id=None, pushers=None, strict=None, wildcard=None):  # noqa: E501
         """InlineResponse20027 - a model defined in Swagger"""  # noqa: E501
-        self._author = None
-        self._comments_url = None
-        self._commit = None
-        self._committer = None
-        self._html_url = None
-        self._parents = None
-        self._sha = None
-        self._url = None
+        self._contexts = None
+        self._id = None
+        self._mergers = None
+        self._mode = None
+        self._project_id = None
+        self._pushers = None
+        self._strict = None
+        self._wildcard = None
         self.discriminator = None
-        if author is not None:
-            self.author = author
-        if comments_url is not None:
-            self.comments_url = comments_url
-        if commit is not None:
-            self.commit = commit
-        if committer is not None:
-            self.committer = committer
-        if html_url is not None:
-            self.html_url = html_url
-        if parents is not None:
-            self.parents = parents
-        if sha is not None:
-            self.sha = sha
-        if url is not None:
-            self.url = url
+        if contexts is not None:
+            self.contexts = contexts
+        if id is not None:
+            self.id = id
+        if mergers is not None:
+            self.mergers = mergers
+        if mode is not None:
+            self.mode = mode
+        if project_id is not None:
+            self.project_id = project_id
+        if pushers is not None:
+            self.pushers = pushers
+        if strict is not None:
+            self.strict = strict
+        if wildcard is not None:
+            self.wildcard = wildcard
 
     @property
-    def author(self):
-        """Gets the author of this InlineResponse20027.  # noqa: E501
+    def contexts(self):
+        """Gets the contexts of this InlineResponse20027.  # noqa: E501
 
 
-        :return: The author of this InlineResponse20027.  # noqa: E501
+        :return: The contexts of this InlineResponse20027.  # noqa: E501
+        :rtype: Contexts
+        """
+        return self._contexts
+
+    @contexts.setter
+    def contexts(self, contexts):
+        """Sets the contexts of this InlineResponse20027.
+
+
+        :param contexts: The contexts of this InlineResponse20027.  # noqa: E501
+        :type: Contexts
+        """
+
+        self._contexts = contexts
+
+    @property
+    def id(self):
+        """Gets the id of this InlineResponse20027.  # noqa: E501
+
+
+        :return: The id of this InlineResponse20027.  # noqa: E501
         :rtype: str
         """
-        return self._author
+        return self._id
 
-    @author.setter
-    def author(self, author):
-        """Sets the author of this InlineResponse20027.
+    @id.setter
+    def id(self, id):
+        """Sets the id of this InlineResponse20027.
 
 
-        :param author: The author of this InlineResponse20027.  # noqa: E501
+        :param id: The id of this InlineResponse20027.  # noqa: E501
         :type: str
         """
 
-        self._author = author
+        self._id = id
 
     @property
-    def comments_url(self):
-        """Gets the comments_url of this InlineResponse20027.  # noqa: E501
+    def mergers(self):
+        """Gets the mergers of this InlineResponse20027.  # noqa: E501
 
 
-        :return: The comments_url of this InlineResponse20027.  # noqa: E501
+        :return: The mergers of this InlineResponse20027.  # noqa: E501
+        :rtype: Mergers
+        """
+        return self._mergers
+
+    @mergers.setter
+    def mergers(self, mergers):
+        """Sets the mergers of this InlineResponse20027.
+
+
+        :param mergers: The mergers of this InlineResponse20027.  # noqa: E501
+        :type: Mergers
+        """
+
+        self._mergers = mergers
+
+    @property
+    def mode(self):
+        """Gets the mode of this InlineResponse20027.  # noqa: E501
+
+
+        :return: The mode of this InlineResponse20027.  # noqa: E501
         :rtype: str
         """
-        return self._comments_url
+        return self._mode
 
-    @comments_url.setter
-    def comments_url(self, comments_url):
-        """Sets the comments_url of this InlineResponse20027.
+    @mode.setter
+    def mode(self, mode):
+        """Sets the mode of this InlineResponse20027.
 
 
-        :param comments_url: The comments_url of this InlineResponse20027.  # noqa: E501
+        :param mode: The mode of this InlineResponse20027.  # noqa: E501
         :type: str
         """
 
-        self._comments_url = comments_url
+        self._mode = mode
 
     @property
-    def commit(self):
-        """Gets the commit of this InlineResponse20027.  # noqa: E501
+    def project_id(self):
+        """Gets the project_id of this InlineResponse20027.  # noqa: E501
 
 
-        :return: The commit of this InlineResponse20027.  # noqa: E501
+        :return: The project_id of this InlineResponse20027.  # noqa: E501
         :rtype: str
         """
-        return self._commit
+        return self._project_id
 
-    @commit.setter
-    def commit(self, commit):
-        """Sets the commit of this InlineResponse20027.
+    @project_id.setter
+    def project_id(self, project_id):
+        """Sets the project_id of this InlineResponse20027.
 
 
-        :param commit: The commit of this InlineResponse20027.  # noqa: E501
+        :param project_id: The project_id of this InlineResponse20027.  # noqa: E501
         :type: str
         """
 
-        self._commit = commit
+        self._project_id = project_id
 
     @property
-    def committer(self):
-        """Gets the committer of this InlineResponse20027.  # noqa: E501
+    def pushers(self):
+        """Gets the pushers of this InlineResponse20027.  # noqa: E501
 
 
-        :return: The committer of this InlineResponse20027.  # noqa: E501
+        :return: The pushers of this InlineResponse20027.  # noqa: E501
+        :rtype: Pushers
+        """
+        return self._pushers
+
+    @pushers.setter
+    def pushers(self, pushers):
+        """Sets the pushers of this InlineResponse20027.
+
+
+        :param pushers: The pushers of this InlineResponse20027.  # noqa: E501
+        :type: Pushers
+        """
+
+        self._pushers = pushers
+
+    @property
+    def strict(self):
+        """Gets the strict of this InlineResponse20027.  # noqa: E501
+
+
+        :return: The strict of this InlineResponse20027.  # noqa: E501
+        :rtype: bool
+        """
+        return self._strict
+
+    @strict.setter
+    def strict(self, strict):
+        """Sets the strict of this InlineResponse20027.
+
+
+        :param strict: The strict of this InlineResponse20027.  # noqa: E501
+        :type: bool
+        """
+
+        self._strict = strict
+
+    @property
+    def wildcard(self):
+        """Gets the wildcard of this InlineResponse20027.  # noqa: E501
+
+
+        :return: The wildcard of this InlineResponse20027.  # noqa: E501
         :rtype: str
         """
-        return self._committer
+        return self._wildcard
 
-    @committer.setter
-    def committer(self, committer):
-        """Sets the committer of this InlineResponse20027.
+    @wildcard.setter
+    def wildcard(self, wildcard):
+        """Sets the wildcard of this InlineResponse20027.
 
 
-        :param committer: The committer of this InlineResponse20027.  # noqa: E501
+        :param wildcard: The wildcard of this InlineResponse20027.  # noqa: E501
         :type: str
         """
 
-        self._committer = committer
-
-    @property
-    def html_url(self):
-        """Gets the html_url of this InlineResponse20027.  # noqa: E501
-
-
-        :return: The html_url of this InlineResponse20027.  # noqa: E501
-        :rtype: str
-        """
-        return self._html_url
-
-    @html_url.setter
-    def html_url(self, html_url):
-        """Sets the html_url of this InlineResponse20027.
-
-
-        :param html_url: The html_url of this InlineResponse20027.  # noqa: E501
-        :type: str
-        """
-
-        self._html_url = html_url
-
-    @property
-    def parents(self):
-        """Gets the parents of this InlineResponse20027.  # noqa: E501
-
-
-        :return: The parents of this InlineResponse20027.  # noqa: E501
-        :rtype: str
-        """
-        return self._parents
-
-    @parents.setter
-    def parents(self, parents):
-        """Sets the parents of this InlineResponse20027.
-
-
-        :param parents: The parents of this InlineResponse20027.  # noqa: E501
-        :type: str
-        """
-
-        self._parents = parents
-
-    @property
-    def sha(self):
-        """Gets the sha of this InlineResponse20027.  # noqa: E501
-
-
-        :return: The sha of this InlineResponse20027.  # noqa: E501
-        :rtype: str
-        """
-        return self._sha
-
-    @sha.setter
-    def sha(self, sha):
-        """Sets the sha of this InlineResponse20027.
-
-
-        :param sha: The sha of this InlineResponse20027.  # noqa: E501
-        :type: str
-        """
-
-        self._sha = sha
-
-    @property
-    def url(self):
-        """Gets the url of this InlineResponse20027.  # noqa: E501
-
-
-        :return: The url of this InlineResponse20027.  # noqa: E501
-        :rtype: str
-        """
-        return self._url
-
-    @url.setter
-    def url(self, url):
-        """Sets the url of this InlineResponse20027.
-
-
-        :param url: The url of this InlineResponse20027.  # noqa: E501
-        :type: str
-        """
-
-        self._url = url
+        self._wildcard = wildcard
 
     def to_dict(self):
         """Returns the model properties as a dict"""

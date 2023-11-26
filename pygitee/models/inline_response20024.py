@@ -28,60 +28,24 @@ class InlineResponse20024(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'links': 'str',
-        'commit': 'str',
-        'name': 'str',
-        'protected': 'str',
-        'protection_url': 'str'
+        'commit': 'Commit',
+        'lines': 'object'
     }
 
     attribute_map = {
-        'links': '_links',
         'commit': 'commit',
-        'name': 'name',
-        'protected': 'protected',
-        'protection_url': 'protection_url'
+        'lines': 'lines'
     }
 
-    def __init__(self, links=None, commit=None, name=None, protected=None, protection_url=None):  # noqa: E501
+    def __init__(self, commit=None, lines=None):  # noqa: E501
         """InlineResponse20024 - a model defined in Swagger"""  # noqa: E501
-        self._links = None
         self._commit = None
-        self._name = None
-        self._protected = None
-        self._protection_url = None
+        self._lines = None
         self.discriminator = None
-        if links is not None:
-            self.links = links
         if commit is not None:
             self.commit = commit
-        if name is not None:
-            self.name = name
-        if protected is not None:
-            self.protected = protected
-        if protection_url is not None:
-            self.protection_url = protection_url
-
-    @property
-    def links(self):
-        """Gets the links of this InlineResponse20024.  # noqa: E501
-
-
-        :return: The links of this InlineResponse20024.  # noqa: E501
-        :rtype: str
-        """
-        return self._links
-
-    @links.setter
-    def links(self, links):
-        """Sets the links of this InlineResponse20024.
-
-
-        :param links: The links of this InlineResponse20024.  # noqa: E501
-        :type: str
-        """
-
-        self._links = links
+        if lines is not None:
+            self.lines = lines
 
     @property
     def commit(self):
@@ -89,7 +53,7 @@ class InlineResponse20024(object):
 
 
         :return: The commit of this InlineResponse20024.  # noqa: E501
-        :rtype: str
+        :rtype: Commit
         """
         return self._commit
 
@@ -99,73 +63,31 @@ class InlineResponse20024(object):
 
 
         :param commit: The commit of this InlineResponse20024.  # noqa: E501
-        :type: str
+        :type: Commit
         """
 
         self._commit = commit
 
     @property
-    def name(self):
-        """Gets the name of this InlineResponse20024.  # noqa: E501
+    def lines(self):
+        """Gets the lines of this InlineResponse20024.  # noqa: E501
 
 
-        :return: The name of this InlineResponse20024.  # noqa: E501
-        :rtype: str
+        :return: The lines of this InlineResponse20024.  # noqa: E501
+        :rtype: object
         """
-        return self._name
+        return self._lines
 
-    @name.setter
-    def name(self, name):
-        """Sets the name of this InlineResponse20024.
-
-
-        :param name: The name of this InlineResponse20024.  # noqa: E501
-        :type: str
-        """
-
-        self._name = name
-
-    @property
-    def protected(self):
-        """Gets the protected of this InlineResponse20024.  # noqa: E501
+    @lines.setter
+    def lines(self, lines):
+        """Sets the lines of this InlineResponse20024.
 
 
-        :return: The protected of this InlineResponse20024.  # noqa: E501
-        :rtype: str
-        """
-        return self._protected
-
-    @protected.setter
-    def protected(self, protected):
-        """Sets the protected of this InlineResponse20024.
-
-
-        :param protected: The protected of this InlineResponse20024.  # noqa: E501
-        :type: str
+        :param lines: The lines of this InlineResponse20024.  # noqa: E501
+        :type: object
         """
 
-        self._protected = protected
-
-    @property
-    def protection_url(self):
-        """Gets the protection_url of this InlineResponse20024.  # noqa: E501
-
-
-        :return: The protection_url of this InlineResponse20024.  # noqa: E501
-        :rtype: str
-        """
-        return self._protection_url
-
-    @protection_url.setter
-    def protection_url(self, protection_url):
-        """Sets the protection_url of this InlineResponse20024.
-
-
-        :param protection_url: The protection_url of this InlineResponse20024.  # noqa: E501
-        :type: str
-        """
-
-        self._protection_url = protection_url
+        self._lines = lines
 
     def to_dict(self):
         """Returns the model properties as a dict"""

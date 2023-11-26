@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    Gitee OpenApi
+    getV5ReposOwnerRepoSubscribers
 
-    All api provided by Gitee  # noqa: E501
+    列出 watch 了仓库的用户  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -42,10 +42,24 @@ class TestUserApi(unittest.TestCase):
         """
         pass
 
+    def test_user_following_username_delete(self):
+        """Test case for user_following_username_delete
+
+        取消关注一个用户  # noqa: E501
+        """
+        pass
+
     def test_user_following_username_get(self):
         """Test case for user_following_username_get
 
         检查授权用户是否关注了一个用户  # noqa: E501
+        """
+        pass
+
+    def test_user_following_username_put(self):
+        """Test case for user_following_username_put
+
+        关注一个用户  # noqa: E501
         """
         pass
 
@@ -63,10 +77,24 @@ class TestUserApi(unittest.TestCase):
         """
         pass
 
+    def test_user_keys_id_delete(self):
+        """Test case for user_keys_id_delete
+
+        删除一个公钥  # noqa: E501
+        """
+        pass
+
     def test_user_keys_id_get(self):
         """Test case for user_keys_id_get
 
         获取一个公钥  # noqa: E501
+        """
+        pass
+
+    def test_user_keys_post(self):
+        """Test case for user_keys_post
+
+        添加一个公钥  # noqa: E501
         """
         pass
 
@@ -84,10 +112,24 @@ class TestUserApi(unittest.TestCase):
         """
         pass
 
+    def test_user_patch(self):
+        """Test case for user_patch
+
+        更新授权用户的资料  # noqa: E501
+        """
+        pass
+
     def test_user_starred_get(self):
         """Test case for user_starred_get
 
         列出授权用户 star 了的仓库  # noqa: E501
+        """
+        pass
+
+    def test_user_starred_owner_repo_delete(self):
+        """Test case for user_starred_owner_repo_delete
+
+        取消 star 一个仓库  # noqa: E501
         """
         pass
 
@@ -98,6 +140,13 @@ class TestUserApi(unittest.TestCase):
         """
         pass
 
+    def test_user_starred_owner_repo_put(self):
+        """Test case for user_starred_owner_repo_put
+
+        star 一个仓库  # noqa: E501
+        """
+        pass
+
     def test_user_subscriptions_get(self):
         """Test case for user_subscriptions_get
 
@@ -105,10 +154,24 @@ class TestUserApi(unittest.TestCase):
         """
         pass
 
+    def test_user_subscriptions_owner_repo_delete(self):
+        """Test case for user_subscriptions_owner_repo_delete
+
+        取消 watch 一个仓库  # noqa: E501
+        """
+        pass
+
     def test_user_subscriptions_owner_repo_get(self):
         """Test case for user_subscriptions_owner_repo_get
 
         检查授权用户是否 watch 了一个仓库  # noqa: E501
+        """
+        pass
+
+    def test_user_subscriptions_owner_repo_put(self):
+        """Test case for user_subscriptions_owner_repo_put
+
+        watch 一个仓库  # noqa: E501
         """
         pass
 

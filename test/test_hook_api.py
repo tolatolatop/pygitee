@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    Gitee OpenApi
+    getV5ReposOwnerRepoSubscribers
 
-    All api provided by Gitee  # noqa: E501
+    列出 watch 了仓库的用户  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -35,6 +35,13 @@ class TestHookApi(unittest.TestCase):
         """
         pass
 
+    def test_repos_owner_repo_hooks_id_delete(self):
+        """Test case for repos_owner_repo_hooks_id_delete
+
+        删除一个仓库WebHook  # noqa: E501
+        """
+        pass
+
     def test_repos_owner_repo_hooks_id_get(self):
         """Test case for repos_owner_repo_hooks_id_get
 
@@ -42,10 +49,24 @@ class TestHookApi(unittest.TestCase):
         """
         pass
 
+    def test_repos_owner_repo_hooks_id_patch(self):
+        """Test case for repos_owner_repo_hooks_id_patch
+
+        更新一个仓库WebHook  # noqa: E501
+        """
+        pass
+
     def test_repos_owner_repo_hooks_id_tests_post(self):
         """Test case for repos_owner_repo_hooks_id_tests_post
 
         测试WebHook是否发送成功  # noqa: E501
+        """
+        pass
+
+    def test_repos_owner_repo_hooks_post(self):
+        """Test case for repos_owner_repo_hooks_post
+
+        创建一个仓库WebHook  # noqa: E501
         """
         pass
 

@@ -28,66 +28,118 @@ class InlineResponse20038(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'str',
-        'key': 'str'
+        'sha': 'str',
+        'tree': 'str',
+        'truncated': 'str',
+        'url': 'str'
     }
 
     attribute_map = {
-        'id': 'id',
-        'key': 'key'
+        'sha': 'sha',
+        'tree': 'tree',
+        'truncated': 'truncated',
+        'url': 'url'
     }
 
-    def __init__(self, id=None, key=None):  # noqa: E501
+    def __init__(self, sha=None, tree=None, truncated=None, url=None):  # noqa: E501
         """InlineResponse20038 - a model defined in Swagger"""  # noqa: E501
-        self._id = None
-        self._key = None
+        self._sha = None
+        self._tree = None
+        self._truncated = None
+        self._url = None
         self.discriminator = None
-        if id is not None:
-            self.id = id
-        if key is not None:
-            self.key = key
+        if sha is not None:
+            self.sha = sha
+        if tree is not None:
+            self.tree = tree
+        if truncated is not None:
+            self.truncated = truncated
+        if url is not None:
+            self.url = url
 
     @property
-    def id(self):
-        """Gets the id of this InlineResponse20038.  # noqa: E501
+    def sha(self):
+        """Gets the sha of this InlineResponse20038.  # noqa: E501
 
 
-        :return: The id of this InlineResponse20038.  # noqa: E501
+        :return: The sha of this InlineResponse20038.  # noqa: E501
         :rtype: str
         """
-        return self._id
+        return self._sha
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this InlineResponse20038.
+    @sha.setter
+    def sha(self, sha):
+        """Sets the sha of this InlineResponse20038.
 
 
-        :param id: The id of this InlineResponse20038.  # noqa: E501
+        :param sha: The sha of this InlineResponse20038.  # noqa: E501
         :type: str
         """
 
-        self._id = id
+        self._sha = sha
 
     @property
-    def key(self):
-        """Gets the key of this InlineResponse20038.  # noqa: E501
+    def tree(self):
+        """Gets the tree of this InlineResponse20038.  # noqa: E501
 
 
-        :return: The key of this InlineResponse20038.  # noqa: E501
+        :return: The tree of this InlineResponse20038.  # noqa: E501
         :rtype: str
         """
-        return self._key
+        return self._tree
 
-    @key.setter
-    def key(self, key):
-        """Sets the key of this InlineResponse20038.
+    @tree.setter
+    def tree(self, tree):
+        """Sets the tree of this InlineResponse20038.
 
 
-        :param key: The key of this InlineResponse20038.  # noqa: E501
+        :param tree: The tree of this InlineResponse20038.  # noqa: E501
         :type: str
         """
 
-        self._key = key
+        self._tree = tree
+
+    @property
+    def truncated(self):
+        """Gets the truncated of this InlineResponse20038.  # noqa: E501
+
+
+        :return: The truncated of this InlineResponse20038.  # noqa: E501
+        :rtype: str
+        """
+        return self._truncated
+
+    @truncated.setter
+    def truncated(self, truncated):
+        """Sets the truncated of this InlineResponse20038.
+
+
+        :param truncated: The truncated of this InlineResponse20038.  # noqa: E501
+        :type: str
+        """
+
+        self._truncated = truncated
+
+    @property
+    def url(self):
+        """Gets the url of this InlineResponse20038.  # noqa: E501
+
+
+        :return: The url of this InlineResponse20038.  # noqa: E501
+        :rtype: str
+        """
+        return self._url
+
+    @url.setter
+    def url(self, url):
+        """Sets the url of this InlineResponse20038.
+
+
+        :param url: The url of this InlineResponse20038.  # noqa: E501
+        :type: str
+        """
+
+        self._url = url
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -5,11 +5,14 @@ All URIs are relative to *https://gitee.com/api/v5*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**repos_owner_repo_hooks_get**](HookApi.md#repos_owner_repo_hooks_get) | **GET** /repos/{owner}/{repo}/hooks | 列出仓库的WebHooks
+[**repos_owner_repo_hooks_id_delete**](HookApi.md#repos_owner_repo_hooks_id_delete) | **DELETE** /repos/{owner}/{repo}/hooks/{id} | 删除一个仓库WebHook
 [**repos_owner_repo_hooks_id_get**](HookApi.md#repos_owner_repo_hooks_id_get) | **GET** /repos/{owner}/{repo}/hooks/{id} | 获取仓库单个WebHook
+[**repos_owner_repo_hooks_id_patch**](HookApi.md#repos_owner_repo_hooks_id_patch) | **PATCH** /repos/{owner}/{repo}/hooks/{id} | 更新一个仓库WebHook
 [**repos_owner_repo_hooks_id_tests_post**](HookApi.md#repos_owner_repo_hooks_id_tests_post) | **POST** /repos/{owner}/{repo}/hooks/{id}/tests | 测试WebHook是否发送成功
+[**repos_owner_repo_hooks_post**](HookApi.md#repos_owner_repo_hooks_post) | **POST** /repos/{owner}/{repo}/hooks | 创建一个仓库WebHook
 
 # **repos_owner_repo_hooks_get**
-> InlineResponse20036 repos_owner_repo_hooks_get(owner, repo, access_token=access_token, page=page, per_page=per_page)
+> InlineResponse20039 repos_owner_repo_hooks_get(owner, repo, access_token=access_token, page=page, per_page=per_page)
 
 列出仓库的WebHooks
 
@@ -55,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20036**](InlineResponse20036.md)
+[**InlineResponse20039**](InlineResponse20039.md)
 
 ### Authorization
 
@@ -68,8 +71,65 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **repos_owner_repo_hooks_id_delete**
+> repos_owner_repo_hooks_id_delete(owner, repo, id, access_token=access_token)
+
+删除一个仓库WebHook
+
+### Example
+```python
+from __future__ import print_function
+import time
+import pygitee
+from pygitee.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: access_token
+configuration = pygitee.Configuration()
+configuration.api_key['access_token'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['access_token'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = pygitee.HookApi(pygitee.ApiClient(configuration))
+owner = 'owner_example' # str | 仓库所属空间地址(企业、组织或个人的地址path)
+repo = 'repo_example' # str | 仓库路径(path)
+id = 56 # int | Webhook的ID
+access_token = 'access_token_example' # str | 用户授权码 (optional)
+
+try:
+    # 删除一个仓库WebHook
+    api_instance.repos_owner_repo_hooks_id_delete(owner, repo, id, access_token=access_token)
+except ApiException as e:
+    print("Exception when calling HookApi->repos_owner_repo_hooks_id_delete: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **owner** | **str**| 仓库所属空间地址(企业、组织或个人的地址path) | 
+ **repo** | **str**| 仓库路径(path) | 
+ **id** | **int**| Webhook的ID | 
+ **access_token** | **str**| 用户授权码 | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **repos_owner_repo_hooks_id_get**
-> InlineResponse20036 repos_owner_repo_hooks_id_get(owner, repo, id, access_token=access_token)
+> InlineResponse20039 repos_owner_repo_hooks_id_get(owner, repo, id, access_token=access_token)
 
 获取仓库单个WebHook
 
@@ -113,7 +173,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20036**](InlineResponse20036.md)
+[**InlineResponse20039**](InlineResponse20039.md)
 
 ### Authorization
 
@@ -122,6 +182,64 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **repos_owner_repo_hooks_id_patch**
+> InlineResponse20039 repos_owner_repo_hooks_id_patch(owner, repo, id, body=body)
+
+更新一个仓库WebHook
+
+### Example
+```python
+from __future__ import print_function
+import time
+import pygitee
+from pygitee.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: access_token
+configuration = pygitee.Configuration()
+configuration.api_key['access_token'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['access_token'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = pygitee.HookApi(pygitee.ApiClient(configuration))
+owner = 'owner_example' # str | 仓库所属空间地址(企业、组织或个人的地址path)
+repo = 'repo_example' # str | 仓库路径(path)
+id = 56 # int | Webhook的ID
+body = pygitee.HooksIdBody() # HooksIdBody |  (optional)
+
+try:
+    # 更新一个仓库WebHook
+    api_response = api_instance.repos_owner_repo_hooks_id_patch(owner, repo, id, body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling HookApi->repos_owner_repo_hooks_id_patch: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **owner** | **str**| 仓库所属空间地址(企业、组织或个人的地址path) | 
+ **repo** | **str**| 仓库路径(path) | 
+ **id** | **int**| Webhook的ID | 
+ **body** | [**HooksIdBody**](HooksIdBody.md)|  | [optional] 
+
+### Return type
+
+[**InlineResponse20039**](InlineResponse20039.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -180,6 +298,62 @@ void (empty response body)
 
  - **Content-Type**: application/json
  - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **repos_owner_repo_hooks_post**
+> InlineResponse20039 repos_owner_repo_hooks_post(owner, repo, body=body)
+
+创建一个仓库WebHook
+
+### Example
+```python
+from __future__ import print_function
+import time
+import pygitee
+from pygitee.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: access_token
+configuration = pygitee.Configuration()
+configuration.api_key['access_token'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['access_token'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = pygitee.HookApi(pygitee.ApiClient(configuration))
+owner = 'owner_example' # str | 仓库所属空间地址(企业、组织或个人的地址path)
+repo = 'repo_example' # str | 仓库路径(path)
+body = pygitee.RepoHooksBody() # RepoHooksBody |  (optional)
+
+try:
+    # 创建一个仓库WebHook
+    api_response = api_instance.repos_owner_repo_hooks_post(owner, repo, body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling HookApi->repos_owner_repo_hooks_post: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **owner** | **str**| 仓库所属空间地址(企业、组织或个人的地址path) | 
+ **repo** | **str**| 仓库路径(path) | 
+ **body** | [**RepoHooksBody**](RepoHooksBody.md)|  | [optional] 
+
+### Return type
+
+[**InlineResponse20039**](InlineResponse20039.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

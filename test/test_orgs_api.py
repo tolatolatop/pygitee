@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    Gitee OpenApi
+    getV5ReposOwnerRepoSubscribers
 
-    All api provided by Gitee  # noqa: E501
+    列出 watch 了仓库的用户  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -63,10 +63,38 @@ class TestOrgsApi(unittest.TestCase):
         """
         pass
 
+    def test_orgs_org_memberships_username_get(self):
+        """Test case for orgs_org_memberships_username_get
+
+        获取授权用户所属组织的一个成员  # noqa: E501
+        """
+        pass
+
+    def test_orgs_org_memberships_username_put(self):
+        """Test case for orgs_org_memberships_username_put
+
+        增加或更新授权用户所管理组织的成员  # noqa: E501
+        """
+        pass
+
+    def test_orgs_org_patch(self):
+        """Test case for orgs_org_patch
+
+        更新授权用户所管理的组织资料  # noqa: E501
+        """
+        pass
+
     def test_orgs_org_repos_get(self):
         """Test case for orgs_org_repos_get
 
         获取一个组织的仓库  # noqa: E501
+        """
+        pass
+
+    def test_orgs_org_repos_post(self):
+        """Test case for orgs_org_repos_post
+
+        创建组织仓库  # noqa: E501
         """
         pass
 
@@ -77,10 +105,24 @@ class TestOrgsApi(unittest.TestCase):
         """
         pass
 
+    def test_user_memberships_orgs_org_delete(self):
+        """Test case for user_memberships_orgs_org_delete
+
+        退出一个组织  # noqa: E501
+        """
+        pass
+
     def test_user_memberships_orgs_org_get(self):
         """Test case for user_memberships_orgs_org_get
 
         获取授权用户在一个组织的成员资料  # noqa: E501
+        """
+        pass
+
+    def test_user_memberships_orgs_org_patch(self):
+        """Test case for user_memberships_orgs_org_patch
+
+        更新授权用户在一个组织的成员资料  # noqa: E501
         """
         pass
 

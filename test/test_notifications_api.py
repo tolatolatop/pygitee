@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    Gitee OpenApi
+    getV5ReposOwnerRepoSubscribers
 
-    All api provided by Gitee  # noqa: E501
+    列出 watch 了仓库的用户  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -49,6 +49,27 @@ class TestNotificationsApi(unittest.TestCase):
         """
         pass
 
+    def test_notifications_messages_id_patch(self):
+        """Test case for notifications_messages_id_patch
+
+        标记一条私信为已读  # noqa: E501
+        """
+        pass
+
+    def test_notifications_messages_post(self):
+        """Test case for notifications_messages_post
+
+        发送私信给指定用户  # noqa: E501
+        """
+        pass
+
+    def test_notifications_messages_put(self):
+        """Test case for notifications_messages_put
+
+        标记所有私信为已读  # noqa: E501
+        """
+        pass
+
     def test_notifications_threads_get(self):
         """Test case for notifications_threads_get
 
@@ -63,10 +84,31 @@ class TestNotificationsApi(unittest.TestCase):
         """
         pass
 
+    def test_notifications_threads_id_patch(self):
+        """Test case for notifications_threads_id_patch
+
+        标记一条通知为已读  # noqa: E501
+        """
+        pass
+
+    def test_notifications_threads_put(self):
+        """Test case for notifications_threads_put
+
+        标记所有通知为已读  # noqa: E501
+        """
+        pass
+
     def test_repos_owner_repo_notifications_get(self):
         """Test case for repos_owner_repo_notifications_get
 
         列出一个仓库里的通知  # noqa: E501
+        """
+        pass
+
+    def test_repos_owner_repo_notifications_put(self):
+        """Test case for repos_owner_repo_notifications_put
+
+        标记一个仓库里的通知为已读  # noqa: E501
         """
         pass
 

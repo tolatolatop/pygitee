@@ -8,8 +8,11 @@ Method | HTTP request | Description
 [**enterprises_enterprise_labels_get**](EnterpriseApi.md#enterprises_enterprise_labels_get) | **GET** /enterprises/{enterprise}/labels | 获取企业所有标签
 [**enterprises_enterprise_labels_name_get**](EnterpriseApi.md#enterprises_enterprise_labels_name_get) | **GET** /enterprises/{enterprise}/labels/{name} | 获取企业某个标签
 [**enterprises_enterprise_members_get**](EnterpriseApi.md#enterprises_enterprise_members_get) | **GET** /enterprises/{enterprise}/members | 列出企业的所有成员
+[**enterprises_enterprise_members_post**](EnterpriseApi.md#enterprises_enterprise_members_post) | **POST** /enterprises/{enterprise}/members | 添加或邀请企业成员
 [**enterprises_enterprise_members_username_get**](EnterpriseApi.md#enterprises_enterprise_members_username_get) | **GET** /enterprises/{enterprise}/members/{username} | 获取企业的一个成员
+[**enterprises_enterprise_members_username_put**](EnterpriseApi.md#enterprises_enterprise_members_username_put) | **PUT** /enterprises/{enterprise}/members/{username} | 修改企业成员权限或备注
 [**enterprises_enterprise_repos_get**](EnterpriseApi.md#enterprises_enterprise_repos_get) | **GET** /enterprises/{enterprise}/repos | 获取企业的所有仓库
+[**enterprises_enterprise_repos_post**](EnterpriseApi.md#enterprises_enterprise_repos_post) | **POST** /enterprises/{enterprise}/repos | 创建企业仓库
 [**user_enterprises_get**](EnterpriseApi.md#user_enterprises_get) | **GET** /user/enterprises | 列出授权用户所属的企业
 
 # **enterprises_enterprise_get**
@@ -236,6 +239,59 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **enterprises_enterprise_members_post**
+> enterprises_enterprise_members_post(enterprise, body=body)
+
+添加或邀请企业成员
+
+### Example
+```python
+from __future__ import print_function
+import time
+import pygitee
+from pygitee.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: access_token
+configuration = pygitee.Configuration()
+configuration.api_key['access_token'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['access_token'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = pygitee.EnterpriseApi(pygitee.ApiClient(configuration))
+enterprise = 'enterprise_example' # str | 企业的路径(path/login)
+body = pygitee.EnterpriseMembersBody() # EnterpriseMembersBody |  (optional)
+
+try:
+    # 添加或邀请企业成员
+    api_instance.enterprises_enterprise_members_post(enterprise, body=body)
+except ApiException as e:
+    print("Exception when calling EnterpriseApi->enterprises_enterprise_members_post: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **enterprise** | **str**| 企业的路径(path/login) | 
+ **body** | [**EnterpriseMembersBody**](EnterpriseMembersBody.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **enterprises_enterprise_members_username_get**
 > InlineResponse2006 enterprises_enterprise_members_username_get(enterprise, username, access_token=access_token)
 
@@ -288,6 +344,62 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **enterprises_enterprise_members_username_put**
+> InlineResponse2006 enterprises_enterprise_members_username_put(enterprise, username, body=body)
+
+修改企业成员权限或备注
+
+### Example
+```python
+from __future__ import print_function
+import time
+import pygitee
+from pygitee.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: access_token
+configuration = pygitee.Configuration()
+configuration.api_key['access_token'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['access_token'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = pygitee.EnterpriseApi(pygitee.ApiClient(configuration))
+enterprise = 'enterprise_example' # str | 企业的路径(path/login)
+username = 'username_example' # str | 用户名(username/login)
+body = pygitee.MembersUsernameBody() # MembersUsernameBody |  (optional)
+
+try:
+    # 修改企业成员权限或备注
+    api_response = api_instance.enterprises_enterprise_members_username_put(enterprise, username, body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling EnterpriseApi->enterprises_enterprise_members_username_put: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **enterprise** | **str**| 企业的路径(path/login) | 
+ **username** | **str**| 用户名(username/login) | 
+ **body** | [**MembersUsernameBody**](MembersUsernameBody.md)|  | [optional] 
+
+### Return type
+
+[**InlineResponse2006**](InlineResponse2006.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -350,6 +462,60 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **enterprises_enterprise_repos_post**
+> InlineResponse2007 enterprises_enterprise_repos_post(enterprise, body=body)
+
+创建企业仓库
+
+### Example
+```python
+from __future__ import print_function
+import time
+import pygitee
+from pygitee.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: access_token
+configuration = pygitee.Configuration()
+configuration.api_key['access_token'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['access_token'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = pygitee.EnterpriseApi(pygitee.ApiClient(configuration))
+enterprise = 'enterprise_example' # str | 企业的路径(path/login)
+body = pygitee.EnterpriseReposBody() # EnterpriseReposBody |  (optional)
+
+try:
+    # 创建企业仓库
+    api_response = api_instance.enterprises_enterprise_repos_post(enterprise, body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling EnterpriseApi->enterprises_enterprise_repos_post: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **enterprise** | **str**| 企业的路径(path/login) | 
+ **body** | [**EnterpriseReposBody**](EnterpriseReposBody.md)|  | [optional] 
+
+### Return type
+
+[**InlineResponse2007**](InlineResponse2007.md)
+
+### Authorization
+
+[access_token](../README.md#access_token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

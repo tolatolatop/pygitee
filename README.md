@@ -165,11 +165,66 @@ id = 56 # int | 评论的ID
 access_token = 'access_token_example' # str | 用户授权码 (optional)
 
 try:
+    # 删除代码片段的评论
+    api_instance.gists_gist_id_comments_id_delete(gist_id, id, access_token=access_token)
+except ApiException as e:
+    print("Exception when calling CommentApi->gists_gist_id_comments_id_delete: %s\n" % e)
+
+# Configure API key authorization: access_token
+configuration = pygitee.Configuration()
+configuration.api_key['access_token'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['access_token'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = pygitee.CommentApi(pygitee.ApiClient(configuration))
+gist_id = 'gist_id_example' # str | 代码片段的ID
+id = 56 # int | 评论的ID
+access_token = 'access_token_example' # str | 用户授权码 (optional)
+
+try:
     # 获取单条代码片段的评论
     api_response = api_instance.gists_gist_id_comments_id_get(gist_id, id, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CommentApi->gists_gist_id_comments_id_get: %s\n" % e)
+
+# Configure API key authorization: access_token
+configuration = pygitee.Configuration()
+configuration.api_key['access_token'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['access_token'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = pygitee.CommentApi(pygitee.ApiClient(configuration))
+gist_id = 'gist_id_example' # str | 代码片段的ID
+id = 56 # int | 评论的ID
+body = pygitee.CommentsIdBody() # CommentsIdBody |  (optional)
+
+try:
+    # 修改代码片段的评论
+    api_response = api_instance.gists_gist_id_comments_id_patch(gist_id, id, body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling CommentApi->gists_gist_id_comments_id_patch: %s\n" % e)
+
+# Configure API key authorization: access_token
+configuration = pygitee.Configuration()
+configuration.api_key['access_token'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['access_token'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = pygitee.CommentApi(pygitee.ApiClient(configuration))
+gist_id = 'gist_id_example' # str | 代码片段的ID
+body = pygitee.GistIdCommentsBody() # GistIdCommentsBody |  (optional)
+
+try:
+    # 增加代码片段的评论
+    api_response = api_instance.gists_gist_id_comments_post(gist_id, body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling CommentApi->gists_gist_id_comments_post: %s\n" % e)
 
 # Configure API key authorization: access_token
 configuration = pygitee.Configuration()
@@ -207,11 +262,50 @@ id = 56 # int | 评论的ID
 access_token = 'access_token_example' # str | 用户授权码 (optional)
 
 try:
+    # 删除Commit评论
+    api_instance.repos_owner_repo_comments_id_delete(owner, repo, id, access_token=access_token)
+except ApiException as e:
+    print("Exception when calling CommentApi->repos_owner_repo_comments_id_delete: %s\n" % e)
+
+# Configure API key authorization: access_token
+configuration = pygitee.Configuration()
+configuration.api_key['access_token'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['access_token'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = pygitee.CommentApi(pygitee.ApiClient(configuration))
+owner = 'owner_example' # str | 仓库所属空间地址(企业、组织或个人的地址path)
+repo = 'repo_example' # str | 仓库路径(path)
+id = 56 # int | 评论的ID
+access_token = 'access_token_example' # str | 用户授权码 (optional)
+
+try:
     # 获取仓库的某条Commit评论
     api_response = api_instance.repos_owner_repo_comments_id_get(owner, repo, id, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CommentApi->repos_owner_repo_comments_id_get: %s\n" % e)
+
+# Configure API key authorization: access_token
+configuration = pygitee.Configuration()
+configuration.api_key['access_token'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['access_token'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = pygitee.CommentApi(pygitee.ApiClient(configuration))
+owner = 'owner_example' # str | 仓库所属空间地址(企业、组织或个人的地址path)
+repo = 'repo_example' # str | 仓库路径(path)
+id = 56 # int | 评论的ID
+body = pygitee.CommentsIdBody1() # CommentsIdBody1 |  (optional)
+
+try:
+    # 更新Commit评论
+    api_response = api_instance.repos_owner_repo_comments_id_patch(owner, repo, id, body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling CommentApi->repos_owner_repo_comments_id_patch: %s\n" % e)
 
 # Configure API key authorization: access_token
 configuration = pygitee.Configuration()
@@ -293,11 +387,50 @@ id = 56 # int | 评论的ID
 access_token = 'access_token_example' # str | 用户授权码 (optional)
 
 try:
+    # 删除Issue某条评论
+    api_instance.repos_owner_repo_issues_comments_id_delete(owner, repo, id, access_token=access_token)
+except ApiException as e:
+    print("Exception when calling CommentApi->repos_owner_repo_issues_comments_id_delete: %s\n" % e)
+
+# Configure API key authorization: access_token
+configuration = pygitee.Configuration()
+configuration.api_key['access_token'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['access_token'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = pygitee.CommentApi(pygitee.ApiClient(configuration))
+owner = 'owner_example' # str | 仓库所属空间地址(企业、组织或个人的地址path)
+repo = 'repo_example' # str | 仓库路径(path)
+id = 56 # int | 评论的ID
+access_token = 'access_token_example' # str | 用户授权码 (optional)
+
+try:
     # 获取仓库Issue某条评论
     api_response = api_instance.repos_owner_repo_issues_comments_id_get(owner, repo, id, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CommentApi->repos_owner_repo_issues_comments_id_get: %s\n" % e)
+
+# Configure API key authorization: access_token
+configuration = pygitee.Configuration()
+configuration.api_key['access_token'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['access_token'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = pygitee.CommentApi(pygitee.ApiClient(configuration))
+owner = 'owner_example' # str | 仓库所属空间地址(企业、组织或个人的地址path)
+repo = 'repo_example' # str | 仓库路径(path)
+id = 56 # int | 评论的ID
+body = pygitee.CommentsIdBody2() # CommentsIdBody2 |  (optional)
+
+try:
+    # 更新Issue某条评论
+    api_response = api_instance.repos_owner_repo_issues_comments_id_patch(owner, repo, id, body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling CommentApi->repos_owner_repo_issues_comments_id_patch: %s\n" % e)
 
 # Configure API key authorization: access_token
 configuration = pygitee.Configuration()
@@ -333,15 +466,73 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = pygitee.CommentApi(pygitee.ApiClient(configuration))
 owner = 'owner_example' # str | 仓库所属空间地址(企业、组织或个人的地址path)
 repo = 'repo_example' # str | 仓库路径(path)
-id = 56 # int | 
+number = 'number_example' # str | Issue 编号(区分大小写，无需添加 # 号)
+body = pygitee.NumberCommentsBody() # NumberCommentsBody |  (optional)
+
+try:
+    # 创建某个Issue评论
+    api_response = api_instance.repos_owner_repo_issues_number_comments_post(owner, repo, number, body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling CommentApi->repos_owner_repo_issues_number_comments_post: %s\n" % e)
+
+# Configure API key authorization: access_token
+configuration = pygitee.Configuration()
+configuration.api_key['access_token'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['access_token'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = pygitee.CommentApi(pygitee.ApiClient(configuration))
+owner = 'owner_example' # str | 仓库所属空间地址(企业、组织或个人的地址path)
+repo = 'repo_example' # str | 仓库路径(path)
+id = 56 # int | 评论的ID
+access_token = 'access_token_example' # str | 用户授权码 (optional)
+
+try:
+    # 删除评论
+    api_instance.repos_owner_repo_pulls_comments_id_delete(owner, repo, id, access_token=access_token)
+except ApiException as e:
+    print("Exception when calling CommentApi->repos_owner_repo_pulls_comments_id_delete: %s\n" % e)
+
+# Configure API key authorization: access_token
+configuration = pygitee.Configuration()
+configuration.api_key['access_token'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['access_token'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = pygitee.CommentApi(pygitee.ApiClient(configuration))
+owner = 'owner_example' # str | 仓库所属空间地址(企业、组织或个人的地址path)
+repo = 'repo_example' # str | 仓库路径(path)
 access_token = 'access_token_example' # str | 用户授权码 (optional)
 
 try:
     # 获取Pull Request的某个评论
-    api_response = api_instance.repos_owner_repo_pulls_comments_id_get(owner, repo, id, access_token=access_token)
+    api_response = api_instance.repos_owner_repo_pulls_comments_id_get(owner, repo, access_token=access_token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CommentApi->repos_owner_repo_pulls_comments_id_get: %s\n" % e)
+
+# Configure API key authorization: access_token
+configuration = pygitee.Configuration()
+configuration.api_key['access_token'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['access_token'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = pygitee.CommentApi(pygitee.ApiClient(configuration))
+owner = 'owner_example' # str | 仓库所属空间地址(企业、组织或个人的地址path)
+repo = 'repo_example' # str | 仓库路径(path)
+id = 56 # int | 评论的ID
+body = pygitee.CommentsIdBody3() # CommentsIdBody3 |  (optional)
+
+try:
+    # 编辑评论
+    api_response = api_instance.repos_owner_repo_pulls_comments_id_patch(owner, repo, id, body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling CommentApi->repos_owner_repo_pulls_comments_id_patch: %s\n" % e)
 
 # Configure API key authorization: access_token
 configuration = pygitee.Configuration()
@@ -366,6 +557,26 @@ try:
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CommentApi->repos_owner_repo_pulls_number_comments_get: %s\n" % e)
+
+# Configure API key authorization: access_token
+configuration = pygitee.Configuration()
+configuration.api_key['access_token'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['access_token'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = pygitee.CommentApi(pygitee.ApiClient(configuration))
+owner = 'owner_example' # str | 仓库所属空间地址(企业、组织或个人的地址path)
+repo = 'repo_example' # str | 仓库路径(path)
+number = 56 # int | 第几个PR，即本仓库PR的序数
+body = pygitee.NumberCommentsBody1() # NumberCommentsBody1 |  (optional)
+
+try:
+    # 提交Pull Request评论
+    api_response = api_instance.repos_owner_repo_pulls_number_comments_post(owner, repo, number, body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling CommentApi->repos_owner_repo_pulls_number_comments_post: %s\n" % e)
 ```
 
 ## Documentation for API Endpoints
@@ -379,16 +590,27 @@ Class | Method | HTTP request | Description
 *CommentApi* | [**enterprises_enterprise_week_reports_id_comments_get**](docs/CommentApi.md#enterprises_enterprise_week_reports_id_comments_get) | **GET** /enterprises/{enterprise}/week_reports/{id}/comments | 某个周报评论列表
 *CommentApi* | [**enterprises_enterprise_week_reports_report_id_comments_id_delete**](docs/CommentApi.md#enterprises_enterprise_week_reports_report_id_comments_id_delete) | **DELETE** /enterprises/{enterprise}/week_reports/{report_id}/comments/{id} | 删除周报某个评论
 *CommentApi* | [**gists_gist_id_comments_get**](docs/CommentApi.md#gists_gist_id_comments_get) | **GET** /gists/{gist_id}/comments | 获取代码片段的评论
+*CommentApi* | [**gists_gist_id_comments_id_delete**](docs/CommentApi.md#gists_gist_id_comments_id_delete) | **DELETE** /gists/{gist_id}/comments/{id} | 删除代码片段的评论
 *CommentApi* | [**gists_gist_id_comments_id_get**](docs/CommentApi.md#gists_gist_id_comments_id_get) | **GET** /gists/{gist_id}/comments/{id} | 获取单条代码片段的评论
+*CommentApi* | [**gists_gist_id_comments_id_patch**](docs/CommentApi.md#gists_gist_id_comments_id_patch) | **PATCH** /gists/{gist_id}/comments/{id} | 修改代码片段的评论
+*CommentApi* | [**gists_gist_id_comments_post**](docs/CommentApi.md#gists_gist_id_comments_post) | **POST** /gists/{gist_id}/comments | 增加代码片段的评论
 *CommentApi* | [**repos_owner_repo_comments_get**](docs/CommentApi.md#repos_owner_repo_comments_get) | **GET** /repos/{owner}/{repo}/comments | 获取仓库的Commit评论
+*CommentApi* | [**repos_owner_repo_comments_id_delete**](docs/CommentApi.md#repos_owner_repo_comments_id_delete) | **DELETE** /repos/{owner}/{repo}/comments/{id} | 删除Commit评论
 *CommentApi* | [**repos_owner_repo_comments_id_get**](docs/CommentApi.md#repos_owner_repo_comments_id_get) | **GET** /repos/{owner}/{repo}/comments/{id} | 获取仓库的某条Commit评论
+*CommentApi* | [**repos_owner_repo_comments_id_patch**](docs/CommentApi.md#repos_owner_repo_comments_id_patch) | **PATCH** /repos/{owner}/{repo}/comments/{id} | 更新Commit评论
 *CommentApi* | [**repos_owner_repo_commits_ref_comments_get**](docs/CommentApi.md#repos_owner_repo_commits_ref_comments_get) | **GET** /repos/{owner}/{repo}/commits/{ref}/comments | 获取单个Commit的评论
 *CommentApi* | [**repos_owner_repo_commits_sha_comments_post**](docs/CommentApi.md#repos_owner_repo_commits_sha_comments_post) | **POST** /repos/{owner}/{repo}/commits/{sha}/comments | 创建Commit评论
 *CommentApi* | [**repos_owner_repo_issues_comments_get**](docs/CommentApi.md#repos_owner_repo_issues_comments_get) | **GET** /repos/{owner}/{repo}/issues/comments | 获取仓库所有Issue的评论
+*CommentApi* | [**repos_owner_repo_issues_comments_id_delete**](docs/CommentApi.md#repos_owner_repo_issues_comments_id_delete) | **DELETE** /repos/{owner}/{repo}/issues/comments/{id} | 删除Issue某条评论
 *CommentApi* | [**repos_owner_repo_issues_comments_id_get**](docs/CommentApi.md#repos_owner_repo_issues_comments_id_get) | **GET** /repos/{owner}/{repo}/issues/comments/{id} | 获取仓库Issue某条评论
+*CommentApi* | [**repos_owner_repo_issues_comments_id_patch**](docs/CommentApi.md#repos_owner_repo_issues_comments_id_patch) | **PATCH** /repos/{owner}/{repo}/issues/comments/{id} | 更新Issue某条评论
 *CommentApi* | [**repos_owner_repo_issues_number_comments_get**](docs/CommentApi.md#repos_owner_repo_issues_number_comments_get) | **GET** /repos/{owner}/{repo}/issues/{number}/comments | 获取仓库某个Issue所有的评论
+*CommentApi* | [**repos_owner_repo_issues_number_comments_post**](docs/CommentApi.md#repos_owner_repo_issues_number_comments_post) | **POST** /repos/{owner}/{repo}/issues/{number}/comments | 创建某个Issue评论
+*CommentApi* | [**repos_owner_repo_pulls_comments_id_delete**](docs/CommentApi.md#repos_owner_repo_pulls_comments_id_delete) | **DELETE** /repos/{owner}/{repo}/pulls/comments/{id} | 删除评论
 *CommentApi* | [**repos_owner_repo_pulls_comments_id_get**](docs/CommentApi.md#repos_owner_repo_pulls_comments_id_get) | **GET** /repos/{owner}/{repo}/pulls/comments/{id} | 获取Pull Request的某个评论
+*CommentApi* | [**repos_owner_repo_pulls_comments_id_patch**](docs/CommentApi.md#repos_owner_repo_pulls_comments_id_patch) | **PATCH** /repos/{owner}/{repo}/pulls/comments/{id} | 编辑评论
 *CommentApi* | [**repos_owner_repo_pulls_number_comments_get**](docs/CommentApi.md#repos_owner_repo_pulls_number_comments_get) | **GET** /repos/{owner}/{repo}/pulls/{number}/comments | 获取某个Pull Request的所有评论
+*CommentApi* | [**repos_owner_repo_pulls_number_comments_post**](docs/CommentApi.md#repos_owner_repo_pulls_number_comments_post) | **POST** /repos/{owner}/{repo}/pulls/{number}/comments | 提交Pull Request评论
 *DefaultApi* | [**emails_get**](docs/DefaultApi.md#emails_get) | **GET** /emails | 获取授权用户的全部邮箱
 *DefaultApi* | [**emojis_get**](docs/DefaultApi.md#emojis_get) | **GET** /emojis | 列出可使用的 Emoji
 *DefaultApi* | [**enterprise_enterprise_pull_requests_get**](docs/DefaultApi.md#enterprise_enterprise_pull_requests_get) | **GET** /enterprise/{enterprise}/pull_requests | 企业 Pull Request 列表
@@ -403,21 +625,34 @@ Class | Method | HTTP request | Description
 *EnterpriseApi* | [**enterprises_enterprise_labels_get**](docs/EnterpriseApi.md#enterprises_enterprise_labels_get) | **GET** /enterprises/{enterprise}/labels | 获取企业所有标签
 *EnterpriseApi* | [**enterprises_enterprise_labels_name_get**](docs/EnterpriseApi.md#enterprises_enterprise_labels_name_get) | **GET** /enterprises/{enterprise}/labels/{name} | 获取企业某个标签
 *EnterpriseApi* | [**enterprises_enterprise_members_get**](docs/EnterpriseApi.md#enterprises_enterprise_members_get) | **GET** /enterprises/{enterprise}/members | 列出企业的所有成员
+*EnterpriseApi* | [**enterprises_enterprise_members_post**](docs/EnterpriseApi.md#enterprises_enterprise_members_post) | **POST** /enterprises/{enterprise}/members | 添加或邀请企业成员
 *EnterpriseApi* | [**enterprises_enterprise_members_username_get**](docs/EnterpriseApi.md#enterprises_enterprise_members_username_get) | **GET** /enterprises/{enterprise}/members/{username} | 获取企业的一个成员
+*EnterpriseApi* | [**enterprises_enterprise_members_username_put**](docs/EnterpriseApi.md#enterprises_enterprise_members_username_put) | **PUT** /enterprises/{enterprise}/members/{username} | 修改企业成员权限或备注
 *EnterpriseApi* | [**enterprises_enterprise_repos_get**](docs/EnterpriseApi.md#enterprises_enterprise_repos_get) | **GET** /enterprises/{enterprise}/repos | 获取企业的所有仓库
+*EnterpriseApi* | [**enterprises_enterprise_repos_post**](docs/EnterpriseApi.md#enterprises_enterprise_repos_post) | **POST** /enterprises/{enterprise}/repos | 创建企业仓库
 *EnterpriseApi* | [**user_enterprises_get**](docs/EnterpriseApi.md#user_enterprises_get) | **GET** /user/enterprises | 列出授权用户所属的企业
 *GistsApi* | [**gists_get**](docs/GistsApi.md#gists_get) | **GET** /gists | 获取代码片段
 *GistsApi* | [**gists_id_commits_get**](docs/GistsApi.md#gists_id_commits_get) | **GET** /gists/{id}/commits | 获取代码片段的commit
+*GistsApi* | [**gists_id_delete**](docs/GistsApi.md#gists_id_delete) | **DELETE** /gists/{id} | 删除指定代码片段
+*GistsApi* | [**gists_id_forks_get**](docs/GistsApi.md#gists_id_forks_get) | **GET** /gists/{id}/forks | 获取 Fork 了指定代码片段的列表
 *GistsApi* | [**gists_id_forks_post**](docs/GistsApi.md#gists_id_forks_post) | **POST** /gists/{id}/forks | Fork代码片段
 *GistsApi* | [**gists_id_get**](docs/GistsApi.md#gists_id_get) | **GET** /gists/{id} | 获取单条代码片段
+*GistsApi* | [**gists_id_patch**](docs/GistsApi.md#gists_id_patch) | **PATCH** /gists/{id} | 修改代码片段
+*GistsApi* | [**gists_id_star_delete**](docs/GistsApi.md#gists_id_star_delete) | **DELETE** /gists/{id}/star | 取消Star代码片段
+*GistsApi* | [**gists_id_star_get**](docs/GistsApi.md#gists_id_star_get) | **GET** /gists/{id}/star | 判断代码片段是否已Star
 *GistsApi* | [**gists_id_star_put**](docs/GistsApi.md#gists_id_star_put) | **PUT** /gists/{id}/star | Star代码片段
+*GistsApi* | [**gists_post**](docs/GistsApi.md#gists_post) | **POST** /gists | 创建代码片段
 *GistsApi* | [**gists_starred_get**](docs/GistsApi.md#gists_starred_get) | **GET** /gists/starred | 获取用户Star的代码片段
 *HookApi* | [**repos_owner_repo_hooks_get**](docs/HookApi.md#repos_owner_repo_hooks_get) | **GET** /repos/{owner}/{repo}/hooks | 列出仓库的WebHooks
+*HookApi* | [**repos_owner_repo_hooks_id_delete**](docs/HookApi.md#repos_owner_repo_hooks_id_delete) | **DELETE** /repos/{owner}/{repo}/hooks/{id} | 删除一个仓库WebHook
 *HookApi* | [**repos_owner_repo_hooks_id_get**](docs/HookApi.md#repos_owner_repo_hooks_id_get) | **GET** /repos/{owner}/{repo}/hooks/{id} | 获取仓库单个WebHook
+*HookApi* | [**repos_owner_repo_hooks_id_patch**](docs/HookApi.md#repos_owner_repo_hooks_id_patch) | **PATCH** /repos/{owner}/{repo}/hooks/{id} | 更新一个仓库WebHook
 *HookApi* | [**repos_owner_repo_hooks_id_tests_post**](docs/HookApi.md#repos_owner_repo_hooks_id_tests_post) | **POST** /repos/{owner}/{repo}/hooks/{id}/tests | 测试WebHook是否发送成功
+*HookApi* | [**repos_owner_repo_hooks_post**](docs/HookApi.md#repos_owner_repo_hooks_post) | **POST** /repos/{owner}/{repo}/hooks | 创建一个仓库WebHook
 *IssueApi* | [**enterprises_enterprise_issues_get**](docs/IssueApi.md#enterprises_enterprise_issues_get) | **GET** /enterprises/{enterprise}/issues | 获取某个企业的所有Issues
 *IssueApi* | [**enterprises_enterprise_issues_number_get**](docs/IssueApi.md#enterprises_enterprise_issues_number_get) | **GET** /enterprises/{enterprise}/issues/{number} | 获取企业的某个Issue
 *IssueApi* | [**enterprises_enterprise_issues_number_labels_get**](docs/IssueApi.md#enterprises_enterprise_issues_number_labels_get) | **GET** /enterprises/{enterprise}/issues/{number}/labels | 获取企业某个Issue所有标签
+*IssueApi* | [**enterprises_enterprise_issues_number_patch**](docs/IssueApi.md#enterprises_enterprise_issues_number_patch) | **PATCH** /enterprises/{enterprise}/issues/{number} | 更新企业的某个Issue
 *IssueApi* | [**enterprises_enterprise_issues_number_pull_requests_get**](docs/IssueApi.md#enterprises_enterprise_issues_number_pull_requests_get) | **GET** /enterprises/{enterprise}/issues/{number}/pull_requests | 获取企业 issue 关联的 Pull Requests
 *IssueApi* | [**issues_get**](docs/IssueApi.md#issues_get) | **GET** /issues | 获取当前授权用户的所有Issues
 *IssueApi* | [**orgs_org_issues_get**](docs/IssueApi.md#orgs_org_issues_get) | **GET** /orgs/{org}/issues | 获取当前用户某个组织的Issues
@@ -427,92 +662,147 @@ Class | Method | HTTP request | Description
 *IssueApi* | [**repos_owner_issues_post**](docs/IssueApi.md#repos_owner_issues_post) | **POST** /repos/{owner}/issues | 创建Issue
 *IssueApi* | [**repos_owner_repo_issues_get**](docs/IssueApi.md#repos_owner_repo_issues_get) | **GET** /repos/{owner}/{repo}/issues | 仓库的所有Issues
 *IssueApi* | [**repos_owner_repo_issues_number_get**](docs/IssueApi.md#repos_owner_repo_issues_number_get) | **GET** /repos/{owner}/{repo}/issues/{number} | 仓库的某个Issue
+*IssueApi* | [**repos_owner_repo_issues_number_labels_delete**](docs/IssueApi.md#repos_owner_repo_issues_number_labels_delete) | **DELETE** /repos/{owner}/{repo}/issues/{number}/labels | 删除Issue所有标签
 *IssueApi* | [**repos_owner_repo_issues_number_labels_get**](docs/IssueApi.md#repos_owner_repo_issues_number_labels_get) | **GET** /repos/{owner}/{repo}/issues/{number}/labels | 获取仓库任务的所有标签
 *IssueApi* | [**repos_owner_repo_issues_number_labels_name_delete**](docs/IssueApi.md#repos_owner_repo_issues_number_labels_name_delete) | **DELETE** /repos/{owner}/{repo}/issues/{number}/labels/{name} | 删除Issue标签
+*IssueApi* | [**repos_owner_repo_issues_number_labels_post**](docs/IssueApi.md#repos_owner_repo_issues_number_labels_post) | **POST** /repos/{owner}/{repo}/issues/{number}/labels | 创建Issue标签
+*IssueApi* | [**repos_owner_repo_issues_number_labels_put**](docs/IssueApi.md#repos_owner_repo_issues_number_labels_put) | **PUT** /repos/{owner}/{repo}/issues/{number}/labels | 替换Issue所有标签
 *IssueApi* | [**repos_owner_repo_pulls_number_issues_get**](docs/IssueApi.md#repos_owner_repo_pulls_number_issues_get) | **GET** /repos/{owner}/{repo}/pulls/{number}/issues | 获取 Pull Request 关联的 issues
 *IssueApi* | [**user_issues_get**](docs/IssueApi.md#user_issues_get) | **GET** /user/issues | 获取授权用户的所有Issues
 *NotificationsApi* | [**notifications_count_get**](docs/NotificationsApi.md#notifications_count_get) | **GET** /notifications/count | 获取授权用户的通知数
 *NotificationsApi* | [**notifications_messages_get**](docs/NotificationsApi.md#notifications_messages_get) | **GET** /notifications/messages | 列出授权用户的所有私信
 *NotificationsApi* | [**notifications_messages_id_get**](docs/NotificationsApi.md#notifications_messages_id_get) | **GET** /notifications/messages/{id} | 获取一条私信
+*NotificationsApi* | [**notifications_messages_id_patch**](docs/NotificationsApi.md#notifications_messages_id_patch) | **PATCH** /notifications/messages/{id} | 标记一条私信为已读
+*NotificationsApi* | [**notifications_messages_post**](docs/NotificationsApi.md#notifications_messages_post) | **POST** /notifications/messages | 发送私信给指定用户
+*NotificationsApi* | [**notifications_messages_put**](docs/NotificationsApi.md#notifications_messages_put) | **PUT** /notifications/messages | 标记所有私信为已读
 *NotificationsApi* | [**notifications_threads_get**](docs/NotificationsApi.md#notifications_threads_get) | **GET** /notifications/threads | 列出授权用户的所有通知
 *NotificationsApi* | [**notifications_threads_id_get**](docs/NotificationsApi.md#notifications_threads_id_get) | **GET** /notifications/threads/{id} | 获取一条通知
+*NotificationsApi* | [**notifications_threads_id_patch**](docs/NotificationsApi.md#notifications_threads_id_patch) | **PATCH** /notifications/threads/{id} | 标记一条通知为已读
+*NotificationsApi* | [**notifications_threads_put**](docs/NotificationsApi.md#notifications_threads_put) | **PUT** /notifications/threads | 标记所有通知为已读
 *NotificationsApi* | [**repos_owner_repo_notifications_get**](docs/NotificationsApi.md#repos_owner_repo_notifications_get) | **GET** /repos/{owner}/{repo}/notifications | 列出一个仓库里的通知
+*NotificationsApi* | [**repos_owner_repo_notifications_put**](docs/NotificationsApi.md#repos_owner_repo_notifications_put) | **PUT** /repos/{owner}/{repo}/notifications | 标记一个仓库里的通知为已读
 *OrgsApi* | [**orgs_org_events_get**](docs/OrgsApi.md#orgs_org_events_get) | **GET** /orgs/{org}/events | 列出组织的公开动态
 *OrgsApi* | [**orgs_org_followers_get**](docs/OrgsApi.md#orgs_org_followers_get) | **GET** /orgs/{org}/followers | 列出指定组织的所有关注者
 *OrgsApi* | [**orgs_org_get**](docs/OrgsApi.md#orgs_org_get) | **GET** /orgs/{org} | 获取一个组织
 *OrgsApi* | [**orgs_org_members_get**](docs/OrgsApi.md#orgs_org_members_get) | **GET** /orgs/{org}/members | 列出一个组织的所有成员
 *OrgsApi* | [**orgs_org_memberships_username_delete**](docs/OrgsApi.md#orgs_org_memberships_username_delete) | **DELETE** /orgs/{org}/memberships/{username} | 移除授权用户所管理组织中的成员
+*OrgsApi* | [**orgs_org_memberships_username_get**](docs/OrgsApi.md#orgs_org_memberships_username_get) | **GET** /orgs/{org}/memberships/{username} | 获取授权用户所属组织的一个成员
+*OrgsApi* | [**orgs_org_memberships_username_put**](docs/OrgsApi.md#orgs_org_memberships_username_put) | **PUT** /orgs/{org}/memberships/{username} | 增加或更新授权用户所管理组织的成员
+*OrgsApi* | [**orgs_org_patch**](docs/OrgsApi.md#orgs_org_patch) | **PATCH** /orgs/{org} | 更新授权用户所管理的组织资料
 *OrgsApi* | [**orgs_org_repos_get**](docs/OrgsApi.md#orgs_org_repos_get) | **GET** /orgs/{org}/repos | 获取一个组织的仓库
+*OrgsApi* | [**orgs_org_repos_post**](docs/OrgsApi.md#orgs_org_repos_post) | **POST** /orgs/{org}/repos | 创建组织仓库
 *OrgsApi* | [**user_memberships_orgs_get**](docs/OrgsApi.md#user_memberships_orgs_get) | **GET** /user/memberships/orgs | 列出授权用户在所属组织的成员资料
+*OrgsApi* | [**user_memberships_orgs_org_delete**](docs/OrgsApi.md#user_memberships_orgs_org_delete) | **DELETE** /user/memberships/orgs/{org} | 退出一个组织
 *OrgsApi* | [**user_memberships_orgs_org_get**](docs/OrgsApi.md#user_memberships_orgs_org_get) | **GET** /user/memberships/orgs/{org} | 获取授权用户在一个组织的成员资料
+*OrgsApi* | [**user_memberships_orgs_org_patch**](docs/OrgsApi.md#user_memberships_orgs_org_patch) | **PATCH** /user/memberships/orgs/{org} | 更新授权用户在一个组织的成员资料
 *OrgsApi* | [**user_orgs_get**](docs/OrgsApi.md#user_orgs_get) | **GET** /user/orgs | 列出授权用户所属的组织
 *OrgsApi* | [**users_username_events_orgs_org_get**](docs/OrgsApi.md#users_username_events_orgs_org_get) | **GET** /users/{username}/events/orgs/{org} | 列出用户所属组织的动态
 *OrgsApi* | [**users_username_orgs_get**](docs/OrgsApi.md#users_username_orgs_get) | **GET** /users/{username}/orgs | 列出用户所属的组织
 *ReleasesApi* | [**repos_owner_repo_releases_get**](docs/ReleasesApi.md#repos_owner_repo_releases_get) | **GET** /repos/{owner}/{repo}/releases | 获取仓库的所有Releases
+*ReleasesApi* | [**repos_owner_repo_releases_id_delete**](docs/ReleasesApi.md#repos_owner_repo_releases_id_delete) | **DELETE** /repos/{owner}/{repo}/releases/{id} | 删除仓库Release
 *ReleasesApi* | [**repos_owner_repo_releases_id_get**](docs/ReleasesApi.md#repos_owner_repo_releases_id_get) | **GET** /repos/{owner}/{repo}/releases/{id} | 获取仓库的单个Releases
+*ReleasesApi* | [**repos_owner_repo_releases_id_patch**](docs/ReleasesApi.md#repos_owner_repo_releases_id_patch) | **PATCH** /repos/{owner}/{repo}/releases/{id} | 更新仓库Release
 *ReleasesApi* | [**repos_owner_repo_releases_latest_get**](docs/ReleasesApi.md#repos_owner_repo_releases_latest_get) | **GET** /repos/{owner}/{repo}/releases/latest | 获取仓库的最后更新的Release
+*ReleasesApi* | [**repos_owner_repo_releases_post**](docs/ReleasesApi.md#repos_owner_repo_releases_post) | **POST** /repos/{owner}/{repo}/releases | 创建仓库Release
 *ReleasesApi* | [**repos_owner_repo_releases_tags_tag_get**](docs/ReleasesApi.md#repos_owner_repo_releases_tags_tag_get) | **GET** /repos/{owner}/{repo}/releases/tags/{tag} | 根据Tag名称获取仓库的Release
 *RepoApi* | [**networks_owner_repo_events_get**](docs/RepoApi.md#networks_owner_repo_events_get) | **GET** /networks/{owner}/{repo}/events | 列出仓库的所有公开动态
+*RepoApi* | [**repos_owner_repo_baidu_statistic_key_delete**](docs/RepoApi.md#repos_owner_repo_baidu_statistic_key_delete) | **DELETE** /repos/{owner}/{repo}/baidu_statistic_key | 删除仓库的百度统计 key
 *RepoApi* | [**repos_owner_repo_baidu_statistic_key_get**](docs/RepoApi.md#repos_owner_repo_baidu_statistic_key_get) | **GET** /repos/{owner}/{repo}/baidu_statistic_key | 获取仓库的百度统计 key
+*RepoApi* | [**repos_owner_repo_baidu_statistic_key_post**](docs/RepoApi.md#repos_owner_repo_baidu_statistic_key_post) | **POST** /repos/{owner}/{repo}/baidu_statistic_key | 设置/更新仓库的百度统计 key
 *RepoApi* | [**repos_owner_repo_blame_path_get**](docs/RepoApi.md#repos_owner_repo_blame_path_get) | **GET** /repos/{owner}/{repo}/blame/{path} | Blame
 *RepoApi* | [**repos_owner_repo_branches_branch_get**](docs/RepoApi.md#repos_owner_repo_branches_branch_get) | **GET** /repos/{owner}/{repo}/branches/{branch} | 获取单个分支
+*RepoApi* | [**repos_owner_repo_branches_branch_protection_delete**](docs/RepoApi.md#repos_owner_repo_branches_branch_protection_delete) | **DELETE** /repos/{owner}/{repo}/branches/{branch}/protection | 取消保护分支的设置
 *RepoApi* | [**repos_owner_repo_branches_branch_protection_put**](docs/RepoApi.md#repos_owner_repo_branches_branch_protection_put) | **PUT** /repos/{owner}/{repo}/branches/{branch}/protection | 设置分支保护
 *RepoApi* | [**repos_owner_repo_branches_get**](docs/RepoApi.md#repos_owner_repo_branches_get) | **GET** /repos/{owner}/{repo}/branches | 获取所有分支
+*RepoApi* | [**repos_owner_repo_branches_post**](docs/RepoApi.md#repos_owner_repo_branches_post) | **POST** /repos/{owner}/{repo}/branches | 创建分支
 *RepoApi* | [**repos_owner_repo_branches_setting_new_put**](docs/RepoApi.md#repos_owner_repo_branches_setting_new_put) | **PUT** /repos/{owner}/{repo}/branches/setting/new | 新建保护分支规则
+*RepoApi* | [**repos_owner_repo_branches_wildcard_setting_delete**](docs/RepoApi.md#repos_owner_repo_branches_wildcard_setting_delete) | **DELETE** /repos/{owner}/{repo}/branches/{wildcard}/setting | 删除保护分支规则
 *RepoApi* | [**repos_owner_repo_branches_wildcard_setting_put**](docs/RepoApi.md#repos_owner_repo_branches_wildcard_setting_put) | **PUT** /repos/{owner}/{repo}/branches/{wildcard}/setting | 更新保护分支规则
 *RepoApi* | [**repos_owner_repo_clear_put**](docs/RepoApi.md#repos_owner_repo_clear_put) | **PUT** /repos/{owner}/{repo}/clear | 清空一个仓库
 *RepoApi* | [**repos_owner_repo_collaborators_get**](docs/RepoApi.md#repos_owner_repo_collaborators_get) | **GET** /repos/{owner}/{repo}/collaborators | 获取仓库的所有成员
+*RepoApi* | [**repos_owner_repo_collaborators_username_delete**](docs/RepoApi.md#repos_owner_repo_collaborators_username_delete) | **DELETE** /repos/{owner}/{repo}/collaborators/{username} | 移除仓库成员
 *RepoApi* | [**repos_owner_repo_collaborators_username_get**](docs/RepoApi.md#repos_owner_repo_collaborators_username_get) | **GET** /repos/{owner}/{repo}/collaborators/{username} | 判断用户是否为仓库成员
 *RepoApi* | [**repos_owner_repo_collaborators_username_permission_get**](docs/RepoApi.md#repos_owner_repo_collaborators_username_permission_get) | **GET** /repos/{owner}/{repo}/collaborators/{username}/permission | 查看仓库成员的权限
+*RepoApi* | [**repos_owner_repo_collaborators_username_put**](docs/RepoApi.md#repos_owner_repo_collaborators_username_put) | **PUT** /repos/{owner}/{repo}/collaborators/{username} | 添加仓库成员或更新仓库成员权限
 *RepoApi* | [**repos_owner_repo_commits_get**](docs/RepoApi.md#repos_owner_repo_commits_get) | **GET** /repos/{owner}/{repo}/commits | 仓库的所有提交
+*RepoApi* | [**repos_owner_repo_commits_post**](docs/RepoApi.md#repos_owner_repo_commits_post) | **POST** /repos/{owner}/{repo}/commits | 提交多个文件变更
 *RepoApi* | [**repos_owner_repo_commits_sha_get**](docs/RepoApi.md#repos_owner_repo_commits_sha_get) | **GET** /repos/{owner}/{repo}/commits/{sha} | 仓库的某个提交
 *RepoApi* | [**repos_owner_repo_compare_base_head_get**](docs/RepoApi.md#repos_owner_repo_compare_base_head_get) | **GET** /repos/{owner}/{repo}/compare/{base}...{head} | Commits 对比
+*RepoApi* | [**repos_owner_repo_contents_path_delete**](docs/RepoApi.md#repos_owner_repo_contents_path_delete) | **DELETE** /repos/{owner}/{repo}/contents/{path} | 删除文件
 *RepoApi* | [**repos_owner_repo_contents_path_get**](docs/RepoApi.md#repos_owner_repo_contents_path_get) | **GET** /repos/{owner}/{repo}/contents(/{path}) | 获取仓库具体路径下的内容
 *RepoApi* | [**repos_owner_repo_contents_path_post**](docs/RepoApi.md#repos_owner_repo_contents_path_post) | **POST** /repos/{owner}/{repo}/contents/{path} | 新建文件
+*RepoApi* | [**repos_owner_repo_contents_path_put**](docs/RepoApi.md#repos_owner_repo_contents_path_put) | **PUT** /repos/{owner}/{repo}/contents/{path} | 更新文件
 *RepoApi* | [**repos_owner_repo_contributors_get**](docs/RepoApi.md#repos_owner_repo_contributors_get) | **GET** /repos/{owner}/{repo}/contributors | 获取仓库贡献者
+*RepoApi* | [**repos_owner_repo_delete**](docs/RepoApi.md#repos_owner_repo_delete) | **DELETE** /repos/{owner}/{repo} | 删除一个仓库
 *RepoApi* | [**repos_owner_repo_events_get**](docs/RepoApi.md#repos_owner_repo_events_get) | **GET** /repos/{owner}/{repo}/events | 列出仓库的所有动态
 *RepoApi* | [**repos_owner_repo_forks_get**](docs/RepoApi.md#repos_owner_repo_forks_get) | **GET** /repos/{owner}/{repo}/forks | 查看仓库的Forks
+*RepoApi* | [**repos_owner_repo_forks_post**](docs/RepoApi.md#repos_owner_repo_forks_post) | **POST** /repos/{owner}/{repo}/forks | Fork一个仓库
 *RepoApi* | [**repos_owner_repo_get**](docs/RepoApi.md#repos_owner_repo_get) | **GET** /repos/{owner}/{repo} | 获取用户的某个仓库
 *RepoApi* | [**repos_owner_repo_git_blobs_sha_get**](docs/RepoApi.md#repos_owner_repo_git_blobs_sha_get) | **GET** /repos/{owner}/{repo}/git/blobs/{sha} | 获取文件Blob
 *RepoApi* | [**repos_owner_repo_git_gitee_metrics_get**](docs/RepoApi.md#repos_owner_repo_git_gitee_metrics_get) | **GET** /repos/{owner}/{repo}/git/gitee_metrics | 获取 Gitee 指数
 *RepoApi* | [**repos_owner_repo_git_trees_sha_get**](docs/RepoApi.md#repos_owner_repo_git_trees_sha_get) | **GET** /repos/{owner}/{repo}/git/trees/{sha} | 获取目录Tree
 *RepoApi* | [**repos_owner_repo_keys_available_get**](docs/RepoApi.md#repos_owner_repo_keys_available_get) | **GET** /repos/{owner}/{repo}/keys/available | 获取仓库可部署的公钥
+*RepoApi* | [**repos_owner_repo_keys_enable_id_delete**](docs/RepoApi.md#repos_owner_repo_keys_enable_id_delete) | **DELETE** /repos/{owner}/{repo}/keys/enable/{id} | 停用仓库公钥
 *RepoApi* | [**repos_owner_repo_keys_enable_id_put**](docs/RepoApi.md#repos_owner_repo_keys_enable_id_put) | **PUT** /repos/{owner}/{repo}/keys/enable/{id} | 启用仓库公钥
 *RepoApi* | [**repos_owner_repo_keys_get**](docs/RepoApi.md#repos_owner_repo_keys_get) | **GET** /repos/{owner}/{repo}/keys | 获取仓库已部署的公钥
+*RepoApi* | [**repos_owner_repo_keys_id_delete**](docs/RepoApi.md#repos_owner_repo_keys_id_delete) | **DELETE** /repos/{owner}/{repo}/keys/{id} | 删除一个仓库公钥
 *RepoApi* | [**repos_owner_repo_keys_id_get**](docs/RepoApi.md#repos_owner_repo_keys_id_get) | **GET** /repos/{owner}/{repo}/keys/{id} | 获取仓库的单个公钥
+*RepoApi* | [**repos_owner_repo_keys_post**](docs/RepoApi.md#repos_owner_repo_keys_post) | **POST** /repos/{owner}/{repo}/keys | 为仓库添加公钥
 *RepoApi* | [**repos_owner_repo_labels_get**](docs/RepoApi.md#repos_owner_repo_labels_get) | **GET** /repos/{owner}/{repo}/labels | 获取仓库所有任务标签
+*RepoApi* | [**repos_owner_repo_labels_name_delete**](docs/RepoApi.md#repos_owner_repo_labels_name_delete) | **DELETE** /repos/{owner}/{repo}/labels/{name} | 删除一个仓库任务标签
 *RepoApi* | [**repos_owner_repo_labels_name_get**](docs/RepoApi.md#repos_owner_repo_labels_name_get) | **GET** /repos/{owner}/{repo}/labels/{name} | 根据标签名称获取单个标签
 *RepoApi* | [**repos_owner_repo_labels_original_name_patch**](docs/RepoApi.md#repos_owner_repo_labels_original_name_patch) | **PATCH** /repos/{owner}/{repo}/labels/{original_name} | 更新一个仓库任务标签
+*RepoApi* | [**repos_owner_repo_labels_post**](docs/RepoApi.md#repos_owner_repo_labels_post) | **POST** /repos/{owner}/{repo}/labels | 创建仓库任务标签
 *RepoApi* | [**repos_owner_repo_license_get**](docs/RepoApi.md#repos_owner_repo_license_get) | **GET** /repos/{owner}/{repo}/license | 获取一个仓库使用的开源许可协议
 *RepoApi* | [**repos_owner_repo_milestones_get**](docs/RepoApi.md#repos_owner_repo_milestones_get) | **GET** /repos/{owner}/{repo}/milestones | 获取仓库所有里程碑
+*RepoApi* | [**repos_owner_repo_milestones_number_delete**](docs/RepoApi.md#repos_owner_repo_milestones_number_delete) | **DELETE** /repos/{owner}/{repo}/milestones/{number} | 删除仓库单个里程碑
 *RepoApi* | [**repos_owner_repo_milestones_number_get**](docs/RepoApi.md#repos_owner_repo_milestones_number_get) | **GET** /repos/{owner}/{repo}/milestones/{number} | 获取仓库单个里程碑
+*RepoApi* | [**repos_owner_repo_milestones_number_patch**](docs/RepoApi.md#repos_owner_repo_milestones_number_patch) | **PATCH** /repos/{owner}/{repo}/milestones/{number} | 更新仓库里程碑
+*RepoApi* | [**repos_owner_repo_milestones_post**](docs/RepoApi.md#repos_owner_repo_milestones_post) | **POST** /repos/{owner}/{repo}/milestones | 创建仓库里程碑
 *RepoApi* | [**repos_owner_repo_open_post**](docs/RepoApi.md#repos_owner_repo_open_post) | **POST** /repos/{owner}/{repo}/open | 开通Gitee Go
 *RepoApi* | [**repos_owner_repo_pages_builds_post**](docs/RepoApi.md#repos_owner_repo_pages_builds_post) | **POST** /repos/{owner}/{repo}/pages/builds | 请求建立Pages
 *RepoApi* | [**repos_owner_repo_pages_get**](docs/RepoApi.md#repos_owner_repo_pages_get) | **GET** /repos/{owner}/{repo}/pages | 获取Pages信息
+*RepoApi* | [**repos_owner_repo_pages_put**](docs/RepoApi.md#repos_owner_repo_pages_put) | **PUT** /repos/{owner}/{repo}/pages | 上传设置 Pages SSL 证书和域名
+*RepoApi* | [**repos_owner_repo_patch**](docs/RepoApi.md#repos_owner_repo_patch) | **PATCH** /repos/{owner}/{repo} | 更新仓库设置
+*RepoApi* | [**repos_owner_repo_project_labels_delete**](docs/RepoApi.md#repos_owner_repo_project_labels_delete) | **DELETE** /repos/{owner}/{repo}/project_labels | 删除仓库标签
 *RepoApi* | [**repos_owner_repo_project_labels_get**](docs/RepoApi.md#repos_owner_repo_project_labels_get) | **GET** /repos/{owner}/{repo}/project_labels | 获取仓库所有标签
+*RepoApi* | [**repos_owner_repo_project_labels_post**](docs/RepoApi.md#repos_owner_repo_project_labels_post) | **POST** /repos/{owner}/{repo}/project_labels | 添加仓库标签
+*RepoApi* | [**repos_owner_repo_project_labels_put**](docs/RepoApi.md#repos_owner_repo_project_labels_put) | **PUT** /repos/{owner}/{repo}/project_labels | 替换所有仓库标签
 *RepoApi* | [**repos_owner_repo_pulls_get**](docs/RepoApi.md#repos_owner_repo_pulls_get) | **GET** /repos/{owner}/{repo}/pulls | 获取Pull Request列表
+*RepoApi* | [**repos_owner_repo_pulls_number_assignees_delete**](docs/RepoApi.md#repos_owner_repo_pulls_number_assignees_delete) | **DELETE** /repos/{owner}/{repo}/pulls/{number}/assignees | 取消用户审查 Pull Request
+*RepoApi* | [**repos_owner_repo_pulls_number_assignees_patch**](docs/RepoApi.md#repos_owner_repo_pulls_number_assignees_patch) | **PATCH** /repos/{owner}/{repo}/pulls/{number}/assignees | 重置 Pull Request 审查 的状态
 *RepoApi* | [**repos_owner_repo_pulls_number_assignees_post**](docs/RepoApi.md#repos_owner_repo_pulls_number_assignees_post) | **POST** /repos/{owner}/{repo}/pulls/{number}/assignees | 指派用户审查 Pull Request
 *RepoApi* | [**repos_owner_repo_pulls_number_commits_get**](docs/RepoApi.md#repos_owner_repo_pulls_number_commits_get) | **GET** /repos/{owner}/{repo}/pulls/{number}/commits | 获取某Pull Request的所有Commit信息。最多显示250条Commit
 *RepoApi* | [**repos_owner_repo_pulls_number_files_get**](docs/RepoApi.md#repos_owner_repo_pulls_number_files_get) | **GET** /repos/{owner}/{repo}/pulls/{number}/files | Pull Request Commit文件列表。最多显示300条diff
 *RepoApi* | [**repos_owner_repo_pulls_number_get**](docs/RepoApi.md#repos_owner_repo_pulls_number_get) | **GET** /repos/{owner}/{repo}/pulls/{number} | 获取单个Pull Request
 *RepoApi* | [**repos_owner_repo_pulls_number_labels_get**](docs/RepoApi.md#repos_owner_repo_pulls_number_labels_get) | **GET** /repos/{owner}/{repo}/pulls/{number}/labels | 获取某个 Pull Request 的所有标签
 *RepoApi* | [**repos_owner_repo_pulls_number_labels_name_delete**](docs/RepoApi.md#repos_owner_repo_pulls_number_labels_name_delete) | **DELETE** /repos/{owner}/{repo}/pulls/{number}/labels/{name} | 删除 Pull Request 标签
+*RepoApi* | [**repos_owner_repo_pulls_number_labels_post**](docs/RepoApi.md#repos_owner_repo_pulls_number_labels_post) | **POST** /repos/{owner}/{repo}/pulls/{number}/labels | 创建 Pull Request 标签
+*RepoApi* | [**repos_owner_repo_pulls_number_labels_put**](docs/RepoApi.md#repos_owner_repo_pulls_number_labels_put) | **PUT** /repos/{owner}/{repo}/pulls/{number}/labels | 替换 Pull Request 所有标签
 *RepoApi* | [**repos_owner_repo_pulls_number_merge_get**](docs/RepoApi.md#repos_owner_repo_pulls_number_merge_get) | **GET** /repos/{owner}/{repo}/pulls/{number}/merge | 判断Pull Request是否已经合并
+*RepoApi* | [**repos_owner_repo_pulls_number_merge_put**](docs/RepoApi.md#repos_owner_repo_pulls_number_merge_put) | **PUT** /repos/{owner}/{repo}/pulls/{number}/merge | 合并Pull Request
 *RepoApi* | [**repos_owner_repo_pulls_number_operate_logs_get**](docs/RepoApi.md#repos_owner_repo_pulls_number_operate_logs_get) | **GET** /repos/{owner}/{repo}/pulls/{number}/operate_logs | 获取某个Pull Request的操作日志
+*RepoApi* | [**repos_owner_repo_pulls_number_patch**](docs/RepoApi.md#repos_owner_repo_pulls_number_patch) | **PATCH** /repos/{owner}/{repo}/pulls/{number} | 更新Pull Request信息
 *RepoApi* | [**repos_owner_repo_pulls_number_review_post**](docs/RepoApi.md#repos_owner_repo_pulls_number_review_post) | **POST** /repos/{owner}/{repo}/pulls/{number}/review | 处理 Pull Request 审查
 *RepoApi* | [**repos_owner_repo_pulls_number_test_post**](docs/RepoApi.md#repos_owner_repo_pulls_number_test_post) | **POST** /repos/{owner}/{repo}/pulls/{number}/test | 处理 Pull Request 测试
+*RepoApi* | [**repos_owner_repo_pulls_number_testers_delete**](docs/RepoApi.md#repos_owner_repo_pulls_number_testers_delete) | **DELETE** /repos/{owner}/{repo}/pulls/{number}/testers | 取消用户测试 Pull Request
+*RepoApi* | [**repos_owner_repo_pulls_number_testers_patch**](docs/RepoApi.md#repos_owner_repo_pulls_number_testers_patch) | **PATCH** /repos/{owner}/{repo}/pulls/{number}/testers | 重置 Pull Request 测试 的状态
 *RepoApi* | [**repos_owner_repo_pulls_number_testers_post**](docs/RepoApi.md#repos_owner_repo_pulls_number_testers_post) | **POST** /repos/{owner}/{repo}/pulls/{number}/testers | 指派用户测试 Pull Request
+*RepoApi* | [**repos_owner_repo_pulls_post**](docs/RepoApi.md#repos_owner_repo_pulls_post) | **POST** /repos/{owner}/{repo}/pulls | 创建Pull Request
 *RepoApi* | [**repos_owner_repo_push_config_get**](docs/RepoApi.md#repos_owner_repo_push_config_get) | **GET** /repos/{owner}/{repo}/push_config | 获取仓库推送规则设置
+*RepoApi* | [**repos_owner_repo_push_config_put**](docs/RepoApi.md#repos_owner_repo_push_config_put) | **PUT** /repos/{owner}/{repo}/push_config | 修改仓库推送规则设置
 *RepoApi* | [**repos_owner_repo_raw_path_get**](docs/RepoApi.md#repos_owner_repo_raw_path_get) | **GET** /repos/{owner}/{repo}/raw/{path} | 获取 raw 文件（100MB 以内）
 *RepoApi* | [**repos_owner_repo_readme_get**](docs/RepoApi.md#repos_owner_repo_readme_get) | **GET** /repos/{owner}/{repo}/readme | 获取仓库README
 *RepoApi* | [**repos_owner_repo_reviewer_put**](docs/RepoApi.md#repos_owner_repo_reviewer_put) | **PUT** /repos/{owner}/{repo}/reviewer | 修改代码审查设置
 *RepoApi* | [**repos_owner_repo_stargazers_get**](docs/RepoApi.md#repos_owner_repo_stargazers_get) | **GET** /repos/{owner}/{repo}/stargazers | 列出 star 了仓库的用户
 *RepoApi* | [**repos_owner_repo_subscribers_get**](docs/RepoApi.md#repos_owner_repo_subscribers_get) | **GET** /repos/{owner}/{repo}/subscribers | 列出 watch 了仓库的用户
 *RepoApi* | [**repos_owner_repo_tags_get**](docs/RepoApi.md#repos_owner_repo_tags_get) | **GET** /repos/{owner}/{repo}/tags | 列出仓库所有的tags
+*RepoApi* | [**repos_owner_repo_tags_post**](docs/RepoApi.md#repos_owner_repo_tags_post) | **POST** /repos/{owner}/{repo}/tags | 创建一个仓库的 Tag
 *RepoApi* | [**repos_owner_repo_tarball_get**](docs/RepoApi.md#repos_owner_repo_tarball_get) | **GET** /repos/{owner}/{repo}/tarball | 下载仓库 tar.gz
 *RepoApi* | [**repos_owner_repo_traffic_data_post**](docs/RepoApi.md#repos_owner_repo_traffic_data_post) | **POST** /repos/{owner}/{repo}/traffic-data | 获取最近30天的七日以内访问量
 *RepoApi* | [**repos_owner_repo_zipball_get**](docs/RepoApi.md#repos_owner_repo_zipball_get) | **GET** /repos/{owner}/{repo}/zipball | 下载仓库 zip
 *RepoApi* | [**user_repos_get**](docs/RepoApi.md#user_repos_get) | **GET** /user/repos | 列出授权用户的所有仓库
+*RepoApi* | [**user_repos_post**](docs/RepoApi.md#user_repos_post) | **POST** /user/repos | 创建一个仓库
 *RepoApi* | [**users_username_repos_get**](docs/RepoApi.md#users_username_repos_get) | **GET** /users/{username}/repos | 获取某个用户的公开仓库
 *SearchApi* | [**enterprises_enterprise_members_search_get**](docs/SearchApi.md#enterprises_enterprise_members_search_get) | **GET** /enterprises/{enterprise}/members/search | 获取企业成员信息(通过用户名/邮箱)
 *SearchApi* | [**search_issues_get**](docs/SearchApi.md#search_issues_get) | **GET** /search/issues | 搜索 Issues
@@ -520,16 +810,25 @@ Class | Method | HTTP request | Description
 *SearchApi* | [**search_users_get**](docs/SearchApi.md#search_users_get) | **GET** /search/users | 搜索用户
 *UserApi* | [**user_followers_get**](docs/UserApi.md#user_followers_get) | **GET** /user/followers | 列出授权用户的关注者
 *UserApi* | [**user_following_get**](docs/UserApi.md#user_following_get) | **GET** /user/following | 列出授权用户正关注的用户
+*UserApi* | [**user_following_username_delete**](docs/UserApi.md#user_following_username_delete) | **DELETE** /user/following/{username} | 取消关注一个用户
 *UserApi* | [**user_following_username_get**](docs/UserApi.md#user_following_username_get) | **GET** /user/following/{username} | 检查授权用户是否关注了一个用户
+*UserApi* | [**user_following_username_put**](docs/UserApi.md#user_following_username_put) | **PUT** /user/following/{username} | 关注一个用户
 *UserApi* | [**user_get**](docs/UserApi.md#user_get) | **GET** /user | 获取授权用户的资料
 *UserApi* | [**user_keys_get**](docs/UserApi.md#user_keys_get) | **GET** /user/keys | 列出授权用户的所有公钥
+*UserApi* | [**user_keys_id_delete**](docs/UserApi.md#user_keys_id_delete) | **DELETE** /user/keys/{id} | 删除一个公钥
 *UserApi* | [**user_keys_id_get**](docs/UserApi.md#user_keys_id_get) | **GET** /user/keys/{id} | 获取一个公钥
+*UserApi* | [**user_keys_post**](docs/UserApi.md#user_keys_post) | **POST** /user/keys | 添加一个公钥
 *UserApi* | [**user_namespace_get**](docs/UserApi.md#user_namespace_get) | **GET** /user/namespace | 获取授权用户的一个 Namespace
 *UserApi* | [**user_namespaces_get**](docs/UserApi.md#user_namespaces_get) | **GET** /user/namespaces | 列出授权用户所有的 Namespace
+*UserApi* | [**user_patch**](docs/UserApi.md#user_patch) | **PATCH** /user | 更新授权用户的资料
 *UserApi* | [**user_starred_get**](docs/UserApi.md#user_starred_get) | **GET** /user/starred | 列出授权用户 star 了的仓库
+*UserApi* | [**user_starred_owner_repo_delete**](docs/UserApi.md#user_starred_owner_repo_delete) | **DELETE** /user/starred/{owner}/{repo} | 取消 star 一个仓库
 *UserApi* | [**user_starred_owner_repo_get**](docs/UserApi.md#user_starred_owner_repo_get) | **GET** /user/starred/{owner}/{repo} | 检查授权用户是否 star 了一个仓库
+*UserApi* | [**user_starred_owner_repo_put**](docs/UserApi.md#user_starred_owner_repo_put) | **PUT** /user/starred/{owner}/{repo} | star 一个仓库
 *UserApi* | [**user_subscriptions_get**](docs/UserApi.md#user_subscriptions_get) | **GET** /user/subscriptions | 列出授权用户 watch 了的仓库
+*UserApi* | [**user_subscriptions_owner_repo_delete**](docs/UserApi.md#user_subscriptions_owner_repo_delete) | **DELETE** /user/subscriptions/{owner}/{repo} | 取消 watch 一个仓库
 *UserApi* | [**user_subscriptions_owner_repo_get**](docs/UserApi.md#user_subscriptions_owner_repo_get) | **GET** /user/subscriptions/{owner}/{repo} | 检查授权用户是否 watch 了一个仓库
+*UserApi* | [**user_subscriptions_owner_repo_put**](docs/UserApi.md#user_subscriptions_owner_repo_put) | **PUT** /user/subscriptions/{owner}/{repo} | watch 一个仓库
 *UserApi* | [**users_organization_post**](docs/UserApi.md#users_organization_post) | **POST** /users/organization | 创建组织
 *UserApi* | [**users_username_events_get**](docs/UserApi.md#users_username_events_get) | **GET** /users/{username}/events | 列出用户的动态
 *UserApi* | [**users_username_events_public_get**](docs/UserApi.md#users_username_events_public_get) | **GET** /users/{username}/events/public | 列出用户的公开动态
@@ -559,16 +858,29 @@ Class | Method | HTTP request | Description
  - [BaseCommit](docs/BaseCommit.md)
  - [BranchProtectionBody](docs/BranchProtectionBody.md)
  - [Collaborators](docs/Collaborators.md)
+ - [CollaboratorsUsernameBody](docs/CollaboratorsUsernameBody.md)
+ - [CommentsIdBody](docs/CommentsIdBody.md)
+ - [CommentsIdBody1](docs/CommentsIdBody1.md)
+ - [CommentsIdBody2](docs/CommentsIdBody2.md)
+ - [CommentsIdBody3](docs/CommentsIdBody3.md)
  - [Commit](docs/Commit.md)
  - [Commits](docs/Commits.md)
  - [Content](docs/Content.md)
  - [ContentsPathBody](docs/ContentsPathBody.md)
+ - [ContentsPathBody1](docs/ContentsPathBody1.md)
  - [Contexts](docs/Contexts.md)
  - [Counts](docs/Counts.md)
  - [EnableIdBody](docs/EnableIdBody.md)
  - [Enterprise](docs/Enterprise.md)
+ - [EnterpriseMembersBody](docs/EnterpriseMembersBody.md)
+ - [EnterpriseReposBody](docs/EnterpriseReposBody.md)
  - [EnterpriseWeekReportBody](docs/EnterpriseWeekReportBody.md)
  - [Files](docs/Files.md)
+ - [FollowingUsernameBody](docs/FollowingUsernameBody.md)
+ - [GistIdCommentsBody](docs/GistIdCommentsBody.md)
+ - [GistsBody](docs/GistsBody.md)
+ - [GistsIdBody](docs/GistsIdBody.md)
+ - [HooksIdBody](docs/HooksIdBody.md)
  - [IdCommentBody](docs/IdCommentBody.md)
  - [IdForksBody](docs/IdForksBody.md)
  - [IdStarBody](docs/IdStarBody.md)
@@ -625,6 +937,8 @@ Class | Method | HTTP request | Description
  - [InlineResponse20052](docs/InlineResponse20052.md)
  - [InlineResponse20053](docs/InlineResponse20053.md)
  - [InlineResponse20054](docs/InlineResponse20054.md)
+ - [InlineResponse20055](docs/InlineResponse20055.md)
+ - [InlineResponse20056](docs/InlineResponse20056.md)
  - [InlineResponse2006](docs/InlineResponse2006.md)
  - [InlineResponse2007](docs/InlineResponse2007.md)
  - [InlineResponse2008](docs/InlineResponse2008.md)
@@ -632,35 +946,75 @@ Class | Method | HTTP request | Description
  - [IssueStateDetail](docs/IssueStateDetail.md)
  - [IssueTypeDetail](docs/IssueTypeDetail.md)
  - [IssuesNumberBody](docs/IssuesNumberBody.md)
+ - [IssuesNumberBody1](docs/IssuesNumberBody1.md)
  - [Labels](docs/Labels.md)
  - [LabelsOriginalNameBody](docs/LabelsOriginalNameBody.md)
  - [List](docs/List.md)
  - [MarkdownBody](docs/MarkdownBody.md)
+ - [MembersUsernameBody](docs/MembersUsernameBody.md)
+ - [MembershipsUsernameBody](docs/MembershipsUsernameBody.md)
  - [MergeBaseCommit](docs/MergeBaseCommit.md)
  - [Mergers](docs/Mergers.md)
+ - [MessagesIdBody](docs/MessagesIdBody.md)
  - [Milestone](docs/Milestone.md)
+ - [MilestonesNumberBody](docs/MilestonesNumberBody.md)
  - [ModelSelf](docs/ModelSelf.md)
  - [Namespace](docs/Namespace.md)
  - [Namespaces](docs/Namespaces.md)
+ - [NotificationsMessagesBody](docs/NotificationsMessagesBody.md)
+ - [NotificationsMessagesBody1](docs/NotificationsMessagesBody1.md)
+ - [NotificationsThreadsBody](docs/NotificationsThreadsBody.md)
  - [NumberAssigneesBody](docs/NumberAssigneesBody.md)
+ - [NumberAssigneesBody1](docs/NumberAssigneesBody1.md)
+ - [NumberCommentsBody](docs/NumberCommentsBody.md)
+ - [NumberCommentsBody1](docs/NumberCommentsBody1.md)
+ - [NumberLabelsBody](docs/NumberLabelsBody.md)
+ - [NumberLabelsBody1](docs/NumberLabelsBody1.md)
+ - [NumberLabelsBody2](docs/NumberLabelsBody2.md)
+ - [NumberLabelsBody3](docs/NumberLabelsBody3.md)
+ - [NumberMergeBody](docs/NumberMergeBody.md)
  - [NumberReviewBody](docs/NumberReviewBody.md)
  - [NumberTestBody](docs/NumberTestBody.md)
  - [NumberTestersBody](docs/NumberTestersBody.md)
+ - [NumberTestersBody1](docs/NumberTestersBody1.md)
+ - [OrgReposBody](docs/OrgReposBody.md)
  - [Organization](docs/Organization.md)
+ - [OrgsOrgBody](docs/OrgsOrgBody.md)
+ - [OrgsOrgBody1](docs/OrgsOrgBody1.md)
  - [Owner](docs/Owner.md)
  - [OwnerIssuesBody](docs/OwnerIssuesBody.md)
+ - [OwnerRepoBody](docs/OwnerRepoBody.md)
+ - [OwnerRepoBody1](docs/OwnerRepoBody1.md)
+ - [OwnerRepoBody2](docs/OwnerRepoBody2.md)
  - [PagesBuildsBody](docs/PagesBuildsBody.md)
  - [Parent](docs/Parent.md)
  - [Parents](docs/Parents.md)
  - [Program](docs/Program.md)
  - [Programs](docs/Programs.md)
  - [ProjectLabels](docs/ProjectLabels.md)
+ - [PullsNumberBody](docs/PullsNumberBody.md)
  - [Pushers](docs/Pushers.md)
  - [RefPullRequests](docs/RefPullRequests.md)
+ - [ReleasesIdBody](docs/ReleasesIdBody.md)
  - [Repo](docs/Repo.md)
+ - [RepoBaiduStatisticKeyBody](docs/RepoBaiduStatisticKeyBody.md)
+ - [RepoBranchesBody](docs/RepoBranchesBody.md)
  - [RepoClearBody](docs/RepoClearBody.md)
+ - [RepoForksBody](docs/RepoForksBody.md)
+ - [RepoHooksBody](docs/RepoHooksBody.md)
+ - [RepoKeysBody](docs/RepoKeysBody.md)
+ - [RepoLabelsBody](docs/RepoLabelsBody.md)
+ - [RepoMilestonesBody](docs/RepoMilestonesBody.md)
+ - [RepoNotificationsBody](docs/RepoNotificationsBody.md)
  - [RepoOpenBody](docs/RepoOpenBody.md)
+ - [RepoPagesBody](docs/RepoPagesBody.md)
+ - [RepoProjectLabelsBody](docs/RepoProjectLabelsBody.md)
+ - [RepoProjectLabelsBody1](docs/RepoProjectLabelsBody1.md)
+ - [RepoPullsBody](docs/RepoPullsBody.md)
+ - [RepoPushConfigBody](docs/RepoPushConfigBody.md)
+ - [RepoReleasesBody](docs/RepoReleasesBody.md)
  - [RepoReviewerBody](docs/RepoReviewerBody.md)
+ - [RepoTagsBody](docs/RepoTagsBody.md)
  - [RepoTrafficdataBody](docs/RepoTrafficdataBody.md)
  - [Repository](docs/Repository.md)
  - [Scope](docs/Scope.md)
@@ -670,7 +1024,11 @@ Class | Method | HTTP request | Description
  - [Subject](docs/Subject.md)
  - [Summary](docs/Summary.md)
  - [Testers](docs/Testers.md)
+ - [ThreadsIdBody](docs/ThreadsIdBody.md)
  - [User](docs/User.md)
+ - [UserBody](docs/UserBody.md)
+ - [UserKeysBody](docs/UserKeysBody.md)
+ - [UserReposBody](docs/UserReposBody.md)
  - [UsersOrganizationBody](docs/UsersOrganizationBody.md)
  - [WeekReportIdBody](docs/WeekReportIdBody.md)
  - [WildcardSettingBody](docs/WildcardSettingBody.md)

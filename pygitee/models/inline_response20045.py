@@ -28,80 +28,54 @@ class InlineResponse20045(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'assets': 'str',
         'author': 'str',
-        'body': 'str',
-        'created_at': 'str',
-        'id': 'int',
-        'name': 'str',
-        'prerelease': 'str',
-        'tag_name': 'str',
-        'target_commitish': 'str'
+        'comments_url': 'str',
+        'commit': 'str',
+        'committer': 'str',
+        'html_url': 'str',
+        'parents': 'Parents',
+        'sha': 'str',
+        'url': 'str'
     }
 
     attribute_map = {
-        'assets': 'assets',
         'author': 'author',
-        'body': 'body',
-        'created_at': 'created_at',
-        'id': 'id',
-        'name': 'name',
-        'prerelease': 'prerelease',
-        'tag_name': 'tag_name',
-        'target_commitish': 'target_commitish'
+        'comments_url': 'comments_url',
+        'commit': 'commit',
+        'committer': 'committer',
+        'html_url': 'html_url',
+        'parents': 'parents',
+        'sha': 'sha',
+        'url': 'url'
     }
 
-    def __init__(self, assets=None, author=None, body=None, created_at=None, id=None, name=None, prerelease=None, tag_name=None, target_commitish=None):  # noqa: E501
+    def __init__(self, author=None, comments_url=None, commit=None, committer=None, html_url=None, parents=None, sha=None, url=None):  # noqa: E501
         """InlineResponse20045 - a model defined in Swagger"""  # noqa: E501
-        self._assets = None
         self._author = None
-        self._body = None
-        self._created_at = None
-        self._id = None
-        self._name = None
-        self._prerelease = None
-        self._tag_name = None
-        self._target_commitish = None
+        self._comments_url = None
+        self._commit = None
+        self._committer = None
+        self._html_url = None
+        self._parents = None
+        self._sha = None
+        self._url = None
         self.discriminator = None
-        if assets is not None:
-            self.assets = assets
         if author is not None:
             self.author = author
-        if body is not None:
-            self.body = body
-        if created_at is not None:
-            self.created_at = created_at
-        if id is not None:
-            self.id = id
-        if name is not None:
-            self.name = name
-        if prerelease is not None:
-            self.prerelease = prerelease
-        if tag_name is not None:
-            self.tag_name = tag_name
-        if target_commitish is not None:
-            self.target_commitish = target_commitish
-
-    @property
-    def assets(self):
-        """Gets the assets of this InlineResponse20045.  # noqa: E501
-
-
-        :return: The assets of this InlineResponse20045.  # noqa: E501
-        :rtype: str
-        """
-        return self._assets
-
-    @assets.setter
-    def assets(self, assets):
-        """Sets the assets of this InlineResponse20045.
-
-
-        :param assets: The assets of this InlineResponse20045.  # noqa: E501
-        :type: str
-        """
-
-        self._assets = assets
+        if comments_url is not None:
+            self.comments_url = comments_url
+        if commit is not None:
+            self.commit = commit
+        if committer is not None:
+            self.committer = committer
+        if html_url is not None:
+            self.html_url = html_url
+        if parents is not None:
+            self.parents = parents
+        if sha is not None:
+            self.sha = sha
+        if url is not None:
+            self.url = url
 
     @property
     def author(self):
@@ -125,151 +99,151 @@ class InlineResponse20045(object):
         self._author = author
 
     @property
-    def body(self):
-        """Gets the body of this InlineResponse20045.  # noqa: E501
+    def comments_url(self):
+        """Gets the comments_url of this InlineResponse20045.  # noqa: E501
 
 
-        :return: The body of this InlineResponse20045.  # noqa: E501
+        :return: The comments_url of this InlineResponse20045.  # noqa: E501
         :rtype: str
         """
-        return self._body
+        return self._comments_url
 
-    @body.setter
-    def body(self, body):
-        """Sets the body of this InlineResponse20045.
+    @comments_url.setter
+    def comments_url(self, comments_url):
+        """Sets the comments_url of this InlineResponse20045.
 
 
-        :param body: The body of this InlineResponse20045.  # noqa: E501
+        :param comments_url: The comments_url of this InlineResponse20045.  # noqa: E501
         :type: str
         """
 
-        self._body = body
+        self._comments_url = comments_url
 
     @property
-    def created_at(self):
-        """Gets the created_at of this InlineResponse20045.  # noqa: E501
+    def commit(self):
+        """Gets the commit of this InlineResponse20045.  # noqa: E501
 
 
-        :return: The created_at of this InlineResponse20045.  # noqa: E501
+        :return: The commit of this InlineResponse20045.  # noqa: E501
         :rtype: str
         """
-        return self._created_at
+        return self._commit
 
-    @created_at.setter
-    def created_at(self, created_at):
-        """Sets the created_at of this InlineResponse20045.
+    @commit.setter
+    def commit(self, commit):
+        """Sets the commit of this InlineResponse20045.
 
 
-        :param created_at: The created_at of this InlineResponse20045.  # noqa: E501
+        :param commit: The commit of this InlineResponse20045.  # noqa: E501
         :type: str
         """
 
-        self._created_at = created_at
+        self._commit = commit
 
     @property
-    def id(self):
-        """Gets the id of this InlineResponse20045.  # noqa: E501
+    def committer(self):
+        """Gets the committer of this InlineResponse20045.  # noqa: E501
 
 
-        :return: The id of this InlineResponse20045.  # noqa: E501
-        :rtype: int
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this InlineResponse20045.
-
-
-        :param id: The id of this InlineResponse20045.  # noqa: E501
-        :type: int
-        """
-
-        self._id = id
-
-    @property
-    def name(self):
-        """Gets the name of this InlineResponse20045.  # noqa: E501
-
-
-        :return: The name of this InlineResponse20045.  # noqa: E501
+        :return: The committer of this InlineResponse20045.  # noqa: E501
         :rtype: str
         """
-        return self._name
+        return self._committer
 
-    @name.setter
-    def name(self, name):
-        """Sets the name of this InlineResponse20045.
+    @committer.setter
+    def committer(self, committer):
+        """Sets the committer of this InlineResponse20045.
 
 
-        :param name: The name of this InlineResponse20045.  # noqa: E501
+        :param committer: The committer of this InlineResponse20045.  # noqa: E501
         :type: str
         """
 
-        self._name = name
+        self._committer = committer
 
     @property
-    def prerelease(self):
-        """Gets the prerelease of this InlineResponse20045.  # noqa: E501
+    def html_url(self):
+        """Gets the html_url of this InlineResponse20045.  # noqa: E501
 
 
-        :return: The prerelease of this InlineResponse20045.  # noqa: E501
+        :return: The html_url of this InlineResponse20045.  # noqa: E501
         :rtype: str
         """
-        return self._prerelease
+        return self._html_url
 
-    @prerelease.setter
-    def prerelease(self, prerelease):
-        """Sets the prerelease of this InlineResponse20045.
+    @html_url.setter
+    def html_url(self, html_url):
+        """Sets the html_url of this InlineResponse20045.
 
 
-        :param prerelease: The prerelease of this InlineResponse20045.  # noqa: E501
+        :param html_url: The html_url of this InlineResponse20045.  # noqa: E501
         :type: str
         """
 
-        self._prerelease = prerelease
+        self._html_url = html_url
 
     @property
-    def tag_name(self):
-        """Gets the tag_name of this InlineResponse20045.  # noqa: E501
+    def parents(self):
+        """Gets the parents of this InlineResponse20045.  # noqa: E501
 
 
-        :return: The tag_name of this InlineResponse20045.  # noqa: E501
+        :return: The parents of this InlineResponse20045.  # noqa: E501
+        :rtype: Parents
+        """
+        return self._parents
+
+    @parents.setter
+    def parents(self, parents):
+        """Sets the parents of this InlineResponse20045.
+
+
+        :param parents: The parents of this InlineResponse20045.  # noqa: E501
+        :type: Parents
+        """
+
+        self._parents = parents
+
+    @property
+    def sha(self):
+        """Gets the sha of this InlineResponse20045.  # noqa: E501
+
+
+        :return: The sha of this InlineResponse20045.  # noqa: E501
         :rtype: str
         """
-        return self._tag_name
+        return self._sha
 
-    @tag_name.setter
-    def tag_name(self, tag_name):
-        """Sets the tag_name of this InlineResponse20045.
+    @sha.setter
+    def sha(self, sha):
+        """Sets the sha of this InlineResponse20045.
 
 
-        :param tag_name: The tag_name of this InlineResponse20045.  # noqa: E501
+        :param sha: The sha of this InlineResponse20045.  # noqa: E501
         :type: str
         """
 
-        self._tag_name = tag_name
+        self._sha = sha
 
     @property
-    def target_commitish(self):
-        """Gets the target_commitish of this InlineResponse20045.  # noqa: E501
+    def url(self):
+        """Gets the url of this InlineResponse20045.  # noqa: E501
 
 
-        :return: The target_commitish of this InlineResponse20045.  # noqa: E501
+        :return: The url of this InlineResponse20045.  # noqa: E501
         :rtype: str
         """
-        return self._target_commitish
+        return self._url
 
-    @target_commitish.setter
-    def target_commitish(self, target_commitish):
-        """Sets the target_commitish of this InlineResponse20045.
+    @url.setter
+    def url(self, url):
+        """Sets the url of this InlineResponse20045.
 
 
-        :param target_commitish: The target_commitish of this InlineResponse20045.  # noqa: E501
+        :param url: The url of this InlineResponse20045.  # noqa: E501
         :type: str
         """
 
-        self._target_commitish = target_commitish
+        self._url = url
 
     def to_dict(self):
         """Returns the model properties as a dict"""

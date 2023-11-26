@@ -3,15 +3,17 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**avatar_url** | **str** |  | [optional] 
-**description** | **str** |  | [optional] 
-**events_url** | **str** |  | [optional] 
-**follow_count** | **str** |  | [optional] 
+**actor** | [**Actor**](Actor.md) |  | [optional] 
+**content** | **str** |  | [optional] 
+**html_url** | **str** |  | [optional] 
 **id** | **int** |  | [optional] 
-**login** | **str** |  | [optional] 
-**members_url** | **str** |  | [optional] 
-**name** | **str** |  | [optional] 
-**repos_url** | **str** |  | [optional] 
+**mute** | **str** |  | [optional] 
+**namespaces** | [**Namespaces**](Namespaces.md) |  | [optional] 
+**repository** | [**Repository**](Repository.md) |  | [optional] 
+**subject** | [**Subject**](Subject.md) |  | [optional] 
+**type** | **str** |  | [optional] 
+**unread** | **str** |  | [optional] 
+**updated_at** | **str** |  | [optional] 
 **url** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

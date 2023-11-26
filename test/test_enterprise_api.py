@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    Gitee OpenApi
+    getV5ReposOwnerRepoSubscribers
 
-    All api provided by Gitee  # noqa: E501
+    列出 watch 了仓库的用户  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -56,6 +56,13 @@ class TestEnterpriseApi(unittest.TestCase):
         """
         pass
 
+    def test_enterprises_enterprise_members_post(self):
+        """Test case for enterprises_enterprise_members_post
+
+        添加或邀请企业成员  # noqa: E501
+        """
+        pass
+
     def test_enterprises_enterprise_members_username_get(self):
         """Test case for enterprises_enterprise_members_username_get
 
@@ -63,10 +70,24 @@ class TestEnterpriseApi(unittest.TestCase):
         """
         pass
 
+    def test_enterprises_enterprise_members_username_put(self):
+        """Test case for enterprises_enterprise_members_username_put
+
+        修改企业成员权限或备注  # noqa: E501
+        """
+        pass
+
     def test_enterprises_enterprise_repos_get(self):
         """Test case for enterprises_enterprise_repos_get
 
         获取企业的所有仓库  # noqa: E501
+        """
+        pass
+
+    def test_enterprises_enterprise_repos_post(self):
+        """Test case for enterprises_enterprise_repos_post
+
+        创建企业仓库  # noqa: E501
         """
         pass
 

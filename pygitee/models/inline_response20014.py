@@ -28,45 +28,71 @@ class InlineResponse20014(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'list': 'List',
+        'message_count': 'int',
+        'notification_count': 'int',
         'total_count': 'int'
     }
 
     attribute_map = {
-        'list': 'list',
+        'message_count': 'message_count',
+        'notification_count': 'notification_count',
         'total_count': 'total_count'
     }
 
-    def __init__(self, list=None, total_count=None):  # noqa: E501
+    def __init__(self, message_count=None, notification_count=None, total_count=None):  # noqa: E501
         """InlineResponse20014 - a model defined in Swagger"""  # noqa: E501
-        self._list = None
+        self._message_count = None
+        self._notification_count = None
         self._total_count = None
         self.discriminator = None
-        if list is not None:
-            self.list = list
+        if message_count is not None:
+            self.message_count = message_count
+        if notification_count is not None:
+            self.notification_count = notification_count
         if total_count is not None:
             self.total_count = total_count
 
     @property
-    def list(self):
-        """Gets the list of this InlineResponse20014.  # noqa: E501
+    def message_count(self):
+        """Gets the message_count of this InlineResponse20014.  # noqa: E501
 
 
-        :return: The list of this InlineResponse20014.  # noqa: E501
-        :rtype: List
+        :return: The message_count of this InlineResponse20014.  # noqa: E501
+        :rtype: int
         """
-        return self._list
+        return self._message_count
 
-    @list.setter
-    def list(self, list):
-        """Sets the list of this InlineResponse20014.
+    @message_count.setter
+    def message_count(self, message_count):
+        """Sets the message_count of this InlineResponse20014.
 
 
-        :param list: The list of this InlineResponse20014.  # noqa: E501
-        :type: List
+        :param message_count: The message_count of this InlineResponse20014.  # noqa: E501
+        :type: int
         """
 
-        self._list = list
+        self._message_count = message_count
+
+    @property
+    def notification_count(self):
+        """Gets the notification_count of this InlineResponse20014.  # noqa: E501
+
+
+        :return: The notification_count of this InlineResponse20014.  # noqa: E501
+        :rtype: int
+        """
+        return self._notification_count
+
+    @notification_count.setter
+    def notification_count(self, notification_count):
+        """Sets the notification_count of this InlineResponse20014.
+
+
+        :param notification_count: The notification_count of this InlineResponse20014.  # noqa: E501
+        :type: int
+        """
+
+        self._notification_count = notification_count
 
     @property
     def total_count(self):

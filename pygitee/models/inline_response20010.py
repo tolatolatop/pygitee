@@ -28,55 +28,172 @@ class InlineResponse20010(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'body': 'str',
+        'comments': 'str',
+        'comments_url': 'str',
+        'commits_url': 'str',
         'created_at': 'str',
+        'description': 'str',
+        'files': 'str',
+        'forks': 'str',
+        'forks_url': 'str',
+        'git_pull_url': 'str',
+        'git_push_url': 'str',
+        'history': 'str',
+        'html_url': 'str',
         'id': 'str',
-        'updated_at': 'str'
+        'owner': 'str',
+        'public': 'str',
+        'truncated': 'str',
+        'updated_at': 'str',
+        'url': 'str',
+        'user': 'str'
     }
 
     attribute_map = {
-        'body': 'body',
+        'comments': 'comments',
+        'comments_url': 'comments_url',
+        'commits_url': 'commits_url',
         'created_at': 'created_at',
+        'description': 'description',
+        'files': 'files',
+        'forks': 'forks',
+        'forks_url': 'forks_url',
+        'git_pull_url': 'git_pull_url',
+        'git_push_url': 'git_push_url',
+        'history': 'history',
+        'html_url': 'html_url',
         'id': 'id',
-        'updated_at': 'updated_at'
+        'owner': 'owner',
+        'public': 'public',
+        'truncated': 'truncated',
+        'updated_at': 'updated_at',
+        'url': 'url',
+        'user': 'user'
     }
 
-    def __init__(self, body=None, created_at=None, id=None, updated_at=None):  # noqa: E501
+    def __init__(self, comments=None, comments_url=None, commits_url=None, created_at=None, description=None, files=None, forks=None, forks_url=None, git_pull_url=None, git_push_url=None, history=None, html_url=None, id=None, owner=None, public=None, truncated=None, updated_at=None, url=None, user=None):  # noqa: E501
         """InlineResponse20010 - a model defined in Swagger"""  # noqa: E501
-        self._body = None
+        self._comments = None
+        self._comments_url = None
+        self._commits_url = None
         self._created_at = None
+        self._description = None
+        self._files = None
+        self._forks = None
+        self._forks_url = None
+        self._git_pull_url = None
+        self._git_push_url = None
+        self._history = None
+        self._html_url = None
         self._id = None
+        self._owner = None
+        self._public = None
+        self._truncated = None
         self._updated_at = None
+        self._url = None
+        self._user = None
         self.discriminator = None
-        if body is not None:
-            self.body = body
+        if comments is not None:
+            self.comments = comments
+        if comments_url is not None:
+            self.comments_url = comments_url
+        if commits_url is not None:
+            self.commits_url = commits_url
         if created_at is not None:
             self.created_at = created_at
+        if description is not None:
+            self.description = description
+        if files is not None:
+            self.files = files
+        if forks is not None:
+            self.forks = forks
+        if forks_url is not None:
+            self.forks_url = forks_url
+        if git_pull_url is not None:
+            self.git_pull_url = git_pull_url
+        if git_push_url is not None:
+            self.git_push_url = git_push_url
+        if history is not None:
+            self.history = history
+        if html_url is not None:
+            self.html_url = html_url
         if id is not None:
             self.id = id
+        if owner is not None:
+            self.owner = owner
+        if public is not None:
+            self.public = public
+        if truncated is not None:
+            self.truncated = truncated
         if updated_at is not None:
             self.updated_at = updated_at
+        if url is not None:
+            self.url = url
+        if user is not None:
+            self.user = user
 
     @property
-    def body(self):
-        """Gets the body of this InlineResponse20010.  # noqa: E501
+    def comments(self):
+        """Gets the comments of this InlineResponse20010.  # noqa: E501
 
 
-        :return: The body of this InlineResponse20010.  # noqa: E501
+        :return: The comments of this InlineResponse20010.  # noqa: E501
         :rtype: str
         """
-        return self._body
+        return self._comments
 
-    @body.setter
-    def body(self, body):
-        """Sets the body of this InlineResponse20010.
+    @comments.setter
+    def comments(self, comments):
+        """Sets the comments of this InlineResponse20010.
 
 
-        :param body: The body of this InlineResponse20010.  # noqa: E501
+        :param comments: The comments of this InlineResponse20010.  # noqa: E501
         :type: str
         """
 
-        self._body = body
+        self._comments = comments
+
+    @property
+    def comments_url(self):
+        """Gets the comments_url of this InlineResponse20010.  # noqa: E501
+
+
+        :return: The comments_url of this InlineResponse20010.  # noqa: E501
+        :rtype: str
+        """
+        return self._comments_url
+
+    @comments_url.setter
+    def comments_url(self, comments_url):
+        """Sets the comments_url of this InlineResponse20010.
+
+
+        :param comments_url: The comments_url of this InlineResponse20010.  # noqa: E501
+        :type: str
+        """
+
+        self._comments_url = comments_url
+
+    @property
+    def commits_url(self):
+        """Gets the commits_url of this InlineResponse20010.  # noqa: E501
+
+
+        :return: The commits_url of this InlineResponse20010.  # noqa: E501
+        :rtype: str
+        """
+        return self._commits_url
+
+    @commits_url.setter
+    def commits_url(self, commits_url):
+        """Sets the commits_url of this InlineResponse20010.
+
+
+        :param commits_url: The commits_url of this InlineResponse20010.  # noqa: E501
+        :type: str
+        """
+
+        self._commits_url = commits_url
 
     @property
     def created_at(self):
@@ -100,6 +217,174 @@ class InlineResponse20010(object):
         self._created_at = created_at
 
     @property
+    def description(self):
+        """Gets the description of this InlineResponse20010.  # noqa: E501
+
+
+        :return: The description of this InlineResponse20010.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this InlineResponse20010.
+
+
+        :param description: The description of this InlineResponse20010.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
+
+    @property
+    def files(self):
+        """Gets the files of this InlineResponse20010.  # noqa: E501
+
+
+        :return: The files of this InlineResponse20010.  # noqa: E501
+        :rtype: str
+        """
+        return self._files
+
+    @files.setter
+    def files(self, files):
+        """Sets the files of this InlineResponse20010.
+
+
+        :param files: The files of this InlineResponse20010.  # noqa: E501
+        :type: str
+        """
+
+        self._files = files
+
+    @property
+    def forks(self):
+        """Gets the forks of this InlineResponse20010.  # noqa: E501
+
+
+        :return: The forks of this InlineResponse20010.  # noqa: E501
+        :rtype: str
+        """
+        return self._forks
+
+    @forks.setter
+    def forks(self, forks):
+        """Sets the forks of this InlineResponse20010.
+
+
+        :param forks: The forks of this InlineResponse20010.  # noqa: E501
+        :type: str
+        """
+
+        self._forks = forks
+
+    @property
+    def forks_url(self):
+        """Gets the forks_url of this InlineResponse20010.  # noqa: E501
+
+
+        :return: The forks_url of this InlineResponse20010.  # noqa: E501
+        :rtype: str
+        """
+        return self._forks_url
+
+    @forks_url.setter
+    def forks_url(self, forks_url):
+        """Sets the forks_url of this InlineResponse20010.
+
+
+        :param forks_url: The forks_url of this InlineResponse20010.  # noqa: E501
+        :type: str
+        """
+
+        self._forks_url = forks_url
+
+    @property
+    def git_pull_url(self):
+        """Gets the git_pull_url of this InlineResponse20010.  # noqa: E501
+
+
+        :return: The git_pull_url of this InlineResponse20010.  # noqa: E501
+        :rtype: str
+        """
+        return self._git_pull_url
+
+    @git_pull_url.setter
+    def git_pull_url(self, git_pull_url):
+        """Sets the git_pull_url of this InlineResponse20010.
+
+
+        :param git_pull_url: The git_pull_url of this InlineResponse20010.  # noqa: E501
+        :type: str
+        """
+
+        self._git_pull_url = git_pull_url
+
+    @property
+    def git_push_url(self):
+        """Gets the git_push_url of this InlineResponse20010.  # noqa: E501
+
+
+        :return: The git_push_url of this InlineResponse20010.  # noqa: E501
+        :rtype: str
+        """
+        return self._git_push_url
+
+    @git_push_url.setter
+    def git_push_url(self, git_push_url):
+        """Sets the git_push_url of this InlineResponse20010.
+
+
+        :param git_push_url: The git_push_url of this InlineResponse20010.  # noqa: E501
+        :type: str
+        """
+
+        self._git_push_url = git_push_url
+
+    @property
+    def history(self):
+        """Gets the history of this InlineResponse20010.  # noqa: E501
+
+
+        :return: The history of this InlineResponse20010.  # noqa: E501
+        :rtype: str
+        """
+        return self._history
+
+    @history.setter
+    def history(self, history):
+        """Sets the history of this InlineResponse20010.
+
+
+        :param history: The history of this InlineResponse20010.  # noqa: E501
+        :type: str
+        """
+
+        self._history = history
+
+    @property
+    def html_url(self):
+        """Gets the html_url of this InlineResponse20010.  # noqa: E501
+
+
+        :return: The html_url of this InlineResponse20010.  # noqa: E501
+        :rtype: str
+        """
+        return self._html_url
+
+    @html_url.setter
+    def html_url(self, html_url):
+        """Sets the html_url of this InlineResponse20010.
+
+
+        :param html_url: The html_url of this InlineResponse20010.  # noqa: E501
+        :type: str
+        """
+
+        self._html_url = html_url
+
+    @property
     def id(self):
         """Gets the id of this InlineResponse20010.  # noqa: E501
 
@@ -121,6 +406,69 @@ class InlineResponse20010(object):
         self._id = id
 
     @property
+    def owner(self):
+        """Gets the owner of this InlineResponse20010.  # noqa: E501
+
+
+        :return: The owner of this InlineResponse20010.  # noqa: E501
+        :rtype: str
+        """
+        return self._owner
+
+    @owner.setter
+    def owner(self, owner):
+        """Sets the owner of this InlineResponse20010.
+
+
+        :param owner: The owner of this InlineResponse20010.  # noqa: E501
+        :type: str
+        """
+
+        self._owner = owner
+
+    @property
+    def public(self):
+        """Gets the public of this InlineResponse20010.  # noqa: E501
+
+
+        :return: The public of this InlineResponse20010.  # noqa: E501
+        :rtype: str
+        """
+        return self._public
+
+    @public.setter
+    def public(self, public):
+        """Sets the public of this InlineResponse20010.
+
+
+        :param public: The public of this InlineResponse20010.  # noqa: E501
+        :type: str
+        """
+
+        self._public = public
+
+    @property
+    def truncated(self):
+        """Gets the truncated of this InlineResponse20010.  # noqa: E501
+
+
+        :return: The truncated of this InlineResponse20010.  # noqa: E501
+        :rtype: str
+        """
+        return self._truncated
+
+    @truncated.setter
+    def truncated(self, truncated):
+        """Sets the truncated of this InlineResponse20010.
+
+
+        :param truncated: The truncated of this InlineResponse20010.  # noqa: E501
+        :type: str
+        """
+
+        self._truncated = truncated
+
+    @property
     def updated_at(self):
         """Gets the updated_at of this InlineResponse20010.  # noqa: E501
 
@@ -140,6 +488,48 @@ class InlineResponse20010(object):
         """
 
         self._updated_at = updated_at
+
+    @property
+    def url(self):
+        """Gets the url of this InlineResponse20010.  # noqa: E501
+
+
+        :return: The url of this InlineResponse20010.  # noqa: E501
+        :rtype: str
+        """
+        return self._url
+
+    @url.setter
+    def url(self, url):
+        """Sets the url of this InlineResponse20010.
+
+
+        :param url: The url of this InlineResponse20010.  # noqa: E501
+        :type: str
+        """
+
+        self._url = url
+
+    @property
+    def user(self):
+        """Gets the user of this InlineResponse20010.  # noqa: E501
+
+
+        :return: The user of this InlineResponse20010.  # noqa: E501
+        :rtype: str
+        """
+        return self._user
+
+    @user.setter
+    def user(self, user):
+        """Sets the user of this InlineResponse20010.
+
+
+        :param user: The user of this InlineResponse20010.  # noqa: E501
+        :type: str
+        """
+
+        self._user = user
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -28,196 +28,66 @@ class InlineResponse20052(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'active': 'str',
-        'organization': 'Organization',
-        'organization_url': 'str',
-        'remark': 'str',
-        'role': 'str',
-        'url': 'str',
-        'user': 'str'
+        'counts': 'Counts',
+        'summary': 'Summary'
     }
 
     attribute_map = {
-        'active': 'active',
-        'organization': 'organization',
-        'organization_url': 'organization_url',
-        'remark': 'remark',
-        'role': 'role',
-        'url': 'url',
-        'user': 'user'
+        'counts': 'counts',
+        'summary': 'summary'
     }
 
-    def __init__(self, active=None, organization=None, organization_url=None, remark=None, role=None, url=None, user=None):  # noqa: E501
+    def __init__(self, counts=None, summary=None):  # noqa: E501
         """InlineResponse20052 - a model defined in Swagger"""  # noqa: E501
-        self._active = None
-        self._organization = None
-        self._organization_url = None
-        self._remark = None
-        self._role = None
-        self._url = None
-        self._user = None
+        self._counts = None
+        self._summary = None
         self.discriminator = None
-        if active is not None:
-            self.active = active
-        if organization is not None:
-            self.organization = organization
-        if organization_url is not None:
-            self.organization_url = organization_url
-        if remark is not None:
-            self.remark = remark
-        if role is not None:
-            self.role = role
-        if url is not None:
-            self.url = url
-        if user is not None:
-            self.user = user
+        if counts is not None:
+            self.counts = counts
+        if summary is not None:
+            self.summary = summary
 
     @property
-    def active(self):
-        """Gets the active of this InlineResponse20052.  # noqa: E501
+    def counts(self):
+        """Gets the counts of this InlineResponse20052.  # noqa: E501
 
 
-        :return: The active of this InlineResponse20052.  # noqa: E501
-        :rtype: str
+        :return: The counts of this InlineResponse20052.  # noqa: E501
+        :rtype: Counts
         """
-        return self._active
+        return self._counts
 
-    @active.setter
-    def active(self, active):
-        """Sets the active of this InlineResponse20052.
+    @counts.setter
+    def counts(self, counts):
+        """Sets the counts of this InlineResponse20052.
 
 
-        :param active: The active of this InlineResponse20052.  # noqa: E501
-        :type: str
+        :param counts: The counts of this InlineResponse20052.  # noqa: E501
+        :type: Counts
         """
 
-        self._active = active
+        self._counts = counts
 
     @property
-    def organization(self):
-        """Gets the organization of this InlineResponse20052.  # noqa: E501
+    def summary(self):
+        """Gets the summary of this InlineResponse20052.  # noqa: E501
 
 
-        :return: The organization of this InlineResponse20052.  # noqa: E501
-        :rtype: Organization
+        :return: The summary of this InlineResponse20052.  # noqa: E501
+        :rtype: Summary
         """
-        return self._organization
+        return self._summary
 
-    @organization.setter
-    def organization(self, organization):
-        """Sets the organization of this InlineResponse20052.
-
-
-        :param organization: The organization of this InlineResponse20052.  # noqa: E501
-        :type: Organization
-        """
-
-        self._organization = organization
-
-    @property
-    def organization_url(self):
-        """Gets the organization_url of this InlineResponse20052.  # noqa: E501
+    @summary.setter
+    def summary(self, summary):
+        """Sets the summary of this InlineResponse20052.
 
 
-        :return: The organization_url of this InlineResponse20052.  # noqa: E501
-        :rtype: str
-        """
-        return self._organization_url
-
-    @organization_url.setter
-    def organization_url(self, organization_url):
-        """Sets the organization_url of this InlineResponse20052.
-
-
-        :param organization_url: The organization_url of this InlineResponse20052.  # noqa: E501
-        :type: str
+        :param summary: The summary of this InlineResponse20052.  # noqa: E501
+        :type: Summary
         """
 
-        self._organization_url = organization_url
-
-    @property
-    def remark(self):
-        """Gets the remark of this InlineResponse20052.  # noqa: E501
-
-
-        :return: The remark of this InlineResponse20052.  # noqa: E501
-        :rtype: str
-        """
-        return self._remark
-
-    @remark.setter
-    def remark(self, remark):
-        """Sets the remark of this InlineResponse20052.
-
-
-        :param remark: The remark of this InlineResponse20052.  # noqa: E501
-        :type: str
-        """
-
-        self._remark = remark
-
-    @property
-    def role(self):
-        """Gets the role of this InlineResponse20052.  # noqa: E501
-
-
-        :return: The role of this InlineResponse20052.  # noqa: E501
-        :rtype: str
-        """
-        return self._role
-
-    @role.setter
-    def role(self, role):
-        """Sets the role of this InlineResponse20052.
-
-
-        :param role: The role of this InlineResponse20052.  # noqa: E501
-        :type: str
-        """
-
-        self._role = role
-
-    @property
-    def url(self):
-        """Gets the url of this InlineResponse20052.  # noqa: E501
-
-
-        :return: The url of this InlineResponse20052.  # noqa: E501
-        :rtype: str
-        """
-        return self._url
-
-    @url.setter
-    def url(self, url):
-        """Sets the url of this InlineResponse20052.
-
-
-        :param url: The url of this InlineResponse20052.  # noqa: E501
-        :type: str
-        """
-
-        self._url = url
-
-    @property
-    def user(self):
-        """Gets the user of this InlineResponse20052.  # noqa: E501
-
-
-        :return: The user of this InlineResponse20052.  # noqa: E501
-        :rtype: str
-        """
-        return self._user
-
-    @user.setter
-    def user(self, user):
-        """Sets the user of this InlineResponse20052.
-
-
-        :param user: The user of this InlineResponse20052.  # noqa: E501
-        :type: str
-        """
-
-        self._user = user
+        self._summary = summary
 
     def to_dict(self):
         """Returns the model properties as a dict"""

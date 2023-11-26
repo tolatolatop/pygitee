@@ -28,148 +28,137 @@ class InlineResponse20017(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'avatar_url': 'str',
-        'description': 'str',
-        'events_url': 'str',
-        'follow_count': 'str',
+        'actor': 'Actor',
+        'content': 'str',
+        'html_url': 'str',
         'id': 'int',
-        'login': 'str',
-        'members_url': 'str',
-        'name': 'str',
-        'repos_url': 'str',
+        'mute': 'str',
+        'namespaces': 'Namespaces',
+        'repository': 'Repository',
+        'subject': 'Subject',
+        'type': 'str',
+        'unread': 'str',
+        'updated_at': 'str',
         'url': 'str'
     }
 
     attribute_map = {
-        'avatar_url': 'avatar_url',
-        'description': 'description',
-        'events_url': 'events_url',
-        'follow_count': 'follow_count',
+        'actor': 'actor',
+        'content': 'content',
+        'html_url': 'html_url',
         'id': 'id',
-        'login': 'login',
-        'members_url': 'members_url',
-        'name': 'name',
-        'repos_url': 'repos_url',
+        'mute': 'mute',
+        'namespaces': 'namespaces',
+        'repository': 'repository',
+        'subject': 'subject',
+        'type': 'type',
+        'unread': 'unread',
+        'updated_at': 'updated_at',
         'url': 'url'
     }
 
-    def __init__(self, avatar_url=None, description=None, events_url=None, follow_count=None, id=None, login=None, members_url=None, name=None, repos_url=None, url=None):  # noqa: E501
+    def __init__(self, actor=None, content=None, html_url=None, id=None, mute=None, namespaces=None, repository=None, subject=None, type=None, unread=None, updated_at=None, url=None):  # noqa: E501
         """InlineResponse20017 - a model defined in Swagger"""  # noqa: E501
-        self._avatar_url = None
-        self._description = None
-        self._events_url = None
-        self._follow_count = None
+        self._actor = None
+        self._content = None
+        self._html_url = None
         self._id = None
-        self._login = None
-        self._members_url = None
-        self._name = None
-        self._repos_url = None
+        self._mute = None
+        self._namespaces = None
+        self._repository = None
+        self._subject = None
+        self._type = None
+        self._unread = None
+        self._updated_at = None
         self._url = None
         self.discriminator = None
-        if avatar_url is not None:
-            self.avatar_url = avatar_url
-        if description is not None:
-            self.description = description
-        if events_url is not None:
-            self.events_url = events_url
-        if follow_count is not None:
-            self.follow_count = follow_count
+        if actor is not None:
+            self.actor = actor
+        if content is not None:
+            self.content = content
+        if html_url is not None:
+            self.html_url = html_url
         if id is not None:
             self.id = id
-        if login is not None:
-            self.login = login
-        if members_url is not None:
-            self.members_url = members_url
-        if name is not None:
-            self.name = name
-        if repos_url is not None:
-            self.repos_url = repos_url
+        if mute is not None:
+            self.mute = mute
+        if namespaces is not None:
+            self.namespaces = namespaces
+        if repository is not None:
+            self.repository = repository
+        if subject is not None:
+            self.subject = subject
+        if type is not None:
+            self.type = type
+        if unread is not None:
+            self.unread = unread
+        if updated_at is not None:
+            self.updated_at = updated_at
         if url is not None:
             self.url = url
 
     @property
-    def avatar_url(self):
-        """Gets the avatar_url of this InlineResponse20017.  # noqa: E501
+    def actor(self):
+        """Gets the actor of this InlineResponse20017.  # noqa: E501
 
 
-        :return: The avatar_url of this InlineResponse20017.  # noqa: E501
-        :rtype: str
+        :return: The actor of this InlineResponse20017.  # noqa: E501
+        :rtype: Actor
         """
-        return self._avatar_url
+        return self._actor
 
-    @avatar_url.setter
-    def avatar_url(self, avatar_url):
-        """Sets the avatar_url of this InlineResponse20017.
+    @actor.setter
+    def actor(self, actor):
+        """Sets the actor of this InlineResponse20017.
 
 
-        :param avatar_url: The avatar_url of this InlineResponse20017.  # noqa: E501
-        :type: str
+        :param actor: The actor of this InlineResponse20017.  # noqa: E501
+        :type: Actor
         """
 
-        self._avatar_url = avatar_url
+        self._actor = actor
 
     @property
-    def description(self):
-        """Gets the description of this InlineResponse20017.  # noqa: E501
+    def content(self):
+        """Gets the content of this InlineResponse20017.  # noqa: E501
 
 
-        :return: The description of this InlineResponse20017.  # noqa: E501
+        :return: The content of this InlineResponse20017.  # noqa: E501
         :rtype: str
         """
-        return self._description
+        return self._content
 
-    @description.setter
-    def description(self, description):
-        """Sets the description of this InlineResponse20017.
+    @content.setter
+    def content(self, content):
+        """Sets the content of this InlineResponse20017.
 
 
-        :param description: The description of this InlineResponse20017.  # noqa: E501
+        :param content: The content of this InlineResponse20017.  # noqa: E501
         :type: str
         """
 
-        self._description = description
+        self._content = content
 
     @property
-    def events_url(self):
-        """Gets the events_url of this InlineResponse20017.  # noqa: E501
+    def html_url(self):
+        """Gets the html_url of this InlineResponse20017.  # noqa: E501
 
 
-        :return: The events_url of this InlineResponse20017.  # noqa: E501
+        :return: The html_url of this InlineResponse20017.  # noqa: E501
         :rtype: str
         """
-        return self._events_url
+        return self._html_url
 
-    @events_url.setter
-    def events_url(self, events_url):
-        """Sets the events_url of this InlineResponse20017.
+    @html_url.setter
+    def html_url(self, html_url):
+        """Sets the html_url of this InlineResponse20017.
 
 
-        :param events_url: The events_url of this InlineResponse20017.  # noqa: E501
+        :param html_url: The html_url of this InlineResponse20017.  # noqa: E501
         :type: str
         """
 
-        self._events_url = events_url
-
-    @property
-    def follow_count(self):
-        """Gets the follow_count of this InlineResponse20017.  # noqa: E501
-
-
-        :return: The follow_count of this InlineResponse20017.  # noqa: E501
-        :rtype: str
-        """
-        return self._follow_count
-
-    @follow_count.setter
-    def follow_count(self, follow_count):
-        """Sets the follow_count of this InlineResponse20017.
-
-
-        :param follow_count: The follow_count of this InlineResponse20017.  # noqa: E501
-        :type: str
-        """
-
-        self._follow_count = follow_count
+        self._html_url = html_url
 
     @property
     def id(self):
@@ -193,88 +182,151 @@ class InlineResponse20017(object):
         self._id = id
 
     @property
-    def login(self):
-        """Gets the login of this InlineResponse20017.  # noqa: E501
+    def mute(self):
+        """Gets the mute of this InlineResponse20017.  # noqa: E501
 
 
-        :return: The login of this InlineResponse20017.  # noqa: E501
+        :return: The mute of this InlineResponse20017.  # noqa: E501
         :rtype: str
         """
-        return self._login
+        return self._mute
 
-    @login.setter
-    def login(self, login):
-        """Sets the login of this InlineResponse20017.
+    @mute.setter
+    def mute(self, mute):
+        """Sets the mute of this InlineResponse20017.
 
 
-        :param login: The login of this InlineResponse20017.  # noqa: E501
+        :param mute: The mute of this InlineResponse20017.  # noqa: E501
         :type: str
         """
 
-        self._login = login
+        self._mute = mute
 
     @property
-    def members_url(self):
-        """Gets the members_url of this InlineResponse20017.  # noqa: E501
+    def namespaces(self):
+        """Gets the namespaces of this InlineResponse20017.  # noqa: E501
 
 
-        :return: The members_url of this InlineResponse20017.  # noqa: E501
-        :rtype: str
+        :return: The namespaces of this InlineResponse20017.  # noqa: E501
+        :rtype: Namespaces
         """
-        return self._members_url
+        return self._namespaces
 
-    @members_url.setter
-    def members_url(self, members_url):
-        """Sets the members_url of this InlineResponse20017.
+    @namespaces.setter
+    def namespaces(self, namespaces):
+        """Sets the namespaces of this InlineResponse20017.
 
 
-        :param members_url: The members_url of this InlineResponse20017.  # noqa: E501
-        :type: str
+        :param namespaces: The namespaces of this InlineResponse20017.  # noqa: E501
+        :type: Namespaces
         """
 
-        self._members_url = members_url
+        self._namespaces = namespaces
 
     @property
-    def name(self):
-        """Gets the name of this InlineResponse20017.  # noqa: E501
+    def repository(self):
+        """Gets the repository of this InlineResponse20017.  # noqa: E501
 
 
-        :return: The name of this InlineResponse20017.  # noqa: E501
-        :rtype: str
+        :return: The repository of this InlineResponse20017.  # noqa: E501
+        :rtype: Repository
         """
-        return self._name
+        return self._repository
 
-    @name.setter
-    def name(self, name):
-        """Sets the name of this InlineResponse20017.
+    @repository.setter
+    def repository(self, repository):
+        """Sets the repository of this InlineResponse20017.
 
 
-        :param name: The name of this InlineResponse20017.  # noqa: E501
-        :type: str
+        :param repository: The repository of this InlineResponse20017.  # noqa: E501
+        :type: Repository
         """
 
-        self._name = name
+        self._repository = repository
 
     @property
-    def repos_url(self):
-        """Gets the repos_url of this InlineResponse20017.  # noqa: E501
+    def subject(self):
+        """Gets the subject of this InlineResponse20017.  # noqa: E501
 
 
-        :return: The repos_url of this InlineResponse20017.  # noqa: E501
+        :return: The subject of this InlineResponse20017.  # noqa: E501
+        :rtype: Subject
+        """
+        return self._subject
+
+    @subject.setter
+    def subject(self, subject):
+        """Sets the subject of this InlineResponse20017.
+
+
+        :param subject: The subject of this InlineResponse20017.  # noqa: E501
+        :type: Subject
+        """
+
+        self._subject = subject
+
+    @property
+    def type(self):
+        """Gets the type of this InlineResponse20017.  # noqa: E501
+
+
+        :return: The type of this InlineResponse20017.  # noqa: E501
         :rtype: str
         """
-        return self._repos_url
+        return self._type
 
-    @repos_url.setter
-    def repos_url(self, repos_url):
-        """Sets the repos_url of this InlineResponse20017.
+    @type.setter
+    def type(self, type):
+        """Sets the type of this InlineResponse20017.
 
 
-        :param repos_url: The repos_url of this InlineResponse20017.  # noqa: E501
+        :param type: The type of this InlineResponse20017.  # noqa: E501
         :type: str
         """
 
-        self._repos_url = repos_url
+        self._type = type
+
+    @property
+    def unread(self):
+        """Gets the unread of this InlineResponse20017.  # noqa: E501
+
+
+        :return: The unread of this InlineResponse20017.  # noqa: E501
+        :rtype: str
+        """
+        return self._unread
+
+    @unread.setter
+    def unread(self, unread):
+        """Sets the unread of this InlineResponse20017.
+
+
+        :param unread: The unread of this InlineResponse20017.  # noqa: E501
+        :type: str
+        """
+
+        self._unread = unread
+
+    @property
+    def updated_at(self):
+        """Gets the updated_at of this InlineResponse20017.  # noqa: E501
+
+
+        :return: The updated_at of this InlineResponse20017.  # noqa: E501
+        :rtype: str
+        """
+        return self._updated_at
+
+    @updated_at.setter
+    def updated_at(self, updated_at):
+        """Sets the updated_at of this InlineResponse20017.
+
+
+        :param updated_at: The updated_at of this InlineResponse20017.  # noqa: E501
+        :type: str
+        """
+
+        self._updated_at = updated_at
 
     @property
     def url(self):

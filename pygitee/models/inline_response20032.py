@@ -28,92 +28,144 @@ class InlineResponse20032(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'contributions': 'str',
-        'email': 'str',
-        'name': 'str'
+        'base_commit': 'BaseCommit',
+        'commits': 'Commits',
+        'files': 'Files',
+        'merge_base_commit': 'MergeBaseCommit',
+        'truncated': 'bool'
     }
 
     attribute_map = {
-        'contributions': 'contributions',
-        'email': 'email',
-        'name': 'name'
+        'base_commit': 'base_commit',
+        'commits': 'commits',
+        'files': 'files',
+        'merge_base_commit': 'merge_base_commit',
+        'truncated': 'truncated'
     }
 
-    def __init__(self, contributions=None, email=None, name=None):  # noqa: E501
+    def __init__(self, base_commit=None, commits=None, files=None, merge_base_commit=None, truncated=None):  # noqa: E501
         """InlineResponse20032 - a model defined in Swagger"""  # noqa: E501
-        self._contributions = None
-        self._email = None
-        self._name = None
+        self._base_commit = None
+        self._commits = None
+        self._files = None
+        self._merge_base_commit = None
+        self._truncated = None
         self.discriminator = None
-        if contributions is not None:
-            self.contributions = contributions
-        if email is not None:
-            self.email = email
-        if name is not None:
-            self.name = name
+        if base_commit is not None:
+            self.base_commit = base_commit
+        if commits is not None:
+            self.commits = commits
+        if files is not None:
+            self.files = files
+        if merge_base_commit is not None:
+            self.merge_base_commit = merge_base_commit
+        if truncated is not None:
+            self.truncated = truncated
 
     @property
-    def contributions(self):
-        """Gets the contributions of this InlineResponse20032.  # noqa: E501
+    def base_commit(self):
+        """Gets the base_commit of this InlineResponse20032.  # noqa: E501
 
 
-        :return: The contributions of this InlineResponse20032.  # noqa: E501
-        :rtype: str
+        :return: The base_commit of this InlineResponse20032.  # noqa: E501
+        :rtype: BaseCommit
         """
-        return self._contributions
+        return self._base_commit
 
-    @contributions.setter
-    def contributions(self, contributions):
-        """Sets the contributions of this InlineResponse20032.
+    @base_commit.setter
+    def base_commit(self, base_commit):
+        """Sets the base_commit of this InlineResponse20032.
 
 
-        :param contributions: The contributions of this InlineResponse20032.  # noqa: E501
-        :type: str
+        :param base_commit: The base_commit of this InlineResponse20032.  # noqa: E501
+        :type: BaseCommit
         """
 
-        self._contributions = contributions
+        self._base_commit = base_commit
 
     @property
-    def email(self):
-        """Gets the email of this InlineResponse20032.  # noqa: E501
+    def commits(self):
+        """Gets the commits of this InlineResponse20032.  # noqa: E501
 
 
-        :return: The email of this InlineResponse20032.  # noqa: E501
-        :rtype: str
+        :return: The commits of this InlineResponse20032.  # noqa: E501
+        :rtype: Commits
         """
-        return self._email
+        return self._commits
 
-    @email.setter
-    def email(self, email):
-        """Sets the email of this InlineResponse20032.
+    @commits.setter
+    def commits(self, commits):
+        """Sets the commits of this InlineResponse20032.
 
 
-        :param email: The email of this InlineResponse20032.  # noqa: E501
-        :type: str
+        :param commits: The commits of this InlineResponse20032.  # noqa: E501
+        :type: Commits
         """
 
-        self._email = email
+        self._commits = commits
 
     @property
-    def name(self):
-        """Gets the name of this InlineResponse20032.  # noqa: E501
+    def files(self):
+        """Gets the files of this InlineResponse20032.  # noqa: E501
 
 
-        :return: The name of this InlineResponse20032.  # noqa: E501
-        :rtype: str
+        :return: The files of this InlineResponse20032.  # noqa: E501
+        :rtype: Files
         """
-        return self._name
+        return self._files
 
-    @name.setter
-    def name(self, name):
-        """Sets the name of this InlineResponse20032.
+    @files.setter
+    def files(self, files):
+        """Sets the files of this InlineResponse20032.
 
 
-        :param name: The name of this InlineResponse20032.  # noqa: E501
-        :type: str
+        :param files: The files of this InlineResponse20032.  # noqa: E501
+        :type: Files
         """
 
-        self._name = name
+        self._files = files
+
+    @property
+    def merge_base_commit(self):
+        """Gets the merge_base_commit of this InlineResponse20032.  # noqa: E501
+
+
+        :return: The merge_base_commit of this InlineResponse20032.  # noqa: E501
+        :rtype: MergeBaseCommit
+        """
+        return self._merge_base_commit
+
+    @merge_base_commit.setter
+    def merge_base_commit(self, merge_base_commit):
+        """Sets the merge_base_commit of this InlineResponse20032.
+
+
+        :param merge_base_commit: The merge_base_commit of this InlineResponse20032.  # noqa: E501
+        :type: MergeBaseCommit
+        """
+
+        self._merge_base_commit = merge_base_commit
+
+    @property
+    def truncated(self):
+        """Gets the truncated of this InlineResponse20032.  # noqa: E501
+
+
+        :return: The truncated of this InlineResponse20032.  # noqa: E501
+        :rtype: bool
+        """
+        return self._truncated
+
+    @truncated.setter
+    def truncated(self, truncated):
+        """Sets the truncated of this InlineResponse20032.
+
+
+        :param truncated: The truncated of this InlineResponse20032.  # noqa: E501
+        :type: bool
+        """
+
+        self._truncated = truncated
 
     def to_dict(self):
         """Returns the model properties as a dict"""

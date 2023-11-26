@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    Gitee OpenApi
+    getV5ReposOwnerRepoSubscribers
 
-    All api provided by Gitee  # noqa: E501
+    列出 watch 了仓库的用户  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -35,6 +35,13 @@ class TestReleasesApi(unittest.TestCase):
         """
         pass
 
+    def test_repos_owner_repo_releases_id_delete(self):
+        """Test case for repos_owner_repo_releases_id_delete
+
+        删除仓库Release  # noqa: E501
+        """
+        pass
+
     def test_repos_owner_repo_releases_id_get(self):
         """Test case for repos_owner_repo_releases_id_get
 
@@ -42,10 +49,24 @@ class TestReleasesApi(unittest.TestCase):
         """
         pass
 
+    def test_repos_owner_repo_releases_id_patch(self):
+        """Test case for repos_owner_repo_releases_id_patch
+
+        更新仓库Release  # noqa: E501
+        """
+        pass
+
     def test_repos_owner_repo_releases_latest_get(self):
         """Test case for repos_owner_repo_releases_latest_get
 
         获取仓库的最后更新的Release  # noqa: E501
+        """
+        pass
+
+    def test_repos_owner_repo_releases_post(self):
+        """Test case for repos_owner_repo_releases_post
+
+        创建仓库Release  # noqa: E501
         """
         pass
 

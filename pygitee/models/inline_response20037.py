@@ -29,38 +29,33 @@ class InlineResponse20037(object):
     """
     swagger_types = {
         'created_at': 'str',
-        'id': 'str',
-        'key': 'str',
-        'title': 'str',
-        'url': 'str'
+        'data': 'str',
+        'repo': 'Repo',
+        'total_score': 'str'
     }
 
     attribute_map = {
         'created_at': 'created_at',
-        'id': 'id',
-        'key': 'key',
-        'title': 'title',
-        'url': 'url'
+        'data': 'data',
+        'repo': 'repo',
+        'total_score': 'total_score'
     }
 
-    def __init__(self, created_at=None, id=None, key=None, title=None, url=None):  # noqa: E501
+    def __init__(self, created_at=None, data=None, repo=None, total_score=None):  # noqa: E501
         """InlineResponse20037 - a model defined in Swagger"""  # noqa: E501
         self._created_at = None
-        self._id = None
-        self._key = None
-        self._title = None
-        self._url = None
+        self._data = None
+        self._repo = None
+        self._total_score = None
         self.discriminator = None
         if created_at is not None:
             self.created_at = created_at
-        if id is not None:
-            self.id = id
-        if key is not None:
-            self.key = key
-        if title is not None:
-            self.title = title
-        if url is not None:
-            self.url = url
+        if data is not None:
+            self.data = data
+        if repo is not None:
+            self.repo = repo
+        if total_score is not None:
+            self.total_score = total_score
 
     @property
     def created_at(self):
@@ -84,88 +79,67 @@ class InlineResponse20037(object):
         self._created_at = created_at
 
     @property
-    def id(self):
-        """Gets the id of this InlineResponse20037.  # noqa: E501
+    def data(self):
+        """Gets the data of this InlineResponse20037.  # noqa: E501
 
 
-        :return: The id of this InlineResponse20037.  # noqa: E501
+        :return: The data of this InlineResponse20037.  # noqa: E501
         :rtype: str
         """
-        return self._id
+        return self._data
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this InlineResponse20037.
+    @data.setter
+    def data(self, data):
+        """Sets the data of this InlineResponse20037.
 
 
-        :param id: The id of this InlineResponse20037.  # noqa: E501
+        :param data: The data of this InlineResponse20037.  # noqa: E501
         :type: str
         """
 
-        self._id = id
+        self._data = data
 
     @property
-    def key(self):
-        """Gets the key of this InlineResponse20037.  # noqa: E501
+    def repo(self):
+        """Gets the repo of this InlineResponse20037.  # noqa: E501
 
 
-        :return: The key of this InlineResponse20037.  # noqa: E501
-        :rtype: str
+        :return: The repo of this InlineResponse20037.  # noqa: E501
+        :rtype: Repo
         """
-        return self._key
+        return self._repo
 
-    @key.setter
-    def key(self, key):
-        """Sets the key of this InlineResponse20037.
+    @repo.setter
+    def repo(self, repo):
+        """Sets the repo of this InlineResponse20037.
 
 
-        :param key: The key of this InlineResponse20037.  # noqa: E501
-        :type: str
+        :param repo: The repo of this InlineResponse20037.  # noqa: E501
+        :type: Repo
         """
 
-        self._key = key
+        self._repo = repo
 
     @property
-    def title(self):
-        """Gets the title of this InlineResponse20037.  # noqa: E501
+    def total_score(self):
+        """Gets the total_score of this InlineResponse20037.  # noqa: E501
 
 
-        :return: The title of this InlineResponse20037.  # noqa: E501
+        :return: The total_score of this InlineResponse20037.  # noqa: E501
         :rtype: str
         """
-        return self._title
+        return self._total_score
 
-    @title.setter
-    def title(self, title):
-        """Sets the title of this InlineResponse20037.
+    @total_score.setter
+    def total_score(self, total_score):
+        """Sets the total_score of this InlineResponse20037.
 
 
-        :param title: The title of this InlineResponse20037.  # noqa: E501
+        :param total_score: The total_score of this InlineResponse20037.  # noqa: E501
         :type: str
         """
 
-        self._title = title
-
-    @property
-    def url(self):
-        """Gets the url of this InlineResponse20037.  # noqa: E501
-
-
-        :return: The url of this InlineResponse20037.  # noqa: E501
-        :rtype: str
-        """
-        return self._url
-
-    @url.setter
-    def url(self, url):
-        """Sets the url of this InlineResponse20037.
-
-
-        :param url: The url of this InlineResponse20037.  # noqa: E501
-        :type: str
-        """
-
-        self._url = url
+        self._total_score = total_score
 
     def to_dict(self):
         """Returns the model properties as a dict"""

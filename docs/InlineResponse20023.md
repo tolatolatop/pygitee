@@ -3,14 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**contexts** | [**Contexts**](Contexts.md) |  | [optional] 
+**action_type** | **str** |  | [optional] 
+**content** | **str** |  | [optional] 
+**created_at** | **str** |  | [optional] 
+**icon** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
-**mergers** | [**Mergers**](Mergers.md) |  | [optional] 
-**mode** | **str** |  | [optional] 
-**project_id** | **str** |  | [optional] 
-**pushers** | [**Pushers**](Pushers.md) |  | [optional] 
-**strict** | **bool** |  | [optional] 
-**wildcard** | **str** |  | [optional] 
+**link_target** | **str** |  | [optional] 
+**user** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

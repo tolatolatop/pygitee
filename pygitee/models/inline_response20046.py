@@ -28,508 +28,222 @@ class InlineResponse20046(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'avatar_url': 'str',
-        'events_url': 'str',
-        'followers_url': 'str',
-        'following_url': 'str',
-        'gists_url': 'str',
-        'html_url': 'str',
-        'id': 'int',
-        'login': 'str',
-        'member_role': 'str',
-        'name': 'str',
-        'organizations_url': 'str',
-        'received_events_url': 'str',
-        'remark': 'str',
-        'repos_url': 'str',
-        'star_at': 'str',
-        'starred_url': 'str',
-        'subscriptions_url': 'str',
-        'type': 'str',
-        'url': 'str'
+        'additions': 'str',
+        'blob_url': 'str',
+        'deletions': 'str',
+        'filename': 'str',
+        'patch': 'str',
+        'raw_url': 'str',
+        'sha': 'str',
+        'status': 'str'
     }
 
     attribute_map = {
-        'avatar_url': 'avatar_url',
-        'events_url': 'events_url',
-        'followers_url': 'followers_url',
-        'following_url': 'following_url',
-        'gists_url': 'gists_url',
-        'html_url': 'html_url',
-        'id': 'id',
-        'login': 'login',
-        'member_role': 'member_role',
-        'name': 'name',
-        'organizations_url': 'organizations_url',
-        'received_events_url': 'received_events_url',
-        'remark': 'remark',
-        'repos_url': 'repos_url',
-        'star_at': 'star_at',
-        'starred_url': 'starred_url',
-        'subscriptions_url': 'subscriptions_url',
-        'type': 'type',
-        'url': 'url'
+        'additions': 'additions',
+        'blob_url': 'blob_url',
+        'deletions': 'deletions',
+        'filename': 'filename',
+        'patch': 'patch',
+        'raw_url': 'raw_url',
+        'sha': 'sha',
+        'status': 'status'
     }
 
-    def __init__(self, avatar_url=None, events_url=None, followers_url=None, following_url=None, gists_url=None, html_url=None, id=None, login=None, member_role=None, name=None, organizations_url=None, received_events_url=None, remark=None, repos_url=None, star_at=None, starred_url=None, subscriptions_url=None, type=None, url=None):  # noqa: E501
+    def __init__(self, additions=None, blob_url=None, deletions=None, filename=None, patch=None, raw_url=None, sha=None, status=None):  # noqa: E501
         """InlineResponse20046 - a model defined in Swagger"""  # noqa: E501
-        self._avatar_url = None
-        self._events_url = None
-        self._followers_url = None
-        self._following_url = None
-        self._gists_url = None
-        self._html_url = None
-        self._id = None
-        self._login = None
-        self._member_role = None
-        self._name = None
-        self._organizations_url = None
-        self._received_events_url = None
-        self._remark = None
-        self._repos_url = None
-        self._star_at = None
-        self._starred_url = None
-        self._subscriptions_url = None
-        self._type = None
-        self._url = None
+        self._additions = None
+        self._blob_url = None
+        self._deletions = None
+        self._filename = None
+        self._patch = None
+        self._raw_url = None
+        self._sha = None
+        self._status = None
         self.discriminator = None
-        if avatar_url is not None:
-            self.avatar_url = avatar_url
-        if events_url is not None:
-            self.events_url = events_url
-        if followers_url is not None:
-            self.followers_url = followers_url
-        if following_url is not None:
-            self.following_url = following_url
-        if gists_url is not None:
-            self.gists_url = gists_url
-        if html_url is not None:
-            self.html_url = html_url
-        if id is not None:
-            self.id = id
-        if login is not None:
-            self.login = login
-        if member_role is not None:
-            self.member_role = member_role
-        if name is not None:
-            self.name = name
-        if organizations_url is not None:
-            self.organizations_url = organizations_url
-        if received_events_url is not None:
-            self.received_events_url = received_events_url
-        if remark is not None:
-            self.remark = remark
-        if repos_url is not None:
-            self.repos_url = repos_url
-        if star_at is not None:
-            self.star_at = star_at
-        if starred_url is not None:
-            self.starred_url = starred_url
-        if subscriptions_url is not None:
-            self.subscriptions_url = subscriptions_url
-        if type is not None:
-            self.type = type
-        if url is not None:
-            self.url = url
+        if additions is not None:
+            self.additions = additions
+        if blob_url is not None:
+            self.blob_url = blob_url
+        if deletions is not None:
+            self.deletions = deletions
+        if filename is not None:
+            self.filename = filename
+        if patch is not None:
+            self.patch = patch
+        if raw_url is not None:
+            self.raw_url = raw_url
+        if sha is not None:
+            self.sha = sha
+        if status is not None:
+            self.status = status
 
     @property
-    def avatar_url(self):
-        """Gets the avatar_url of this InlineResponse20046.  # noqa: E501
+    def additions(self):
+        """Gets the additions of this InlineResponse20046.  # noqa: E501
 
 
-        :return: The avatar_url of this InlineResponse20046.  # noqa: E501
+        :return: The additions of this InlineResponse20046.  # noqa: E501
         :rtype: str
         """
-        return self._avatar_url
+        return self._additions
 
-    @avatar_url.setter
-    def avatar_url(self, avatar_url):
-        """Sets the avatar_url of this InlineResponse20046.
+    @additions.setter
+    def additions(self, additions):
+        """Sets the additions of this InlineResponse20046.
 
 
-        :param avatar_url: The avatar_url of this InlineResponse20046.  # noqa: E501
+        :param additions: The additions of this InlineResponse20046.  # noqa: E501
         :type: str
         """
 
-        self._avatar_url = avatar_url
+        self._additions = additions
 
     @property
-    def events_url(self):
-        """Gets the events_url of this InlineResponse20046.  # noqa: E501
+    def blob_url(self):
+        """Gets the blob_url of this InlineResponse20046.  # noqa: E501
 
 
-        :return: The events_url of this InlineResponse20046.  # noqa: E501
+        :return: The blob_url of this InlineResponse20046.  # noqa: E501
         :rtype: str
         """
-        return self._events_url
+        return self._blob_url
 
-    @events_url.setter
-    def events_url(self, events_url):
-        """Sets the events_url of this InlineResponse20046.
+    @blob_url.setter
+    def blob_url(self, blob_url):
+        """Sets the blob_url of this InlineResponse20046.
 
 
-        :param events_url: The events_url of this InlineResponse20046.  # noqa: E501
+        :param blob_url: The blob_url of this InlineResponse20046.  # noqa: E501
         :type: str
         """
 
-        self._events_url = events_url
+        self._blob_url = blob_url
 
     @property
-    def followers_url(self):
-        """Gets the followers_url of this InlineResponse20046.  # noqa: E501
+    def deletions(self):
+        """Gets the deletions of this InlineResponse20046.  # noqa: E501
 
 
-        :return: The followers_url of this InlineResponse20046.  # noqa: E501
+        :return: The deletions of this InlineResponse20046.  # noqa: E501
         :rtype: str
         """
-        return self._followers_url
+        return self._deletions
 
-    @followers_url.setter
-    def followers_url(self, followers_url):
-        """Sets the followers_url of this InlineResponse20046.
+    @deletions.setter
+    def deletions(self, deletions):
+        """Sets the deletions of this InlineResponse20046.
 
 
-        :param followers_url: The followers_url of this InlineResponse20046.  # noqa: E501
+        :param deletions: The deletions of this InlineResponse20046.  # noqa: E501
         :type: str
         """
 
-        self._followers_url = followers_url
+        self._deletions = deletions
 
     @property
-    def following_url(self):
-        """Gets the following_url of this InlineResponse20046.  # noqa: E501
+    def filename(self):
+        """Gets the filename of this InlineResponse20046.  # noqa: E501
 
 
-        :return: The following_url of this InlineResponse20046.  # noqa: E501
+        :return: The filename of this InlineResponse20046.  # noqa: E501
         :rtype: str
         """
-        return self._following_url
+        return self._filename
 
-    @following_url.setter
-    def following_url(self, following_url):
-        """Sets the following_url of this InlineResponse20046.
+    @filename.setter
+    def filename(self, filename):
+        """Sets the filename of this InlineResponse20046.
 
 
-        :param following_url: The following_url of this InlineResponse20046.  # noqa: E501
+        :param filename: The filename of this InlineResponse20046.  # noqa: E501
         :type: str
         """
 
-        self._following_url = following_url
+        self._filename = filename
 
     @property
-    def gists_url(self):
-        """Gets the gists_url of this InlineResponse20046.  # noqa: E501
+    def patch(self):
+        """Gets the patch of this InlineResponse20046.  # noqa: E501
 
 
-        :return: The gists_url of this InlineResponse20046.  # noqa: E501
+        :return: The patch of this InlineResponse20046.  # noqa: E501
         :rtype: str
         """
-        return self._gists_url
+        return self._patch
 
-    @gists_url.setter
-    def gists_url(self, gists_url):
-        """Sets the gists_url of this InlineResponse20046.
+    @patch.setter
+    def patch(self, patch):
+        """Sets the patch of this InlineResponse20046.
 
 
-        :param gists_url: The gists_url of this InlineResponse20046.  # noqa: E501
+        :param patch: The patch of this InlineResponse20046.  # noqa: E501
         :type: str
         """
 
-        self._gists_url = gists_url
+        self._patch = patch
 
     @property
-    def html_url(self):
-        """Gets the html_url of this InlineResponse20046.  # noqa: E501
+    def raw_url(self):
+        """Gets the raw_url of this InlineResponse20046.  # noqa: E501
 
 
-        :return: The html_url of this InlineResponse20046.  # noqa: E501
+        :return: The raw_url of this InlineResponse20046.  # noqa: E501
         :rtype: str
         """
-        return self._html_url
+        return self._raw_url
 
-    @html_url.setter
-    def html_url(self, html_url):
-        """Sets the html_url of this InlineResponse20046.
+    @raw_url.setter
+    def raw_url(self, raw_url):
+        """Sets the raw_url of this InlineResponse20046.
 
 
-        :param html_url: The html_url of this InlineResponse20046.  # noqa: E501
+        :param raw_url: The raw_url of this InlineResponse20046.  # noqa: E501
         :type: str
         """
 
-        self._html_url = html_url
+        self._raw_url = raw_url
 
     @property
-    def id(self):
-        """Gets the id of this InlineResponse20046.  # noqa: E501
+    def sha(self):
+        """Gets the sha of this InlineResponse20046.  # noqa: E501
 
 
-        :return: The id of this InlineResponse20046.  # noqa: E501
-        :rtype: int
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this InlineResponse20046.
-
-
-        :param id: The id of this InlineResponse20046.  # noqa: E501
-        :type: int
-        """
-
-        self._id = id
-
-    @property
-    def login(self):
-        """Gets the login of this InlineResponse20046.  # noqa: E501
-
-
-        :return: The login of this InlineResponse20046.  # noqa: E501
+        :return: The sha of this InlineResponse20046.  # noqa: E501
         :rtype: str
         """
-        return self._login
+        return self._sha
 
-    @login.setter
-    def login(self, login):
-        """Sets the login of this InlineResponse20046.
+    @sha.setter
+    def sha(self, sha):
+        """Sets the sha of this InlineResponse20046.
 
 
-        :param login: The login of this InlineResponse20046.  # noqa: E501
+        :param sha: The sha of this InlineResponse20046.  # noqa: E501
         :type: str
         """
 
-        self._login = login
+        self._sha = sha
 
     @property
-    def member_role(self):
-        """Gets the member_role of this InlineResponse20046.  # noqa: E501
+    def status(self):
+        """Gets the status of this InlineResponse20046.  # noqa: E501
 
 
-        :return: The member_role of this InlineResponse20046.  # noqa: E501
+        :return: The status of this InlineResponse20046.  # noqa: E501
         :rtype: str
         """
-        return self._member_role
+        return self._status
 
-    @member_role.setter
-    def member_role(self, member_role):
-        """Sets the member_role of this InlineResponse20046.
+    @status.setter
+    def status(self, status):
+        """Sets the status of this InlineResponse20046.
 
 
-        :param member_role: The member_role of this InlineResponse20046.  # noqa: E501
+        :param status: The status of this InlineResponse20046.  # noqa: E501
         :type: str
         """
 
-        self._member_role = member_role
-
-    @property
-    def name(self):
-        """Gets the name of this InlineResponse20046.  # noqa: E501
-
-
-        :return: The name of this InlineResponse20046.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this InlineResponse20046.
-
-
-        :param name: The name of this InlineResponse20046.  # noqa: E501
-        :type: str
-        """
-
-        self._name = name
-
-    @property
-    def organizations_url(self):
-        """Gets the organizations_url of this InlineResponse20046.  # noqa: E501
-
-
-        :return: The organizations_url of this InlineResponse20046.  # noqa: E501
-        :rtype: str
-        """
-        return self._organizations_url
-
-    @organizations_url.setter
-    def organizations_url(self, organizations_url):
-        """Sets the organizations_url of this InlineResponse20046.
-
-
-        :param organizations_url: The organizations_url of this InlineResponse20046.  # noqa: E501
-        :type: str
-        """
-
-        self._organizations_url = organizations_url
-
-    @property
-    def received_events_url(self):
-        """Gets the received_events_url of this InlineResponse20046.  # noqa: E501
-
-
-        :return: The received_events_url of this InlineResponse20046.  # noqa: E501
-        :rtype: str
-        """
-        return self._received_events_url
-
-    @received_events_url.setter
-    def received_events_url(self, received_events_url):
-        """Sets the received_events_url of this InlineResponse20046.
-
-
-        :param received_events_url: The received_events_url of this InlineResponse20046.  # noqa: E501
-        :type: str
-        """
-
-        self._received_events_url = received_events_url
-
-    @property
-    def remark(self):
-        """Gets the remark of this InlineResponse20046.  # noqa: E501
-
-
-        :return: The remark of this InlineResponse20046.  # noqa: E501
-        :rtype: str
-        """
-        return self._remark
-
-    @remark.setter
-    def remark(self, remark):
-        """Sets the remark of this InlineResponse20046.
-
-
-        :param remark: The remark of this InlineResponse20046.  # noqa: E501
-        :type: str
-        """
-
-        self._remark = remark
-
-    @property
-    def repos_url(self):
-        """Gets the repos_url of this InlineResponse20046.  # noqa: E501
-
-
-        :return: The repos_url of this InlineResponse20046.  # noqa: E501
-        :rtype: str
-        """
-        return self._repos_url
-
-    @repos_url.setter
-    def repos_url(self, repos_url):
-        """Sets the repos_url of this InlineResponse20046.
-
-
-        :param repos_url: The repos_url of this InlineResponse20046.  # noqa: E501
-        :type: str
-        """
-
-        self._repos_url = repos_url
-
-    @property
-    def star_at(self):
-        """Gets the star_at of this InlineResponse20046.  # noqa: E501
-
-
-        :return: The star_at of this InlineResponse20046.  # noqa: E501
-        :rtype: str
-        """
-        return self._star_at
-
-    @star_at.setter
-    def star_at(self, star_at):
-        """Sets the star_at of this InlineResponse20046.
-
-
-        :param star_at: The star_at of this InlineResponse20046.  # noqa: E501
-        :type: str
-        """
-
-        self._star_at = star_at
-
-    @property
-    def starred_url(self):
-        """Gets the starred_url of this InlineResponse20046.  # noqa: E501
-
-
-        :return: The starred_url of this InlineResponse20046.  # noqa: E501
-        :rtype: str
-        """
-        return self._starred_url
-
-    @starred_url.setter
-    def starred_url(self, starred_url):
-        """Sets the starred_url of this InlineResponse20046.
-
-
-        :param starred_url: The starred_url of this InlineResponse20046.  # noqa: E501
-        :type: str
-        """
-
-        self._starred_url = starred_url
-
-    @property
-    def subscriptions_url(self):
-        """Gets the subscriptions_url of this InlineResponse20046.  # noqa: E501
-
-
-        :return: The subscriptions_url of this InlineResponse20046.  # noqa: E501
-        :rtype: str
-        """
-        return self._subscriptions_url
-
-    @subscriptions_url.setter
-    def subscriptions_url(self, subscriptions_url):
-        """Sets the subscriptions_url of this InlineResponse20046.
-
-
-        :param subscriptions_url: The subscriptions_url of this InlineResponse20046.  # noqa: E501
-        :type: str
-        """
-
-        self._subscriptions_url = subscriptions_url
-
-    @property
-    def type(self):
-        """Gets the type of this InlineResponse20046.  # noqa: E501
-
-
-        :return: The type of this InlineResponse20046.  # noqa: E501
-        :rtype: str
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this InlineResponse20046.
-
-
-        :param type: The type of this InlineResponse20046.  # noqa: E501
-        :type: str
-        """
-
-        self._type = type
-
-    @property
-    def url(self):
-        """Gets the url of this InlineResponse20046.  # noqa: E501
-
-
-        :return: The url of this InlineResponse20046.  # noqa: E501
-        :rtype: str
-        """
-        return self._url
-
-    @url.setter
-    def url(self, url):
-        """Sets the url of this InlineResponse20046.
-
-
-        :param url: The url of this InlineResponse20046.  # noqa: E501
-        :type: str
-        """
-
-        self._url = url
+        self._status = status
 
     def to_dict(self):
         """Returns the model properties as a dict"""

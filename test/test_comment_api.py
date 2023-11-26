@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    Gitee OpenApi
+    getV5ReposOwnerRepoSubscribers
 
-    All api provided by Gitee  # noqa: E501
+    列出 watch 了仓库的用户  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -63,10 +63,31 @@ class TestCommentApi(unittest.TestCase):
         """
         pass
 
+    def test_gists_gist_id_comments_id_delete(self):
+        """Test case for gists_gist_id_comments_id_delete
+
+        删除代码片段的评论  # noqa: E501
+        """
+        pass
+
     def test_gists_gist_id_comments_id_get(self):
         """Test case for gists_gist_id_comments_id_get
 
         获取单条代码片段的评论  # noqa: E501
+        """
+        pass
+
+    def test_gists_gist_id_comments_id_patch(self):
+        """Test case for gists_gist_id_comments_id_patch
+
+        修改代码片段的评论  # noqa: E501
+        """
+        pass
+
+    def test_gists_gist_id_comments_post(self):
+        """Test case for gists_gist_id_comments_post
+
+        增加代码片段的评论  # noqa: E501
         """
         pass
 
@@ -77,10 +98,24 @@ class TestCommentApi(unittest.TestCase):
         """
         pass
 
+    def test_repos_owner_repo_comments_id_delete(self):
+        """Test case for repos_owner_repo_comments_id_delete
+
+        删除Commit评论  # noqa: E501
+        """
+        pass
+
     def test_repos_owner_repo_comments_id_get(self):
         """Test case for repos_owner_repo_comments_id_get
 
         获取仓库的某条Commit评论  # noqa: E501
+        """
+        pass
+
+    def test_repos_owner_repo_comments_id_patch(self):
+        """Test case for repos_owner_repo_comments_id_patch
+
+        更新Commit评论  # noqa: E501
         """
         pass
 
@@ -105,10 +140,24 @@ class TestCommentApi(unittest.TestCase):
         """
         pass
 
+    def test_repos_owner_repo_issues_comments_id_delete(self):
+        """Test case for repos_owner_repo_issues_comments_id_delete
+
+        删除Issue某条评论  # noqa: E501
+        """
+        pass
+
     def test_repos_owner_repo_issues_comments_id_get(self):
         """Test case for repos_owner_repo_issues_comments_id_get
 
         获取仓库Issue某条评论  # noqa: E501
+        """
+        pass
+
+    def test_repos_owner_repo_issues_comments_id_patch(self):
+        """Test case for repos_owner_repo_issues_comments_id_patch
+
+        更新Issue某条评论  # noqa: E501
         """
         pass
 
@@ -119,6 +168,20 @@ class TestCommentApi(unittest.TestCase):
         """
         pass
 
+    def test_repos_owner_repo_issues_number_comments_post(self):
+        """Test case for repos_owner_repo_issues_number_comments_post
+
+        创建某个Issue评论  # noqa: E501
+        """
+        pass
+
+    def test_repos_owner_repo_pulls_comments_id_delete(self):
+        """Test case for repos_owner_repo_pulls_comments_id_delete
+
+        删除评论  # noqa: E501
+        """
+        pass
+
     def test_repos_owner_repo_pulls_comments_id_get(self):
         """Test case for repos_owner_repo_pulls_comments_id_get
 
@@ -126,10 +189,24 @@ class TestCommentApi(unittest.TestCase):
         """
         pass
 
+    def test_repos_owner_repo_pulls_comments_id_patch(self):
+        """Test case for repos_owner_repo_pulls_comments_id_patch
+
+        编辑评论  # noqa: E501
+        """
+        pass
+
     def test_repos_owner_repo_pulls_number_comments_get(self):
         """Test case for repos_owner_repo_pulls_number_comments_get
 
         获取某个Pull Request的所有评论  # noqa: E501
+        """
+        pass
+
+    def test_repos_owner_repo_pulls_number_comments_post(self):
+        """Test case for repos_owner_repo_pulls_number_comments_post
+
+        提交Pull Request评论  # noqa: E501
         """
         pass
 

@@ -28,92 +28,222 @@ class InlineResponse20013(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'message_count': 'int',
-        'notification_count': 'int',
-        'total_count': 'int'
+        'actor': 'str',
+        'created_at': 'str',
+        'id': 'int',
+        'org': 'str',
+        'payload': 'object',
+        'public': 'str',
+        'repo': 'str',
+        'type': 'str'
     }
 
     attribute_map = {
-        'message_count': 'message_count',
-        'notification_count': 'notification_count',
-        'total_count': 'total_count'
+        'actor': 'actor',
+        'created_at': 'created_at',
+        'id': 'id',
+        'org': 'org',
+        'payload': 'payload',
+        'public': 'public',
+        'repo': 'repo',
+        'type': 'type'
     }
 
-    def __init__(self, message_count=None, notification_count=None, total_count=None):  # noqa: E501
+    def __init__(self, actor=None, created_at=None, id=None, org=None, payload=None, public=None, repo=None, type=None):  # noqa: E501
         """InlineResponse20013 - a model defined in Swagger"""  # noqa: E501
-        self._message_count = None
-        self._notification_count = None
-        self._total_count = None
+        self._actor = None
+        self._created_at = None
+        self._id = None
+        self._org = None
+        self._payload = None
+        self._public = None
+        self._repo = None
+        self._type = None
         self.discriminator = None
-        if message_count is not None:
-            self.message_count = message_count
-        if notification_count is not None:
-            self.notification_count = notification_count
-        if total_count is not None:
-            self.total_count = total_count
+        if actor is not None:
+            self.actor = actor
+        if created_at is not None:
+            self.created_at = created_at
+        if id is not None:
+            self.id = id
+        if org is not None:
+            self.org = org
+        if payload is not None:
+            self.payload = payload
+        if public is not None:
+            self.public = public
+        if repo is not None:
+            self.repo = repo
+        if type is not None:
+            self.type = type
 
     @property
-    def message_count(self):
-        """Gets the message_count of this InlineResponse20013.  # noqa: E501
+    def actor(self):
+        """Gets the actor of this InlineResponse20013.  # noqa: E501
 
 
-        :return: The message_count of this InlineResponse20013.  # noqa: E501
+        :return: The actor of this InlineResponse20013.  # noqa: E501
+        :rtype: str
+        """
+        return self._actor
+
+    @actor.setter
+    def actor(self, actor):
+        """Sets the actor of this InlineResponse20013.
+
+
+        :param actor: The actor of this InlineResponse20013.  # noqa: E501
+        :type: str
+        """
+
+        self._actor = actor
+
+    @property
+    def created_at(self):
+        """Gets the created_at of this InlineResponse20013.  # noqa: E501
+
+
+        :return: The created_at of this InlineResponse20013.  # noqa: E501
+        :rtype: str
+        """
+        return self._created_at
+
+    @created_at.setter
+    def created_at(self, created_at):
+        """Sets the created_at of this InlineResponse20013.
+
+
+        :param created_at: The created_at of this InlineResponse20013.  # noqa: E501
+        :type: str
+        """
+
+        self._created_at = created_at
+
+    @property
+    def id(self):
+        """Gets the id of this InlineResponse20013.  # noqa: E501
+
+
+        :return: The id of this InlineResponse20013.  # noqa: E501
         :rtype: int
         """
-        return self._message_count
+        return self._id
 
-    @message_count.setter
-    def message_count(self, message_count):
-        """Sets the message_count of this InlineResponse20013.
+    @id.setter
+    def id(self, id):
+        """Sets the id of this InlineResponse20013.
 
 
-        :param message_count: The message_count of this InlineResponse20013.  # noqa: E501
+        :param id: The id of this InlineResponse20013.  # noqa: E501
         :type: int
         """
 
-        self._message_count = message_count
+        self._id = id
 
     @property
-    def notification_count(self):
-        """Gets the notification_count of this InlineResponse20013.  # noqa: E501
+    def org(self):
+        """Gets the org of this InlineResponse20013.  # noqa: E501
 
 
-        :return: The notification_count of this InlineResponse20013.  # noqa: E501
-        :rtype: int
+        :return: The org of this InlineResponse20013.  # noqa: E501
+        :rtype: str
         """
-        return self._notification_count
+        return self._org
 
-    @notification_count.setter
-    def notification_count(self, notification_count):
-        """Sets the notification_count of this InlineResponse20013.
+    @org.setter
+    def org(self, org):
+        """Sets the org of this InlineResponse20013.
 
 
-        :param notification_count: The notification_count of this InlineResponse20013.  # noqa: E501
-        :type: int
+        :param org: The org of this InlineResponse20013.  # noqa: E501
+        :type: str
         """
 
-        self._notification_count = notification_count
+        self._org = org
 
     @property
-    def total_count(self):
-        """Gets the total_count of this InlineResponse20013.  # noqa: E501
+    def payload(self):
+        """Gets the payload of this InlineResponse20013.  # noqa: E501
 
 
-        :return: The total_count of this InlineResponse20013.  # noqa: E501
-        :rtype: int
+        :return: The payload of this InlineResponse20013.  # noqa: E501
+        :rtype: object
         """
-        return self._total_count
+        return self._payload
 
-    @total_count.setter
-    def total_count(self, total_count):
-        """Sets the total_count of this InlineResponse20013.
+    @payload.setter
+    def payload(self, payload):
+        """Sets the payload of this InlineResponse20013.
 
 
-        :param total_count: The total_count of this InlineResponse20013.  # noqa: E501
-        :type: int
+        :param payload: The payload of this InlineResponse20013.  # noqa: E501
+        :type: object
         """
 
-        self._total_count = total_count
+        self._payload = payload
+
+    @property
+    def public(self):
+        """Gets the public of this InlineResponse20013.  # noqa: E501
+
+
+        :return: The public of this InlineResponse20013.  # noqa: E501
+        :rtype: str
+        """
+        return self._public
+
+    @public.setter
+    def public(self, public):
+        """Sets the public of this InlineResponse20013.
+
+
+        :param public: The public of this InlineResponse20013.  # noqa: E501
+        :type: str
+        """
+
+        self._public = public
+
+    @property
+    def repo(self):
+        """Gets the repo of this InlineResponse20013.  # noqa: E501
+
+
+        :return: The repo of this InlineResponse20013.  # noqa: E501
+        :rtype: str
+        """
+        return self._repo
+
+    @repo.setter
+    def repo(self, repo):
+        """Sets the repo of this InlineResponse20013.
+
+
+        :param repo: The repo of this InlineResponse20013.  # noqa: E501
+        :type: str
+        """
+
+        self._repo = repo
+
+    @property
+    def type(self):
+        """Gets the type of this InlineResponse20013.  # noqa: E501
+
+
+        :return: The type of this InlineResponse20013.  # noqa: E501
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this InlineResponse20013.
+
+
+        :param type: The type of this InlineResponse20013.  # noqa: E501
+        :type: str
+        """
+
+        self._type = type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

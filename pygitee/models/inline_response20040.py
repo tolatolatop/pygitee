@@ -28,29 +28,60 @@ class InlineResponse20040(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'id': 'int',
-        'ident': 'str',
-        'name': 'str'
+        'created_at': 'str',
+        'id': 'str',
+        'key': 'str',
+        'title': 'str',
+        'url': 'str'
     }
 
     attribute_map = {
+        'created_at': 'created_at',
         'id': 'id',
-        'ident': 'ident',
-        'name': 'name'
+        'key': 'key',
+        'title': 'title',
+        'url': 'url'
     }
 
-    def __init__(self, id=None, ident=None, name=None):  # noqa: E501
+    def __init__(self, created_at=None, id=None, key=None, title=None, url=None):  # noqa: E501
         """InlineResponse20040 - a model defined in Swagger"""  # noqa: E501
+        self._created_at = None
         self._id = None
-        self._ident = None
-        self._name = None
+        self._key = None
+        self._title = None
+        self._url = None
         self.discriminator = None
+        if created_at is not None:
+            self.created_at = created_at
         if id is not None:
             self.id = id
-        if ident is not None:
-            self.ident = ident
-        if name is not None:
-            self.name = name
+        if key is not None:
+            self.key = key
+        if title is not None:
+            self.title = title
+        if url is not None:
+            self.url = url
+
+    @property
+    def created_at(self):
+        """Gets the created_at of this InlineResponse20040.  # noqa: E501
+
+
+        :return: The created_at of this InlineResponse20040.  # noqa: E501
+        :rtype: str
+        """
+        return self._created_at
+
+    @created_at.setter
+    def created_at(self, created_at):
+        """Sets the created_at of this InlineResponse20040.
+
+
+        :param created_at: The created_at of this InlineResponse20040.  # noqa: E501
+        :type: str
+        """
+
+        self._created_at = created_at
 
     @property
     def id(self):
@@ -58,7 +89,7 @@ class InlineResponse20040(object):
 
 
         :return: The id of this InlineResponse20040.  # noqa: E501
-        :rtype: int
+        :rtype: str
         """
         return self._id
 
@@ -68,52 +99,73 @@ class InlineResponse20040(object):
 
 
         :param id: The id of this InlineResponse20040.  # noqa: E501
-        :type: int
+        :type: str
         """
 
         self._id = id
 
     @property
-    def ident(self):
-        """Gets the ident of this InlineResponse20040.  # noqa: E501
+    def key(self):
+        """Gets the key of this InlineResponse20040.  # noqa: E501
 
 
-        :return: The ident of this InlineResponse20040.  # noqa: E501
+        :return: The key of this InlineResponse20040.  # noqa: E501
         :rtype: str
         """
-        return self._ident
+        return self._key
 
-    @ident.setter
-    def ident(self, ident):
-        """Sets the ident of this InlineResponse20040.
+    @key.setter
+    def key(self, key):
+        """Sets the key of this InlineResponse20040.
 
 
-        :param ident: The ident of this InlineResponse20040.  # noqa: E501
+        :param key: The key of this InlineResponse20040.  # noqa: E501
         :type: str
         """
 
-        self._ident = ident
+        self._key = key
 
     @property
-    def name(self):
-        """Gets the name of this InlineResponse20040.  # noqa: E501
+    def title(self):
+        """Gets the title of this InlineResponse20040.  # noqa: E501
 
 
-        :return: The name of this InlineResponse20040.  # noqa: E501
+        :return: The title of this InlineResponse20040.  # noqa: E501
         :rtype: str
         """
-        return self._name
+        return self._title
 
-    @name.setter
-    def name(self, name):
-        """Sets the name of this InlineResponse20040.
+    @title.setter
+    def title(self, title):
+        """Sets the title of this InlineResponse20040.
 
 
-        :param name: The name of this InlineResponse20040.  # noqa: E501
+        :param title: The title of this InlineResponse20040.  # noqa: E501
         :type: str
         """
 
-        self._name = name
+        self._title = title
+
+    @property
+    def url(self):
+        """Gets the url of this InlineResponse20040.  # noqa: E501
+
+
+        :return: The url of this InlineResponse20040.  # noqa: E501
+        :rtype: str
+        """
+        return self._url
+
+    @url.setter
+    def url(self, url):
+        """Sets the url of this InlineResponse20040.
+
+
+        :param url: The url of this InlineResponse20040.  # noqa: E501
+        :type: str
+        """
+
+        self._url = url
 
     def to_dict(self):
         """Returns the model properties as a dict"""

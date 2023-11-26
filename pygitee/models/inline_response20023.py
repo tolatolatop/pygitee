@@ -28,75 +28,133 @@ class InlineResponse20023(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'contexts': 'Contexts',
+        'action_type': 'str',
+        'content': 'str',
+        'created_at': 'str',
+        'icon': 'str',
         'id': 'str',
-        'mergers': 'Mergers',
-        'mode': 'str',
-        'project_id': 'str',
-        'pushers': 'Pushers',
-        'strict': 'bool',
-        'wildcard': 'str'
+        'link_target': 'str',
+        'user': 'str'
     }
 
     attribute_map = {
-        'contexts': 'contexts',
+        'action_type': 'action_type',
+        'content': 'content',
+        'created_at': 'created_at',
+        'icon': 'icon',
         'id': 'id',
-        'mergers': 'mergers',
-        'mode': 'mode',
-        'project_id': 'project_id',
-        'pushers': 'pushers',
-        'strict': 'strict',
-        'wildcard': 'wildcard'
+        'link_target': 'link_target',
+        'user': 'user'
     }
 
-    def __init__(self, contexts=None, id=None, mergers=None, mode=None, project_id=None, pushers=None, strict=None, wildcard=None):  # noqa: E501
+    def __init__(self, action_type=None, content=None, created_at=None, icon=None, id=None, link_target=None, user=None):  # noqa: E501
         """InlineResponse20023 - a model defined in Swagger"""  # noqa: E501
-        self._contexts = None
+        self._action_type = None
+        self._content = None
+        self._created_at = None
+        self._icon = None
         self._id = None
-        self._mergers = None
-        self._mode = None
-        self._project_id = None
-        self._pushers = None
-        self._strict = None
-        self._wildcard = None
+        self._link_target = None
+        self._user = None
         self.discriminator = None
-        if contexts is not None:
-            self.contexts = contexts
+        if action_type is not None:
+            self.action_type = action_type
+        if content is not None:
+            self.content = content
+        if created_at is not None:
+            self.created_at = created_at
+        if icon is not None:
+            self.icon = icon
         if id is not None:
             self.id = id
-        if mergers is not None:
-            self.mergers = mergers
-        if mode is not None:
-            self.mode = mode
-        if project_id is not None:
-            self.project_id = project_id
-        if pushers is not None:
-            self.pushers = pushers
-        if strict is not None:
-            self.strict = strict
-        if wildcard is not None:
-            self.wildcard = wildcard
+        if link_target is not None:
+            self.link_target = link_target
+        if user is not None:
+            self.user = user
 
     @property
-    def contexts(self):
-        """Gets the contexts of this InlineResponse20023.  # noqa: E501
+    def action_type(self):
+        """Gets the action_type of this InlineResponse20023.  # noqa: E501
 
 
-        :return: The contexts of this InlineResponse20023.  # noqa: E501
-        :rtype: Contexts
+        :return: The action_type of this InlineResponse20023.  # noqa: E501
+        :rtype: str
         """
-        return self._contexts
+        return self._action_type
 
-    @contexts.setter
-    def contexts(self, contexts):
-        """Sets the contexts of this InlineResponse20023.
+    @action_type.setter
+    def action_type(self, action_type):
+        """Sets the action_type of this InlineResponse20023.
 
 
-        :param contexts: The contexts of this InlineResponse20023.  # noqa: E501
-        :type: Contexts
+        :param action_type: The action_type of this InlineResponse20023.  # noqa: E501
+        :type: str
         """
 
-        self._contexts = contexts
+        self._action_type = action_type
+
+    @property
+    def content(self):
+        """Gets the content of this InlineResponse20023.  # noqa: E501
+
+
+        :return: The content of this InlineResponse20023.  # noqa: E501
+        :rtype: str
+        """
+        return self._content
+
+    @content.setter
+    def content(self, content):
+        """Sets the content of this InlineResponse20023.
+
+
+        :param content: The content of this InlineResponse20023.  # noqa: E501
+        :type: str
+        """
+
+        self._content = content
+
+    @property
+    def created_at(self):
+        """Gets the created_at of this InlineResponse20023.  # noqa: E501
+
+
+        :return: The created_at of this InlineResponse20023.  # noqa: E501
+        :rtype: str
+        """
+        return self._created_at
+
+    @created_at.setter
+    def created_at(self, created_at):
+        """Sets the created_at of this InlineResponse20023.
+
+
+        :param created_at: The created_at of this InlineResponse20023.  # noqa: E501
+        :type: str
+        """
+
+        self._created_at = created_at
+
+    @property
+    def icon(self):
+        """Gets the icon of this InlineResponse20023.  # noqa: E501
+
+
+        :return: The icon of this InlineResponse20023.  # noqa: E501
+        :rtype: str
+        """
+        return self._icon
+
+    @icon.setter
+    def icon(self, icon):
+        """Sets the icon of this InlineResponse20023.
+
+
+        :param icon: The icon of this InlineResponse20023.  # noqa: E501
+        :type: str
+        """
+
+        self._icon = icon
 
     @property
     def id(self):
@@ -120,130 +178,46 @@ class InlineResponse20023(object):
         self._id = id
 
     @property
-    def mergers(self):
-        """Gets the mergers of this InlineResponse20023.  # noqa: E501
+    def link_target(self):
+        """Gets the link_target of this InlineResponse20023.  # noqa: E501
 
 
-        :return: The mergers of this InlineResponse20023.  # noqa: E501
-        :rtype: Mergers
-        """
-        return self._mergers
-
-    @mergers.setter
-    def mergers(self, mergers):
-        """Sets the mergers of this InlineResponse20023.
-
-
-        :param mergers: The mergers of this InlineResponse20023.  # noqa: E501
-        :type: Mergers
-        """
-
-        self._mergers = mergers
-
-    @property
-    def mode(self):
-        """Gets the mode of this InlineResponse20023.  # noqa: E501
-
-
-        :return: The mode of this InlineResponse20023.  # noqa: E501
+        :return: The link_target of this InlineResponse20023.  # noqa: E501
         :rtype: str
         """
-        return self._mode
+        return self._link_target
 
-    @mode.setter
-    def mode(self, mode):
-        """Sets the mode of this InlineResponse20023.
+    @link_target.setter
+    def link_target(self, link_target):
+        """Sets the link_target of this InlineResponse20023.
 
 
-        :param mode: The mode of this InlineResponse20023.  # noqa: E501
+        :param link_target: The link_target of this InlineResponse20023.  # noqa: E501
         :type: str
         """
 
-        self._mode = mode
+        self._link_target = link_target
 
     @property
-    def project_id(self):
-        """Gets the project_id of this InlineResponse20023.  # noqa: E501
+    def user(self):
+        """Gets the user of this InlineResponse20023.  # noqa: E501
 
 
-        :return: The project_id of this InlineResponse20023.  # noqa: E501
+        :return: The user of this InlineResponse20023.  # noqa: E501
         :rtype: str
         """
-        return self._project_id
+        return self._user
 
-    @project_id.setter
-    def project_id(self, project_id):
-        """Sets the project_id of this InlineResponse20023.
+    @user.setter
+    def user(self, user):
+        """Sets the user of this InlineResponse20023.
 
 
-        :param project_id: The project_id of this InlineResponse20023.  # noqa: E501
+        :param user: The user of this InlineResponse20023.  # noqa: E501
         :type: str
         """
 
-        self._project_id = project_id
-
-    @property
-    def pushers(self):
-        """Gets the pushers of this InlineResponse20023.  # noqa: E501
-
-
-        :return: The pushers of this InlineResponse20023.  # noqa: E501
-        :rtype: Pushers
-        """
-        return self._pushers
-
-    @pushers.setter
-    def pushers(self, pushers):
-        """Sets the pushers of this InlineResponse20023.
-
-
-        :param pushers: The pushers of this InlineResponse20023.  # noqa: E501
-        :type: Pushers
-        """
-
-        self._pushers = pushers
-
-    @property
-    def strict(self):
-        """Gets the strict of this InlineResponse20023.  # noqa: E501
-
-
-        :return: The strict of this InlineResponse20023.  # noqa: E501
-        :rtype: bool
-        """
-        return self._strict
-
-    @strict.setter
-    def strict(self, strict):
-        """Sets the strict of this InlineResponse20023.
-
-
-        :param strict: The strict of this InlineResponse20023.  # noqa: E501
-        :type: bool
-        """
-
-        self._strict = strict
-
-    @property
-    def wildcard(self):
-        """Gets the wildcard of this InlineResponse20023.  # noqa: E501
-
-
-        :return: The wildcard of this InlineResponse20023.  # noqa: E501
-        :rtype: str
-        """
-        return self._wildcard
-
-    @wildcard.setter
-    def wildcard(self, wildcard):
-        """Sets the wildcard of this InlineResponse20023.
-
-
-        :param wildcard: The wildcard of this InlineResponse20023.  # noqa: E501
-        :type: str
-        """
-
-        self._wildcard = wildcard
+        self._user = user
 
     def to_dict(self):
         """Returns the model properties as a dict"""

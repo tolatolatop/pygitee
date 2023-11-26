@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    Gitee OpenApi
+    getV5ReposOwnerRepoSubscribers
 
-    All api provided by Gitee  # noqa: E501
+    列出 watch 了仓库的用户  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     
@@ -35,10 +35,24 @@ class TestRepoApi(unittest.TestCase):
         """
         pass
 
+    def test_repos_owner_repo_baidu_statistic_key_delete(self):
+        """Test case for repos_owner_repo_baidu_statistic_key_delete
+
+        删除仓库的百度统计 key  # noqa: E501
+        """
+        pass
+
     def test_repos_owner_repo_baidu_statistic_key_get(self):
         """Test case for repos_owner_repo_baidu_statistic_key_get
 
         获取仓库的百度统计 key  # noqa: E501
+        """
+        pass
+
+    def test_repos_owner_repo_baidu_statistic_key_post(self):
+        """Test case for repos_owner_repo_baidu_statistic_key_post
+
+        设置/更新仓库的百度统计 key  # noqa: E501
         """
         pass
 
@@ -56,6 +70,13 @@ class TestRepoApi(unittest.TestCase):
         """
         pass
 
+    def test_repos_owner_repo_branches_branch_protection_delete(self):
+        """Test case for repos_owner_repo_branches_branch_protection_delete
+
+        取消保护分支的设置  # noqa: E501
+        """
+        pass
+
     def test_repos_owner_repo_branches_branch_protection_put(self):
         """Test case for repos_owner_repo_branches_branch_protection_put
 
@@ -70,10 +91,24 @@ class TestRepoApi(unittest.TestCase):
         """
         pass
 
+    def test_repos_owner_repo_branches_post(self):
+        """Test case for repos_owner_repo_branches_post
+
+        创建分支  # noqa: E501
+        """
+        pass
+
     def test_repos_owner_repo_branches_setting_new_put(self):
         """Test case for repos_owner_repo_branches_setting_new_put
 
         新建保护分支规则  # noqa: E501
+        """
+        pass
+
+    def test_repos_owner_repo_branches_wildcard_setting_delete(self):
+        """Test case for repos_owner_repo_branches_wildcard_setting_delete
+
+        删除保护分支规则  # noqa: E501
         """
         pass
 
@@ -98,6 +133,13 @@ class TestRepoApi(unittest.TestCase):
         """
         pass
 
+    def test_repos_owner_repo_collaborators_username_delete(self):
+        """Test case for repos_owner_repo_collaborators_username_delete
+
+        移除仓库成员  # noqa: E501
+        """
+        pass
+
     def test_repos_owner_repo_collaborators_username_get(self):
         """Test case for repos_owner_repo_collaborators_username_get
 
@@ -112,10 +154,24 @@ class TestRepoApi(unittest.TestCase):
         """
         pass
 
+    def test_repos_owner_repo_collaborators_username_put(self):
+        """Test case for repos_owner_repo_collaborators_username_put
+
+        添加仓库成员或更新仓库成员权限  # noqa: E501
+        """
+        pass
+
     def test_repos_owner_repo_commits_get(self):
         """Test case for repos_owner_repo_commits_get
 
         仓库的所有提交  # noqa: E501
+        """
+        pass
+
+    def test_repos_owner_repo_commits_post(self):
+        """Test case for repos_owner_repo_commits_post
+
+        提交多个文件变更  # noqa: E501
         """
         pass
 
@@ -133,6 +189,13 @@ class TestRepoApi(unittest.TestCase):
         """
         pass
 
+    def test_repos_owner_repo_contents_path_delete(self):
+        """Test case for repos_owner_repo_contents_path_delete
+
+        删除文件  # noqa: E501
+        """
+        pass
+
     def test_repos_owner_repo_contents_path_get(self):
         """Test case for repos_owner_repo_contents_path_get
 
@@ -147,10 +210,24 @@ class TestRepoApi(unittest.TestCase):
         """
         pass
 
+    def test_repos_owner_repo_contents_path_put(self):
+        """Test case for repos_owner_repo_contents_path_put
+
+        更新文件  # noqa: E501
+        """
+        pass
+
     def test_repos_owner_repo_contributors_get(self):
         """Test case for repos_owner_repo_contributors_get
 
         获取仓库贡献者  # noqa: E501
+        """
+        pass
+
+    def test_repos_owner_repo_delete(self):
+        """Test case for repos_owner_repo_delete
+
+        删除一个仓库  # noqa: E501
         """
         pass
 
@@ -165,6 +242,13 @@ class TestRepoApi(unittest.TestCase):
         """Test case for repos_owner_repo_forks_get
 
         查看仓库的Forks  # noqa: E501
+        """
+        pass
+
+    def test_repos_owner_repo_forks_post(self):
+        """Test case for repos_owner_repo_forks_post
+
+        Fork一个仓库  # noqa: E501
         """
         pass
 
@@ -203,6 +287,13 @@ class TestRepoApi(unittest.TestCase):
         """
         pass
 
+    def test_repos_owner_repo_keys_enable_id_delete(self):
+        """Test case for repos_owner_repo_keys_enable_id_delete
+
+        停用仓库公钥  # noqa: E501
+        """
+        pass
+
     def test_repos_owner_repo_keys_enable_id_put(self):
         """Test case for repos_owner_repo_keys_enable_id_put
 
@@ -217,6 +308,13 @@ class TestRepoApi(unittest.TestCase):
         """
         pass
 
+    def test_repos_owner_repo_keys_id_delete(self):
+        """Test case for repos_owner_repo_keys_id_delete
+
+        删除一个仓库公钥  # noqa: E501
+        """
+        pass
+
     def test_repos_owner_repo_keys_id_get(self):
         """Test case for repos_owner_repo_keys_id_get
 
@@ -224,10 +322,24 @@ class TestRepoApi(unittest.TestCase):
         """
         pass
 
+    def test_repos_owner_repo_keys_post(self):
+        """Test case for repos_owner_repo_keys_post
+
+        为仓库添加公钥  # noqa: E501
+        """
+        pass
+
     def test_repos_owner_repo_labels_get(self):
         """Test case for repos_owner_repo_labels_get
 
         获取仓库所有任务标签  # noqa: E501
+        """
+        pass
+
+    def test_repos_owner_repo_labels_name_delete(self):
+        """Test case for repos_owner_repo_labels_name_delete
+
+        删除一个仓库任务标签  # noqa: E501
         """
         pass
 
@@ -245,6 +357,13 @@ class TestRepoApi(unittest.TestCase):
         """
         pass
 
+    def test_repos_owner_repo_labels_post(self):
+        """Test case for repos_owner_repo_labels_post
+
+        创建仓库任务标签  # noqa: E501
+        """
+        pass
+
     def test_repos_owner_repo_license_get(self):
         """Test case for repos_owner_repo_license_get
 
@@ -259,10 +378,31 @@ class TestRepoApi(unittest.TestCase):
         """
         pass
 
+    def test_repos_owner_repo_milestones_number_delete(self):
+        """Test case for repos_owner_repo_milestones_number_delete
+
+        删除仓库单个里程碑  # noqa: E501
+        """
+        pass
+
     def test_repos_owner_repo_milestones_number_get(self):
         """Test case for repos_owner_repo_milestones_number_get
 
         获取仓库单个里程碑  # noqa: E501
+        """
+        pass
+
+    def test_repos_owner_repo_milestones_number_patch(self):
+        """Test case for repos_owner_repo_milestones_number_patch
+
+        更新仓库里程碑  # noqa: E501
+        """
+        pass
+
+    def test_repos_owner_repo_milestones_post(self):
+        """Test case for repos_owner_repo_milestones_post
+
+        创建仓库里程碑  # noqa: E501
         """
         pass
 
@@ -287,6 +427,27 @@ class TestRepoApi(unittest.TestCase):
         """
         pass
 
+    def test_repos_owner_repo_pages_put(self):
+        """Test case for repos_owner_repo_pages_put
+
+        上传设置 Pages SSL 证书和域名  # noqa: E501
+        """
+        pass
+
+    def test_repos_owner_repo_patch(self):
+        """Test case for repos_owner_repo_patch
+
+        更新仓库设置  # noqa: E501
+        """
+        pass
+
+    def test_repos_owner_repo_project_labels_delete(self):
+        """Test case for repos_owner_repo_project_labels_delete
+
+        删除仓库标签  # noqa: E501
+        """
+        pass
+
     def test_repos_owner_repo_project_labels_get(self):
         """Test case for repos_owner_repo_project_labels_get
 
@@ -294,10 +455,38 @@ class TestRepoApi(unittest.TestCase):
         """
         pass
 
+    def test_repos_owner_repo_project_labels_post(self):
+        """Test case for repos_owner_repo_project_labels_post
+
+        添加仓库标签  # noqa: E501
+        """
+        pass
+
+    def test_repos_owner_repo_project_labels_put(self):
+        """Test case for repos_owner_repo_project_labels_put
+
+        替换所有仓库标签  # noqa: E501
+        """
+        pass
+
     def test_repos_owner_repo_pulls_get(self):
         """Test case for repos_owner_repo_pulls_get
 
         获取Pull Request列表  # noqa: E501
+        """
+        pass
+
+    def test_repos_owner_repo_pulls_number_assignees_delete(self):
+        """Test case for repos_owner_repo_pulls_number_assignees_delete
+
+        取消用户审查 Pull Request  # noqa: E501
+        """
+        pass
+
+    def test_repos_owner_repo_pulls_number_assignees_patch(self):
+        """Test case for repos_owner_repo_pulls_number_assignees_patch
+
+        重置 Pull Request 审查 的状态  # noqa: E501
         """
         pass
 
@@ -343,6 +532,20 @@ class TestRepoApi(unittest.TestCase):
         """
         pass
 
+    def test_repos_owner_repo_pulls_number_labels_post(self):
+        """Test case for repos_owner_repo_pulls_number_labels_post
+
+        创建 Pull Request 标签  # noqa: E501
+        """
+        pass
+
+    def test_repos_owner_repo_pulls_number_labels_put(self):
+        """Test case for repos_owner_repo_pulls_number_labels_put
+
+        替换 Pull Request 所有标签  # noqa: E501
+        """
+        pass
+
     def test_repos_owner_repo_pulls_number_merge_get(self):
         """Test case for repos_owner_repo_pulls_number_merge_get
 
@@ -350,10 +553,24 @@ class TestRepoApi(unittest.TestCase):
         """
         pass
 
+    def test_repos_owner_repo_pulls_number_merge_put(self):
+        """Test case for repos_owner_repo_pulls_number_merge_put
+
+        合并Pull Request  # noqa: E501
+        """
+        pass
+
     def test_repos_owner_repo_pulls_number_operate_logs_get(self):
         """Test case for repos_owner_repo_pulls_number_operate_logs_get
 
         获取某个Pull Request的操作日志  # noqa: E501
+        """
+        pass
+
+    def test_repos_owner_repo_pulls_number_patch(self):
+        """Test case for repos_owner_repo_pulls_number_patch
+
+        更新Pull Request信息  # noqa: E501
         """
         pass
 
@@ -371,6 +588,20 @@ class TestRepoApi(unittest.TestCase):
         """
         pass
 
+    def test_repos_owner_repo_pulls_number_testers_delete(self):
+        """Test case for repos_owner_repo_pulls_number_testers_delete
+
+        取消用户测试 Pull Request  # noqa: E501
+        """
+        pass
+
+    def test_repos_owner_repo_pulls_number_testers_patch(self):
+        """Test case for repos_owner_repo_pulls_number_testers_patch
+
+        重置 Pull Request 测试 的状态  # noqa: E501
+        """
+        pass
+
     def test_repos_owner_repo_pulls_number_testers_post(self):
         """Test case for repos_owner_repo_pulls_number_testers_post
 
@@ -378,10 +609,24 @@ class TestRepoApi(unittest.TestCase):
         """
         pass
 
+    def test_repos_owner_repo_pulls_post(self):
+        """Test case for repos_owner_repo_pulls_post
+
+        创建Pull Request  # noqa: E501
+        """
+        pass
+
     def test_repos_owner_repo_push_config_get(self):
         """Test case for repos_owner_repo_push_config_get
 
         获取仓库推送规则设置  # noqa: E501
+        """
+        pass
+
+    def test_repos_owner_repo_push_config_put(self):
+        """Test case for repos_owner_repo_push_config_put
+
+        修改仓库推送规则设置  # noqa: E501
         """
         pass
 
@@ -427,6 +672,13 @@ class TestRepoApi(unittest.TestCase):
         """
         pass
 
+    def test_repos_owner_repo_tags_post(self):
+        """Test case for repos_owner_repo_tags_post
+
+        创建一个仓库的 Tag  # noqa: E501
+        """
+        pass
+
     def test_repos_owner_repo_tarball_get(self):
         """Test case for repos_owner_repo_tarball_get
 
@@ -452,6 +704,13 @@ class TestRepoApi(unittest.TestCase):
         """Test case for user_repos_get
 
         列出授权用户的所有仓库  # noqa: E501
+        """
+        pass
+
+    def test_user_repos_post(self):
+        """Test case for user_repos_post
+
+        创建一个仓库  # noqa: E501
         """
         pass
 

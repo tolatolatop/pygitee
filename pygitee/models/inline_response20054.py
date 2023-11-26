@@ -31,7 +31,6 @@ class InlineResponse20054(object):
         'avatar_url': 'str',
         'bio': 'str',
         'blog': 'str',
-        'company': 'str',
         'created_at': 'str',
         'email': 'str',
         'events_url': 'str',
@@ -42,15 +41,12 @@ class InlineResponse20054(object):
         'gists_url': 'str',
         'html_url': 'str',
         'id': 'int',
-        'linkedin': 'str',
         'login': 'str',
         'member_role': 'str',
         'name': 'str',
         'organizations_url': 'str',
-        'profession': 'str',
         'public_gists': 'str',
         'public_repos': 'str',
-        'qq': 'str',
         'received_events_url': 'str',
         'remark': 'str',
         'repos_url': 'str',
@@ -61,7 +57,6 @@ class InlineResponse20054(object):
         'updated_at': 'str',
         'url': 'str',
         'watched': 'str',
-        'wechat': 'str',
         'weibo': 'str'
     }
 
@@ -69,7 +64,6 @@ class InlineResponse20054(object):
         'avatar_url': 'avatar_url',
         'bio': 'bio',
         'blog': 'blog',
-        'company': 'company',
         'created_at': 'created_at',
         'email': 'email',
         'events_url': 'events_url',
@@ -80,15 +74,12 @@ class InlineResponse20054(object):
         'gists_url': 'gists_url',
         'html_url': 'html_url',
         'id': 'id',
-        'linkedin': 'linkedin',
         'login': 'login',
         'member_role': 'member_role',
         'name': 'name',
         'organizations_url': 'organizations_url',
-        'profession': 'profession',
         'public_gists': 'public_gists',
         'public_repos': 'public_repos',
-        'qq': 'qq',
         'received_events_url': 'received_events_url',
         'remark': 'remark',
         'repos_url': 'repos_url',
@@ -99,16 +90,14 @@ class InlineResponse20054(object):
         'updated_at': 'updated_at',
         'url': 'url',
         'watched': 'watched',
-        'wechat': 'wechat',
         'weibo': 'weibo'
     }
 
-    def __init__(self, avatar_url=None, bio=None, blog=None, company=None, created_at=None, email=None, events_url=None, followers=None, followers_url=None, following=None, following_url=None, gists_url=None, html_url=None, id=None, linkedin=None, login=None, member_role=None, name=None, organizations_url=None, profession=None, public_gists=None, public_repos=None, qq=None, received_events_url=None, remark=None, repos_url=None, stared=None, starred_url=None, subscriptions_url=None, type=None, updated_at=None, url=None, watched=None, wechat=None, weibo=None):  # noqa: E501
+    def __init__(self, avatar_url=None, bio=None, blog=None, created_at=None, email=None, events_url=None, followers=None, followers_url=None, following=None, following_url=None, gists_url=None, html_url=None, id=None, login=None, member_role=None, name=None, organizations_url=None, public_gists=None, public_repos=None, received_events_url=None, remark=None, repos_url=None, stared=None, starred_url=None, subscriptions_url=None, type=None, updated_at=None, url=None, watched=None, weibo=None):  # noqa: E501
         """InlineResponse20054 - a model defined in Swagger"""  # noqa: E501
         self._avatar_url = None
         self._bio = None
         self._blog = None
-        self._company = None
         self._created_at = None
         self._email = None
         self._events_url = None
@@ -119,15 +108,12 @@ class InlineResponse20054(object):
         self._gists_url = None
         self._html_url = None
         self._id = None
-        self._linkedin = None
         self._login = None
         self._member_role = None
         self._name = None
         self._organizations_url = None
-        self._profession = None
         self._public_gists = None
         self._public_repos = None
-        self._qq = None
         self._received_events_url = None
         self._remark = None
         self._repos_url = None
@@ -138,7 +124,6 @@ class InlineResponse20054(object):
         self._updated_at = None
         self._url = None
         self._watched = None
-        self._wechat = None
         self._weibo = None
         self.discriminator = None
         if avatar_url is not None:
@@ -147,8 +132,6 @@ class InlineResponse20054(object):
             self.bio = bio
         if blog is not None:
             self.blog = blog
-        if company is not None:
-            self.company = company
         if created_at is not None:
             self.created_at = created_at
         if email is not None:
@@ -169,8 +152,6 @@ class InlineResponse20054(object):
             self.html_url = html_url
         if id is not None:
             self.id = id
-        if linkedin is not None:
-            self.linkedin = linkedin
         if login is not None:
             self.login = login
         if member_role is not None:
@@ -179,14 +160,10 @@ class InlineResponse20054(object):
             self.name = name
         if organizations_url is not None:
             self.organizations_url = organizations_url
-        if profession is not None:
-            self.profession = profession
         if public_gists is not None:
             self.public_gists = public_gists
         if public_repos is not None:
             self.public_repos = public_repos
-        if qq is not None:
-            self.qq = qq
         if received_events_url is not None:
             self.received_events_url = received_events_url
         if remark is not None:
@@ -207,8 +184,6 @@ class InlineResponse20054(object):
             self.url = url
         if watched is not None:
             self.watched = watched
-        if wechat is not None:
-            self.wechat = wechat
         if weibo is not None:
             self.weibo = weibo
 
@@ -274,27 +249,6 @@ class InlineResponse20054(object):
         """
 
         self._blog = blog
-
-    @property
-    def company(self):
-        """Gets the company of this InlineResponse20054.  # noqa: E501
-
-
-        :return: The company of this InlineResponse20054.  # noqa: E501
-        :rtype: str
-        """
-        return self._company
-
-    @company.setter
-    def company(self, company):
-        """Sets the company of this InlineResponse20054.
-
-
-        :param company: The company of this InlineResponse20054.  # noqa: E501
-        :type: str
-        """
-
-        self._company = company
 
     @property
     def created_at(self):
@@ -507,27 +461,6 @@ class InlineResponse20054(object):
         self._id = id
 
     @property
-    def linkedin(self):
-        """Gets the linkedin of this InlineResponse20054.  # noqa: E501
-
-
-        :return: The linkedin of this InlineResponse20054.  # noqa: E501
-        :rtype: str
-        """
-        return self._linkedin
-
-    @linkedin.setter
-    def linkedin(self, linkedin):
-        """Sets the linkedin of this InlineResponse20054.
-
-
-        :param linkedin: The linkedin of this InlineResponse20054.  # noqa: E501
-        :type: str
-        """
-
-        self._linkedin = linkedin
-
-    @property
     def login(self):
         """Gets the login of this InlineResponse20054.  # noqa: E501
 
@@ -612,27 +545,6 @@ class InlineResponse20054(object):
         self._organizations_url = organizations_url
 
     @property
-    def profession(self):
-        """Gets the profession of this InlineResponse20054.  # noqa: E501
-
-
-        :return: The profession of this InlineResponse20054.  # noqa: E501
-        :rtype: str
-        """
-        return self._profession
-
-    @profession.setter
-    def profession(self, profession):
-        """Sets the profession of this InlineResponse20054.
-
-
-        :param profession: The profession of this InlineResponse20054.  # noqa: E501
-        :type: str
-        """
-
-        self._profession = profession
-
-    @property
     def public_gists(self):
         """Gets the public_gists of this InlineResponse20054.  # noqa: E501
 
@@ -673,27 +585,6 @@ class InlineResponse20054(object):
         """
 
         self._public_repos = public_repos
-
-    @property
-    def qq(self):
-        """Gets the qq of this InlineResponse20054.  # noqa: E501
-
-
-        :return: The qq of this InlineResponse20054.  # noqa: E501
-        :rtype: str
-        """
-        return self._qq
-
-    @qq.setter
-    def qq(self, qq):
-        """Sets the qq of this InlineResponse20054.
-
-
-        :param qq: The qq of this InlineResponse20054.  # noqa: E501
-        :type: str
-        """
-
-        self._qq = qq
 
     @property
     def received_events_url(self):
@@ -904,27 +795,6 @@ class InlineResponse20054(object):
         """
 
         self._watched = watched
-
-    @property
-    def wechat(self):
-        """Gets the wechat of this InlineResponse20054.  # noqa: E501
-
-
-        :return: The wechat of this InlineResponse20054.  # noqa: E501
-        :rtype: str
-        """
-        return self._wechat
-
-    @wechat.setter
-    def wechat(self, wechat):
-        """Sets the wechat of this InlineResponse20054.
-
-
-        :param wechat: The wechat of this InlineResponse20054.  # noqa: E501
-        :type: str
-        """
-
-        self._wechat = wechat
 
     @property
     def weibo(self):
