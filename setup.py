@@ -26,6 +26,7 @@ REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil"]
 setup(
     name=NAME,
     version=VERSION,
+    python_requires='>3.4',
     description="Gitee OpenApi",
     author_email="tolatolatop@gmail.com",
     url="",
