@@ -27,7 +27,7 @@ setup(
     name=NAME,
     version=VERSION,
     description="Gitee OpenApi",
-    author_email="",
+    author_email="tolatolatop@gmail.com",
     url="",
     keywords=["Swagger", "Gitee OpenApi"],
     install_requires=REQUIRES,
