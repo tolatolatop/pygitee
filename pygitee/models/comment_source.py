@@ -42,8 +42,10 @@ class CommentSource(object):
         self._issue = None
         self._pull_request = None
         self.discriminator = None
-        self.issue = issue
-        self.pull_request = pull_request
+        if issue is not None:
+            self.issue = issue
+        if pull_request is not None:
+            self.pull_request = pull_request
 
     @property
     def issue(self):
@@ -63,8 +65,6 @@ class CommentSource(object):
         :param issue: The issue of this CommentSource.  # noqa: E501
         :type: CommentSourceIssue
         """
-        if issue is None:
-            raise ValueError("Invalid value for `issue`, must not be `None`")  # noqa: E501
 
         self._issue = issue
 
@@ -86,8 +86,6 @@ class CommentSource(object):
         :param pull_request: The pull_request of this CommentSource.  # noqa: E501
         :type: object
         """
-        if pull_request is None:
-            raise ValueError("Invalid value for `pull_request`, must not be `None`")  # noqa: E501
 
         self._pull_request = pull_request
 
