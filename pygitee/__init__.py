@@ -42,6 +42,10 @@ from pygitee.models.base_commit import BaseCommit
 from pygitee.models.branch_protection_body import BranchProtectionBody
 from pygitee.models.collaborators import Collaborators
 from pygitee.models.collaborators_username_body import CollaboratorsUsernameBody
+from pygitee.models.comment import Comment
+from pygitee.models.comment_source import CommentSource
+from pygitee.models.comment_source_issue import CommentSourceIssue
+from pygitee.models.comment_target import CommentTarget
 from pygitee.models.comments_id_body import CommentsIdBody
 from pygitee.models.comments_id_body1 import CommentsIdBody1
 from pygitee.models.comments_id_body2 import CommentsIdBody2

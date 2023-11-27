@@ -1012,7 +1012,7 @@ class CommentApi(object):
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
         :param str order: 排序顺序: asc(default),desc
-        :return: InlineResponse2004
+        :return: list[Comment]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1038,7 +1038,7 @@ class CommentApi(object):
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
         :param str order: 排序顺序: asc(default),desc
-        :return: InlineResponse2004
+        :return: list[Comment]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1106,7 +1106,7 @@ class CommentApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2004',  # noqa: E501
+            response_type='list[Comment]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -2172,7 +2172,7 @@ class CommentApi(object):
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
         :param str order: 排序顺序: asc(default),desc
-        :return: InlineResponse2004
+        :return: list[Comment]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2200,7 +2200,7 @@ class CommentApi(object):
         :param int page: 当前的页码
         :param int per_page: 每页的数量，最大为 100
         :param str order: 排序顺序: asc(default),desc
-        :return: InlineResponse2004
+        :return: list[Comment]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2276,7 +2276,7 @@ class CommentApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2004',  # noqa: E501
+            response_type='list[Comment]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

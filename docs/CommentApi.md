@@ -544,7 +544,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **repos_owner_repo_comments_get**
-> InlineResponse2004 repos_owner_repo_comments_get(owner, repo, access_token=access_token, page=page, per_page=per_page, order=order)
+> list[Comment] repos_owner_repo_comments_get(owner, repo, access_token=access_token, page=page, per_page=per_page, order=order)
 
 获取仓库的Commit评论
 
@@ -592,7 +592,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2004**](InlineResponse2004.md)
+[**list[Comment]**](Comment.md)
 
 ### Authorization
 
@@ -1138,7 +1138,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **repos_owner_repo_issues_number_comments_get**
-> InlineResponse2004 repos_owner_repo_issues_number_comments_get(owner, repo, number, access_token=access_token, since=since, page=page, per_page=per_page, order=order)
+> list[Comment] repos_owner_repo_issues_number_comments_get(owner, repo, number, access_token=access_token, since=since, page=page, per_page=per_page, order=order)
 
 获取仓库某个Issue所有的评论
 
@@ -1190,7 +1190,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2004**](InlineResponse2004.md)
+[**list[Comment]**](Comment.md)
 
 ### Authorization
 
